@@ -1,0 +1,6 @@
+{
+  "name": "Enigma del Bosque",
+  "description": "Side quest de acertijos al aire libre para recorrer cualquier bosque con geolocalización y packs personalizables",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,72 @@
+{
+  "P7GGT5": {
+    "code": "P7GGT5",
+    "forestPackId": "bosque-canejan-cestas",
+    "name": "Tester",
+    "type": "individual",
+    "storyId": "guerra",
+    "difficulty": "novato",
+    "duration": "30min",
+    "currentPoiIndex": 1,
+    "routePoiIds": [
+      "moulin_rouillac",
+      "ruisseau_moulin"
+    ],
+    "points": 95,
+    "status": "active",
+    "dateStarted": "2026-09-26T09:06:45.682Z",
+    "lastActive": "2026-09-26T09:06:58.003Z",
+    "lat": 44.7645,
+    "lng": -0.6358,
+    "messages": [
+      {
+        "id": "msg-welcome",
+        "sender": "narrator",
+        "text": "¡Saludos, Tester! Soy Jean 'Le Silence'. He preparado la senda para tu expedición. Dirígete al primer punto marcado en tu mapa y prepárate a desentrañar los enigmas del bosque.",
+        "timestamp": "09:06 AM"
+      }
+    ],
+    "completedPois": [
+      "moulin_rouillac"
+    ],
+    "hintHistory": [
+      {
+        "poiId": "ruisseau_moulin",
+        "level": 1,
+        "text": "Psst, baja la cabeza y vigila la maleza... Si no quieres que los perros de la Kommandantur sigan nuestro rastro, debes buscar lo más duro y sólido que la corriente esconde bajo la superficie.",
+        "timestamp": "09:06 AM"
+      }
+    ]
+  },
+  "9CW7DS": {
+    "code": "9CW7DS",
+    "forestPackId": "bosque-canejan-cestas",
+    "name": "mari",
+    "type": "individual",
+    "storyId": "guerra",
+    "difficulty": "novato",
+    "duration": "1h",
+    "currentPoiIndex": 0,
+    "routePoiIds": [
+      "moulin_rouillac",
+      "ruisseau_moulin",
+      "chene_soupirs"
+    ],
+    "points": 0,
+    "status": "active",
+    "dateStarted": "2026-09-27T10:29:37.894Z",
+    "lastActive": "2026-09-27T10:34:24.317Z",
+    "lat": 44.7645,
+    "lng": -0.6358,
+    "messages": [
+      {
+        "id": "msg-welcome",
+        "sender": "narrator",
+        "text": "¡Saludos, mari! Soy Jean 'Le Silence'. He preparado la senda para tu expedición. Dirígete al primer punto marcado en tu mapa y prepárate a desentrañar los enigmas del bosque.",
+        "timestamp": "10:29 AM"
+      }
+    ],
+    "completedPois": [],
+    "hintHistory": []
+  }
+}
