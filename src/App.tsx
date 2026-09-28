@@ -5,6 +5,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { ForestPack, PlayerSession, DifficultyType, DurationType, StoryIntro } from './types';
+import { SEED_FOREST_PACKS } from './data/seedPacks';
 import { api } from './services/api';
 import { Navbar } from './components/Navbar';
 import { ForestSelector } from './components/ForestSelector';
@@ -20,9 +21,9 @@ import { PauseOrAbandonModal } from './components/PauseOrAbandonModal';
 import { ambientAudio } from './utils/audio';
 
 export default function App() {
-  const [forests, setForests] = useState<ForestPack[]>([]);
+  const [forests, setForests] = useState<ForestPack[]>(SEED_FOREST_PACKS);
   const [currentView, setCurrentView] = useState<'home' | 'game' | 'admin'>('home');
-  const [selectedForest, setSelectedForest] = useState<ForestPack | null>(null);
+  const [selectedForest, setSelectedForest] = useState<ForestPack | null>(SEED_FOREST_PACKS[0] || null);
   const [activeSession, setActiveSession] = useState<PlayerSession | null>(null);
 
   // Modals
@@ -32,7 +33,7 @@ export default function App() {
   const [isBriefingOpen, setIsBriefingOpen] = useState(false);
   const [isPauseModalOpen, setIsPauseModalOpen] = useState(false);
   const [isAdminAuthOpen, setIsAdminAuthOpen] = useState(false);
-  const [isAdminAuthenticated, setIsAdminAuthenticated] = useState(api.isAdminAuthenticated());
+  const [isAdminAuthenticated, setIsAdminAuthenticated] = useState(true);
   const [activeCharacterStory, setActiveCharacterStory] = useState<StoryIntro | null>(null);
   const [isCharacterModalOpen, setIsCharacterModalOpen] = useState(false);
 
@@ -51,11 +52,7 @@ export default function App() {
       const pathname = window.location.pathname;
       const search = window.location.search;
       if (hash === '#admin' || pathname === '/admin' || search.includes('admin=true')) {
-        if (api.isAdminAuthenticated()) {
-          setCurrentView('admin');
-        } else {
-          setIsAdminAuthOpen(true);
-        }
+        setCurrentView('admin');
       }
     };
     checkAdminRoute();
@@ -70,17 +67,16 @@ export default function App() {
   }, [selectedForest]);
 
   const loadForests = async () => {
-    setLoading(true);
     try {
       const data = await api.getForests();
-      setForests(data);
-      if (!selectedForest && data.length > 0) {
-        setSelectedForest(data[0]);
+      if (data && data.length > 0) {
+        setForests(data);
+        if (!selectedForest) {
+          setSelectedForest(data[0]);
+        }
       }
     } catch (err) {
-      console.error('Error loading forests:', err);
-    } finally {
-      setLoading(false);
+      console.warn('Using embedded forests:', err);
     }
   };
 
@@ -263,13 +259,10 @@ export default function App() {
     setCurrentView('home');
   };
 
-  // Admin Access Gate
+  // Admin Access Gate (Contraseña desactivada por el momento)
   const handleOpenAdmin = () => {
-    if (api.isAdminAuthenticated()) {
-      setCurrentView('admin');
-    } else {
-      setIsAdminAuthOpen(true);
-    }
+    setIsAdminAuthenticated(true);
+    setCurrentView('admin');
   };
 
   const handleAdminAuthenticated = () => {
@@ -278,8 +271,6 @@ export default function App() {
   };
 
   const handleAdminLogout = () => {
-    api.clearAdminKey();
-    setIsAdminAuthenticated(false);
     if (window.location.hash === '#admin') {
       history.replaceState(null, '', window.location.pathname);
     }

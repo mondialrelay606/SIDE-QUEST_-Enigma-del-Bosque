@@ -1,5 +1,6 @@
 import React from 'react';
 import { ForestPack, StoryIntro, PlayerSession } from '../types';
+import { SEED_FOREST_PACKS } from '../data/seedPacks';
 import { MapPin, BookOpen, Compass, Sparkles, KeyRound, PlusCircle, ArrowRight, Award, Mic, Users, Play, LogOut, BookmarkCheck } from 'lucide-react';
 import { CharactersGallery } from './CharactersGallery';
 
@@ -26,6 +27,9 @@ export const ForestSelector: React.FC<ForestSelectorProps> = ({
   onContinueSavedGame,
   onOpenPauseOrAbandon,
 }) => {
+  const displayForests = (forests && forests.length > 0 ? forests : SEED_FOREST_PACKS).filter(
+    (f) => f.isPublished !== false
+  );
   return (
     <div className="max-w-5xl mx-auto px-4 py-8 space-y-8">
       {/* Active / Paused Expedition Quick Resume Banner */}
@@ -128,22 +132,12 @@ export const ForestSelector: React.FC<ForestSelectorProps> = ({
             </p>
           </div>
           <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-emerald-950 text-emerald-300 border border-emerald-800/50">
-            {forests.length} disponibles
+            {displayForests.length} disponibles
           </span>
         </div>
 
-        {loading ? (
-          <div className="py-20 text-center text-stone-400 space-y-3">
-            <div className="w-8 h-8 border-2 border-emerald-500 border-t-transparent rounded-full animate-spin mx-auto" />
-            <p className="text-sm">Buscando rutas forestales...</p>
-          </div>
-        ) : forests.length === 0 ? (
-          <div className="text-center py-12 bg-stone-900/40 rounded-2xl border border-stone-800 p-8 space-y-4">
-            <p className="text-stone-300">Cargando las sendas de aventura disponibles...</p>
-          </div>
-        ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {forests.map((forest) => {
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {displayForests.map((forest) => {
               const poiCount = forest.pois?.length || 0;
               const storyCount = forest.stories?.length || 0;
               const riddleCount = forest.riddles?.length || 0;
@@ -247,7 +241,6 @@ export const ForestSelector: React.FC<ForestSelectorProps> = ({
               );
             })}
           </div>
-        )}
       </div>
 
       {/* Featured Characters Section */}
