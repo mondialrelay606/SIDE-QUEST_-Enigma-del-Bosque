@@ -1,29 +1,82 @@
 import React from 'react';
-import { ForestPack, StoryIntro } from '../types';
-import { MapPin, BookOpen, Compass, Sparkles, KeyRound, PlusCircle, ArrowRight, Award, Mic, Users } from 'lucide-react';
+import { ForestPack, StoryIntro, PlayerSession } from '../types';
+import { MapPin, BookOpen, Compass, Sparkles, KeyRound, PlusCircle, ArrowRight, Award, Mic, Users, Play, LogOut, BookmarkCheck } from 'lucide-react';
 import { CharactersGallery } from './CharactersGallery';
 
 interface ForestSelectorProps {
   forests: ForestPack[];
   onSelectForest: (forest: ForestPack) => void;
   onResumeGame: () => void;
-  onOpenAdmin: () => void;
-  isAdminAuthenticated?: boolean;
   onInteractWithCharacter?: (story: StoryIntro, forest: ForestPack) => void;
   loading: boolean;
+  activeSession?: PlayerSession | null;
+  selectedForest?: ForestPack | null;
+  onContinueSavedGame?: () => void;
+  onOpenPauseOrAbandon?: () => void;
 }
 
 export const ForestSelector: React.FC<ForestSelectorProps> = ({
   forests,
   onSelectForest,
   onResumeGame,
-  onOpenAdmin,
-  isAdminAuthenticated = false,
   onInteractWithCharacter,
   loading,
+  activeSession,
+  selectedForest,
+  onContinueSavedGame,
+  onOpenPauseOrAbandon,
 }) => {
   return (
-    <div className="max-w-5xl mx-auto px-4 py-8 space-y-10">
+    <div className="max-w-5xl mx-auto px-4 py-8 space-y-8">
+      {/* Active / Paused Expedition Quick Resume Banner */}
+      {activeSession && selectedForest && activeSession.status !== 'completed' && (
+        <div className="rounded-3xl border-2 border-amber-500/60 bg-gradient-to-r from-[#241c12] via-[#1c291e] to-[#122016] p-5 sm:p-6 shadow-2xl flex flex-col md:flex-row items-start md:items-center justify-between gap-4 animate-in fade-in duration-300">
+          <div className="space-y-1.5">
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-amber-500/20 text-amber-300 font-mono text-[11px] font-bold border border-amber-500/40">
+                <BookmarkCheck className="w-3.5 h-3.5 text-amber-400" />
+                Partida Guardada en Curso
+              </span>
+              <span className="font-mono text-xs text-stone-300 font-semibold bg-black/40 px-2 py-0.5 rounded-md border border-white/10">
+                Código: <strong className="text-amber-200 tracking-wider">{activeSession.code}</strong>
+              </span>
+            </div>
+            <h3 className="font-adventure text-lg sm:text-xl font-bold text-amber-100">
+              {selectedForest.name} — Hito {activeSession.currentPoiIndex + 1} de {activeSession.routePoiIds.length}
+            </h3>
+            <p className="text-xs text-stone-300 leading-relaxed max-w-xl">
+              Tienes {activeSession.points} puntos acumulados. Puedes continuar hoy o cualquier otro día, o abandonar definitivamente la partida si lo deseas.
+            </p>
+          </div>
+
+          <div className="flex items-center gap-2.5 w-full md:w-auto shrink-0 pt-2 md:pt-0">
+            {onContinueSavedGame && (
+              <button
+                type="button"
+                onClick={onContinueSavedGame}
+                className="flex-1 md:flex-none px-5 py-3 rounded-xl bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-adventure text-xs font-bold tracking-wider flex items-center justify-center gap-2 shadow-lg shadow-emerald-950/80 active:scale-95 transition-all"
+              >
+                <Play className="w-4 h-4 fill-white" />
+                <span>Continuar expedición</span>
+              </button>
+            )}
+
+            {onOpenPauseOrAbandon && (
+              <button
+                type="button"
+                onClick={onOpenPauseOrAbandon}
+                className="px-3.5 py-3 rounded-xl bg-stone-900/90 hover:bg-stone-800 border border-stone-700/80 hover:border-red-600/60 text-stone-300 hover:text-red-300 text-xs font-semibold flex items-center justify-center gap-1.5 transition-all active:scale-95"
+                title="Pausar o abandonar definitivamente"
+              >
+                <LogOut className="w-3.5 h-3.5 text-stone-400" />
+                <span className="hidden sm:inline">Gestionar / </span>
+                <span>Abandonar</span>
+              </button>
+            )}
+          </div>
+        </div>
+      )}
+
       {/* Hero Presentation */}
       <div className="relative rounded-3xl overflow-hidden border border-emerald-800/40 bg-gradient-to-b from-[#223525] via-[#1B291E] to-[#141F16] p-6 sm:p-10 shadow-2xl shadow-black/60">
         <div className="absolute top-0 right-0 -mt-10 -mr-10 w-72 h-72 rounded-full bg-emerald-500/10 blur-3xl pointer-events-none" />
@@ -43,27 +96,27 @@ export const ForestSelector: React.FC<ForestSelectorProps> = ({
           </p>
 
           <div className="pt-2 flex flex-wrap items-center gap-3">
+            <a
+              href="#bosques-list"
+              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-adventure text-xs font-bold tracking-wider shadow-lg shadow-emerald-950/60 transition-all active:scale-95"
+            >
+              <Compass className="w-4 h-4 text-emerald-100" />
+              <span>Explorar Bosques Disponibles</span>
+            </a>
+
             <button
               onClick={onResumeGame}
-              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-stone-800/90 hover:bg-stone-700/90 border border-stone-600/50 text-amber-200 hover:text-white font-semibold text-sm transition-all shadow-md active:scale-95"
+              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-stone-800/90 hover:bg-stone-700/90 border border-stone-600/50 text-amber-200 hover:text-white font-semibold text-xs transition-all shadow-md active:scale-95"
             >
               <KeyRound className="w-4 h-4 text-amber-400" />
               <span>Retomar partida con código</span>
-            </button>
-
-            <button
-              onClick={onOpenAdmin}
-              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-emerald-950/80 hover:bg-emerald-900/90 border border-emerald-700/50 text-emerald-300 hover:text-emerald-100 font-semibold text-sm transition-all active:scale-95"
-            >
-              <PlusCircle className="w-4 h-4 text-amber-400" />
-              <span>{isAdminAuthenticated ? 'Panel Administrador (Activo)' : 'Gestionar Bosques (Admin)'}</span>
             </button>
           </div>
         </div>
       </div>
 
       {/* Forest Packs Section */}
-      <div className="space-y-5">
+      <div id="bosques-list" className="space-y-5">
         <div className="flex items-center justify-between border-b border-emerald-900/60 pb-3">
           <div>
             <h3 className="font-adventure text-xl sm:text-2xl font-bold text-amber-100 flex items-center gap-2">
@@ -86,13 +139,7 @@ export const ForestSelector: React.FC<ForestSelectorProps> = ({
           </div>
         ) : forests.length === 0 ? (
           <div className="text-center py-12 bg-stone-900/40 rounded-2xl border border-stone-800 p-8 space-y-4">
-            <p className="text-stone-300">No hay bosques publicados actualmente.</p>
-            <button
-              onClick={onOpenAdmin}
-              className="px-5 py-2.5 rounded-xl bg-emerald-700 hover:bg-emerald-600 text-white font-medium text-sm"
-            >
-              Crear primer bosque en el Panel de Administración
-            </button>
+            <p className="text-stone-300">Cargando las sendas de aventura disponibles...</p>
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

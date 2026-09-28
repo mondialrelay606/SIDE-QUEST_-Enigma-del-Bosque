@@ -44,6 +44,23 @@ export default function App() {
   useEffect(() => {
     loadForests();
     restoreSessionFromStorage();
+
+    // Check URL route for direct organizer access (#admin, /admin, ?admin=true)
+    const checkAdminRoute = () => {
+      const hash = window.location.hash;
+      const pathname = window.location.pathname;
+      const search = window.location.search;
+      if (hash === '#admin' || pathname === '/admin' || search.includes('admin=true')) {
+        if (api.isAdminAuthenticated()) {
+          setCurrentView('admin');
+        } else {
+          setIsAdminAuthOpen(true);
+        }
+      }
+    };
+    checkAdminRoute();
+    window.addEventListener('hashchange', checkAdminRoute);
+    return () => window.removeEventListener('hashchange', checkAdminRoute);
   }, []);
 
   useEffect(() => {
@@ -263,6 +280,9 @@ export default function App() {
   const handleAdminLogout = () => {
     api.clearAdminKey();
     setIsAdminAuthenticated(false);
+    if (window.location.hash === '#admin') {
+      history.replaceState(null, '', window.location.pathname);
+    }
     setCurrentView(activeSession ? 'game' : 'home');
   };
 
@@ -298,14 +318,16 @@ export default function App() {
               setIsNewGameOpen(true);
             }}
             onResumeGame={() => setIsResumeOpen(true)}
-            onOpenAdmin={handleOpenAdmin}
-            isAdminAuthenticated={isAdminAuthenticated}
             onInteractWithCharacter={(story, forest) => {
               setSelectedForest(forest);
               setActiveCharacterStory(story);
               setIsCharacterModalOpen(true);
             }}
             loading={loading}
+            activeSession={activeSession}
+            selectedForest={selectedForest}
+            onContinueSavedGame={() => setCurrentView('game')}
+            onOpenPauseOrAbandon={() => setIsPauseModalOpen(true)}
           />
         )}
 
@@ -398,6 +420,37 @@ export default function App() {
           textMessages={activeSession?.messages}
           onSelectOtherCharacter={(other) => setActiveCharacterStory(other)}
         />
+      )}
+
+      {/* Pause or Abandon Modal */}
+      {selectedForest && activeSession && (
+        <PauseOrAbandonModal
+          isOpen={isPauseModalOpen}
+          onClose={() => setIsPauseModalOpen(false)}
+          forest={selectedForest}
+          session={activeSession}
+          onPauseAndSave={handlePauseAndSave}
+          onAbandonPermanently={handleAbandonPermanently}
+        />
+      )}
+      {/* Discreet Footer with subtle copyright & organizer trigger */}
+      {currentView !== 'admin' && (
+        <footer className="py-6 px-4 text-center text-[11px] text-stone-500 border-t border-emerald-950/80 bg-[#0E150F]">
+          <p className="flex items-center justify-center gap-2 flex-wrap">
+            <span>Enigma del Bosque</span>
+            <span>•</span>
+            <span>Rutas y acertijos al aire libre</span>
+            <span>•</span>
+            <button
+              type="button"
+              onClick={handleOpenAdmin}
+              className="text-stone-600 hover:text-stone-400 underline transition-colors cursor-pointer"
+              title="Acceso organizador"
+            >
+              Acceso organizador
+            </button>
+          </p>
+        </footer>
       )}
     </div>
   );

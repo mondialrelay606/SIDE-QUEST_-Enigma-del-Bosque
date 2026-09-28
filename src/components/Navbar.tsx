@@ -91,26 +91,8 @@ export const Navbar: React.FC<NavbarProps> = ({
           {/* Audio toggle & Ambient Soundscape Control */}
           <AmbientAudioControl variant="compact" />
 
-          {/* Admin link */}
-          {currentView !== 'admin' ? (
-            <button
-              onClick={onOpenAdmin}
-              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-xs font-semibold transition-all shadow-sm ${
-                isAdminAuthenticated
-                  ? 'bg-amber-950/60 border-amber-600/50 hover:bg-amber-900/60 text-amber-200'
-                  : 'bg-stone-800/80 border-stone-600/50 hover:bg-stone-700 text-stone-200 hover:text-white'
-              }`}
-            >
-              {isAdminAuthenticated ? (
-                <ShieldCheck className="w-3.5 h-3.5 text-amber-400" />
-              ) : (
-                <Lock className="w-3.5 h-3.5 text-stone-400" />
-              )}
-              <span className="hidden sm:inline">
-                {isAdminAuthenticated ? 'Admin Activo' : 'Administrador'}
-              </span>
-            </button>
-          ) : (
+          {/* Admin Header Controls (only shown when in admin view) */}
+          {currentView === 'admin' && (
             <div className="flex items-center gap-2">
               {onLogoutAdmin && (
                 <button
@@ -126,7 +108,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-800 hover:bg-emerald-700 text-xs font-semibold text-white transition-all shadow-sm"
               >
                 <ArrowLeft className="w-3.5 h-3.5" />
-                <span>Volver a jugar</span>
+                <span>Volver a la aventura</span>
               </button>
             </div>
           )}
