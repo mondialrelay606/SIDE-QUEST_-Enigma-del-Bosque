@@ -11,6 +11,8 @@ export const SEED_FOREST_PACKS: ForestPack[] = [
     coverImageUrl: "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1200&q=80",
     attribution: "Historia «La Promenade Enchantée» basada en el proyecto real Divercités «FOR[Ê]VEUR» (2026), cuentos y esculturas de niños de Canéjan junto a un escultor y cuentacuentos local.",
     credits: "Historia «La Promenade Enchantée» basada en el proyecto real Divercités «FOR[Ê]VEUR» (2026), cuentos y esculturas de niños de Canéjan junto a un escultor y cuentacuentos local.",
+    defaultLanguage: "fr",
+    languages: ["fr", "es", "en"],
     isPublished: true,
     pois: [
       {
@@ -438,6 +440,34 @@ export const SEED_FOREST_PACKS: ForestPack[] = [
         ]
       },
       {
+        id: "r_molino_moulin_3",
+        poiId: "moulin_rouillac",
+        storyId: "molino_perdido",
+        name: "El Engranaje de Maître Pierre",
+        difficulty: "maestro",
+        points: 250,
+        type: "order",
+        question: "Maître Pierre dejó sus dibujos desordenados. Ordena el recorrido de la fuerza del agua, desde que entra en la acequia hasta que la harina llega al saco.",
+        options: [
+          "El agua desciende por la acequia y pasa por la esclusa",
+          "El agua empuja las palas de la rueda hidráulica",
+          "La rueda hace girar el eje de madera",
+          "Los engranajes de roble transmiten el giro",
+          "La muela superior gira sobre la muela fija",
+          "La harina cae por el canal hasta el saco"
+        ],
+        hints: [
+          "Empieza por donde entra el agua, no por donde sale la harina.",
+          "La fuerza va de la rueda al eje, del eje a los engranajes y de los engranajes a las muelas.",
+          "Orden: acequia y esclusa, palas de la rueda, eje, engranajes, muelas, saco."
+        ],
+        staticHints: [
+          "Empieza por donde entra el agua, no por donde sale la harina.",
+          "La fuerza va de la rueda al eje, del eje a los engranajes y de los engranajes a las muelas.",
+          "Orden: acequia y esclusa, palas de la rueda, eje, engranajes, muelas, saco."
+        ]
+      },
+      {
         id: "r_molino_ruisseau_1",
         poiId: "ruisseau_moulin",
         storyId: "molino_perdido",
@@ -547,6 +577,34 @@ export const SEED_FOREST_PACKS: ForestPack[] = [
           "Crecen en la penumbra húmeda.",
           "Tienen un tacto suave y esponjoso.",
           "Son el musgo y los helechos."
+        ]
+      },
+      {
+        id: "r_hechizo_ruisseau_2",
+        poiId: "ruisseau_moulin",
+        storyId: "hechizo_encantado",
+        name: "El Viaje de la Gota",
+        difficulty: "explorador",
+        points: 150,
+        type: "order",
+        question: "Sylvaine te pide devolver la melodía al arroyo. Ordena el viaje de una gota de agua, de la lluvia a la nube.",
+        options: [
+          "La gota cae como lluvia sobre el bosque",
+          "Se filtra entre el musgo y la tierra",
+          "Brota de nuevo en el arroyo",
+          "Corre río abajo hacia el mar",
+          "El sol la evapora",
+          "Sube y se convierte en nube"
+        ],
+        hints: [
+          "El viaje empieza en el cielo y termina en el cielo.",
+          "Antes de correr por el arroyo, la gota tiene que atravesar el suelo.",
+          "Orden: lluvia, filtración, arroyo, río hacia el mar, evaporación, nube."
+        ],
+        staticHints: [
+          "El viaje empieza en el cielo y termina en el cielo.",
+          "Antes de correr por el arroyo, la gota tiene que atravesar el suelo.",
+          "Orden: lluvia, filtración, arroyo, río hacia el mar, evaporación, nube."
         ]
       },
       {
@@ -707,168 +765,67 @@ export const SEED_FOREST_PACKS: ForestPack[] = [
         ]
       },
 
-      // --- PRUEBAS EXTRA SECCIÓN 6ter ---
-      // 1. Foto 1: Engranajes del Molino
+      // --- PRUEBAS EXTRA OPCIONALES (SECCIÓN 6ter) ---
       {
-        id: "r_extra_foto_rueda",
-        poiId: "moulin_rouillac",
-        storyId: "guerra",
-        name: "Reto Extra Fotográfico: Rueda y Engranajes",
-        difficulty: "novato",
-        points: 50,
-        isBonus: true,
-        bonusPoints: 50,
-        type: "photo",
-        question: "Captura con tu cámara una fotografía del mecanismo, rueda o compuerta del molino sin entrar en el agua ni cruzar vallas.",
-        answer: "foto_confirmada",
-        hints: [
-          "Apunta a las piezas de madera o hierro junto al canal.",
-          "Cualquier encuadre del molino es válido para el cuaderno de campo.",
-          "Pulsa confirmar captura fotográfica."
-        ],
-        staticHints: [
-          "Apunta a las piezas de madera o hierro junto al canal.",
-          "Cualquier encuadre del molino es válido para el cuaderno de campo.",
-          "Pulsa confirmar captura fotográfica."
-        ]
-      },
-      // 2. Foto 2: Corteza del Roble Centenario
-      {
-        id: "r_extra_foto_corteza",
+        id: "b_chene_foto",
         poiId: "chene_soupirs",
-        storyId: "hechizo_encantado",
-        name: "Reto Extra Fotográfico: Corteza Milenaria",
-        difficulty: "novato",
+        storyId: "*",
+        name: "El Tesoro del Roble",
+        difficulty: "*",
         points: 50,
+        optional: true,
         isBonus: true,
-        bonusPoints: 50,
         type: "photo",
-        question: "Toma una fotografía de los surcos rugosos y el musgo que viste el tronco del gran roble para documentar su porte.",
-        answer: "foto_confirmada",
-        hints: [
-          "Acércate con respeto a la base del tronco sin arrancar nada.",
-          "Enfoca la corteza a la luz del claro.",
-          "Pulsa confirmar fotografía."
-        ],
-        staticHints: [
-          "Acércate con respeto a la base del tronco sin arrancar nada.",
-          "Enfoca la corteza a la luz del claro.",
-          "Pulsa confirmar fotografía."
-        ]
+        question: "Busca en el suelo una hoja de roble o la cúpula de una bellota y fotografíala. Déjala donde está: en el bosque no se recoge nada.",
+        config: { validation: "trust" }
       },
-      // 3. Escucha en el arroyo: Identificar el sonido del agua y la fauna
       {
-        id: "r_extra_escucha_arroyo",
+        id: "b_ruisseau_escucha",
         poiId: "ruisseau_moulin",
-        storyId: "hechizo_encantado",
-        name: "Reto de Escucha Atenta: El Murmullo del Arroyo",
-        difficulty: "novato",
+        storyId: "*",
+        name: "El Concierto del Arroyo",
+        difficulty: "*",
         points: 50,
+        optional: true,
         isBonus: true,
-        bonusPoints: 50,
-        type: "audio",
-        audioDescription: "Grabación ambiental del curso de agua dulce y el trino de un mirlo común ribereño.",
-        question: "Detén la marcha, pulsa escuchar y presta atención al sonido de las aguas. ¿Qué pequeña ave riparia canta entre los juncos?",
-        options: ["Mirlo de agua o común", "Gaviota marina", "Pavo real"],
-        answer: "Mirlo de agua o común",
-        hints: [
-          "Es un ave paseriforme de plumaje oscuro y canto dulce y aflautado.",
-          "Frecuenta las orillas rocosas de los arroyos limpios.",
-          "Es el mirlo de agua o común."
+        type: "listen",
+        question: "Quédate quieto 30 segundos con el móvil bajado y marca todos los sonidos que oigas.",
+        options: [
+          "Agua corriendo",
+          "Pájaros",
+          "Viento entre los árboles",
+          "Insectos",
+          "Ramas que crujen",
+          "Voces o motores lejanos"
         ],
-        staticHints: [
-          "Es un ave paseriforme de plumaje oscuro y canto dulce y aflautado.",
-          "Frecuenta las orillas rocosas de los arroyos limpios.",
-          "Es el mirlo de agua o común."
-        ]
+        config: { holdSeconds: 30 }
       },
-      // 4. Contar en el sitio: Tablas / travesaños
       {
-        id: "r_extra_contar_puente",
-        poiId: "pont_sorciere",
+        id: "b_ruisseau_orden_promenade",
+        poiId: "ruisseau_moulin",
         storyId: "promenade_enchantee",
-        name: "Reto en el Sitio: Cuenta los Travesaños",
-        difficulty: "novato",
+        name: "La Ranita en Cuatro Viñetas",
+        difficulty: "*",
         points: 50,
+        optional: true,
         isBonus: true,
-        bonusPoints: 50,
-        type: "count",
-        targetCount: 8,
-        countTolerance: 1,
-        question: "Observa los travesaños o apoyos de madera que refuerzan la barandilla del puente. ¿Cuántos apoyos principales sostienen el pasamanos?",
-        answer: "8",
-        acceptedAnswers: ["8", "ocho", "7", "9"],
-        hints: [
-          "Cuéntalos de un extremo al otro del puente.",
-          "Hay entre 7 y 9 apoyos verticales.",
-          "El número clave es 8."
-        ],
-        staticHints: [
-          "Cuéntalos de un extremo al otro del puente.",
-          "Hay entre 7 y 9 apoyos verticales.",
-          "El número clave es 8."
-        ]
-      },
-      // 5. Ordenar: Ciclo de vida del Roble
-      {
-        id: "r_extra_ordenar_roble",
-        poiId: "chene_soupirs",
-        storyId: "promenade_enchantee",
-        name: "Reto Botánico: El Ciclo de Vida del Roble",
-        difficulty: "explorador",
-        points: 75,
-        isBonus: true,
-        bonusPoints: 75,
         type: "order",
-        question: "Ordena de menor a mayor las fases de crecimiento del señor de los bosques:",
-        orderItems: [
-          "Arbusto joven flexible",
-          "Bellota caída en el mantillo",
-          "Roble centenario de copa frondosa",
-          "Brote verde con dos primeras hojas"
+        question: "Los niños dibujaron la vida de la ranita en cuatro viñetas, pero se han mezclado. Ordénalas de principio a fin.",
+        options: [
+          "Los huevos flotan en el agua",
+          "Nace un renacuajo con cola",
+          "Le salen las patas y pierde la cola",
+          "La ranita adulta salta fuera del arroyo"
         ],
-        correctOrder: [
-          "Bellota caída en el mantillo",
-          "Brote verde con dos primeras hojas",
-          "Arbusto joven flexible",
-          "Roble centenario de copa frondosa"
-        ],
-        answer: "Bellota caída en el mantillo, Brote verde con dos primeras hojas, Arbusto joven flexible, Roble centenario de copa frondosa",
         hints: [
-          "Todo comienza con la semilla (bellota).",
-          "Luego germina el brote, crece como arbusto y culmina en árbol centenario.",
-          "Orden: Bellota -> Brote -> Arbusto -> Roble centenario."
+          "Todo empieza con huevos.",
+          "La cola desaparece casi al final.",
+          "Huevos, renacuajo, patas y sin cola, rana adulta."
         ],
         staticHints: [
-          "Todo comienza con la semilla (bellota).",
-          "Luego germina el brote, crece como arbusto y culmina en árbol centenario.",
-          "Orden: Bellota -> Brote -> Arbusto -> Roble centenario."
-        ]
-      },
-      // 6. Descifrar: Código rúnico de la Resistencia
-      {
-        id: "r_extra_descifrar_maquis",
-        poiId: "cabane_forestier",
-        storyId: "guerra",
-        name: "Descifrado: El Mensaje del Cilindro",
-        difficulty: "explorador",
-        points: 75,
-        isBonus: true,
-        bonusPoints: 75,
-        type: "cipher",
-        cipherHint: "Clave vegetal: 🌲=R, 💧=O, 🍃=B, 🍄=L, ⭐=E",
-        question: "Descifra la palabra en clave interceptada en el cilindro: [ 🌲 💧 🍃 🍄 ⭐ ]",
-        answer: "ROBLE",
-        acceptedAnswers: ["ROBLE", "roble"],
-        hints: [
-          "Sustituye cada símbolo según la clave vegetal proporcionada.",
-          "🌲=R, 💧=O, 🍃=B, 🍄=L, ⭐=E.",
-          "La palabra es ROBLE."
-        ],
-        staticHints: [
-          "Sustituye cada símbolo según la clave vegetal proporcionada.",
-          "🌲=R, 💧=O, 🍃=B, 🍄=L, ⭐=E.",
-          "La palabra es ROBLE."
+          "Todo empieza con huevos.",
+          "La cola desaparece casi al final.",
+          "Huevos, renacuajo, patas y sin cola, rana adulta."
         ]
       }
     ],
@@ -959,6 +916,8 @@ export const SEED_FOREST_PACKS: ForestPack[] = [
     coverImageUrl: "https://images.unsplash.com/photo-1511497584788-87676104235f?auto=format&fit=crop&w=1200&q=80",
     attribution: "Plantilla para el bosque local. Coordenadas de ejemplo (Puerta del Sol / Madrid). Puedes sustituirlas desde el Panel de Administración por las de tu bosque real.",
     credits: "Plantilla para el bosque local. Coordenadas de ejemplo (Puerta del Sol / Madrid). Puedes sustituirlas desde el Panel de Administración por las de tu bosque real.",
+    defaultLanguage: "es",
+    languages: ["es", "en"],
     _todoCoordenadas: "Estas coordenadas son el centro de Madrid (Puerta del Sol), no un bosque real. Sustituir centerLat/centerLng y las lat/lng de cada POI por las de tu bosque real antes de publicar.",
     isPublished: true,
     pois: [
@@ -1139,12 +1098,12 @@ export const SEED_FOREST_PACKS: ForestPack[] = [
         options: ["Contando los anillos de crecimiento del tronco", "Pesando las hojas caídas", "Midiendo el grosor de la corteza en invierno"],
         answer: "Contando los anillos de crecimiento del tronco",
         hints: [
-          "Cada primavera y otoño el árbol añade una capa circular a su madera.",
+          "Cada año el árbol añade una capa circular a su madera.",
           "Se ven en el corte transversal como círculos concéntricos.",
           "Contando los anillos de crecimiento del tronco."
         ],
         staticHints: [
-          "Cada primavera y otoño el árbol añade una capa circular a su madera.",
+          "Cada año el árbol añade una capa circular a su madera.",
           "Se ven en el corte transversal como círculos concéntricos.",
           "Contando los anillos de crecimiento del tronco."
         ]
@@ -1329,30 +1288,70 @@ export const SEED_FOREST_PACKS: ForestPack[] = [
         ]
       },
 
-      // --- PRUEBA EXTRA SECCIÓN 6ter: Brújula al Norte en el Pinar ---
+      // --- PRUEBAS EXTRA OPCIONALES (SECCIÓN 6ter) ---
       {
-        id: "r_extra_brujula_norte",
-        poiId: "cruce_vientos",
-        storyId: "leyenda_guardabosques",
-        name: "Reto Extra de Orientación: Brújula al Norte",
-        difficulty: "novato",
+        id: "b_fuente_foto",
+        poiId: "fuente_piedra",
+        storyId: "*",
+        name: "La Farmacia del Monte",
+        difficulty: "*",
         points: 50,
+        optional: true,
         isBonus: true,
-        bonusPoints: 50,
+        type: "photo",
+        question: "Encuentra una planta aromática (romero, tomillo o similar) y fotografíala sin arrancarla. Acércate para oler su aroma.",
+        config: { validation: "trust" }
+      },
+      {
+        id: "b_cruce_brujula",
+        poiId: "cruce_vientos",
+        storyId: "*",
+        name: "Apunta al Norte",
+        difficulty: "*",
+        points: 50,
+        optional: true,
+        isBonus: true,
         type: "compass",
-        targetBearing: 0,
-        compassTolerance: 25,
-        question: "Sitúate en el centro del Cruce de los Vientos. Sostén tu móvil en horizontal y gira sobre tus pies hasta alinear la flecha brújula con el Norte exacto (0°).",
-        answer: "norte_alineado",
+        question: "Sujeta el móvil plano y gira sobre ti mismo hasta que la flecha marque el Norte. Mantenlo 3 segundos.",
+        config: { targetBearing: 0, toleranceDeg: 15, holdSeconds: 3 },
         hints: [
           "Mantén el teléfono plano para calibrar los sensores magnéticos.",
-          "Gira lentamente hasta que el indicador marque 0° (o 360°).",
-          "Alcanza el rumbo Norte para validar el reto."
+          "Gira lentamente hasta que el indicador marque 0°.",
+          "Mantén la posición durante 3 segundos."
         ],
         staticHints: [
           "Mantén el teléfono plano para calibrar los sensores magnéticos.",
-          "Gira lentamente hasta que el indicador marque 0° (o 360°).",
-          "Alcanza el rumbo Norte para validar el reto."
+          "Gira lentamente hasta que el indicador marque 0°.",
+          "Mantén la posición durante 3 segundos."
+        ]
+      },
+      {
+        id: "b_arbol_orden",
+        poiId: "arbol_vigia",
+        storyId: "*",
+        name: "El Ciclo del Pino",
+        difficulty: "*",
+        points: 50,
+        optional: true,
+        isBonus: true,
+        type: "order",
+        question: "Anselmo dibujó la vida de un pino en su cuaderno, pero las páginas se han mezclado. Ordena las etapas, de la semilla al árbol adulto.",
+        options: [
+          "El piñón cae al suelo",
+          "El piñón germina",
+          "Brota una plántula",
+          "Crece un pino joven",
+          "El pino adulto da piñas"
+        ],
+        hints: [
+          "Todo árbol empieza siendo semilla.",
+          "Primero brota, después crece.",
+          "Piñón, germinación, plántula, pino joven, pino adulto."
+        ],
+        staticHints: [
+          "Todo árbol empieza siendo semilla.",
+          "Primero brota, después crece.",
+          "Piñón, germinación, plántula, pino joven, pino adulto."
         ]
       }
     ],

@@ -41,6 +41,7 @@ import { TransitDisplacementCard } from './TransitDisplacementCard';
 import { RewardScreenCard } from './RewardScreenCard';
 import { RiddleTypeInteractive } from './RiddleTypeInteractive';
 import { MetaEnigmaModal } from './MetaEnigmaModal';
+import { findBestRiddle } from '../utils/difficultyFallback';
 
 interface GameViewProps {
   session: PlayerSession;
@@ -189,26 +190,15 @@ export const GameView: React.FC<GameViewProps> = ({
     ambientAudio.start();
   }, []);
 
-  // Find Main Riddle for this POI
-  let riddle = forest.riddles.find(
-    (r) =>
-      r.poiId === currentPoiId &&
-      r.storyId === session.storyId &&
-      r.difficulty === session.difficulty &&
-      !r.isBonus
-  );
-  if (!riddle) {
-    riddle = forest.riddles.find(
-      (r) => r.poiId === currentPoiId && r.storyId === session.storyId && !r.isBonus
-    );
-  }
-  if (!riddle) {
-    riddle = forest.riddles.find((r) => r.poiId === currentPoiId && !r.isBonus);
-  }
+  // Find Main Riddle for this POI with difficulty fallback rule
+  const riddle = findBestRiddle(forest.riddles, currentPoiId, session.storyId, session.difficulty);
 
   // Find Optional Bonus Riddles for this POI (Sección 6ter)
   const bonusRiddles = forest.riddles.filter(
-    (r) => r.poiId === currentPoiId && r.isBonus
+    (r) =>
+      r.poiId === currentPoiId &&
+      (r.isBonus || r.optional) &&
+      (r.storyId === '*' || r.storyId === session.storyId)
   );
 
   // Scene narrative

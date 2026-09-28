@@ -1,0 +1,1425 @@
+{
+  "_meta": {
+    "schemaVersion": "1.0",
+    "note": "Paquete de traducciones. El contenido base (español) está en forest-packs-seed.json. Aquí se añaden fr y en, indexados por id. Las pruebas que dependen del idioma (juegos de palabras) están ADAPTADAS, no traducidas literalmente.",
+    "transcreated": [
+      "r_guerra_moulin_3: ES MOLINO→MOLINR; FR MEULE→MEULR; EN MILLSTONE→MILLSTONR",
+      "r_hechizo_belvedere_1: ES ARMONIA (A _ _ _ N _ A); FR HARMONIE (H _ _ _ _ N _ E); EN HARMONY (H _ _ _ _ N Y)",
+      "r_guardabosques_fuente_3: ES ZACILA→CALIZA; EN NOTES→STONE"
+    ],
+    "rules": [
+      "En las pruebas de test, la respuesta correcta es siempre options[0] en los datos: la app DEBE barajar las opciones al mostrarlas.",
+      "En las pruebas 'order', options = piezas en el orden correcto: la app las baraja.",
+      "Si falta una traducción, se muestra el idioma por defecto del bosque.",
+      "Los nombres propios de lugar de Canéjan-Cestas (Moulin de Rouillac, etc.) no se traducen."
+    ],
+    "pendiente": [
+      "Revisión de las traducciones al francés por un hablante nativo antes de publicar.",
+      "Pinar de los Tres Caminos: sin versión francesa."
+    ]
+  },
+  "languages": {
+    "fr": "Français",
+    "es": "Español",
+    "en": "English"
+  },
+  "ui": {
+    "es": {
+      "app.title": "Enigma del Bosque",
+      "lang.select": "Idioma",
+      "common.start": "Empezar aventura",
+      "common.continue": "Continuar",
+      "common.back": "Volver",
+      "common.confirm": "Confirmar",
+      "common.cancel": "Cancelar",
+      "home.chooseForest": "Elige tu bosque",
+      "home.resume": "Retomar una partida con código",
+      "home.codePlaceholder": "Código de 6 caracteres",
+      "setup.story": "Elige tu historia",
+      "setup.difficulty": "Dificultad",
+      "setup.duration": "Duración",
+      "setup.easyMode": "Modo fácil (niños pequeños / movilidad reducida)",
+      "difficulty.novato": "Novato",
+      "difficulty.explorador": "Explorador",
+      "difficulty.maestro": "Maestro",
+      "duration.30min": "30 min",
+      "duration.1h": "1 h",
+      "duration.1.5h": "1 h 30",
+      "duration.2h": "2 h",
+      "register.name": "Nombre del jugador o del grupo",
+      "register.individual": "Individual",
+      "register.group": "Grupo",
+      "register.codeTitle": "Tu código de partida",
+      "register.codeHelp": "Guárdalo: te permite retomar la partida si cierras la app.",
+      "briefing.title": "Antes de empezar",
+      "briefing.safetyTitle": "Seguridad en el bosque",
+      "briefing.safety.1": "Lleva agua y calzado adecuado.",
+      "briefing.safety.2": "Avisa a alguien de tu ruta y de la hora prevista de vuelta.",
+      "briefing.safety.3": "Mira dónde pisas: raíces, desniveles, barro.",
+      "briefing.safety.4": "No mires el móvil mientras caminas; párate para jugar.",
+      "briefing.safety.5": "Respeta la fauna y la flora: fotografía, no recojas.",
+      "briefing.safety.6": "Este juego es un complemento: tu seguridad es responsabilidad tuya.",
+      "briefing.confirm": "Entendido, estoy listo/a",
+      "transit.headingTo": "Rumbo a",
+      "transit.distance": "Distancia: {meters} m",
+      "transit.eta": "A pie: unos {minutes} min",
+      "transit.arrived": "¡Has llegado!",
+      "transit.imHere": "Estoy aquí",
+      "transit.imHereConfirm": "¿Seguro? La prueba es mejor viéndola en el sitio.",
+      "transit.weakGps": "Señal GPS débil: el punto puede aparecer desplazado.",
+      "play.submit": "Comprobar",
+      "play.hint": "Pedir una pista",
+      "play.hintLevel": "Pista {n} de 3",
+      "play.correct": "¡Correcto!",
+      "play.wrong": "Casi. ¡Inténtalo otra vez!",
+      "play.points": "+{points} puntos",
+      "play.bonus": "Prueba extra (opcional)",
+      "play.skipBonus": "Saltar",
+      "order.hint": "Ordena las piezas arrastrándolas o tocándolas.",
+      "order.result": "{n} de {total} piezas en su sitio",
+      "compass.hold": "Mantén el rumbo…",
+      "listen.start": "Empezar a escuchar (30 s)",
+      "photo.take": "Hacer foto",
+      "chat.open": "Hablar con tu guía",
+      "emergency.back": "Volver al inicio",
+      "reward.title": "¡Prueba superada!",
+      "finish.title": "¡Misión cumplida!",
+      "finish.rate": "Valora tu aventura",
+      "offline.download": "Descargar el bosque para jugar sin conexión",
+      "ar.view": "Ver en realidad aumentada"
+    },
+    "fr": {
+      "app.title": "Énigme de la Forêt",
+      "lang.select": "Langue",
+      "common.start": "Commencer l'aventure",
+      "common.continue": "Continuer",
+      "common.back": "Retour",
+      "common.confirm": "Confirmer",
+      "common.cancel": "Annuler",
+      "home.chooseForest": "Choisis ta forêt",
+      "home.resume": "Reprendre une partie avec un code",
+      "home.codePlaceholder": "Code à 6 caractères",
+      "setup.story": "Choisis ton histoire",
+      "setup.difficulty": "Difficulté",
+      "setup.duration": "Durée",
+      "setup.easyMode": "Mode facile (jeunes enfants / mobilité réduite)",
+      "difficulty.novato": "Novice",
+      "difficulty.explorador": "Explorateur",
+      "difficulty.maestro": "Maître",
+      "duration.30min": "30 min",
+      "duration.1h": "1 h",
+      "duration.1.5h": "1 h 30",
+      "duration.2h": "2 h",
+      "register.name": "Nom du joueur ou du groupe",
+      "register.individual": "Solo",
+      "register.group": "En groupe",
+      "register.codeTitle": "Ton code de partie",
+      "register.codeHelp": "Garde-le : il te permet de reprendre la partie si tu fermes l'appli.",
+      "briefing.title": "Avant de commencer",
+      "briefing.safetyTitle": "Sécurité en forêt",
+      "briefing.safety.1": "Emporte de l'eau et des chaussures adaptées.",
+      "briefing.safety.2": "Préviens quelqu'un de ton itinéraire et de ton heure de retour prévue.",
+      "briefing.safety.3": "Regarde où tu marches : racines, dénivelés, boue.",
+      "briefing.safety.4": "Ne regarde pas ton téléphone en marchant ; arrête-toi pour jouer.",
+      "briefing.safety.5": "Respecte la faune et la flore : photographie, ne ramasse pas.",
+      "briefing.safety.6": "Ce jeu n'est qu'un complément : ta sécurité reste ta responsabilité.",
+      "briefing.confirm": "Compris, je suis prêt(e)",
+      "transit.headingTo": "En route vers",
+      "transit.distance": "Distance : {meters} m",
+      "transit.eta": "À pied : environ {minutes} min",
+      "transit.arrived": "Tu es arrivé(e) !",
+      "transit.imHere": "Je suis ici",
+      "transit.imHereConfirm": "Sûr(e) ? L'épreuve est plus belle à découvrir sur place.",
+      "transit.weakGps": "Signal GPS faible : le point peut sembler décalé.",
+      "play.submit": "Valider",
+      "play.hint": "Demander un indice",
+      "play.hintLevel": "Indice {n} sur 3",
+      "play.correct": "Bravo !",
+      "play.wrong": "Presque. Essaie encore !",
+      "play.points": "+{points} points",
+      "play.bonus": "Épreuve bonus (facultative)",
+      "play.skipBonus": "Passer",
+      "order.hint": "Remets les éléments dans l'ordre en les faisant glisser ou en les touchant.",
+      "order.result": "{n} éléments sur {total} bien placés",
+      "compass.hold": "Garde le cap…",
+      "listen.start": "Commencer l'écoute (30 s)",
+      "photo.take": "Prendre une photo",
+      "chat.open": "Parler à ton guide",
+      "emergency.back": "Retour au départ",
+      "reward.title": "Épreuve réussie !",
+      "finish.title": "Mission accomplie !",
+      "finish.rate": "Note ton aventure",
+      "offline.download": "Télécharger la forêt pour jouer hors ligne",
+      "ar.view": "Voir en réalité augmentée"
+    },
+    "en": {
+      "app.title": "Enigma of the Forest",
+      "lang.select": "Language",
+      "common.start": "Start adventure",
+      "common.continue": "Continue",
+      "common.back": "Back",
+      "common.confirm": "Confirm",
+      "common.cancel": "Cancel",
+      "home.chooseForest": "Choose your forest",
+      "home.resume": "Resume a game with a code",
+      "home.codePlaceholder": "6-character code",
+      "setup.story": "Choose your story",
+      "setup.difficulty": "Difficulty",
+      "setup.duration": "Duration",
+      "setup.easyMode": "Easy mode (young children / reduced mobility)",
+      "difficulty.novato": "Novice",
+      "difficulty.explorador": "Explorer",
+      "difficulty.maestro": "Master",
+      "duration.30min": "30 min",
+      "duration.1h": "1 h",
+      "duration.1.5h": "1 h 30",
+      "duration.2h": "2 h",
+      "register.name": "Player or group name",
+      "register.individual": "Solo",
+      "register.group": "Group",
+      "register.codeTitle": "Your game code",
+      "register.codeHelp": "Keep it: it lets you resume your game if you close the app.",
+      "briefing.title": "Before you begin",
+      "briefing.safetyTitle": "Safety in the forest",
+      "briefing.safety.1": "Bring water and suitable footwear.",
+      "briefing.safety.2": "Tell someone your route and expected return time.",
+      "briefing.safety.3": "Watch your step: roots, slopes, mud.",
+      "briefing.safety.4": "Don't look at your phone while walking; stop to play.",
+      "briefing.safety.5": "Respect wildlife and plants: photograph, don't pick.",
+      "briefing.safety.6": "This game is only an add-on: your safety is your own responsibility.",
+      "briefing.confirm": "Understood, I'm ready",
+      "transit.headingTo": "Heading to",
+      "transit.distance": "Distance: {meters} m",
+      "transit.eta": "On foot: about {minutes} min",
+      "transit.arrived": "You have arrived!",
+      "transit.imHere": "I'm here",
+      "transit.imHereConfirm": "Are you sure? The challenge is better seen on site.",
+      "transit.weakGps": "Weak GPS signal: the point may appear shifted.",
+      "play.submit": "Check",
+      "play.hint": "Ask for a hint",
+      "play.hintLevel": "Hint {n} of 3",
+      "play.correct": "Correct!",
+      "play.wrong": "Almost. Try again!",
+      "play.points": "+{points} points",
+      "play.bonus": "Bonus challenge (optional)",
+      "play.skipBonus": "Skip",
+      "order.hint": "Put the pieces in order by dragging or tapping them.",
+      "order.result": "{n} of {total} pieces in place",
+      "compass.hold": "Hold your heading…",
+      "listen.start": "Start listening (30 s)",
+      "photo.take": "Take photo",
+      "chat.open": "Talk to your guide",
+      "emergency.back": "Back to start",
+      "reward.title": "Challenge complete!",
+      "finish.title": "Mission accomplished!",
+      "finish.rate": "Rate your adventure",
+      "offline.download": "Download the forest to play offline",
+      "ar.view": "View in augmented reality"
+    }
+  },
+  "forests": {
+    "bosque-canejan-cestas": {
+      "defaultLanguage": "fr",
+      "fr": {
+        "name": "Forêt de Canéjan-Cestas",
+        "country": "France (Gironde)",
+        "credits": "Histoire « La Promenade Enchantée » inspirée du projet réel Divercités « FOR[Ê]VEUR » (2026) : contes et sculptures imaginés par les enfants de Canéjan avec un sculpteur et conteur local.",
+        "pois": {
+          "moulin_rouillac": {
+            "name": "Moulin de Rouillac",
+            "description": "Ancien moulin du XIXe siècle."
+          },
+          "ruisseau_moulin": {
+            "name": "Ruisseau du Moulin",
+            "description": "Petit ruisseau chantant recouvert de mousse."
+          },
+          "chene_soupirs": {
+            "name": "Chêne des Soupirs",
+            "description": "Chêne bicentenaire."
+          },
+          "pont_sorciere": {
+            "name": "Pont de la Sorcière",
+            "description": "Pont rustique en pierre."
+          },
+          "cabane_forestier": {
+            "name": "Cabane du Forestier",
+            "description": "Refuge traditionnel des résiniers."
+          },
+          "belvedere_canejan": {
+            "name": "Belvédère de Canéjan",
+            "description": "Belvédère surplombant la canopée des pins."
+          }
+        },
+        "stories": {
+          "guerra": {
+            "title": "Ombres de la Guerre",
+            "summary": "Été 1944. Les patrouilles d'occupation surveillent les chemins ; le réseau clandestin du maquis a caché des messages le long de l'Eau Bourde.",
+            "mission": "Agir comme agent de liaison de la Résistance, suivre les signes cachés dans les arbres et déchiffrer les codes pour ouvrir un passage sûr vers Bordeaux.",
+            "narrator": {
+              "name": "Jean « Le Silence »",
+              "role": "Agent de liaison vétéran de la Résistance",
+              "tone": "Prudent, ferme, chuchoté"
+            }
+          },
+          "molino_perdido": {
+            "title": "Le Secret du Moulin Perdu",
+            "summary": "Année 1878. Maître Pierre a imaginé un mécanisme hydraulique pour tripler la force motrice du moulin et a caché ses plans le long du bassin.",
+            "mission": "Reconstituer les mesures du débit, examiner la maçonnerie des biefs et retrouver la combinaison du coffre de Rouillac.",
+            "narrator": {
+              "name": "Maître Pierre",
+              "role": "Dernier maître meunier",
+              "tone": "Fier, méthodique, passionné d'artisanat et d'engrenages"
+            }
+          },
+          "hechizo_encantado": {
+            "title": "Le Sortilège du Moulin Enchanté",
+            "summary": "Un sortilège de brume a figé la mélodie du ruisseau et les fleurs ne s'éveillent plus.",
+            "mission": "Aider la dryade Sylvaine à communiquer avec les arbres centenaires, purifier les eaux et rompre le maléfice.",
+            "narrator": {
+              "name": "Sylvaine",
+              "role": "Dryade protectrice de l'Eau Bourde",
+              "tone": "Éthérée, poétique, parle en métaphores d'eau et de feuilles"
+            }
+          },
+          "promenade_enchantee": {
+            "title": "La Promenade Enchantée",
+            "summary": "Contes d'enfants et sculptures en bois imaginés par les enfants de Canéjan avec un sculpteur et conteur local.",
+            "mission": "Suivre les indices rimés des élèves, découvrir les petits animaux du ruisseau et faire rire la forêt en famille.",
+            "narrator": {
+              "name": "Petit Lutin Chêne",
+              "role": "Chroniqueur des contes de l'école",
+              "tone": "Joyeux, espiègle, rimeur"
+            }
+          }
+        },
+        "riddles": {
+          "r_guerra_moulin_1": {
+            "name": "La Clé de l'Axe",
+            "question": "Quel élément fondamental du moulin servait à la Résistance à cacher des messages étanches sous le torrent ?",
+            "options": [
+              "La roue hydraulique",
+              "La girouette du toit",
+              "Le sac de farine",
+              "L'horloge murale"
+            ],
+            "answer": "La roue hydraulique",
+            "hints": [
+              "Elle est en contact constant avec l'eau qui descend du cours d'eau.",
+              "Elle tourne sans cesse quand les vannes sont ouvertes.",
+              "C'est la grande roue hydraulique en bois et en fer qui actionne le mécanisme."
+            ]
+          },
+          "r_guerra_moulin_2": {
+            "name": "Le Code des Meules",
+            "question": "Un message codé dit : « Trois sacs de blé, deux tours d'axe, un silence à l'aube ». Si chaque sac représente 10 km et chaque tour 5 heures, combien de km le messager a-t-il parcourus avant de s'arrêter ?",
+            "answer": "30",
+            "acceptedAnswers": [
+              "30",
+              "30 km",
+              "30km",
+              "trente"
+            ],
+            "hints": [
+              "Ne regarde que les sacs de blé, qui indiquent la distance.",
+              "Il y a 3 sacs et chacun vaut 10.",
+              "Multiplie 3 par 10 : le résultat est 30."
+            ]
+          },
+          "r_guerra_moulin_3": {
+            "name": "Chiffre de Rouillac",
+            "question": "Le mot de passe du maquis est le mot « MEULE » dont on remplace la dernière lettre (une voyelle) par l'initiale du réseau « RÉSISTANCE ». Quelle est la clé finale ?",
+            "answer": "MEULR",
+            "acceptedAnswers": [
+              "MEULR",
+              "meulr"
+            ],
+            "hints": [
+              "Prends le mot MEULE.",
+              "Enlève la dernière lettre « E » et ajoute l'initiale de Résistance (« R »).",
+              "Le mot de passe est MEULR."
+            ]
+          },
+          "r_guerra_ruisseau_1": {
+            "name": "Traverser le Ruisseau",
+            "question": "Pour traverser le ruisseau sans laisser de traces visibles dans la boue, par où le sergent a-t-il indiqué de marcher ?",
+            "options": [
+              "En marchant sur les pierres du lit",
+              "En courant sur le chemin de sable",
+              "En sautant avec de lourdes bottes"
+            ],
+            "answer": "En marchant sur les pierres du lit",
+            "hints": [
+              "L'eau efface aussitôt la trace.",
+              "Cherche les surfaces dures et mouillées qui dépassent du courant.",
+              "Il faut marcher sur les pierres du lit de la rivière."
+            ]
+          },
+          "r_guerra_ruisseau_2": {
+            "name": "L'Heure du Gué",
+            "question": "Si la patrouille ennemie passe toutes les 45 minutes et que la dernière est passée à 14h15, à quelle heure exacte (HH:MM) passera la suivante, sans retard ?",
+            "answer": "15:00",
+            "acceptedAnswers": [
+              "15:00",
+              "15h00",
+              "15 h 00",
+              "15:00h"
+            ],
+            "hints": [
+              "Ajoute 45 minutes à 14h15.",
+              "15 + 45 minutes font exactamente 60 minutes.",
+              "L'heure pile est donc 15h00."
+            ]
+          },
+          "r_guerra_chene_1": {
+            "name": "La Boîte aux Lettres Silencieuse",
+            "question": "Quel fruit caractéristique produit ce chêne centenaire, que les agents de liaison portaient en poche comme mot de passe ?",
+            "options": [
+              "Un gland",
+              "Une pomme de pin",
+              "Une châtaigne",
+              "Une noix"
+            ],
+            "answer": "Un gland",
+            "hints": [
+              "C'est le fruit traditionnel des chênes.",
+              "Il a une petite cupule ligneuse, comme un petit chapeau.",
+              "C'est le gland."
+            ]
+          },
+          "r_guerra_chene_2": {
+            "name": "Orientation du Maquis",
+            "question": "De quel côté du tronc du chêne la mousse est-elle la plus épaisse dans cet hémisphère, indiquant où se trouve le Nord ?",
+            "options": [
+              "Côté Nord",
+              "Côté Sud",
+              "Côté Est",
+              "N'importe quel côté, pareil"
+            ],
+            "answer": "Côté Nord",
+            "hints": [
+              "C'est le côté le plus sombre et le plus humide, sans soleil direct.",
+              "En Europe, c'est la direction boréale.",
+              "C'est le côté Nord."
+            ]
+          },
+          "r_guerra_belvedere_1": {
+            "name": "La Vigie de l'Horizon",
+            "question": "Depuis ce belvédère, quel signal visuel de fumée blanche avaient-ils convenu pour confirmer que la route était libre ?",
+            "options": [
+              "Trois courtes colonnes de fumée",
+              "Une fusée éclairante rouge",
+              "Un drapeau jaune"
+            ],
+            "answer": "Trois courtes colonnes de fumée",
+            "hints": [
+              "Des colonnes discrètes produites avec des branches vertes.",
+              "Le signal était répété trois fois.",
+              "Trois courtes colonnes de fumée."
+            ]
+          },
+          "r_molino_moulin_1": {
+            "name": "La Roue de Pierre",
+            "question": "Comment s'appelle la lourde pierre circulaire qui écrase le grain contre la pierre fixe ?",
+            "answer": "Meule",
+            "acceptedAnswers": [
+              "Meule",
+              "la meule",
+              "meule de moulin"
+            ],
+            "hints": [
+              "Mot de 5 lettres, qui désigne aussi un gros tas de foin.",
+              "Elle tourne, entraînée par l'axe du moulin.",
+              "C'est la « meule »."
+            ]
+          },
+          "r_molino_moulin_2": {
+            "name": "Le Débit Secret",
+            "question": "Maître Pierre a noté : « Pour chaque mètre cube par seconde, la roue fait 12 tours par minute. » Si la rivière charrie aujourd'hui 3 m³/s, à combien de tours par minute tourne la roue ?",
+            "answer": "36",
+            "acceptedAnswers": [
+              "36",
+              "36 tr/min",
+              "36 tours par minute",
+              "trente-six"
+            ],
+            "hints": [
+              "Multiplie le débit en m³/s par le nombre de tours par unité.",
+              "3 multiplié par 12.",
+              "Le résultat est 36."
+            ]
+          },
+          "r_molino_moulin_3": {
+            "name": "L'Engrenage de Maître Pierre",
+            "question": "Maître Pierre a laissé ses dessins en désordre. Remets dans l'ordre le parcours de la force de l'eau, depuis son entrée dans le bief jusqu'à l'arrivée de la farine dans le sac.",
+            "options": [
+              "L'eau descend par le bief et passe par la vanne",
+              "L'eau pousse les aubes de la roue hydraulique",
+              "La roue fait tourner l'axe en bois",
+              "Les engrenages en chêne transmettent la rotation",
+              "La meule tournante tourne sur la meule dormante",
+              "La farine tombe par la goulotte jusqu'au sac"
+            ],
+            "hints": [
+              "Commence par l'endroit où l'eau entre, pas par celui d'où sort la farine.",
+              "La force va de la roue à l'axe, de l'axe aux engrenages, puis aux meules.",
+              "Ordre : bief et vanne, aubes de la roue, axe, engrenages, meules, sac."
+            ]
+          },
+          "r_molino_ruisseau_1": {
+            "name": "Le Canal de Dérivation",
+            "question": "Comment s'appelle la vanne en bois qui règle le passage de l'eau vers le moulin ?",
+            "options": [
+              "Écluse ou vanne",
+              "Digue sèche",
+              "Puits d'orage"
+            ],
+            "answer": "Écluse ou vanne",
+            "hints": [
+              "Elle se lève ou se baisse verticalement avec une crémaillère ou une manivelle.",
+              "Elle permet d'isoler le moulin en cas de crue.",
+              "Écluse ou vanne."
+            ]
+          },
+          "r_molino_chene_1": {
+            "name": "Le Bois de l'Axe",
+            "question": "Quelle propriété du chêne en faisait l'arbre préféré pour fabriquer les dents et les engrenages du moulin ?",
+            "options": [
+              "Dureté et résistance à l'eau",
+              "Légèreté extrême comme le liège",
+              "Souplesse pour se plier en spirale"
+            ],
+            "answer": "Dureté et résistance à l'eau",
+            "hints": [
+              "Les engrenages doivent supporter des tonnes de frottement.",
+              "Il ne doit pas pourrir facilement dans une humidité constante.",
+              "Dureté et résistance à l'eau."
+            ]
+          },
+          "r_molino_belvedere_1": {
+            "name": "Le Niveau de Chute",
+            "question": "Pour qu'un moulin fonctionne avec force, que doit avoir l'eau entre le début et la fin du bief ?",
+            "options": [
+              "Un dénivelé ou une pente",
+              "Des eaux thermales chaudes",
+              "Du sable blanc"
+            ],
+            "answer": "Un dénivelé ou une pente",
+            "hints": [
+              "La gravité est la source d'énergie de l'eau.",
+              "Sans hauteur de chute, l'eau stagne.",
+              "Un dénivelé ou une pente."
+            ]
+          },
+          "r_hechizo_moulin_1": {
+            "name": "La Voix de l'Eau",
+            "question": "Sylvaine te murmure : « Je ne suis ni pierre ni vent, je meus le bois sans bouger un bras et je chante sans avoir de bouche. » Quel élément suis-je ?",
+            "options": [
+              "L'eau de la rivière",
+              "Le rayon de soleil",
+              "L'ombre du soir"
+            ],
+            "answer": "L'eau de la rivière",
+            "hints": [
+              "Elle coule éternellement vers l'océan.",
+              "Elle remplit les lits des cours d'eau de la forêt.",
+              "C'est l'eau de la rivière."
+            ]
+          },
+          "r_hechizo_ruisseau_1": {
+            "name": "Les Larmes de Sylvaine",
+            "question": "Quelles petites plantes millénaires sans fleurs recouvrent les pierres au bord du ruisseau comme un tapis d'un vert éclatant ?",
+            "options": [
+              "Mousses et fougères",
+              "Cactus et épines",
+              "Roses sauvages"
+            ],
+            "answer": "Mousses et fougères",
+            "hints": [
+              "Elles poussent dans la pénombre humide.",
+              "Elles ont un toucher doux et spongieux.",
+              "Ce sont les mousses et les fougères."
+            ]
+          },
+          "r_hechizo_ruisseau_2": {
+            "name": "Le Voyage de la Goutte",
+            "question": "Sylvaine te demande de rendre sa mélodie au ruisseau. Remets dans l'ordre le voyage d'une goutte d'eau, de la pluie au nuage.",
+            "options": [
+              "La goutte tombe en pluie sur la forêt",
+              "Elle s'infiltre dans la mousse et la terre",
+              "Elle jaillit de nouveau dans le ruisseau",
+              "Elle descend la rivière vers la mer",
+              "Le soleil l'évapore",
+              "Elle monte et devient nuage"
+            ],
+            "hints": [
+              "Le voyage commence dans le ciel et finit dans le ciel.",
+              "Avant de couler dans le ruisseau, la goutte doit traverser le sol.",
+              "Ordre : pluie, infiltration, ruisseau, rivière vers la mer, évaporation, nuage."
+            ]
+          },
+          "r_hechizo_chene_1": {
+            "name": "L'Étreinte de la Dryade",
+            "question": "Combien de vies humaines les légendes disent-elles qu'un chêne millénaire en bonne santé peut vivre dans cette forêt ?",
+            "options": [
+              "Plus de 10 vies (800-1000 ans)",
+              "À peine 1 vie (30 ans)",
+              "Seulement 5 ans"
+            ],
+            "answer": "Plus de 10 vies (800-1000 ans)",
+            "hints": [
+              "Un chêne met des siècles à grandir, mûrir et décliner.",
+              "C'est l'un des arbres qui vivent le plus longtemps en Europe.",
+              "Plus de 10 vies (800-1000 ans)."
+            ]
+          },
+          "r_hechizo_pont_1": {
+            "name": "Le Pont des Brumes",
+            "question": "Pour traverser le pont sans alerter les esprits de la brume, quel tribut végétal la légende exige-t-elle de jeter à l'eau ?",
+            "options": [
+              "Une feuille sèche de chêne",
+              "Une pièce d'or",
+              "Un morceau de pain"
+            ],
+            "answer": "Une feuille sèche de chêne",
+            "hints": [
+              "C'est un élément naturel du sol de la forêt.",
+              "Elle provient de l'arbre sacré de la clairière.",
+              "Une feuille sèche de chêne."
+            ]
+          },
+          "r_hechizo_belvedere_1": {
+            "name": "Le Réveil de la Forêt",
+            "question": "En arrivant tout en haut du belvédère, Sylvaine te demande de prononcer le mot qui unit tous les êtres vivants de la forêt : « H _ _ _ _ N _ E ». Quel est ce mot ?",
+            "answer": "HARMONIE",
+            "acceptedAnswers": [
+              "HARMONIE",
+              "harmonie"
+            ],
+            "hints": [
+              "Il signifie concorde, équilibre et beauté d'ensemble.",
+              "Il commence par HAR et se termine par IE.",
+              "Le mot est HARMONIE."
+            ]
+          },
+          "r_promenade_ruisseau_1": {
+            "name": "La Comptine du Têtard",
+            "question": "Conte des enfants : « J'ai une queue mais je ne suis pas un poisson, quand je serai grand, je sauterai sans m'arrêter. » Qui suis-je ?",
+            "options": [
+              "Un têtard ou une petite grenouille",
+              "Une libellule rapide",
+              "Un escargot d'eau"
+            ],
+            "answer": "Un têtard ou une petite grenouille",
+            "hints": [
+              "Il vit dans les eaux calmes du ruisseau.",
+              "Il perdra sa petite queue et il lui poussera quatre pattes pour coasser.",
+              "Un têtard ou une petite grenouille."
+            ]
+          },
+          "r_promenade_chene_1": {
+            "name": "Le Chapeau du Lutin",
+            "question": "Les enfants ont imaginé que les glands tombés étaient des petits chapeaux de lutins. Si tu comptes les lutins d'un nid et que tu vois 4 chapeaux et 3 brindilles, combien de lutins portent un chapeau ?",
+            "answer": "4",
+            "acceptedAnswers": [
+              "4",
+              "quatre",
+              "4 lutins"
+            ],
+            "hints": [
+              "Chaque lutin avec un chapeau utilise une cupule de gland.",
+              "Il y avait 4 chapeaux en tout.",
+              "La réponse est 4."
+            ]
+          },
+          "r_promenade_pont_1": {
+            "name": "La Sculpture Magique",
+            "question": "Dans le projet Divercités « FOR[Ê]VEUR », le sculpteur a taillé des figures en bois pour accompagner les contes. Dans quel matériau noble ces œuvres sont-elles faites ?",
+            "options": [
+              "Du bois récupéré dans la forêt elle-même",
+              "Du plastique recyclé de couleur",
+              "De l'acier inoxydable poli"
+            ],
+            "answer": "Du bois récupéré dans la forêt elle-même",
+            "hints": [
+              "Il respecte la nature vivante, sans abattre d'arbres sains.",
+              "C'est un matériau chaleureux qui vieillit sous la mousse.",
+              "Du bois récupéré dans la forêt elle-même."
+            ]
+          },
+          "r_promenade_moulin_1": {
+            "name": "Le Gâteau du Lutin Meunier",
+            "question": "Pour clore le conte de la classe, le petit lutin prépare un gâteau avec de la farine fraîchement moulue. Quel ingrédient venu de la forêt lui donne sa touche sucrée ?",
+            "options": [
+              "Du miel d'abeilles de la forêt",
+              "Du poivre piquant",
+              "Du sel de mer"
+            ],
+            "answer": "Du miel d'abeilles de la forêt",
+            "hints": [
+              "Ce sont des insectes travailleurs qui le fabriquent en butinant les fleurs sauvages.",
+              "Il est doré et très sucré.",
+              "Du miel d'abeilles de la forêt."
+            ]
+          },
+          "b_chene_foto": {
+            "name": "Le Trésor du Chêne",
+            "question": "Cherche au sol une feuille de chêne ou la cupule d'un gland et prends-la en photo. Laisse-la où elle est : dans la forêt, on ne ramasse rien."
+          },
+          "b_ruisseau_escucha": {
+            "name": "Le Concert du Ruisseau",
+            "question": "Reste immobile 30 secondes, le téléphone baissé, et coche tous les sons que tu entends.",
+            "options": [
+              "De l'eau qui coule",
+              "Des oiseaux",
+              "Du vent dans les arbres",
+              "Des insectes",
+              "Des branches qui craquent",
+              "Des voix ou des moteurs lointains"
+            ]
+          },
+          "b_ruisseau_orden_promenade": {
+            "name": "La Petite Grenouille en Quatre Vignettes",
+            "question": "Les enfants ont dessiné la vie de la petite grenouille en quatre vignettes, mais elles se sont mélangées. Remets-les dans l'ordre, du début à la fin.",
+            "options": [
+              "Les œufs flottent sur l'eau",
+              "Un têtard à queue apparaît",
+              "Ses pattes poussent et sa queue disparaît",
+              "La grenouille adulte saute hors du ruisseau"
+            ],
+            "hints": [
+              "Tout commence par des œufs.",
+              "La queue disparaît presque à la fin.",
+              "Œufs, têtard, pattes et sans queue, grenouille adulte."
+            ]
+          }
+        }
+      },
+      "en": {
+        "name": "Canéjan-Cestas Forest",
+        "country": "France (Gironde)",
+        "credits": "Story “The Enchanted Walk” based on the real Divercités project “FOR[Ê]VEUR” (2026): tales and sculptures imagined by the children of Canéjan together with a local sculptor and storyteller.",
+        "pois": {
+          "moulin_rouillac": {
+            "name": "Moulin de Rouillac",
+            "description": "Old 19th-century mill."
+          },
+          "ruisseau_moulin": {
+            "name": "Ruisseau du Moulin",
+            "description": "Singing brook covered in moss."
+          },
+          "chene_soupirs": {
+            "name": "Chêne des Soupirs",
+            "description": "Two-hundred-year-old oak."
+          },
+          "pont_sorciere": {
+            "name": "Pont de la Sorcière",
+            "description": "Rustic stone bridge."
+          },
+          "cabane_forestier": {
+            "name": "Cabane du Forestier",
+            "description": "Traditional shelter of the resin tappers."
+          },
+          "belvedere_canejan": {
+            "name": "Belvédère de Canéjan",
+            "description": "Viewpoint over the pine canopy."
+          }
+        },
+        "stories": {
+          "guerra": {
+            "title": "Shadows of War",
+            "summary": "Summer 1944. Occupation patrols watch the roads; the clandestine Maquis network has hidden messages along the Eau Bourde river.",
+            "mission": "Act as a Resistance liaison agent, follow the signs hidden in the trees and decipher the codes to open a safe path to Bordeaux.",
+            "narrator": {
+              "name": "Jean “Le Silence”",
+              "role": "Veteran Resistance liaison agent",
+              "tone": "Cautious, firm, whispered"
+            }
+          },
+          "molino_perdido": {
+            "title": "The Secret of the Lost Mill",
+            "summary": "The year 1878. Maître Pierre devised a hydraulic mechanism to triple the mill's driving force and hid his plans along the river basin.",
+            "mission": "Reconstruct the flow measurements, examine the stonework of the millraces and find the combination of the Rouillac chest.",
+            "narrator": {
+              "name": "Maître Pierre",
+              "role": "Last master miller",
+              "tone": "Proud, methodical, a lover of craftsmanship and gears"
+            }
+          },
+          "hechizo_encantado": {
+            "title": "The Spell of the Enchanted Mill",
+            "summary": "A spell of mist has frozen the brook's melody and the flowers will not wake.",
+            "mission": "Help the dryad Sylvaine connect with the ancient trees, purify the waters and break the curse.",
+            "narrator": {
+              "name": "Sylvaine",
+              "role": "Dryad guardian of the Eau Bourde",
+              "tone": "Ethereal, poetic, speaks in metaphors of water and leaves"
+            }
+          },
+          "promenade_enchantee": {
+            "title": "The Enchanted Walk",
+            "summary": "Children's tales and wooden sculptures imagined by the children of Canéjan together with a local sculptor and storyteller.",
+            "mission": "Follow the pupils' rhyming clues, discover the little animals of the brook and make the forest laugh together as a family.",
+            "narrator": {
+              "name": "Little Oak Sprite",
+              "role": "Chronicler of the school's tales",
+              "tone": "Cheerful, mischievous, rhyming"
+            }
+          }
+        },
+        "riddles": {
+          "r_guerra_moulin_1": {
+            "name": "The Key of the Axle",
+            "question": "Which essential part of the mill did the Resistance use to hide waterproofed messages under the torrent?",
+            "options": [
+              "The water wheel",
+              "The rooftop weather vane",
+              "The flour sack",
+              "The wall clock"
+            ],
+            "answer": "The water wheel",
+            "hints": [
+              "It is in constant contact with the water coming down the channel.",
+              "It turns endlessly when the sluice gates are open.",
+              "It is the great wooden and iron water wheel that drives the mechanism."
+            ]
+          },
+          "r_guerra_moulin_2": {
+            "name": "The Millstone Code",
+            "question": "A coded message reads: “Three sacks of wheat, two turns of the axle, one silence at dawn.” If each sack stands for 10 km and each turn for 5 hours, how many km did the messenger travel before stopping?",
+            "answer": "30",
+            "acceptedAnswers": [
+              "30",
+              "30 km",
+              "30km",
+              "thirty"
+            ],
+            "hints": [
+              "Look only at the sacks of wheat, which mark the distance.",
+              "There are 3 sacks and each is worth 10.",
+              "Multiply 3 by 10: the result is 30."
+            ]
+          },
+          "r_guerra_moulin_3": {
+            "name": "The Rouillac Cipher",
+            "question": "The Maquis password is the word “MILLSTONE” with its last letter (a vowel) replaced by the initial of the network “RESISTANCE”. What is the final key?",
+            "answer": "MILLSTONR",
+            "acceptedAnswers": [
+              "MILLSTONR",
+              "millstonr"
+            ],
+            "hints": [
+              "Take the word MILLSTONE.",
+              "Remove the last letter “E” and add the initial of Resistance (“R”).",
+              "The password is MILLSTONR."
+            ]
+          },
+          "r_guerra_ruisseau_1": {
+            "name": "Wading the Brook",
+            "question": "To cross the brook without leaving visible tracks in the mud, where did the sergeant say to walk?",
+            "options": [
+              "Stepping on the stones of the streambed",
+              "Running along the sandy path",
+              "Jumping in heavy boots"
+            ],
+            "answer": "Stepping on the stones of the streambed",
+            "hints": [
+              "The water wipes away the trail immediately.",
+              "Look for the hard, wet surfaces sticking out of the current.",
+              "You must walk on the stones of the streambed."
+            ]
+          },
+          "r_guerra_ruisseau_2": {
+            "name": "Ford Time",
+            "question": "If the enemy patrol passes every 45 minutes and the last one passed at 14:15, at what exact time (HH:MM) will the next one pass, if there are no delays?",
+            "answer": "15:00",
+            "acceptedAnswers": [
+              "15:00",
+              "15h00",
+              "3:00 pm",
+              "3 pm"
+            ],
+            "hints": [
+              "Add 45 minutes to 14:15.",
+              "15 + 45 minutes makes exactly 60 minutes.",
+              "So the hour on the dot is 15:00."
+            ]
+          },
+          "r_guerra_chene_1": {
+            "name": "The Silent Mailbox",
+            "question": "What characteristic fruit does this centuries-old oak produce, which the liaison agents carried in their pocket as a password?",
+            "options": [
+              "Acorn",
+              "Pine cone",
+              "Chestnut",
+              "Walnut"
+            ],
+            "answer": "Acorn",
+            "hints": [
+              "It is the traditional fruit of oaks.",
+              "It has a small woody cap, like a tiny hat.",
+              "It is the acorn."
+            ]
+          },
+          "r_guerra_chene_2": {
+            "name": "Maquis Orientation",
+            "question": "On which side of the oak trunk does moss usually grow thickest in this hemisphere, showing where north is?",
+            "options": [
+              "North side",
+              "South side",
+              "East side",
+              "Any side equally"
+            ],
+            "answer": "North side",
+            "hints": [
+              "It is the darkest, dampest side, with no direct sun.",
+              "In Europe, it is the north side."
+            ]
+          },
+          "r_guerra_belvedere_1": {
+            "name": "The Horizon Lookout",
+            "question": "From this viewpoint, what white-smoke visual signal did they agree on to confirm the route was clear?",
+            "options": [
+              "Three short columns of smoke",
+              "A red flare",
+              "A yellow flag"
+            ],
+            "answer": "Three short columns of smoke",
+            "hints": [
+              "Discreet columns made with green branches.",
+              "The signal was repeated three times.",
+              "Three short columns of smoke."
+            ]
+          },
+          "r_molino_moulin_1": {
+            "name": "The Stone Wheel",
+            "question": "What is the heavy circular stone that grinds the grain against the fixed stone called?",
+            "answer": "Millstone",
+            "acceptedAnswers": [
+              "Millstone",
+              "the millstone",
+              "mill stone"
+            ],
+            "hints": [
+              "A nine-letter word.",
+              "It turns, driven by the mill's axle.",
+              "It is the “millstone”."
+            ]
+          },
+          "r_molino_moulin_2": {
+            "name": "The Secret Flow",
+            "question": "Maître Pierre noted: “For every cubic metre per second, the wheel turns 12 times per minute.” If the river carries 3 m³/s today, how many revolutions per minute does the wheel turn?",
+            "answer": "36",
+            "acceptedAnswers": [
+              "36",
+              "36 rpm",
+              "36rpm",
+              "thirty-six",
+              "thirty six"
+            ],
+            "hints": [
+              "Multiply the flow in m³/s by the revolutions per unit.",
+              "3 multiplied by 12.",
+              "The result is 36."
+            ]
+          },
+          "r_molino_moulin_3": {
+            "name": "Maître Pierre's Gears",
+            "question": "Maître Pierre left his drawings in a mess. Put the path of the water's force in order, from the moment it enters the millrace until the flour reaches the sack.",
+            "options": [
+              "Water flows down the millrace and passes the sluice gate",
+              "The water pushes the paddles of the water wheel",
+              "The wheel turns the wooden axle",
+              "The oak gears pass the rotation on",
+              "The upper millstone turns on the fixed one",
+              "The flour falls down the chute into the sack"
+            ],
+            "hints": [
+              "Start where the water comes in, not where the flour comes out.",
+              "The force goes from wheel to axle, from axle to gears, and from gears to millstones.",
+              "Order: millrace and sluice, wheel paddles, axle, gears, millstones, sack."
+            ]
+          },
+          "r_molino_ruisseau_1": {
+            "name": "The Diversion Channel",
+            "question": "What is the wooden gate that regulates the flow of water toward the mill called?",
+            "options": [
+              "Sluice gate",
+              "Dry dam",
+              "Storm well"
+            ],
+            "answer": "Sluice gate",
+            "hints": [
+              "It is raised or lowered vertically with a rack or a crank.",
+              "It lets the mill be cut off during floods.",
+              "A sluice gate."
+            ]
+          },
+          "r_molino_chene_1": {
+            "name": "The Wood of the Axle",
+            "question": "Which property of oak made it the favourite tree for making the teeth and gears of the mill?",
+            "options": [
+              "Hardness and resistance to water",
+              "Extreme lightness like cork",
+              "Flexibility to bend into a spiral"
+            ],
+            "answer": "Hardness and resistance to water",
+            "hints": [
+              "Gears must withstand tons of friction.",
+              "It must not rot easily in constant humidity.",
+              "Hardness and resistance to water."
+            ]
+          },
+          "r_molino_belvedere_1": {
+            "name": "The Drop Level",
+            "question": "For a mill to work with force, what must the water have between the start and the end of the millrace?",
+            "options": [
+              "A drop or slope",
+              "Hot thermal water",
+              "White sand"
+            ],
+            "answer": "A drop or slope",
+            "hints": [
+              "Gravity is the source of the water's energy.",
+              "Without height to fall, the water stands still.",
+              "A drop or slope."
+            ]
+          },
+          "r_hechizo_moulin_1": {
+            "name": "The Voice of the Water",
+            "question": "Sylvaine whispers: “I am neither stone nor wind, I move timber without moving an arm and I sing songs without a mouth.” What element am I?",
+            "options": [
+              "The river water",
+              "The sunbeam",
+              "The evening shadow"
+            ],
+            "answer": "The river water",
+            "hints": [
+              "It flows forever toward the ocean.",
+              "It fills the beds of the forest's streams.",
+              "It is the river water."
+            ]
+          },
+          "r_hechizo_ruisseau_1": {
+            "name": "Sylvaine's Tears",
+            "question": "Which tiny ancient flowerless plants cover the stones on the brook's edge like a bright green carpet?",
+            "options": [
+              "Moss and ferns",
+              "Cactus and thorns",
+              "Wild roses"
+            ],
+            "answer": "Moss and ferns",
+            "hints": [
+              "They grow in the damp half-light.",
+              "They feel soft and spongy.",
+              "They are moss and ferns."
+            ]
+          },
+          "r_hechizo_ruisseau_2": {
+            "name": "The Journey of the Drop",
+            "question": "Sylvaine asks you to give the brook its melody back. Put the journey of a drop of water in order, from rain to cloud.",
+            "options": [
+              "The drop falls as rain on the forest",
+              "It seeps through the moss and soil",
+              "It springs up again in the brook",
+              "It runs down the river toward the sea",
+              "The sun evaporates it",
+              "It rises and becomes a cloud"
+            ],
+            "hints": [
+              "The journey starts in the sky and ends in the sky.",
+              "Before running in the brook, the drop has to pass through the ground.",
+              "Order: rain, seeping, brook, river to the sea, evaporation, cloud."
+            ]
+          },
+          "r_hechizo_chene_1": {
+            "name": "The Dryad's Embrace",
+            "question": "How many human lifetimes do legends say a healthy, thousand-year-old oak can live in this forest?",
+            "options": [
+              "More than 10 lifetimes (800-1000 years)",
+              "Barely 1 lifetime (30 years)",
+              "Only 5 years"
+            ],
+            "answer": "More than 10 lifetimes (800-1000 years)",
+            "hints": [
+              "An oak takes centuries to grow, mature and decline.",
+              "It is one of the longest-lived trees in Europe.",
+              "More than 10 lifetimes (800-1000 years)."
+            ]
+          },
+          "r_hechizo_pont_1": {
+            "name": "The Bridge of Mists",
+            "question": "To cross the bridge without alerting the spirits of the mist, what plant offering does the legend demand you throw into the water?",
+            "options": [
+              "A dry oak leaf",
+              "A gold coin",
+              "A piece of bread"
+            ],
+            "answer": "A dry oak leaf",
+            "hints": [
+              "It is a natural element of the forest floor.",
+              "It comes from the sacred tree of the grove.",
+              "A dry oak leaf."
+            ]
+          },
+          "r_hechizo_belvedere_1": {
+            "name": "The Awakening of the Forest",
+            "question": "Reaching the top of the viewpoint, Sylvaine asks you to say the word that unites all living beings of the forest: “H _ _ _ _ N Y”. What word is it?",
+            "answer": "HARMONY",
+            "acceptedAnswers": [
+              "HARMONY",
+              "harmony"
+            ],
+            "hints": [
+              "It means agreement, balance and beauty as a whole.",
+              "It starts with HAR and ends with NY.",
+              "The word is HARMONY."
+            ]
+          },
+          "r_promenade_ruisseau_1": {
+            "name": "The Tadpole's Rhyme",
+            "question": "Children's tale: “I have a tail but I'm not a fish, when I grow up I'll hop without stopping.” Who am I?",
+            "options": [
+              "A tadpole or little frog",
+              "A speedy dragonfly",
+              "A water snail"
+            ],
+            "answer": "A tadpole or little frog",
+            "hints": [
+              "It lives in the calm pools of the brook.",
+              "It will lose its little tail and grow four legs to croak.",
+              "A tadpole or little frog."
+            ]
+          },
+          "r_promenade_chene_1": {
+            "name": "The Sprite's Hat",
+            "question": "The children imagined that fallen acorns were little sprite hats. If you count the sprites in a nest and see 4 hats and 3 twigs, how many sprites are wearing a hat?",
+            "answer": "4",
+            "acceptedAnswers": [
+              "4",
+              "four",
+              "4 sprites"
+            ],
+            "hints": [
+              "Each sprite wearing a hat uses one acorn cap.",
+              "There were 4 hats in total.",
+              "The answer is 4."
+            ]
+          },
+          "r_promenade_pont_1": {
+            "name": "The Magic Sculpture",
+            "question": "In the Divercités “FOR[Ê]VEUR” project, the sculptor carved wooden figures to accompany the tales. What noble material are these works made of?",
+            "options": [
+              "Wood salvaged from the forest itself",
+              "Recycled coloured plastic",
+              "Polished stainless steel"
+            ],
+            "answer": "Wood salvaged from the forest itself",
+            "hints": [
+              "It respects living nature without felling healthy trees.",
+              "It is a warm material that ages under moss.",
+              "Wood salvaged from the forest itself."
+            ]
+          },
+          "r_promenade_moulin_1": {
+            "name": "The Sprite Miller's Cake",
+            "question": "To end the class tale, the little sprite bakes a cake with freshly ground flour. Which ingredient from the forest gives it its sweet touch?",
+            "options": [
+              "Honey from forest bees",
+              "Hot pepper",
+              "Sea salt"
+            ],
+            "answer": "Honey from forest bees",
+            "hints": [
+              "Hard-working insects make it while visiting wild flowers.",
+              "It is golden and very sweet.",
+              "Honey from forest bees."
+            ]
+          },
+          "b_chene_foto": {
+            "name": "The Oak's Treasure",
+            "question": "Look on the ground for an oak leaf or an acorn cap and photograph it. Leave it where it is: in the forest, we don't pick anything up."
+          },
+          "b_ruisseau_escucha": {
+            "name": "The Brook's Concert",
+            "question": "Stay still for 30 seconds with your phone lowered and tick every sound you hear.",
+            "options": [
+              "Running water",
+              "Birds",
+              "Wind in the trees",
+              "Insects",
+              "Creaking branches",
+              "Distant voices or engines"
+            ]
+          },
+          "b_ruisseau_orden_promenade": {
+            "name": "The Little Frog in Four Panels",
+            "question": "The children drew the little frog's life in four panels, but they got mixed up. Put them in order, from start to finish.",
+            "options": [
+              "Eggs float on the water",
+              "A tadpole with a tail hatches",
+              "Legs grow and the tail disappears",
+              "The adult frog hops out of the brook"
+            ],
+            "hints": [
+              "Everything starts with eggs.",
+              "The tail disappears almost at the end.",
+              "Eggs, tadpole, legs and no tail, adult frog."
+            ]
+          }
+        }
+      }
+    },
+    "pinar-tres-caminos": {
+      "defaultLanguage": "es",
+      "en": {
+        "name": "The Pine Grove of the Three Paths (Home Forest)",
+        "country": "Spain — PLACEHOLDER, replace with the real location",
+        "pois": {
+          "fuente_piedra": {
+            "name": "The Stone Fountain",
+            "description": "Limestone spring and drinking trough."
+          },
+          "arbol_vigia": {
+            "name": "The Great Lookout Tree",
+            "description": "Centuries-old tree with exposed roots."
+          },
+          "cruce_vientos": {
+            "name": "Crossroads of the Four Winds",
+            "description": "Stone marker where the cattle tracks meet."
+          },
+          "mirador_puestas_sol": {
+            "name": "Sunset Viewpoint",
+            "description": "Natural balcony over the rocky hillside."
+          }
+        },
+        "stories": {
+          "leyenda_guardabosques": {
+            "title": "The Legend of the Forgotten Forest Ranger",
+            "summary": "For forty years, Anselmo patrolled these paths protecting deer and springs. Before retiring, he buried a field notebook with botanical notes and riddles.",
+            "mission": "Complete the four landmarks, solve the botany and orientation challenges and earn the title of Honorary Forest Guardian.",
+            "narrator": {
+              "name": "Ranger Anselmo",
+              "role": "Guardian spirit of the mountain",
+              "tone": "Warm, wise, a lover of birds and plants"
+            }
+          }
+        },
+        "riddles": {
+          "r_guardabosques_fuente_1": {
+            "name": "The Crystal Spout",
+            "question": "Which aromatic plant with purple or bluish flowers often grows wild among the dry rocks near the spring?",
+            "options": [
+              "Rosemary or thyme",
+              "Iceberg lettuce",
+              "Tropical banana plant"
+            ],
+            "answer": "Rosemary or thyme",
+            "hints": [
+              "If you rub its leaves between your fingers they give off the typical scent of the hills.",
+              "It is a typical plant of the Mediterranean forest, resistant to drought.",
+              "Rosemary or thyme."
+            ]
+          },
+          "r_guardabosques_fuente_2": {
+            "name": "The Spring's Hourglass",
+            "question": "Anselmo wrote in his notebook: “The spring fills the trough in 4 turns of the sand, and each turn lasts 15 minutes.” How many minutes does it take to fill the whole trough?",
+            "answer": "60",
+            "acceptedAnswers": [
+              "60",
+              "60 minutes",
+              "sixty",
+              "1 hour",
+              "one hour",
+              "an hour"
+            ],
+            "hints": [
+              "Multiply the number of turns by the length of each one.",
+              "There are 4 turns of 15 minutes each.",
+              "4 times 15 is 60 minutes."
+            ]
+          },
+          "r_guardabosques_fuente_3": {
+            "name": "The Coded Stone",
+            "question": "In his notebook, Anselmo scrambled the name of the material this fountain is made of by rearranging its letters: “NOTES”. What word does it hide?",
+            "answer": "STONE",
+            "acceptedAnswers": [
+              "STONE",
+              "stone",
+              "the stone"
+            ],
+            "hints": [
+              "It is what the fountain, the trough and the boundary marker are made of.",
+              "It has the same five letters as NOTES, just rearranged.",
+              "The word is STONE."
+            ]
+          },
+          "r_guardabosques_arbol_1": {
+            "name": "The Rings of Time",
+            "question": "How can we know the exact age of a felled tree without modern machines?",
+            "options": [
+              "By counting the growth rings of the trunk",
+              "By weighing the fallen leaves",
+              "By measuring the bark thickness in winter"
+            ],
+            "answer": "By counting the growth rings of the trunk",
+            "hints": [
+              "Every year the tree adds a circular layer to its wood.",
+              "They show up in the cross-section as concentric circles.",
+              "By counting the growth rings of the trunk."
+            ]
+          },
+          "r_guardabosques_arbol_2": {
+            "name": "The Lookout's Age",
+            "question": "Anselmo measured the trunk: 120 cm in diameter. If the tree adds on average 0.6 cm of radius each year, roughly how many years old is the Great Lookout Tree?",
+            "answer": "100",
+            "acceptedAnswers": [
+              "100",
+              "100 years",
+              "one hundred",
+              "a hundred"
+            ],
+            "hints": [
+              "The radius is half the diameter: start there.",
+              "120 cm of diameter is 60 cm of radius.",
+              "60 divided by 0.6 is 100 years."
+            ]
+          },
+          "r_guardabosques_arbol_3": {
+            "name": "The Oak's Thirsty Cousin",
+            "question": "In his notebook, Anselmo drew a root and wrote: “I seek deep water beneath the limestone; I am a cousin of the oak but I withstand drought better.” Which Mediterranean tree am I?",
+            "answer": "Holm oak",
+            "acceptedAnswers": [
+              "Holm oak",
+              "holm oak",
+              "the holm oak",
+              "evergreen oak",
+              "holly oak"
+            ],
+            "hints": [
+              "It belongs to the same family as the oaks, the Quercus.",
+              "Its fruit is also the acorn, but its leaf is small and evergreen, almost spiny.",
+              "It is the holm oak (or evergreen oak)."
+            ]
+          },
+          "r_guardabosques_cruce_1": {
+            "name": "The Wind Rose",
+            "question": "If you stand at sunrise facing the direction where the Sun rises (East), which hand will North be on?",
+            "options": [
+              "Your left hand",
+              "Your right hand",
+              "Behind you"
+            ],
+            "answer": "Your left hand",
+            "hints": [
+              "Stretch both arms out to the sides, facing the sunrise.",
+              "Your right arm will point South and your back will face West.",
+              "Your left hand."
+            ]
+          },
+          "r_guardabosques_cruce_2": {
+            "name": "The Midday Shadow",
+            "question": "At solar noon in the northern hemisphere, which cardinal point does the shadow of a pole stuck in the ground always point to?",
+            "options": [
+              "Toward the North",
+              "Toward the South",
+              "Toward the East",
+              "Toward the West"
+            ],
+            "answer": "Toward the North",
+            "hints": [
+              "At noon the sun is at its highest, in the south, in our hemisphere.",
+              "The shadow always falls on the side opposite the sun.",
+              "It points North."
+            ]
+          },
+          "r_guardabosques_cruce_3": {
+            "name": "The Way Back",
+            "question": "You leave the crossroads walking on a bearing of 90° (East) for 10 minutes, then turn exactly 180°. On what bearing do you return to the crossroads?",
+            "answer": "270",
+            "acceptedAnswers": [
+              "270",
+              "270°",
+              "270 degrees",
+              "west"
+            ],
+            "hints": [
+              "Turning 180° means a complete about-turn.",
+              "Add 180 to the outbound bearing: 90 + 180.",
+              "The return bearing is 270° (West)."
+            ]
+          },
+          "r_guardabosques_mirador_1": {
+            "name": "The Eagle's Flight",
+            "question": "Which bird of prey, with a wedge-shaped tail and broad wings, often glides in circles on thermal currents above the viewpoint?",
+            "options": [
+              "Eagle or buzzard",
+              "Emperor penguin",
+              "Hummingbird"
+            ],
+            "answer": "Eagle or buzzard",
+            "hints": [
+              "It has sharp talons and prodigious eyesight.",
+              "It flies with hardly a flap on sunny days.",
+              "Eagle or buzzard."
+            ]
+          },
+          "r_guardabosques_mirador_2": {
+            "name": "The Summer Sun",
+            "question": "In the northern hemisphere, at the summer solstice, where does the sun set relative to due West?",
+            "options": [
+              "Further toward the Northwest",
+              "Further toward the Southwest",
+              "Exactly due West"
+            ],
+            "answer": "Further toward the Northwest",
+            "hints": [
+              "In summer the days are longer and the sun travels a wider arc.",
+              "It sets shifted toward the same side where it rises earliest in the morning.",
+              "It sets further toward the Northwest."
+            ]
+          },
+          "r_guardabosques_mirador_3": {
+            "name": "The Last Glimmer",
+            "question": "The solar disc takes about 2 minutes to disappear completely below the horizon once it touches it. If it started to disappear at 21:07 today, at what exact time does it vanish completely?",
+            "answer": "21:09",
+            "acceptedAnswers": [
+              "21:09",
+              "21h09",
+              "9:09 pm",
+              "9:09pm"
+            ],
+            "hints": [
+              "Add the 2 minutes it takes to disappear.",
+              "21:07 plus 2 minutes.",
+              "It disappears at 21:09."
+            ]
+          },
+          "b_fuente_foto": {
+            "name": "The Mountain Pharmacy",
+            "question": "Find an aromatic plant (rosemary, thyme or similar) and photograph it without pulling it up. Lean in to smell its aroma."
+          },
+          "b_cruce_brujula": {
+            "name": "Point North",
+            "question": "Hold your phone flat and turn around until the arrow points North. Hold it there for 3 seconds."
+          },
+          "b_arbol_orden": {
+            "name": "The Pine's Life Cycle",
+            "question": "Anselmo drew the life of a pine in his notebook, but the pages got mixed up. Put the stages in order, from seed to adult tree.",
+            "options": [
+              "The pine nut falls to the ground",
+              "The pine nut germinates",
+              "A seedling sprouts",
+              "A young pine grows",
+              "The adult pine bears cones"
+            ],
+            "hints": [
+              "Every tree starts as a seed.",
+              "First it sprouts, then it grows.",
+              "Pine nut, germination, seedling, young pine, adult pine."
+            ]
+          }
+        }
+      }
+    }
+  }
+}

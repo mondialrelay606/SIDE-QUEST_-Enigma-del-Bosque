@@ -10,6 +10,7 @@ export type RiddleType =
   | 'count'
   | 'compass'
   | 'audio'
+  | 'listen'
   | 'cipher'
   | 'order'
   | 'physical_clue';
@@ -19,11 +20,11 @@ export interface Riddle {
   poiId: string;
   storyId: string;
   name: string;
-  difficulty: DifficultyType;
+  difficulty: DifficultyType | '*';
   question: string;
   type?: RiddleType;
-  options?: string[]; // If present, rendered as multiple choice buttons
-  answer: string;    // Main answer or correct option text
+  options?: string[]; // If present, rendered as multiple choice buttons or ordered items
+  answer?: string;    // Main answer or correct option text (optional in 'order')
   acceptedAnswers?: string[]; // Alternative spellings/synonyms
   points: number;
   imageUrl?: string;
@@ -32,8 +33,10 @@ export interface Riddle {
   _fix?: string;
 
   // 6ter additions
+  optional?: boolean;       // Prueba extra opcional
   isBonus?: boolean;        // Prueba extra opcional con puntos de bonus
   bonusPoints?: number;
+  config?: Record<string, any>; // Configuración extra (ej. holdSeconds, targetBearing, etc.)
   metaRune?: string;        // Letra o glifo para el meta-enigma final (ej. 'R', 'O', 'B', 'L', 'E')
   metaRuneClue?: string;    // Descripción de la letra (ej. "Primera letra del pacto antiguo")
   
@@ -118,6 +121,8 @@ export interface ForestPack {
   coverImageUrl?: string;
   attribution?: string;        // créditos como Divercités «FOR[Ê]VEUR», 2026
   credits?: string;
+  defaultLanguage?: 'fr' | 'es' | 'en' | string;
+  languages?: string[];
   isPublished: boolean;
   pois: WindmillPOI[];
   routePresets: {
@@ -179,6 +184,7 @@ export interface PlayerSession {
   hintHistory: HintHistoryItem[];
   rating?: number;
   feedback?: string;
+  language?: string;
 
   // 6bis & 6ter state
   phase?: SessionPhase;           // 'in_transit' (desplazamiento) | 'at_poi' (enigma) | 'reward' (recompensa)

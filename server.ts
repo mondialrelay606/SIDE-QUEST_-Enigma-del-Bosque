@@ -8,6 +8,7 @@ import { WebSocketServer, WebSocket } from 'ws';
 import { GoogleGenAI, LiveServerMessage, Modality } from '@google/genai';
 import { ForestPack, PlayerSession, Riddle, PlayerFeedback } from './src/types';
 import { SEED_FOREST_PACKS } from './src/data/seedPacks';
+import { findBestRiddle } from './src/utils/difficultyFallback';
 
 dotenv.config();
 
@@ -377,18 +378,10 @@ app.post('/api/sessions/:code/answer', (req: Request, res: Response) => {
     return res.status(400).json({ error: 'Respuesta vacía' });
   }
 
-  // Find riddle (by riddleId if provided for bonus, or matching current POI)
+  // Find riddle (by riddleId if provided for bonus, or with difficulty fallback rule)
   let riddle = riddleId ? pack.riddles.find(r => r.id === riddleId) : null;
   if (!riddle) {
-    riddle = pack.riddles.find(
-      r => r.poiId === currentPoiId && r.storyId === session.storyId && r.difficulty === session.difficulty
-    );
-  }
-  if (!riddle) {
-    riddle = pack.riddles.find(r => r.poiId === currentPoiId && r.storyId === session.storyId);
-  }
-  if (!riddle) {
-    riddle = pack.riddles.find(r => r.poiId === currentPoiId);
+    riddle = findBestRiddle(pack.riddles, currentPoiId, session.storyId, session.difficulty);
   }
 
   if (!riddle) {
@@ -410,7 +403,7 @@ app.post('/api/sessions/:code/answer', (req: Request, res: Response) => {
   // Comprobar respuesta según tipo de enigma
   let isCorrect = false;
   const normUser = normalizeAnswer(userAnswer);
-  const normExpected = normalizeAnswer(riddle.answer);
+  const normExpected = normalizeAnswer(riddle.answer || '');
   const acceptedNorm = (riddle.acceptedAnswers || []).map(normalizeAnswer);
 
   if (riddle.type === 'photo') {
@@ -421,11 +414,18 @@ app.post('/api/sessions/:code/answer', (req: Request, res: Response) => {
     isCorrect = normUser.includes('alinead') || normUser === '0' || normUser === 'norte' || normUser === normExpected;
   } else if (riddle.type === 'count') {
     const numUser = parseInt(userAnswer, 10);
-    const target = riddle.targetCount || parseInt(riddle.answer, 10) || 0;
+    const target = riddle.targetCount || parseInt(riddle.answer || '0', 10) || 0;
     const tolerance = riddle.countTolerance ?? 1;
     isCorrect = !isNaN(numUser) && Math.abs(numUser - target) <= tolerance;
   } else if (riddle.type === 'order') {
-    isCorrect = normUser === normExpected || acceptedNorm.includes(normUser);
+    const correctItems = riddle.options || riddle.orderItems || [];
+    const expectedStr = correctItems.map(normalizeAnswer).join(', ');
+    const expectedArrowStr = correctItems.map(normalizeAnswer).join(' -> ');
+    isCorrect =
+      normUser === expectedStr ||
+      normUser === expectedArrowStr ||
+      normUser === normExpected ||
+      acceptedNorm.includes(normUser);
   } else {
     isCorrect = normUser === normExpected || acceptedNorm.includes(normUser);
   }

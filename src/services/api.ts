@@ -1,5 +1,6 @@
 import { ForestPack, PlayerSession, PlayerFeedback } from '../types';
 import { SEED_FOREST_PACKS } from '../data/seedPacks';
+import { findBestRiddle } from '../utils/difficultyFallback';
 
 function normalizeAnswer(text: string): string {
   return text
@@ -404,12 +405,8 @@ export const api = {
 
     let riddle = riddleId ? pack.riddles.find(r => r.id === riddleId) : null;
     if (!riddle) {
-      riddle = pack.riddles.find(
-        r => r.poiId === currentPoiId && r.storyId === session.storyId && r.difficulty === session.difficulty
-      );
+      riddle = findBestRiddle(pack.riddles, currentPoiId, session.storyId, session.difficulty);
     }
-    if (!riddle) riddle = pack.riddles.find(r => r.poiId === currentPoiId && r.storyId === session.storyId);
-    if (!riddle) riddle = pack.riddles.find(r => r.poiId === currentPoiId);
 
     if (!riddle) {
       if (!session.completedPois.includes(currentPoiId)) {
@@ -427,7 +424,7 @@ export const api = {
     }
 
     const normUser = normalizeAnswer(userAnswer);
-    const normExpected = normalizeAnswer(riddle.answer);
+    const normExpected = normalizeAnswer(riddle.answer || '');
     const acceptedNorm = (riddle.acceptedAnswers || []).map(normalizeAnswer);
 
     let isCorrect = false;
@@ -437,11 +434,18 @@ export const api = {
       isCorrect = normUser.includes('alinead') || normUser === '0' || normUser === 'norte' || normUser === normExpected;
     } else if (riddle.type === 'count') {
       const numUser = parseInt(userAnswer, 10);
-      const target = riddle.targetCount || parseInt(riddle.answer, 10) || 0;
+      const target = riddle.targetCount || parseInt(riddle.answer || '0', 10) || 0;
       const tolerance = riddle.countTolerance ?? 1;
       isCorrect = !isNaN(numUser) && Math.abs(numUser - target) <= tolerance;
     } else if (riddle.type === 'order') {
-      isCorrect = normUser === normExpected || acceptedNorm.includes(normUser);
+      const correctItems = riddle.options || riddle.orderItems || [];
+      const expectedStr = correctItems.map(normalizeAnswer).join(', ');
+      const expectedArrowStr = correctItems.map(normalizeAnswer).join(' -> ');
+      isCorrect =
+        normUser === expectedStr ||
+        normUser === expectedArrowStr ||
+        normUser === normExpected ||
+        acceptedNorm.includes(normUser);
     } else {
       isCorrect = normUser === normExpected || acceptedNorm.includes(normUser);
     }
