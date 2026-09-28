@@ -244,13 +244,13 @@ export const ForestSelector: React.FC<ForestSelectorProps> = ({
       </div>
 
       {/* Featured Characters Section */}
-      {forests.length > 0 && onInteractWithCharacter && (
+      {displayForests.length > 0 && onInteractWithCharacter && (
         <div className="pt-4 border-t border-emerald-900/60">
           <CharactersGallery
-            forest={forests[0]}
-            onInteractWithCharacter={(story) => onInteractWithCharacter(story, forests[0])}
+            forest={displayForests[0]}
+            onInteractWithCharacter={(story) => onInteractWithCharacter(story, displayForests[0])}
             onStartRouteWithStory={(storyId) => {
-              const target = forests.find((f) => f.stories.some((s) => s.id === storyId)) || forests[0];
+              const target = displayForests.find((f) => f.stories.some((s) => s.id === storyId)) || displayForests[0];
               onSelectForest(target);
             }}
           />
