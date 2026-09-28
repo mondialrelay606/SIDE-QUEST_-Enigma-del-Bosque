@@ -705,6 +705,171 @@ export const SEED_FOREST_PACKS: ForestPack[] = [
           "Es dorada y muy dulce.",
           "Miel de abejas del bosque."
         ]
+      },
+
+      // --- PRUEBAS EXTRA SECCIÓN 6ter ---
+      // 1. Foto 1: Engranajes del Molino
+      {
+        id: "r_extra_foto_rueda",
+        poiId: "moulin_rouillac",
+        storyId: "guerra",
+        name: "Reto Extra Fotográfico: Rueda y Engranajes",
+        difficulty: "novato",
+        points: 50,
+        isBonus: true,
+        bonusPoints: 50,
+        type: "photo",
+        question: "Captura con tu cámara una fotografía del mecanismo, rueda o compuerta del molino sin entrar en el agua ni cruzar vallas.",
+        answer: "foto_confirmada",
+        hints: [
+          "Apunta a las piezas de madera o hierro junto al canal.",
+          "Cualquier encuadre del molino es válido para el cuaderno de campo.",
+          "Pulsa confirmar captura fotográfica."
+        ],
+        staticHints: [
+          "Apunta a las piezas de madera o hierro junto al canal.",
+          "Cualquier encuadre del molino es válido para el cuaderno de campo.",
+          "Pulsa confirmar captura fotográfica."
+        ]
+      },
+      // 2. Foto 2: Corteza del Roble Centenario
+      {
+        id: "r_extra_foto_corteza",
+        poiId: "chene_soupirs",
+        storyId: "hechizo_encantado",
+        name: "Reto Extra Fotográfico: Corteza Milenaria",
+        difficulty: "novato",
+        points: 50,
+        isBonus: true,
+        bonusPoints: 50,
+        type: "photo",
+        question: "Toma una fotografía de los surcos rugosos y el musgo que viste el tronco del gran roble para documentar su porte.",
+        answer: "foto_confirmada",
+        hints: [
+          "Acércate con respeto a la base del tronco sin arrancar nada.",
+          "Enfoca la corteza a la luz del claro.",
+          "Pulsa confirmar fotografía."
+        ],
+        staticHints: [
+          "Acércate con respeto a la base del tronco sin arrancar nada.",
+          "Enfoca la corteza a la luz del claro.",
+          "Pulsa confirmar fotografía."
+        ]
+      },
+      // 3. Escucha en el arroyo: Identificar el sonido del agua y la fauna
+      {
+        id: "r_extra_escucha_arroyo",
+        poiId: "ruisseau_moulin",
+        storyId: "hechizo_encantado",
+        name: "Reto de Escucha Atenta: El Murmullo del Arroyo",
+        difficulty: "novato",
+        points: 50,
+        isBonus: true,
+        bonusPoints: 50,
+        type: "audio",
+        audioDescription: "Grabación ambiental del curso de agua dulce y el trino de un mirlo común ribereño.",
+        question: "Detén la marcha, pulsa escuchar y presta atención al sonido de las aguas. ¿Qué pequeña ave riparia canta entre los juncos?",
+        options: ["Mirlo de agua o común", "Gaviota marina", "Pavo real"],
+        answer: "Mirlo de agua o común",
+        hints: [
+          "Es un ave paseriforme de plumaje oscuro y canto dulce y aflautado.",
+          "Frecuenta las orillas rocosas de los arroyos limpios.",
+          "Es el mirlo de agua o común."
+        ],
+        staticHints: [
+          "Es un ave paseriforme de plumaje oscuro y canto dulce y aflautado.",
+          "Frecuenta las orillas rocosas de los arroyos limpios.",
+          "Es el mirlo de agua o común."
+        ]
+      },
+      // 4. Contar en el sitio: Tablas / travesaños
+      {
+        id: "r_extra_contar_puente",
+        poiId: "pont_sorciere",
+        storyId: "promenade_enchantee",
+        name: "Reto en el Sitio: Cuenta los Travesaños",
+        difficulty: "novato",
+        points: 50,
+        isBonus: true,
+        bonusPoints: 50,
+        type: "count",
+        targetCount: 8,
+        countTolerance: 1,
+        question: "Observa los travesaños o apoyos de madera que refuerzan la barandilla del puente. ¿Cuántos apoyos principales sostienen el pasamanos?",
+        answer: "8",
+        acceptedAnswers: ["8", "ocho", "7", "9"],
+        hints: [
+          "Cuéntalos de un extremo al otro del puente.",
+          "Hay entre 7 y 9 apoyos verticales.",
+          "El número clave es 8."
+        ],
+        staticHints: [
+          "Cuéntalos de un extremo al otro del puente.",
+          "Hay entre 7 y 9 apoyos verticales.",
+          "El número clave es 8."
+        ]
+      },
+      // 5. Ordenar: Ciclo de vida del Roble
+      {
+        id: "r_extra_ordenar_roble",
+        poiId: "chene_soupirs",
+        storyId: "promenade_enchantee",
+        name: "Reto Botánico: El Ciclo de Vida del Roble",
+        difficulty: "explorador",
+        points: 75,
+        isBonus: true,
+        bonusPoints: 75,
+        type: "order",
+        question: "Ordena de menor a mayor las fases de crecimiento del señor de los bosques:",
+        orderItems: [
+          "Arbusto joven flexible",
+          "Bellota caída en el mantillo",
+          "Roble centenario de copa frondosa",
+          "Brote verde con dos primeras hojas"
+        ],
+        correctOrder: [
+          "Bellota caída en el mantillo",
+          "Brote verde con dos primeras hojas",
+          "Arbusto joven flexible",
+          "Roble centenario de copa frondosa"
+        ],
+        answer: "Bellota caída en el mantillo, Brote verde con dos primeras hojas, Arbusto joven flexible, Roble centenario de copa frondosa",
+        hints: [
+          "Todo comienza con la semilla (bellota).",
+          "Luego germina el brote, crece como arbusto y culmina en árbol centenario.",
+          "Orden: Bellota -> Brote -> Arbusto -> Roble centenario."
+        ],
+        staticHints: [
+          "Todo comienza con la semilla (bellota).",
+          "Luego germina el brote, crece como arbusto y culmina en árbol centenario.",
+          "Orden: Bellota -> Brote -> Arbusto -> Roble centenario."
+        ]
+      },
+      // 6. Descifrar: Código rúnico de la Resistencia
+      {
+        id: "r_extra_descifrar_maquis",
+        poiId: "cabane_forestier",
+        storyId: "guerra",
+        name: "Descifrado: El Mensaje del Cilindro",
+        difficulty: "explorador",
+        points: 75,
+        isBonus: true,
+        bonusPoints: 75,
+        type: "cipher",
+        cipherHint: "Clave vegetal: 🌲=R, 💧=O, 🍃=B, 🍄=L, ⭐=E",
+        question: "Descifra la palabra en clave interceptada en el cilindro: [ 🌲 💧 🍃 🍄 ⭐ ]",
+        answer: "ROBLE",
+        acceptedAnswers: ["ROBLE", "roble"],
+        hints: [
+          "Sustituye cada símbolo según la clave vegetal proporcionada.",
+          "🌲=R, 💧=O, 🍃=B, 🍄=L, ⭐=E.",
+          "La palabra es ROBLE."
+        ],
+        staticHints: [
+          "Sustituye cada símbolo según la clave vegetal proporcionada.",
+          "🌲=R, 💧=O, 🍃=B, 🍄=L, ⭐=E.",
+          "La palabra es ROBLE."
+        ]
       }
     ],
     routePresets: {
@@ -765,6 +930,21 @@ export const SEED_FOREST_PACKS: ForestPack[] = [
       "promenade_enchantee_pont_sorciere": "Las esculturas de madera de Divercités cobran vida cuando los niños las miran con ojos de explorador curioso.",
       "promenade_enchantee_cabane_forestier": "Una cabaña hecha para soñar despierto: aquí guardaban los lápices de colores y las historias que no cabían en los cuadernos.",
       "promenade_enchantee_belvedere_canejan": "¡La meta de la Promenade! El horizonte se llena de aplausos invisibles y una brisa juguetona que despeina a los exploradores."
+    },
+    bridgePhrases: {
+      "moulin_rouillac_to_ruisseau_moulin": "¡Excelente deducción! El sonido de las muelas da paso al rumor cristalino del agua. Sigue la senda que bordea el río hacia el arroyo cubierto de musgo.",
+      "ruisseau_moulin_to_chene_soupirs": "¡Bien resuelto! Deja atrás las piedras cantarinas y adéntrate en la arboleda sombría hasta el gran Roble de los Suspiros.",
+      "chene_soupirs_to_pont_sorciere": "¡El espíritu del roble bendice tu avance! Cruza el claro y sigue las raíces retorcidas hacia el viejo puente de piedra.",
+      "chene_soupirs_to_belvedere_canejan": "¡Rumbo a las alturas! Deja las ramas centenarias del roble y toma la senda ascendente entre helechos hacia el mirador panorámico.",
+      "pont_sorciere_to_belvedere_canejan": "¡Has sorteado el paso de las aguas! Asciende por la ladera rocosa entre pinos y brezos hasta alcanzar el mirador despejado.",
+      "pont_sorciere_to_moulin_rouillac": "¡El círculo se cierra! Regresa bordeando el cauce principal hacia el gran molino centenario."
+    },
+    metaEnigma: {
+      keyword: "ROBLE",
+      title: "El Códice del Bosque Sagrado",
+      description: "Has completado todos los hitos y reunido las 5 runas sagradas ocultas a lo largo de la ribera del Eau Bourde. Ahora debes ordenarlas para revelar el nombre del guardián eterno de estas tierras.",
+      hint: "El señor indiscutible de estos montes, de madera noble y hojas lobuladas (5 letras).",
+      successNarrative: "¡Pronuncias «ROBLE» y el bosque responde con un murmullo de hojas doradas! El pacto entre los caminantes y la naturaleza queda sellado. Has alcanzado el rango de Maestro Explorador Forestal."
     }
   },
 
@@ -1147,6 +1327,33 @@ export const SEED_FOREST_PACKS: ForestPack[] = [
           "21:07 más 2 minutos.",
           "Desaparece a las 21:09."
         ]
+      },
+
+      // --- PRUEBA EXTRA SECCIÓN 6ter: Brújula al Norte en el Pinar ---
+      {
+        id: "r_extra_brujula_norte",
+        poiId: "cruce_vientos",
+        storyId: "leyenda_guardabosques",
+        name: "Reto Extra de Orientación: Brújula al Norte",
+        difficulty: "novato",
+        points: 50,
+        isBonus: true,
+        bonusPoints: 50,
+        type: "compass",
+        targetBearing: 0,
+        compassTolerance: 25,
+        question: "Sitúate en el centro del Cruce de los Vientos. Sostén tu móvil en horizontal y gira sobre tus pies hasta alinear la flecha brújula con el Norte exacto (0°).",
+        answer: "norte_alineado",
+        hints: [
+          "Mantén el teléfono plano para calibrar los sensores magnéticos.",
+          "Gira lentamente hasta que el indicador marque 0° (o 360°).",
+          "Alcanza el rumbo Norte para validar el reto."
+        ],
+        staticHints: [
+          "Mantén el teléfono plano para calibrar los sensores magnéticos.",
+          "Gira lentamente hasta que el indicador marque 0° (o 360°).",
+          "Alcanza el rumbo Norte para validar el reto."
+        ]
       }
     ],
     routePresets: {
@@ -1166,6 +1373,18 @@ export const SEED_FOREST_PACKS: ForestPack[] = [
       "leyenda_guardabosques_arbol_vigia": "El gran árbol extiende su manto protector. Anselmo solía sentarse en su raíz más gruesa para anotar el nacimiento de los primeros corzos.",
       "leyenda_guardabosques_cruce_vientos": "Cuatro sendas se abren ante ti. El hito de piedra desgastado por la intemperie indica el camino que tomaban los antiguos leñadores.",
       "leyenda_guardabosques_mirador_puestas_sol": "El aire aquí arriba es puro y huele a jara y pino quemado por el sol. El horizonte te regala una vista inabarcable de todo el valle."
+    },
+    bridgePhrases: {
+      "fuente_piedra_to_arbol_vigia": "¡Agua fresca para la marcha! Sigue la senda de pinos que asciende suavemente entre jaras hacia el Gran Árbol Vigía.",
+      "arbol_vigia_to_cruce_vientos": "¡El viejo vigía bendice tu camino! Toma la vereda pedregosa hacia el Cruce de los Cuatro Vientos.",
+      "cruce_vientos_to_mirador_puestas_sol": "¡Has escogido el rumbo certero! Avanza hacia la cornisa rocosa donde el sol poniente baña las copas de oro."
+    },
+    metaEnigma: {
+      keyword: "PINAR",
+      title: "El Códice del Guardabosques",
+      description: "Has culminado todos los hitos y descifrado las runas grabadas por el viejo Anselmo. Combina las letras obtenidas para desvelar la palabra que protege el monte.",
+      hint: "El bosque mediterráneo de agujas aromáticas y piñas doradas (5 letras).",
+      successNarrative: "¡Pronuncias «PINAR» y el viento susurra entre las acículas! Anselmo sonríe desde la espesura. Has superado la expedición con honor."
     }
   }
 ];

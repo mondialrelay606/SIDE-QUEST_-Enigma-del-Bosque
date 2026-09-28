@@ -1,6 +1,18 @@
 export type DifficultyType = 'novato' | 'explorador' | 'maestro';
 export type DurationType = '30min' | '1h' | '1.5h' | '2h';
 export type SessionStatus = 'active' | 'completed' | 'abandoned';
+export type SessionPhase = 'in_transit' | 'at_poi' | 'reward';
+
+export type RiddleType =
+  | 'multiple_choice'
+  | 'open_text'
+  | 'photo'
+  | 'count'
+  | 'compass'
+  | 'audio'
+  | 'cipher'
+  | 'order'
+  | 'physical_clue';
 
 export interface Riddle {
   id: string;
@@ -9,7 +21,7 @@ export interface Riddle {
   name: string;
   difficulty: DifficultyType;
   question: string;
-  type?: 'multiple_choice' | 'open_text';
+  type?: RiddleType;
   options?: string[]; // If present, rendered as multiple choice buttons
   answer: string;    // Main answer or correct option text
   acceptedAnswers?: string[]; // Alternative spellings/synonyms
@@ -18,6 +30,24 @@ export interface Riddle {
   hints?: string[];
   staticHints?: [string, string, string]; // [Level 1: 35%, Level 2: 70%, Level 3: 100%]
   _fix?: string;
+
+  // 6ter additions
+  isBonus?: boolean;        // Prueba extra opcional con puntos de bonus
+  bonusPoints?: number;
+  metaRune?: string;        // Letra o glifo para el meta-enigma final (ej. 'R', 'O', 'B', 'L', 'E')
+  metaRuneClue?: string;    // Descripción de la letra (ej. "Primera letra del pacto antiguo")
+  
+  // Specific riddle mechanics
+  targetCount?: number;     // Para tipo 'count': número exacto a contar en el sitio
+  countTolerance?: number;  // Margen permitido (ej. +/- 1)
+  targetBearing?: number;   // Para tipo 'compass': rumbo en grados (0=Norte, 90=Este, etc.)
+  compassTolerance?: number;// Margen de tolerancia en grados (ej. 25°)
+  audioClipUrl?: string;    // Para tipo 'audio': clip de sonido ambiente
+  audioDescription?: string;
+  cipherHint?: string;      // Para tipo 'cipher': clave del código rúnico
+  orderItems?: string[];    // Para tipo 'order': elementos desordenados
+  correctOrder?: string[];  // Secuencia correcta
+  physicalClueCode?: string;// Para tipo 'physical_clue': código en relieve o madera
 }
 
 export interface ArAssetConfig {
@@ -70,6 +100,14 @@ export interface StoryIntro {
   narrator?: StoryNarrator;
 }
 
+export interface MetaEnigmaConfig {
+  keyword: string;         // Palabra sagrada que forman las runas (ej. "ROBLE" o "SILVA")
+  title: string;           // "El Códice del Bosque"
+  description: string;     // Descripción del misterio final
+  hint: string;            // Pista sobre el significado
+  successNarrative: string;// Narrativa final de consagración
+}
+
 export interface ForestPack {
   id: string;                 // slug único, ej. "bosque-canejan-cestas"
   name: string;                // "Bosque de Canéjan-Cestas"
@@ -93,6 +131,8 @@ export interface ForestPack {
   riddles: Riddle[];
   sceneNarratives: Record<string, string>; // clave `${storyId}_${poiId}`
   waypointImages?: Record<string, string>; // clave `${storyId}_${poiId}` -> url imagen
+  bridgePhrases?: Record<string, string>;  // Frases puente entre hitos `${fromPoiId}_to_${toPoiId}`
+  metaEnigma?: MetaEnigmaConfig;          // Meta-enigma final de la senda
   _todoCoordenadas?: string;
 }
 
@@ -108,6 +148,13 @@ export interface HintHistoryItem {
   level: 1 | 2 | 3;
   text: string;
   timestamp: string;
+}
+
+export interface CollectedRune {
+  letter: string;
+  poiId: string;
+  riddleName: string;
+  revealedAt: string;
 }
 
 export interface PlayerSession {
@@ -132,6 +179,13 @@ export interface PlayerSession {
   hintHistory: HintHistoryItem[];
   rating?: number;
   feedback?: string;
+
+  // 6bis & 6ter state
+  phase?: SessionPhase;           // 'in_transit' (desplazamiento) | 'at_poi' (enigma) | 'reward' (recompensa)
+  hasArrivedAtPoi?: boolean;       // Desbloqueado por GPS <=25m (o 60m fácil) o botón "Estoy aquí"
+  collectedRunes?: CollectedRune[];// Letras recolectadas para el meta-enigma final
+  bonusCompleted?: string[];       // IDs de pruebas opcionales completadas
+  metaEnigmaSolved?: boolean;      // Si se resolvió el meta-enigma final
 }
 
 export interface PlayerFeedback {

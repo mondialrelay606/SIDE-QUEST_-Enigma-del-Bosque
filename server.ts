@@ -291,6 +291,11 @@ app.post('/api/sessions', (req: Request, res: Response) => {
     ],
     completedPois: [],
     hintHistory: [],
+    phase: 'in_transit',
+    hasArrivedAtPoi: false,
+    collectedRunes: [],
+    bonusCompleted: [],
+    metaEnigmaSolved: false,
   };
 
   sessions[code] = newSession;
@@ -311,7 +316,45 @@ app.get('/api/sessions/:code', (req: Request, res: Response) => {
   res.json({ session, forestPack: pack });
 });
 
-// 8. Submit Answer to Current Riddle
+// 7bis. Arrive at POI (Sección 6bis: Desbloqueo por GPS 25m/60m o botón "Estoy aquí")
+app.post('/api/sessions/:code/arrive', (req: Request, res: Response) => {
+  const code = req.params.code.toUpperCase();
+  const session = sessions[code];
+  if (!session) {
+    return res.status(404).json({ error: 'Partida no encontrada' });
+  }
+
+  session.hasArrivedAtPoi = true;
+  session.phase = 'at_poi';
+  session.lastActive = new Date().toISOString();
+  saveSessions(sessions);
+
+  res.json({ session, unlocked: true });
+});
+
+// 7ter. Continue Transit (Sección 6bis: Salto al siguiente hito tras recompensa)
+app.post('/api/sessions/:code/continue-transit', (req: Request, res: Response) => {
+  const code = req.params.code.toUpperCase();
+  const session = sessions[code];
+  if (!session) {
+    return res.status(404).json({ error: 'Partida no encontrada' });
+  }
+
+  if (session.currentPoiIndex + 1 < session.routePoiIds.length) {
+    session.currentPoiIndex++;
+    session.hasArrivedAtPoi = false;
+    session.phase = 'in_transit';
+  } else {
+    session.status = 'completed';
+  }
+
+  session.lastActive = new Date().toISOString();
+  saveSessions(sessions);
+
+  res.json({ session, isComplete: session.status === 'completed' });
+});
+
+// 8. Submit Answer to Current Riddle (Soporte 6ter para todos los tipos)
 app.post('/api/sessions/:code/answer', (req: Request, res: Response) => {
   const code = req.params.code.toUpperCase();
   const session = sessions[code];
@@ -319,8 +362,8 @@ app.post('/api/sessions/:code/answer', (req: Request, res: Response) => {
     return res.status(404).json({ error: 'Partida no encontrada' });
   }
 
-  if (session.status === 'completed') {
-    return res.json({ session, isCorrect: true, isComplete: true, message: '¡Partida ya completada!' });
+  if (session.status === 'completed' && !session.metaEnigmaSolved) {
+    // Permitir continuar si queda meta-enigma
   }
 
   const pack = forestPacks.find(p => p.id === session.forestPackId);
@@ -329,15 +372,18 @@ app.post('/api/sessions/:code/answer', (req: Request, res: Response) => {
   }
 
   const currentPoiId = session.routePoiIds[session.currentPoiIndex];
-  const { userAnswer } = req.body;
+  const { userAnswer, riddleId } = req.body;
   if (!userAnswer || typeof userAnswer !== 'string') {
     return res.status(400).json({ error: 'Respuesta vacía' });
   }
 
-  // Find riddle matching current POI, story and difficulty (or fallback)
-  let riddle = pack.riddles.find(
-    r => r.poiId === currentPoiId && r.storyId === session.storyId && r.difficulty === session.difficulty
-  );
+  // Find riddle (by riddleId if provided for bonus, or matching current POI)
+  let riddle = riddleId ? pack.riddles.find(r => r.id === riddleId) : null;
+  if (!riddle) {
+    riddle = pack.riddles.find(
+      r => r.poiId === currentPoiId && r.storyId === session.storyId && r.difficulty === session.difficulty
+    );
+  }
   if (!riddle) {
     riddle = pack.riddles.find(r => r.poiId === currentPoiId && r.storyId === session.storyId);
   }
@@ -346,48 +392,103 @@ app.post('/api/sessions/:code/answer', (req: Request, res: Response) => {
   }
 
   if (!riddle) {
-    // If no riddle exists for this POI, advance automatically
-    session.completedPois.push(currentPoiId);
-    session.currentPoiIndex++;
-    if (session.currentPoiIndex >= session.routePoiIds.length) {
-      session.status = 'completed';
+    // Si no hay enigma, avanzar a recompensa
+    if (!session.completedPois.includes(currentPoiId)) {
+      session.completedPois.push(currentPoiId);
     }
+    session.phase = 'reward';
     saveSessions(sessions);
     return res.json({
       session,
       isCorrect: true,
       pointsEarned: 100,
-      isComplete: session.status === 'completed',
+      phase: 'reward',
+      isComplete: session.currentPoiIndex + 1 >= session.routePoiIds.length,
     });
   }
 
+  // Comprobar respuesta según tipo de enigma
+  let isCorrect = false;
   const normUser = normalizeAnswer(userAnswer);
   const normExpected = normalizeAnswer(riddle.answer);
   const acceptedNorm = (riddle.acceptedAnswers || []).map(normalizeAnswer);
 
-  const isCorrect = normUser === normExpected || acceptedNorm.includes(normUser);
+  if (riddle.type === 'photo') {
+    // Foto confirmada
+    isCorrect = true;
+  } else if (riddle.type === 'compass') {
+    // Brújula alineada
+    isCorrect = normUser.includes('alinead') || normUser === '0' || normUser === 'norte' || normUser === normExpected;
+  } else if (riddle.type === 'count') {
+    const numUser = parseInt(userAnswer, 10);
+    const target = riddle.targetCount || parseInt(riddle.answer, 10) || 0;
+    const tolerance = riddle.countTolerance ?? 1;
+    isCorrect = !isNaN(numUser) && Math.abs(numUser - target) <= tolerance;
+  } else if (riddle.type === 'order') {
+    isCorrect = normUser === normExpected || acceptedNorm.includes(normUser);
+  } else {
+    isCorrect = normUser === normExpected || acceptedNorm.includes(normUser);
+  }
 
   if (isCorrect) {
-    const pointsAwarded = riddle.points || 100;
+    const isBonus = Boolean(riddle.isBonus);
+    const pointsAwarded = isBonus
+      ? (riddle.bonusPoints || 50)
+      : (riddle.points || 100);
+
     session.points += pointsAwarded;
+    session.lastActive = new Date().toISOString();
+
+    if (isBonus) {
+      session.bonusCompleted = session.bonusCompleted || [];
+      if (!session.bonusCompleted.includes(riddle.id)) {
+        session.bonusCompleted.push(riddle.id);
+      }
+      saveSessions(sessions);
+      return res.json({
+        session,
+        isCorrect: true,
+        isBonus: true,
+        pointsEarned: pointsAwarded,
+        message: '¡Reto extra completado! Has ganado puntos de bonificación.',
+      });
+    }
+
     if (!session.completedPois.includes(currentPoiId)) {
       session.completedPois.push(currentPoiId);
     }
-    session.currentPoiIndex++;
-    session.lastActive = new Date().toISOString();
 
-    if (session.currentPoiIndex >= session.routePoiIds.length) {
-      session.status = 'completed';
+    // Agregar runa mística para el meta-enigma final
+    let revealedRune: string | undefined = riddle.metaRune;
+    if (!revealedRune) {
+      // Asignar letra basada en el índice para garantizar meta-enigma
+      const keyword = pack.metaEnigma?.keyword || 'ROBLE';
+      revealedRune = keyword[session.currentPoiIndex % keyword.length];
     }
 
+    session.collectedRunes = session.collectedRunes || [];
+    if (revealedRune && !session.collectedRunes.some(r => r.poiId === currentPoiId)) {
+      session.collectedRunes.push({
+        letter: revealedRune,
+        poiId: currentPoiId,
+        riddleName: riddle.name,
+        revealedAt: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+      });
+    }
+
+    session.phase = 'reward';
     saveSessions(sessions);
+
+    const isLastPoi = session.currentPoiIndex + 1 >= session.routePoiIds.length;
 
     return res.json({
       session,
       isCorrect: true,
       pointsEarned: pointsAwarded,
-      isComplete: session.status === 'completed',
-      message: '¡Excelente deducción! Has resuelto el enigma.',
+      phase: 'reward',
+      metaRune: revealedRune,
+      isComplete: isLastPoi,
+      message: '¡Excelente deducción! Has resuelto el enigma del lugar.',
     });
   } else {
     return res.json({
@@ -396,6 +497,40 @@ app.post('/api/sessions/:code/answer', (req: Request, res: Response) => {
       message: 'No es la respuesta correcta. Observa con más calma tu entorno o pide una pista al guía.',
     });
   }
+});
+
+// 8bis. Resolver Meta-Enigma Final
+app.post('/api/sessions/:code/meta-enigma', (req: Request, res: Response) => {
+  const code = req.params.code.toUpperCase();
+  const session = sessions[code];
+  if (!session) {
+    return res.status(404).json({ error: 'Partida no encontrada' });
+  }
+
+  const pack = forestPacks.find(p => p.id === session.forestPackId);
+  const targetWord = pack?.metaEnigma?.keyword || 'ROBLE';
+  const { answer } = req.body;
+
+  if (normalizeAnswer(answer) === normalizeAnswer(targetWord)) {
+    session.metaEnigmaSolved = true;
+    session.points += 200;
+    session.status = 'completed';
+    session.lastActive = new Date().toISOString();
+    saveSessions(sessions);
+
+    return res.json({
+      session,
+      isCorrect: true,
+      pointsEarned: 200,
+      message: pack?.metaEnigma?.successNarrative || '¡Has descifrado la palabra sagrada del bosque!',
+    });
+  }
+
+  res.json({
+    session,
+    isCorrect: false,
+    message: 'Esa no es la palabra sagrada. Revisa las letras que has reunido en tu códice.',
+  });
 });
 
 // 9. Request Progressive Hint (Level 1, 2, or 3)

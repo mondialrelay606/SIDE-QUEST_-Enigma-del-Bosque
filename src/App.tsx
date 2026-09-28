@@ -142,21 +142,55 @@ export default function App() {
     }
   };
 
-  // Submit Answer in Game
-  const handleSubmitAnswer = async (answer: string) => {
+  // Submit Answer in Game (Supports 6ter all types & bonus)
+  const handleSubmitAnswer = async (answer: string, riddleId?: string) => {
     if (!activeSession) return { isCorrect: false };
     setLoading(true);
     try {
-      const res = await api.submitAnswer(activeSession.code, answer);
+      const res = await api.submitAnswer(activeSession.code, answer, riddleId);
       setActiveSession(res.session);
-      if (res.isComplete) {
-        setIsCompletionOpen(true);
-      }
       return { isCorrect: res.isCorrect, message: res.message };
     } catch (err: any) {
       return { isCorrect: false, message: err.message };
     } finally {
       setLoading(false);
+    }
+  };
+
+  // Arrive at POI (Sección 6bis: desbloqueo GPS 25m/60m o botón «Estoy aquí»)
+  const handleArriveAtPoi = async () => {
+    if (!activeSession) return;
+    try {
+      const res = await api.arriveAtPoi(activeSession.code);
+      setActiveSession(res.session);
+    } catch (e) {
+      console.error('Error arriving at POI:', e);
+    }
+  };
+
+  // Continue Transit to next POI (Sección 6bis: tras pantalla de recompensa)
+  const handleContinueTransit = async () => {
+    if (!activeSession) return;
+    try {
+      const res = await api.continueTransit(activeSession.code);
+      setActiveSession(res.session);
+      if (res.isComplete) {
+        setIsCompletionOpen(true);
+      }
+    } catch (e) {
+      console.error('Error continuing transit:', e);
+    }
+  };
+
+  // Solve Meta-Enigma Final (Sección 6ter)
+  const handleSolveMetaEnigma = async (answer: string) => {
+    if (!activeSession) return { isCorrect: false, message: 'No hay partida activa' };
+    try {
+      const res = await api.solveMetaEnigma(activeSession.code, answer);
+      setActiveSession(res.session);
+      return { isCorrect: res.isCorrect, message: res.message };
+    } catch (e: any) {
+      return { isCorrect: false, message: e.message || 'Error al resolver el códice' };
     }
   };
 
@@ -330,10 +364,14 @@ export default function App() {
             onRequestHint={handleRequestHint}
             onSendMessage={handleSendMessage}
             onUpdateLocation={handleUpdateLocation}
+            onArriveAtPoi={handleArriveAtPoi}
+            onContinueTransit={handleContinueTransit}
+            onSolveMetaEnigma={handleSolveMetaEnigma}
             simulatedGps={simulatedGps}
             onToggleSimulatedGps={() => setSimulatedGps(!simulatedGps)}
             loading={loading}
             onOpenPauseModal={() => setIsPauseModalOpen(true)}
+            onFinishGame={handleFinishGame}
           />
         )}
 
