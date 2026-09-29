@@ -42,6 +42,7 @@ import { RewardScreenCard } from './RewardScreenCard';
 import { RiddleTypeInteractive } from './RiddleTypeInteractive';
 import { MetaEnigmaModal } from './MetaEnigmaModal';
 import { findBestRiddle } from '../utils/difficultyFallback';
+import { useI18n } from '../context/I18nContext';
 
 interface GameViewProps {
   session: PlayerSession;
@@ -76,6 +77,7 @@ export const GameView: React.FC<GameViewProps> = ({
   onOpenPauseModal,
   onFinishGame,
 }) => {
+  const { t } = useI18n();
   // Navigation tabs (10bis: pestañas inferiores)
   const [activeTab, setActiveTab] = useState<'route' | 'map' | 'hints' | 'codex' | 'chat'>('route');
 
@@ -254,9 +256,18 @@ export const GameView: React.FC<GameViewProps> = ({
   };
 
   const getBearingCardinal = (deg: number): string => {
-    const directions = ['Norte', 'Noreste', 'Este', 'Sureste', 'Sur', 'Suroeste', 'Oeste', 'Noroeste'];
+    const directions = [
+      'cardinal.north',
+      'cardinal.northeast',
+      'cardinal.east',
+      'cardinal.southeast',
+      'cardinal.south',
+      'cardinal.southwest',
+      'cardinal.west',
+      'cardinal.northwest',
+    ];
     const idx = Math.round(((deg %= 360) < 0 ? deg + 360 : deg) / 45) % 8;
-    return directions[idx];
+    return t(directions[idx]);
   };
 
   return (
@@ -296,7 +307,7 @@ export const GameView: React.FC<GameViewProps> = ({
                   ? 'bg-yellow-400 text-black border-yellow-300 font-bold'
                   : 'bg-stone-900/80 border-stone-700 text-stone-300 hover:text-white'
               }`}
-              title="Modo Alto Contraste (ideal bajo sol directo)"
+              title={t('game.contrastTitle')}
             >
               <Contrast className="w-4 h-4" />
             </button>
@@ -310,7 +321,7 @@ export const GameView: React.FC<GameViewProps> = ({
                   ? 'bg-amber-600 text-stone-950 border-amber-400 font-bold'
                   : 'bg-stone-900/80 border-stone-700 text-stone-300 hover:text-white'
               }`}
-              title="Modo Atardecer / Crepúsculo"
+              title={t('game.sunsetModeTitle')}
             >
               {sunsetMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
             </button>
@@ -321,10 +332,10 @@ export const GameView: React.FC<GameViewProps> = ({
                 type="button"
                 onClick={onOpenPauseModal}
                 className="px-2.5 py-1.5 rounded-xl bg-amber-950/80 hover:bg-amber-900 border border-amber-600/70 text-amber-200 font-adventure text-[11px] font-bold flex items-center gap-1"
-                title="Pausar para continuar otro día o abandonar"
+                title={t('game.pauseTitle')}
               >
                 <PauseCircle className="w-3.5 h-3.5 text-amber-400" />
-                <span className="hidden sm:inline">Pausar</span>
+                <span className="hidden sm:inline">{t('game.pause')}</span>
               </button>
             )}
 
@@ -349,7 +360,7 @@ export const GameView: React.FC<GameViewProps> = ({
             <div>
               <div className="flex items-center gap-2 flex-wrap">
                 <span className="text-[11px] font-bold text-amber-300 uppercase tracking-wider font-adventure">
-                  Punto {session.currentPoiIndex + 1} de {session.routePoiIds.length}
+                  {t('game.pointOf', { current: session.currentPoiIndex + 1, total: session.routePoiIds.length })}
                 </span>
                 <span className="text-[10px] px-1.5 py-0.2 bg-emerald-950 text-emerald-400 rounded border border-emerald-800/40 font-semibold">
                   {session.difficulty}
@@ -357,7 +368,7 @@ export const GameView: React.FC<GameViewProps> = ({
                 {session.easyMode && (
                   <span className="text-[10px] px-2 py-0.5 bg-amber-950/80 text-amber-300 rounded border border-amber-600/40 font-semibold flex items-center gap-1">
                     <Footprints className="w-3 h-3 text-amber-400" />
-                    <span>Radio 60m</span>
+                    <span>{t('game.easyRadius')}</span>
                   </span>
                 )}
               </div>
@@ -384,7 +395,7 @@ export const GameView: React.FC<GameViewProps> = ({
                         ? 'bg-amber-500 text-stone-950 ring-2 ring-amber-300 ring-offset-2 ring-offset-[#19271C]'
                         : 'bg-stone-800 text-stone-400'
                     }`}
-                    title={`Punto ${idx + 1}`}
+                    title={t('game.pointNum', { number: idx + 1 })}
                   >
                     {isCompleted ? <CheckCircle className="w-4 h-4" /> : idx + 1}
                   </div>
@@ -425,11 +436,11 @@ export const GameView: React.FC<GameViewProps> = ({
               <div className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-emerald-400 shrink-0" />
                 <span className="font-semibold">
-                  ¡Llegada confirmada! Estás en {currentPoi.name}. Enigma desbloqueado.
+                  {t('game.arrivalConfirmed', { poiName: currentPoi.name })}
                 </span>
               </div>
               <span className="text-[10px] px-2 py-0.5 rounded bg-emerald-900/60 font-mono text-emerald-200 border border-emerald-700/50">
-                Punto activo
+                {t('game.activePoint')}
               </span>
             </div>
 
@@ -442,13 +453,13 @@ export const GameView: React.FC<GameViewProps> = ({
                 <div>
                   <div className="text-[10px] font-bold uppercase tracking-wider text-amber-300 font-mono flex items-center gap-1">
                     <Sparkles className="w-3 h-3 text-amber-400" />
-                    <span>Realidad Aumentada GPS</span>
+                    <span>{t('game.arTitle')}</span>
                   </div>
                   <h3 className="font-adventure text-sm sm:text-base font-bold text-amber-100">
-                    {currentPoi?.arAsset?.title || `Proyección Mística de ${currentPoi?.name}`}
+                    {currentPoi?.arAsset?.title || `${t('ar.title')}: ${currentPoi?.name}`}
                   </h3>
                   <p className="text-xs text-stone-300 line-clamp-1 mt-0.5">
-                    {currentPoi?.arAsset?.description || 'Apunta con la cámara de tu móvil para ver el objeto 3D.'}
+                    {currentPoi?.arAsset?.description || t('ar.activateDesc', { poiName: currentPoi?.name })}
                   </p>
                 </div>
               </div>
@@ -462,7 +473,7 @@ export const GameView: React.FC<GameViewProps> = ({
                 className="w-full sm:w-auto px-4 py-2.5 rounded-xl bg-gradient-to-r from-amber-600 to-yellow-500 text-stone-950 font-adventure text-xs font-bold tracking-wider flex items-center justify-center gap-1.5 shadow active:scale-95 transition-all shrink-0"
               >
                 <Camera className="w-4 h-4 text-stone-950" />
-                <span>Ver en AR</span>
+                <span>{t('game.arViewButton')}</span>
               </button>
             </div>
 
@@ -472,7 +483,7 @@ export const GameView: React.FC<GameViewProps> = ({
                 <div className="flex items-center gap-2">
                   <Sparkles className="w-4 h-4 text-amber-400" />
                   <span className="text-xs font-bold uppercase tracking-wider text-amber-300 font-adventure">
-                    Ambientación: {story?.title}
+                    {t('game.setting')} {story?.title}
                   </span>
                 </div>
 
@@ -485,7 +496,7 @@ export const GameView: React.FC<GameViewProps> = ({
                   }`}
                 >
                   {speaking ? <VolumeX className="w-3.5 h-3.5" /> : <Volume2 className="w-3.5 h-3.5 text-emerald-400" />}
-                  <span className="hidden sm:inline">{speaking ? 'Detener' : 'Escuchar'}</span>
+                  <span className="hidden sm:inline">{speaking ? t('game.stop') : t('game.listen')}</span>
                 </button>
               </div>
 
@@ -497,7 +508,7 @@ export const GameView: React.FC<GameViewProps> = ({
                 <div className="p-3 rounded-xl bg-black/30 border border-emerald-900/60 text-xs text-stone-300 flex items-start gap-2">
                   <Eye className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
                   <div>
-                    <span className="font-semibold text-emerald-300">Pistas del entorno: </span>
+                    <span className="font-semibold text-emerald-300">{t('game.clues')} </span>
                     <span>{currentPoi.clueSnippet}</span>
                   </div>
                 </div>
@@ -536,7 +547,7 @@ export const GameView: React.FC<GameViewProps> = ({
                 <div className="pt-3 border-t border-emerald-900/50 flex flex-wrap items-center justify-between gap-3">
                   <div className="text-xs text-stone-400 flex items-center gap-1.5">
                     <Lightbulb className="w-4 h-4 text-amber-400" />
-                    <span>¿Bloqueado con este acertijo?</span>
+                    <span>{t('game.stuck')}</span>
                   </div>
 
                   <button
@@ -545,7 +556,7 @@ export const GameView: React.FC<GameViewProps> = ({
                     className="px-3.5 py-2 rounded-xl bg-amber-950/60 hover:bg-amber-900/70 border border-amber-600/50 text-amber-200 text-xs font-semibold transition-all flex items-center gap-2 shadow-sm active:scale-95"
                   >
                     <Lightbulb className="w-3.5 h-3.5 text-amber-400" />
-                    <span>Pedir Pista Progresiva ({currentPoiHints.length}/3)</span>
+                    <span>{t('game.askHintProgressive', { count: currentPoiHints.length })}</span>
                   </button>
                 </div>
 
@@ -553,10 +564,10 @@ export const GameView: React.FC<GameViewProps> = ({
                   <div className="p-4 rounded-xl bg-[#141F16] border border-amber-600/40 space-y-4 animate-in fade-in duration-200">
                     <div className="flex items-center justify-between">
                       <span className="text-xs font-bold text-amber-300 uppercase tracking-wider font-adventure">
-                        Pistas Progresivas del Guía
+                        {t('game.guideHints')}
                       </span>
                       <span className="text-[11px] text-stone-400">
-                        Puntos actuales: <strong>{session.points}</strong>
+                        {t('game.currentPoints')} <strong>{session.points}</strong>
                       </span>
                     </div>
 
@@ -565,7 +576,7 @@ export const GameView: React.FC<GameViewProps> = ({
                         {currentPoiHints.map((h, i) => (
                           <div key={i} className="p-3 rounded-lg bg-black/40 border border-emerald-800/50 text-xs space-y-1">
                             <div className="flex items-center justify-between text-[10px] text-amber-400 font-bold uppercase">
-                              <span>Nivel {h.level}: {h.level === 1 ? 'Orientación' : h.level === 2 ? 'Método' : 'Decisiva'}</span>
+                              <span>Nivel {h.level}: {h.level === 1 ? t('game.hintLevel1') : h.level === 2 ? t('game.hintLevel2') : t('game.hintLevel3')}</span>
                               <span className="text-stone-500 font-normal">{h.timestamp}</span>
                             </div>
                             <p className="text-stone-200 italic">"{h.text}"</p>
@@ -574,16 +585,16 @@ export const GameView: React.FC<GameViewProps> = ({
                       </div>
                     ) : (
                       <p className="text-xs text-stone-400 italic">
-                        Aún no has solicitado ninguna pista para este enigma.
+                        {t('game.noHintsYet')}
                       </p>
                     )}
 
                     {currentPoiHints.length < 3 && (
                       <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 pt-2">
                         {[
-                          { lvl: 1, label: 'Nivel 1: Sutil (35%)', cost: '-5 pts' },
-                          { lvl: 2, label: 'Nivel 2: Método (70%)', cost: '-15 pts' },
-                          { lvl: 3, label: 'Nivel 3: Decisiva (100%)', cost: '-30 pts' },
+                          { lvl: 1, label: t('game.hintLevel1'), cost: '-5 pts' },
+                          { lvl: 2, label: t('game.hintLevel2'), cost: '-15 pts' },
+                          { lvl: 3, label: t('game.hintLevel3'), cost: '-30 pts' },
                         ].map((item) => {
                           const alreadyUnlocked = currentPoiHints.some((h) => h.level === item.lvl);
                           return (
@@ -620,7 +631,7 @@ export const GameView: React.FC<GameViewProps> = ({
                   <div className="flex items-center gap-2">
                     <Sparkles className="w-4 h-4 text-amber-400" />
                     <span className="text-xs font-adventure font-bold text-amber-200 uppercase tracking-wider">
-                      Reto Extra Opcional: {b.name}
+                      {t('game.extraChallenge')} {b.name}
                     </span>
                   </div>
                   <span className="text-[11px] font-mono px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/30">
@@ -684,7 +695,7 @@ export const GameView: React.FC<GameViewProps> = ({
           <div className="p-6 rounded-2xl bg-[#19271C] border border-emerald-900/60 space-y-4 animate-in fade-in duration-200">
             <h3 className="font-adventure text-lg font-bold text-amber-100 flex items-center gap-2">
               <Lightbulb className="w-5 h-5 text-amber-400" />
-              <span>Historial de Pistas y Cuaderno de Campo</span>
+              <span>{t('game.fieldNotes')}</span>
             </h3>
 
             {session.hintHistory.length > 0 ? (
@@ -701,7 +712,7 @@ export const GameView: React.FC<GameViewProps> = ({
               </div>
             ) : (
               <p className="text-xs text-stone-400 italic">
-                Aún no has solicitado pistas. ¡Tu instinto de explorador va impecable!
+                {t('game.noHintsTotal')}
               </p>
             )}
           </div>
@@ -722,7 +733,7 @@ export const GameView: React.FC<GameViewProps> = ({
             }`}
           >
             <Compass className="w-5 h-5" />
-            <span>Ruta</span>
+            <span>{t('nav.route')}</span>
           </button>
 
           {/* Mapa */}
@@ -736,7 +747,7 @@ export const GameView: React.FC<GameViewProps> = ({
             }`}
           >
             <MapPin className="w-5 h-5" />
-            <span>Mapa</span>
+            <span>{t('nav.map')}</span>
           </button>
 
           {/* Códice / Mochila (Meta-Enigma) */}
@@ -746,7 +757,7 @@ export const GameView: React.FC<GameViewProps> = ({
             className="relative flex flex-col items-center gap-1 py-1 px-2.5 rounded-xl text-[10px] font-bold text-amber-200 hover:text-white transition-all"
           >
             <KeyRound className="w-5 h-5 text-amber-400" />
-            <span>Códice</span>
+            <span>{t('nav.codex')}</span>
             {(session.collectedRunes?.length || 0) > 0 && (
               <span className="absolute top-0 right-1 w-4 h-4 rounded-full bg-amber-500 text-stone-950 text-[9px] font-bold flex items-center justify-center font-mono">
                 {session.collectedRunes?.length}
@@ -765,7 +776,7 @@ export const GameView: React.FC<GameViewProps> = ({
             }`}
           >
             <Lightbulb className="w-5 h-5" />
-            <span>Pistas</span>
+            <span>{t('nav.hints')}</span>
           </button>
 
           {/* Guía / Voz */}
@@ -775,7 +786,7 @@ export const GameView: React.FC<GameViewProps> = ({
             className="flex flex-col items-center gap-1 py-1 px-2.5 rounded-xl text-[10px] font-bold text-stone-300 hover:text-amber-200 transition-all"
           >
             <Mic className="w-5 h-5 text-emerald-400" />
-            <span>Guía</span>
+            <span>{t('nav.guide')}</span>
           </button>
         </div>
       </nav>
@@ -836,7 +847,7 @@ export const GameView: React.FC<GameViewProps> = ({
               </div>
               <div>
                 <span className="text-[10px] font-bold uppercase tracking-wider text-amber-300 font-mono">
-                  Doble Respaldo de Llegada
+                  {t('visualConfirm.title')}
                 </span>
                 <h3 className="font-adventure text-lg font-bold text-amber-100">
                   {currentPoi?.name}
@@ -845,24 +856,24 @@ export const GameView: React.FC<GameViewProps> = ({
             </div>
 
             <p className="text-xs text-stone-300 leading-relaxed">
-              En bosques densos la señal GPS puede rebotar con las copas de los árboles. Comprueba los elementos visuales de este hito:
+              {t('visualConfirm.desc')}
             </p>
 
             <div className="p-4 rounded-2xl bg-black/40 border border-emerald-900/60 space-y-2 text-xs">
               <div>
-                <span className="text-emerald-400 font-semibold">Descripción del hito: </span>
+                <span className="text-emerald-400 font-semibold">{t('visualConfirm.poiDesc')} </span>
                 <span className="text-stone-200">{currentPoi?.description}</span>
               </div>
               {currentPoi?.clueSnippet && (
                 <div className="pt-1.5 border-t border-emerald-950">
-                  <span className="text-amber-300 font-semibold">Marcas visuales: </span>
+                  <span className="text-amber-300 font-semibold">{t('visualConfirm.visualMarks')} </span>
                   <span className="text-amber-100 italic font-serif">"{currentPoi.clueSnippet}"</span>
                 </div>
               )}
             </div>
 
             <div className="p-3 rounded-xl bg-amber-950/20 border border-amber-500/30 text-[11px] text-amber-200/90">
-              ¿Estás físicamente frente a este hito? Al confirmar se desbloqueará el enigma sin penalización.
+              {t('visualConfirm.prompt')}
             </div>
 
             <div className="grid grid-cols-2 gap-2 pt-1">
@@ -871,7 +882,7 @@ export const GameView: React.FC<GameViewProps> = ({
                 onClick={() => setShowVisualConfirmModal(false)}
                 className="py-3 px-3 rounded-xl bg-black/40 hover:bg-black/60 border border-stone-800 text-stone-300 text-xs font-semibold"
               >
-                Cancelar
+                {t('common.cancel')}
               </button>
               <button
                 type="button"
@@ -881,7 +892,7 @@ export const GameView: React.FC<GameViewProps> = ({
                 }}
                 className="py-3 px-3 rounded-xl bg-gradient-to-r from-emerald-600 to-green-600 text-white font-adventure text-xs font-bold shadow-lg active:scale-95 transition-all"
               >
-                ¡Sí, estoy aquí!
+                {t('visualConfirm.confirmBtn')}
               </button>
             </div>
           </div>
@@ -905,10 +916,10 @@ export const GameView: React.FC<GameViewProps> = ({
               </div>
               <div>
                 <span className="text-[10px] font-bold uppercase tracking-wider text-red-400 font-mono">
-                  Seguridad Forestal
+                  {t('sos.title')}
                 </span>
                 <h3 className="font-adventure text-lg font-bold text-amber-100">
-                  Regreso Seguro al Inicio
+                  {t('sos.subtitle')}
                 </h3>
               </div>
             </div>
@@ -921,18 +932,18 @@ export const GameView: React.FC<GameViewProps> = ({
                 <Navigation className="w-6 h-6" />
               </div>
               <div>
-                <div className="text-[11px] text-stone-400">Rumbo hacia la entrada:</div>
+                <div className="text-[11px] text-stone-400">{t('sos.headingToEntrance')}</div>
                 <div className="font-adventure text-sm font-bold text-amber-200">
                   {startPoi?.name} ({startPoi?.emoji})
                 </div>
                 <div className="text-xs text-emerald-400 font-mono font-bold mt-0.5">
-                  {formatDistance(returnDistanceMeters)} al {getBearingCardinal(returnBearing)} ({Math.round(returnBearing)}°)
+                  {t('sos.towardsDirection', { distance: formatDistance(returnDistanceMeters), cardinal: getBearingCardinal(returnBearing), bearing: Math.round(returnBearing) })}
                 </div>
               </div>
             </div>
 
             <div className="p-3 rounded-xl bg-black/40 border border-stone-800 text-xs space-y-1">
-              <div className="text-[11px] text-stone-400 font-semibold">Tus Coordenadas GPS actuales:</div>
+              <div className="text-[11px] text-stone-400 font-semibold">{t('sos.gpsCoords')}</div>
               <div className="font-mono text-amber-300 select-all font-bold text-sm">
                 {playerLat.toFixed(6)}, {playerLng.toFixed(6)}
               </div>
@@ -944,14 +955,14 @@ export const GameView: React.FC<GameViewProps> = ({
                 className="py-3 px-3 rounded-xl bg-red-600 hover:bg-red-500 text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow active:scale-95 transition-all text-center"
               >
                 <Phone className="w-4 h-4" />
-                <span>Llamar al 112</span>
+                <span>{t('sos.call112')}</span>
               </a>
               <button
                 type="button"
                 onClick={() => setShowEmergencyModal(false)}
                 className="py-3 px-3 rounded-xl bg-[#1C2C1F] hover:bg-emerald-900 border border-emerald-700/60 text-stone-200 text-xs font-semibold"
               >
-                Volver a la Ruta
+                {t('sos.backToRoute')}
               </button>
             </div>
           </div>

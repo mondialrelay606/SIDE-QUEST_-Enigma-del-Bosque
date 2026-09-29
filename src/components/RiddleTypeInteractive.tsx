@@ -21,6 +21,10 @@ import {
   Square,
   Clock,
   Shuffle,
+  Mic,
+  Video,
+  Play,
+  Award,
 } from 'lucide-react';
 import { sounds } from '../utils/audio';
 
@@ -86,6 +90,14 @@ export const RiddleTypeInteractive: React.FC<RiddleTypeInteractiveProps> = ({
   const [selectedToSwap, setSelectedToSwap] = useState<number | null>(null);
   const [draggedIdx, setDraggedIdx] = useState<number | null>(null);
 
+  // Extra Test States: audio_record, video, mimic
+  const [isRecordingAudio, setIsRecordingAudio] = useState(false);
+  const [audioRecorded, setAudioRecorded] = useState(false);
+  const [isRecordingVideo, setIsRecordingVideo] = useState(false);
+  const [videoRecorded, setVideoRecorded] = useState(false);
+  const [mimicTimer, setMimicTimer] = useState<number>(0);
+  const [mimicDone, setMimicDone] = useState(false);
+
   // Feedback state
   const [submitting, setSubmitting] = useState(false);
   const [feedback, setFeedback] = useState<{ isCorrect?: boolean; message: string } | null>(null);
@@ -99,6 +111,12 @@ export const RiddleTypeInteractive: React.FC<RiddleTypeInteractiveProps> = ({
     setSelectedListenOptions([]);
     setListenTimer(0);
     setSelectedToSwap(null);
+    setIsRecordingAudio(false);
+    setAudioRecorded(false);
+    setIsRecordingVideo(false);
+    setVideoRecorded(false);
+    setMimicTimer(0);
+    setMimicDone(false);
 
     // Initial shuffle for multiple-choice options (rule: never show in fixed default order)
     if (riddle.options && riddle.options.length > 0) {
@@ -287,6 +305,183 @@ export const RiddleTypeInteractive: React.FC<RiddleTypeInteractiveProps> = ({
                 <span>Abrir Cámara / Capturar Foto</span>
               </button>
             </div>
+          )}
+        </div>
+      )}
+
+      {/* 1b. TYPE: AUDIO_RECORD */}
+      {riddle.type === 'audio_record' && (
+        <div className="p-5 rounded-2xl bg-black/40 border border-emerald-800/80 space-y-4 text-center">
+          <div className="flex items-center justify-center gap-2 text-amber-300 font-adventure font-bold text-xs uppercase tracking-wider">
+            <Mic className="w-4 h-4 text-amber-400" />
+            <span>{riddle.name || 'Grabación Sonora del Bosque'}</span>
+          </div>
+
+          <p className="text-xs text-stone-300 max-w-md mx-auto">
+            {riddle.question || 'Graba tu sonido, eructo o brindis tabernero en este punto.'}
+          </p>
+
+          {audioRecorded ? (
+            <div className="space-y-3">
+              <div className="p-4 rounded-xl bg-emerald-950/70 border border-emerald-500/60 flex items-center justify-center gap-3">
+                <div className="w-3 h-3 rounded-full bg-emerald-400 animate-ping" />
+                <span className="text-xs text-emerald-200 font-mono font-bold">
+                  Audio registrado con éxito (0:03) ✓
+                </span>
+              </div>
+              <button
+                type="button"
+                onClick={() => handleSend('audio_grabado')}
+                disabled={submitting}
+                className="w-full sm:w-auto px-6 py-3 rounded-xl bg-gradient-to-r from-emerald-600 to-green-500 hover:from-emerald-500 text-white font-adventure font-bold text-xs tracking-wider shadow-lg active:scale-95 transition-all"
+              >
+                Validar Grabación Sonora
+              </button>
+            </div>
+          ) : (
+            <div className="space-y-3">
+              {isRecordingAudio ? (
+                <div className="p-4 rounded-xl bg-red-950/80 border border-red-500/80 space-y-3 animate-pulse">
+                  <div className="flex items-center justify-center gap-2 text-red-300 text-xs font-mono font-bold">
+                    <div className="w-3 h-3 rounded-full bg-red-500 animate-ping" />
+                    <span>GRABANDO SONIDO AMBIENTE...</span>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setIsRecordingAudio(false);
+                      setAudioRecorded(true);
+                      sounds.playSuccess();
+                    }}
+                    className="px-6 py-2.5 rounded-xl bg-red-700 hover:bg-red-600 text-white font-bold text-xs"
+                  >
+                    Detener y Guardar Grabación
+                  </button>
+                </div>
+              ) : (
+                <button
+                  type="button"
+                  onClick={() => {
+                    setIsRecordingAudio(true);
+                    sounds.playClick();
+                    setTimeout(() => {
+                      setIsRecordingAudio(false);
+                      setAudioRecorded(true);
+                    }, 3500);
+                  }}
+                  className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-gradient-to-r from-amber-600 to-yellow-500 hover:from-amber-500 text-stone-950 font-adventure font-bold text-xs tracking-wider shadow-lg flex items-center justify-center gap-2 mx-auto active:scale-95 transition-all"
+                >
+                  <Mic className="w-4 h-4 text-stone-950" />
+                  <span>Iniciar Grabación de Audio</span>
+                </button>
+              )}
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* 1c. TYPE: VIDEO */}
+      {riddle.type === 'video' && (
+        <div className="p-5 rounded-2xl bg-black/40 border border-emerald-800/80 space-y-4 text-center">
+          <div className="flex items-center justify-center gap-2 text-amber-300 font-adventure font-bold text-xs uppercase tracking-wider">
+            <Video className="w-4 h-4 text-amber-400" />
+            <span>{riddle.name || 'Captura de Vídeo Corto'}</span>
+          </div>
+
+          <p className="text-xs text-stone-300 max-w-md mx-auto">
+            {riddle.question || 'Graba un breve clip de vídeo de 3 segundos cumpliendo el reto.'}
+          </p>
+
+          {videoRecorded ? (
+            <div className="space-y-3">
+              <div className="relative w-full max-w-xs mx-auto h-44 rounded-xl overflow-hidden border-2 border-emerald-500 bg-emerald-950/80 flex items-center justify-center">
+                <Play className="w-8 h-8 text-emerald-400 opacity-80" />
+                <span className="absolute bottom-2 left-2 text-[10px] text-emerald-300 font-mono font-bold bg-black/70 px-2 py-0.5 rounded">
+                  Clip de 3s registrado ✓
+                </span>
+              </div>
+              <button
+                type="button"
+                onClick={() => handleSend('video_confirmado')}
+                disabled={submitting}
+                className="w-full sm:w-auto px-6 py-3 rounded-xl bg-gradient-to-r from-emerald-600 to-green-500 hover:from-emerald-500 text-white font-adventure font-bold text-xs tracking-wider shadow-lg active:scale-95 transition-all"
+              >
+                Validar Vídeo
+              </button>
+            </div>
+          ) : (
+            <div className="space-y-3">
+              {isRecordingVideo ? (
+                <div className="p-4 rounded-xl bg-red-950/80 border border-red-500/80 space-y-2 animate-pulse">
+                  <span className="text-xs text-red-200 font-mono font-bold">
+                    GRABANDO VÍDEO... (3s)
+                  </span>
+                </div>
+              ) : (
+                <button
+                  type="button"
+                  onClick={() => {
+                    setIsRecordingVideo(true);
+                    sounds.playClick();
+                    setTimeout(() => {
+                      setIsRecordingVideo(false);
+                      setVideoRecorded(true);
+                      sounds.playSuccess();
+                    }, 3000);
+                  }}
+                  className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-gradient-to-r from-amber-600 to-yellow-500 hover:from-amber-500 text-stone-950 font-adventure font-bold text-xs tracking-wider shadow-lg flex items-center justify-center gap-2 mx-auto active:scale-95 transition-all"
+                >
+                  <Video className="w-4 h-4 text-stone-950" />
+                  <span>Grabar Clip de 3 Segundos</span>
+                </button>
+              )}
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* 1d. TYPE: MIMIC */}
+      {riddle.type === 'mimic' && (
+        <div className="p-5 rounded-2xl bg-black/40 border border-emerald-800/80 space-y-4 text-center">
+          <div className="flex items-center justify-center gap-2 text-amber-300 font-adventure font-bold text-xs uppercase tracking-wider">
+            <Sparkles className="w-4 h-4 text-amber-400" />
+            <span>{riddle.name || 'Reto de Mímica y Actuación'}</span>
+          </div>
+
+          <p className="text-xs text-stone-300 max-w-md mx-auto">
+            {riddle.question || 'Imita la pose o el baile indicado por Fray Botijo durante 3 segundos.'}
+          </p>
+
+          {mimicDone ? (
+            <div className="space-y-3">
+              <div className="p-4 rounded-xl bg-emerald-950/70 border border-emerald-500/60 text-xs text-emerald-200 font-bold">
+                ¡Mímica completada con elegancia tabernera! 💃🕺 ✓
+              </div>
+              <button
+                type="button"
+                onClick={() => handleSend('mimica_completada')}
+                disabled={submitting}
+                className="w-full sm:w-auto px-6 py-3 rounded-xl bg-gradient-to-r from-emerald-600 to-green-500 hover:from-emerald-500 text-white font-adventure font-bold text-xs tracking-wider shadow-lg active:scale-95 transition-all"
+              >
+                Confirmar Desafío de Mímica
+              </button>
+            </div>
+          ) : (
+            <button
+              type="button"
+              onClick={() => {
+                setMimicTimer(3);
+                sounds.playClick();
+                setTimeout(() => {
+                  setMimicDone(true);
+                  sounds.playSuccess();
+                }, 3000);
+              }}
+              className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-gradient-to-r from-amber-600 to-yellow-500 hover:from-amber-500 text-stone-950 font-adventure font-bold text-xs tracking-wider shadow-lg flex items-center justify-center gap-2 mx-auto active:scale-95 transition-all"
+            >
+              <Award className="w-4 h-4 text-stone-950" />
+              <span>Realizar Mímica (3s)</span>
+            </button>
           )}
         </div>
       )}
@@ -672,8 +867,8 @@ export const RiddleTypeInteractive: React.FC<RiddleTypeInteractiveProps> = ({
         </div>
       )}
 
-      {/* 7. TYPE: MULTIPLE CHOICE */}
-      {(!riddle.type || riddle.type === 'multiple_choice') && riddle.options && riddle.options.length > 0 && (
+      {/* 7. TYPE: MULTIPLE CHOICE & TEST */}
+      {(!riddle.type || riddle.type === 'multiple_choice' || riddle.type === 'test') && riddle.options && riddle.options.length > 0 && (
         <div className="space-y-2.5">
           <span className="text-[11px] font-bold text-emerald-300 uppercase tracking-wider block">
             Elige tu deducción:
@@ -695,9 +890,10 @@ export const RiddleTypeInteractive: React.FC<RiddleTypeInteractiveProps> = ({
         </div>
       )}
 
-      {/* 8. TYPE: OPEN TEXT / PHYSICAL CLUE */}
+      {/* 8. TYPE: OPEN TEXT / TEXT / PHYSICAL CLUE */}
       {((!riddle.type && (!riddle.options || riddle.options.length === 0)) ||
         riddle.type === 'open_text' ||
+        riddle.type === 'text' ||
         riddle.type === 'physical_clue') && (
         <div className="space-y-3">
           <span className="text-[11px] font-bold text-emerald-300 uppercase tracking-wider block">

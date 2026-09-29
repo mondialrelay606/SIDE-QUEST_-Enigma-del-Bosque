@@ -45,9 +45,18 @@ export const TransitDisplacementCard: React.FC<TransitDisplacementCardProps> = (
     `¡Buen trabajo! Ahora sigue el sendero marcado hacia ${currentPoi.name}. Presta atención a las señales del bosque y camina con calma.`;
 
   const getCardinal = (deg: number): string => {
-    const directions = ['Norte', 'Noreste', 'Este', 'Sureste', 'Sur', 'Suroeste', 'Oeste', 'Noroeste'];
+    const directions = [
+      'cardinal.north',
+      'cardinal.northeast',
+      'cardinal.east',
+      'cardinal.southeast',
+      'cardinal.south',
+      'cardinal.southwest',
+      'cardinal.west',
+      'cardinal.northwest',
+    ];
     const idx = Math.round(((deg %= 360) < 0 ? deg + 360 : deg) / 45) % 8;
-    return directions[idx];
+    return t(directions[idx]);
   };
 
   return (
@@ -88,7 +97,7 @@ export const TransitDisplacementCard: React.FC<TransitDisplacementCardProps> = (
           <span className="text-2xl shrink-0 not-italic select-none">{story?.narratorAvatar || '🦉'}</span>
           <div>
             <div className="not-italic text-[11px] font-sans font-bold uppercase tracking-wider text-amber-400 mb-1">
-              Mensaje del guía ({story?.narratorName || 'Guardián del Monte'}):
+              {t('transit.guideMessage')} ({story?.narratorName || 'Guardián'}):
             </div>
             <span>"{bridgePhrase}"</span>
           </div>
@@ -124,10 +133,10 @@ export const TransitDisplacementCard: React.FC<TransitDisplacementCardProps> = (
 
             <div className="space-y-0.5">
               <div className="text-xs uppercase tracking-wider text-stone-400 font-semibold">
-                Rumbo de Navegación
+                {t('transit.navHeading')}
               </div>
               <div className="font-adventure font-bold text-amber-200 text-sm">
-                Hacia el {getCardinal(bearing)} ({Math.round(bearing)}°)
+                {t('transit.towards', { cardinal: getCardinal(bearing), degrees: Math.round(bearing) })}
               </div>
             </div>
           </div>
@@ -136,13 +145,13 @@ export const TransitDisplacementCard: React.FC<TransitDisplacementCardProps> = (
           <div className="space-y-3">
             <div className="p-5 rounded-2xl bg-black/40 border border-emerald-900/80 space-y-2">
               <div className="text-xs font-semibold text-stone-400 uppercase tracking-wider">
-                Distancia al Hito:
+                {t('transit.poiDistance')}
               </div>
               <div className="font-mono text-3xl sm:text-4xl font-black text-emerald-300">
                 {formatDistance(distanceMeters)}
               </div>
               <p className="text-xs text-stone-300 leading-relaxed">
-                Radio de desbloqueo: <strong>{arrivalRadiusMeters} metros</strong>.
+                {t('transit.unlockRadius', { meters: arrivalRadiusMeters })}
               </p>
             </div>
 
@@ -150,7 +159,7 @@ export const TransitDisplacementCard: React.FC<TransitDisplacementCardProps> = (
             <div className="p-3.5 rounded-xl bg-amber-950/30 border border-amber-500/30 text-xs text-amber-200/90 flex items-start gap-2.5">
               <AlertCircle className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
               <p>
-                <strong>La siguiente prueba está sellada:</strong> No se revelará hasta que te encuentres físicamente en este punto.
+                {t('transit.sealedWarning')}
               </p>
             </div>
           </div>
@@ -162,10 +171,10 @@ export const TransitDisplacementCard: React.FC<TransitDisplacementCardProps> = (
             <div className="p-4 rounded-2xl bg-emerald-950/80 border-2 border-emerald-500 text-emerald-200 space-y-3 animate-in fade-in duration-300">
               <div className="flex items-center gap-2.5 font-adventure font-bold text-base text-emerald-100">
                 <CheckCircle2 className="w-5 h-5 text-emerald-400" />
-                <span>¡Has llegado al hito!</span>
+                <span>{t('transit.arrived')}</span>
               </div>
               <p className="text-xs text-stone-300">
-                Tu dispositivo ha detectado la llegada por GPS. Pulsa para revelar el enigma y comenzar a explorar el entorno.
+                {t('transit.gpsDetectedDesc')}
               </p>
               <button
                 type="button"
@@ -173,7 +182,7 @@ export const TransitDisplacementCard: React.FC<TransitDisplacementCardProps> = (
                 className="w-full py-3.5 px-5 rounded-xl bg-gradient-to-r from-emerald-600 to-green-500 hover:from-emerald-500 hover:to-green-400 text-white font-adventure font-bold text-sm tracking-wide shadow-lg shadow-emerald-950/80 active:scale-95 transition-all flex items-center justify-center gap-2"
               >
                 <Sparkles className="w-4 h-4 text-amber-300" />
-                <span>Desbloquear Prueba y Enigma</span>
+                <span>{t('transit.unlockChallenge')}</span>
               </button>
             </div>
           ) : (
@@ -184,10 +193,10 @@ export const TransitDisplacementCard: React.FC<TransitDisplacementCardProps> = (
                   type="button"
                   onClick={onConfirmArrival}
                   className="flex-1 w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-emerald-800 to-green-700 hover:from-emerald-700 hover:to-green-600 text-amber-100 hover:text-white font-adventure font-bold text-xs sm:text-sm tracking-wider flex items-center justify-center gap-2 shadow-md active:scale-95 transition-all"
-                  title="Si estás frente al punto y el GPS falla bajo los árboles, confirma sin penalización"
+                  title={t('transit.imHereConfirm')}
                 >
                   <MapPin className="w-4 h-4 text-amber-300" />
-                  <span>«Estoy aquí» (GPS sin señal)</span>
+                  <span>{t('transit.imHere')}</span>
                 </button>
 
                 {/* Double verification by image */}
@@ -197,12 +206,12 @@ export const TransitDisplacementCard: React.FC<TransitDisplacementCardProps> = (
                   className="w-full sm:w-auto py-3.5 px-4 rounded-xl bg-stone-900/90 hover:bg-stone-800 border border-stone-700 text-stone-200 text-xs font-semibold flex items-center justify-center gap-1.5 active:scale-95 transition-all"
                 >
                   <Eye className="w-4 h-4 text-emerald-400" />
-                  <span>Ver Marcas de Referencia</span>
+                  <span>{t('transit.viewLandmarks')}</span>
                 </button>
               </div>
 
               <p className="text-[11px] text-center text-stone-400">
-                Bajo árboles frondosos el GPS puede perder precisión. El botón «Estoy aquí» no tiene ninguna penalización de puntos.
+                {t('transit.weakGps')}
               </p>
             </div>
           )}

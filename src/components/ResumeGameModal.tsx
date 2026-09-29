@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useI18n } from '../context/I18nContext';
 import { X, KeyRound, ArrowRight, AlertCircle } from 'lucide-react';
 
 interface ResumeGameModalProps {
@@ -14,6 +15,7 @@ export const ResumeGameModal: React.FC<ResumeGameModalProps> = ({
   onResume,
   loading,
 }) => {
+  const { t } = useI18n();
   const [code, setCode] = useState('');
   const [error, setError] = useState('');
 
@@ -23,14 +25,14 @@ export const ResumeGameModal: React.FC<ResumeGameModalProps> = ({
     e.preventDefault();
     const cleanCode = code.trim().toUpperCase();
     if (!cleanCode) {
-      setError('Por favor introduce tu código de 6 caracteres');
+      setError(t('resume.errorEmpty'));
       return;
     }
     setError('');
     try {
       await onResume(cleanCode);
     } catch (err: any) {
-      setError(err.message || 'Código de partida no encontrado');
+      setError(err.message || t('resume.notFound'));
     }
   };
 
@@ -42,7 +44,7 @@ export const ResumeGameModal: React.FC<ResumeGameModalProps> = ({
           <div className="flex items-center gap-2">
             <KeyRound className="w-5 h-5 text-amber-400" />
             <h3 className="font-adventure text-lg font-bold text-amber-100">
-              Retomar Partida
+              {t('resume.title')}
             </h3>
           </div>
           <button
@@ -56,7 +58,7 @@ export const ResumeGameModal: React.FC<ResumeGameModalProps> = ({
         {/* Form */}
         <form onSubmit={handleSubmit} className="p-5 sm:p-6 space-y-4">
           <p className="text-xs text-stone-300 leading-relaxed">
-            Introduce el código de 6 caracteres que recibiste al comenzar tu expedición para continuar exactamente donde lo dejaste.
+            {t('resume.help')}
           </p>
 
           {error && (
@@ -68,13 +70,13 @@ export const ResumeGameModal: React.FC<ResumeGameModalProps> = ({
 
           <div>
             <label className="block text-[11px] font-bold uppercase tracking-wider text-emerald-300 mb-1.5">
-              Código de Acceso
+              {t('resume.codeLabel')}
             </label>
             <input
               type="text"
               value={code}
               onChange={(e) => setCode(e.target.value.toUpperCase())}
-              placeholder="Ej: BOSQ42"
+              placeholder={t('resume.placeholder')}
               maxLength={8}
               className="w-full text-center text-2xl font-mono tracking-widest font-bold px-4 py-3 rounded-xl bg-black/50 border border-emerald-800 text-amber-300 focus:outline-none focus:border-amber-400"
               autoFocus
@@ -90,7 +92,7 @@ export const ResumeGameModal: React.FC<ResumeGameModalProps> = ({
               <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
             ) : (
               <>
-                <span>Acceder a la Partida</span>
+                <span>{t('resume.submit')}</span>
                 <ArrowRight className="w-4 h-4" />
               </>
             )}

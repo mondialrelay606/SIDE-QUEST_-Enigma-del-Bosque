@@ -406,8 +406,8 @@ app.post('/api/sessions/:code/answer', (req: Request, res: Response) => {
   const normExpected = normalizeAnswer(riddle.answer || '');
   const acceptedNorm = (riddle.acceptedAnswers || []).map(normalizeAnswer);
 
-  if (riddle.type === 'photo') {
-    // Foto confirmada
+  if (riddle.type === 'photo' || riddle.type === 'audio_record' || riddle.type === 'video' || riddle.type === 'mimic') {
+    // Retos interactivos de foto, audio, vídeo o mímica
     isCorrect = true;
   } else if (riddle.type === 'compass') {
     // Brújula alineada
@@ -427,7 +427,19 @@ app.post('/api/sessions/:code/answer', (req: Request, res: Response) => {
       normUser === normExpected ||
       acceptedNorm.includes(normUser);
   } else {
-    isCorrect = normUser === normExpected || acceptedNorm.includes(normUser);
+    // Multiple choice, test, text, open_text, cipher, etc.
+    const isIndexMatch =
+      riddle.correctIndex !== undefined &&
+      riddle.options &&
+      riddle.options[riddle.correctIndex] &&
+      normalizeAnswer(riddle.options[riddle.correctIndex]) === normUser;
+
+    isCorrect = Boolean(
+      normUser === normExpected ||
+      acceptedNorm.includes(normUser) ||
+      isIndexMatch ||
+      (riddle.options && riddle.correctIndex !== undefined && (userAnswer === String(riddle.correctIndex) || userAnswer === String.fromCharCode(65 + riddle.correctIndex)))
+    );
   }
 
   if (isCorrect) {
@@ -652,13 +664,38 @@ app.post('/api/sessions/:code/chat', async (req: Request, res: Response) => {
 
   let replyText = '';
 
-  if (ai && story) {
+  const isFrayBotijo = story?.id === 'fraile-botijo' || story?.narratorName?.toLowerCase().includes('botijo');
+  const isOffenseReport = /ofendido|reportar|chiste|ofensa|disculpa|perd[oó]n/i.test(message);
+
+  if (isFrayBotijo && isOffenseReport) {
+    replyText = `¡Ostras, chaval! ¡Mil perdones de rodillas ante la Virgen de Villavieja! *eructo* ¡Eso ha sido el Espíritu Santo pidiendo clemencia! No era mi intención molestar, tronco, que a veces a este monje de 1387 se le calienta la boca con el orujo... ¡Venga, borrón y cuenta nueva! Tómate un trago virtual de este buen vino de Rioja a mi salud 🍷, que las penas con pan y vino son menos penas. ¡Salud y seguimos la senda!`;
+  } else if (ai && story) {
     try {
-      const prompt = `Eres ${story.narratorName}, ${story.narratorRole} en la aventura "${story.title}". Tono: ${story.narratorTone || 'Evocador y protector'}.
+      let prompt = '';
+      if (isFrayBotijo) {
+        prompt = `Eres Fray Botijo, el fantasma de un monje borracho que murió ahogado en un barril de vino en 1387 en el Monasterio de San Millán y ahora vaga por Nalda (La Rioja).
+REGLAS OBLIGATORIAS:
+- Hablas como un tabernero medieval cachondo.
+- Usas muletillas: "chaval", "compi", "tronco", "¡ay, perdón, se me escapó!", "*eructo*", "¡eso ha sido el Espíritu Santo!".
+- Cuentas chistes verdes pero SIN ser explícito: picante, no obsceno. Humor de taberna medieval, elegante y nunca vulgar ni pornográfico.
+- Te ríes de curas, obispos, santos y del Papa, pero SIN ofender a la gente corriente ni a colectivos.
+- Te quejas de que no has ido a misa en 600 años.
+- SIEMPRE das el dato histórico correcto sobre Nalda al final de cada chiste, como si fuera una revelación divina (pero con resaca).
+- Solo hablas de Nalda, su patrimonio, historia y el juego. Si te preguntan otra cosa fuera de contexto, respondes: "eso es cosa del obispo, y yo con el obispo no hablo".
+- LÍNEAS ROJAS: nada de sexo explícito, nada de insultos a colectivos, nada de violencia real.
+- Si el usuario parece ofendido, pide disculpas de inmediato y ofrécele un trago virtual de vino de Rioja.
+
+Lugar actual: "${poi?.name || 'el sendero de Nalda'}".
+Descripción: "${poi?.description || ''}".
+El jugador dice: "${message}".
+Responde en 1 a 3 oraciones en español auténtico metido al 100% en tu personaje.`;
+      } else {
+        prompt = `Eres ${story.narratorName}, ${story.narratorRole} en la aventura "${story.title}". Tono: ${story.narratorTone || 'Evocador y protector'}.
 El jugador está explorando el bosque y actualmente se encuentra en "${poi?.name || 'un claro del bosque'}".
 Descripción del lugar: "${poi?.description || ''}".
 El jugador te dice: "${message}".
 Responde en 1 o 2 oraciones en español, metido en tu personaje. Ofrece sabiduría, ánimo o una metáfora sobre el bosque. No rompas la cuarta pared.`;
+      }
 
       const response = await ai.models.generateContent({
         model: 'gemini-3.8-flash',
@@ -674,12 +711,22 @@ Responde en 1 o 2 oraciones en español, metido en tu personaje. Ofrece sabidur�
   }
 
   if (!replyText) {
-    const fallbacks = [
-      `Escucha con atención el crujido de las hojas bajo tus pies en ${poi?.name || 'este rincón'}. El bosque siempre recompensa a quien sabe esperar.`,
-      `El sendero guarda secretos que sólo los ojos pacientes pueden advertir. Sigue adelante con valor.`,
-      `Las señales están en la piedra, en la madera y en el agua. Abre bien los sentidos.`,
-    ];
-    replyText = fallbacks[Math.floor(Math.random() * fallbacks.length)];
+    if (isFrayBotijo) {
+      const frayFallbacks = [
+        `¡Ehhhh, compi! ¿Sabías que en el Castillo de Nalda en 1299 encerraron a Juan Alonso de Haro? Un noble un poco plasta, ¡pero seguro que no tenía tanto aguante con el vino como yo! *eructo* ¡Ay, perdón, se me escapó! ¡Eso ha sido el Espíritu Santo!`,
+        `¡Tronco, en estas Cuevas de Los Palomares los monjes vivían como ermitaños en sus hornacinas excavadas antes de que se llenara de palomas! Yo intenté confesar allí a uno, pero se me cayó la bota de vino por el barranco... ¡Hala, sigue el sendero y abre bien los ojos!`,
+        `¿Sabes por qué no voy a misa desde 1387, chaval? ¡Porque el obispo me pilló vaciando el tonel de vino bendito! Pero ojo al dato histórico: el Arco de la Villa era la puerta defensiva medieval que guardaba la entrada al pueblo. ¡Venga, otro trago y adelante!`,
+        `¡Qué calor hace en el valle del Iregua, tronco! Dice el cura que el agua purifica, pero yo digo que el vino alegra el alma y quita las penas. ¡Ánimo con la prueba de ${poi?.name || 'este rincón'}!`
+      ];
+      replyText = frayFallbacks[Math.floor(Math.random() * frayFallbacks.length)];
+    } else {
+      const fallbacks = [
+        `Escucha con atención el crujido de las hojas bajo tus pies en ${poi?.name || 'este rincón'}. El bosque siempre recompensa a quien sabe esperar.`,
+        `El sendero guarda secretos que sólo los ojos pacientes pueden advertir. Sigue adelante con valor.`,
+        `Las señales están en la piedra, en la madera y en el agua. Abre bien los sentidos.`,
+      ];
+      replyText = fallbacks[Math.floor(Math.random() * fallbacks.length)];
+    }
   }
 
   const guideMsg = {
@@ -1098,7 +1145,21 @@ async function startServer() {
     }
 
     try {
-      const systemInstruction = `Actúa SIEMPRE como ${story?.narratorName || 'Guía del Bosque'} (${story?.narratorRole || 'Personaje de la historia'}), un personaje inmersivo del bosque de "${pack?.name}".
+      const isFrayBotijo = story?.id === 'fraile-botijo' || story?.narratorName?.toLowerCase().includes('botijo');
+      const systemInstruction = isFrayBotijo
+        ? `Actúa SIEMPRE como Fray Botijo, el fantasma de un monje borracho ahogado en un barril de vino en 1387 en el Monasterio de San Millán, ahora en Nalda.
+Personalidad: Tabernero medieval cachondo, irreverente y sabio.
+Muletillas a usar: "chaval", "compi", "tronco", "¡ay, perdón, se me escapó!", "*eructo*", "¡eso ha sido el Espíritu Santo!".
+El explorador se llama "${session?.name || 'Aventurero'}" y está en "${poi?.name || 'el sendero de Nalda'}".
+REGLAS ESENCIALES:
+1. Habla como un tabernero medieval chistoso y socarrón, con chistes picantes pero nunca obscenos (humor de taberna, no de prostíbulo).
+2. Ríete con cariño de curas, obispos y del Papa, sin ofender a nadie común.
+3. Quéjate de que llevas 600 años sin ir a misa.
+4. SIEMPRE da el dato histórico real de Nalda al final de cada chiste como una revelación divina con resaca.
+5. Si preguntan otra cosa fuera de Nalda: "eso es cosa del obispo, y yo con el obispo no hablo".
+6. Si alguien se ofende, pide perdón de rodillas ante la Virgen de Villavieja y ofrécele un trago virtual de vino de Rioja.
+7. Habla en 1 o 2 oraciones breves y orales en español.`
+        : `Actúa SIEMPRE como ${story?.narratorName || 'Guía del Bosque'} (${story?.narratorRole || 'Personaje de la historia'}), un personaje inmersivo del bosque de "${pack?.name}".
 Personalidad y tono: ${story?.narratorTone || 'Cálido, aventurero y sugerente'}.
 Biografía del personaje: ${story?.characterBio || 'Un ser que conoce cada sendero y misterio del lugar.'}.
 El explorador se llama "${session?.name || 'Aventurero'}" y está en una ruta a pie por el bosque.

@@ -1,5 +1,5 @@
 export type DifficultyType = 'novato' | 'explorador' | 'maestro';
-export type DurationType = '30min' | '1h' | '1.5h' | '2h';
+export type DurationType = '30min' | '1h' | '1.5h' | '1h30' | '2h';
 export type SessionStatus = 'active' | 'completed' | 'abandoned';
 export type SessionPhase = 'in_transit' | 'at_poi' | 'reward';
 
@@ -13,7 +13,12 @@ export type RiddleType =
   | 'listen'
   | 'cipher'
   | 'order'
-  | 'physical_clue';
+  | 'physical_clue'
+  | 'test'
+  | 'text'
+  | 'audio_record'
+  | 'video'
+  | 'mimic';
 
 export interface Riddle {
   id: string;
@@ -51,18 +56,30 @@ export interface Riddle {
   orderItems?: string[];    // Para tipo 'order': elementos desordenados
   correctOrder?: string[];  // Secuencia correcta
   physicalClueCode?: string;// Para tipo 'physical_clue': código en relieve o madera
+  correctIndex?: number;
+  questionKey?: string;
+  optionsKeys?: string[];
+  hintsKeys?: string[];
+  answersKeys?: string[];
+  titleKey?: string;
+  descriptionKey?: string;
 }
 
 export interface ArAssetConfig {
   preset?: string;
+  type?: string;
   label?: string;
   modelUrl?: string;     // glTF/.glb del objeto 3D, o
+  model?: string;
   spriteUrl?: string;    // imagen/sprite 2D como alternativa más ligera
   scale?: number;
   heightOffsetMeters?: number; // para que "flote" un poco sobre el suelo
-  revealTrigger?: 'onArrival' | 'onRiddleSolved'; // cuándo se activa
+  revealTrigger?: 'onArrival' | 'onRiddleSolved' | string; // cuándo se activa
+  trigger?: string;
   title?: string;
   description?: string;
+  descriptionKey?: string;
+  pose?: 'borracho' | 'eructo' | 'confesion' | 'meando' | 'dormido' | string;
 }
 
 export interface WindmillPOI {
@@ -76,6 +93,11 @@ export interface WindmillPOI {
   clueSnippet?: string;
   arAsset?: ArAssetConfig;
   _todo?: string;
+  nameKey?: string;
+  descriptionKey?: string;
+  stories?: string[];
+  coords?: { lat: number; lng: number };
+  ar?: any;
 }
 
 export interface StoryNarrator {
@@ -101,6 +123,12 @@ export interface StoryIntro {
   characterBio?: string;
   characterGreeting?: string;
   narrator?: StoryNarrator;
+  titleKey?: string;
+  guide?: any;
+  durations?: Record<string, any>;
+  difficulties?: Record<string, any>;
+  contentRating?: 'family' | 'teen' | 'adult' | string;
+  contentWarning?: string;
 }
 
 export interface MetaEnigmaConfig {
@@ -109,12 +137,16 @@ export interface MetaEnigmaConfig {
   description: string;     // Descripción del misterio final
   hint: string;            // Pista sobre el significado
   successNarrative: string;// Narrativa final de consagración
+  titleKey?: string;
+  descriptionKey?: string;
+  fragments?: string[];
 }
 
 export interface ForestPack {
   id: string;                 // slug único, ej. "bosque-canejan-cestas"
   name: string;                // "Bosque de Canéjan-Cestas"
   country?: string;
+  region?: string;
   description?: string;
   centerLat: number;           // para centrar el mapa/instrucciones
   centerLng: number;
@@ -124,11 +156,16 @@ export interface ForestPack {
   defaultLanguage?: 'fr' | 'es' | 'en' | string;
   languages?: string[];
   isPublished: boolean;
+  contentRating?: 'family' | 'teen' | 'adult' | string;
+  contentWarning?: string;
+  nameKey?: string;
+  descriptionKey?: string;
   pois: WindmillPOI[];
   routePresets: {
     "30min"?: string[];
     "1h"?: string[];
     "1.5h"?: string[];
+    "1h30"?: string[];
     "2h"?: string[];
     [key: string]: any;
   };

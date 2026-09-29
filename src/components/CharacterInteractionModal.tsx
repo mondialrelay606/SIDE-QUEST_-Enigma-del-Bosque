@@ -52,6 +52,7 @@ export const CharacterInteractionModal: React.FC<CharacterInteractionModalProps>
   const [statusMessage, setStatusMessage] = useState<string>('');
   const [chatInput, setChatInput] = useState('');
   const [isSendingText, setIsSendingText] = useState(false);
+  const [apologyToast, setApologyToast] = useState<string | null>(null);
 
   // WebSocket and LiveAudioSession references
   const wsRef = useRef<WebSocket | null>(null);
@@ -207,6 +208,14 @@ export const CharacterInteractionModal: React.FC<CharacterInteractionModalProps>
     }
   };
 
+  const handleReportJoke = async () => {
+    sounds.playClick();
+    setApologyToast("🍷 Fray Botijo te pide mil perdones de rodillas ante la Virgen de Villavieja y te invita a un buen trago virtual de Rioja. ¡Salud y borrón y cuenta nueva!");
+    if (onSendTextMessage) {
+      await onSendTextMessage('Reportar chiste: Me he sentido ofendido por este comentario.');
+    }
+  };
+
   if (!isOpen) return null;
 
   return (
@@ -245,6 +254,17 @@ export const CharacterInteractionModal: React.FC<CharacterInteractionModalProps>
           </div>
 
           <div className="flex items-center gap-2">
+            {(story.id === 'fraile-botijo' || story.narratorName?.toLowerCase().includes('botijo')) && (
+              <button
+                type="button"
+                onClick={handleReportJoke}
+                className="px-2.5 py-1.5 rounded-xl bg-amber-950/80 hover:bg-amber-900 border border-amber-500/50 text-[10px] text-amber-200 flex items-center gap-1 font-semibold transition-all active:scale-95"
+                title="Reportar chiste y recibir disculpa con trago virtual"
+              >
+                <span>🍷</span>
+                <span className="hidden sm:inline">Reportar chiste</span>
+              </button>
+            )}
             <button
               onClick={onClose}
               className="p-2 rounded-xl bg-black/40 hover:bg-black/60 text-stone-300 hover:text-white transition-colors"
@@ -253,6 +273,23 @@ export const CharacterInteractionModal: React.FC<CharacterInteractionModalProps>
             </button>
           </div>
         </div>
+
+        {/* Apology Toast Banner */}
+        {apologyToast && (
+          <div className="p-3 bg-amber-950/90 border-b border-amber-500/60 px-5 flex items-center justify-between gap-3 text-xs text-amber-100 animate-in fade-in">
+            <div className="flex items-center gap-2">
+              <span className="text-xl">🍷</span>
+              <span className="font-medium">{apologyToast}</span>
+            </div>
+            <button
+              type="button"
+              onClick={() => setApologyToast(null)}
+              className="text-amber-300 hover:text-white text-xs font-bold px-2.5 py-1 rounded-lg bg-black/40"
+            >
+              ¡Salud!
+            </button>
+          </div>
+        )}
 
         {/* Current Location & POI Context */}
         {currentPoi && (

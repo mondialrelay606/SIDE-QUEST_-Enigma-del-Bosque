@@ -44,7 +44,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               {t('app.title')}
             </h1>
             <p className="text-[10px] text-emerald-400/80 hidden sm:block tracking-wider font-medium uppercase">
-              {t('setup.story')} · GPS & Aventura
+              {t('home.heroBadge')}
             </p>
           </div>
         </div>
@@ -71,7 +71,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           {currentView === 'game' && (
             <button
               onClick={onToggleSimulatedGps}
-              title={simulatedGps ? "Modo GPS Simulado (en el lugar)" : "GPS Real del dispositivo"}
+              title={simulatedGps ? t('nav.gpsSimulated') : t('nav.gpsReal')}
               className={`flex items-center gap-1 px-2 py-1 text-xs rounded-lg border font-medium transition-all ${
                 simulatedGps
                   ? 'bg-amber-950/50 border-amber-600/40 text-amber-300 hover:bg-amber-900/60'
@@ -79,7 +79,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               }`}
             >
               <Compass className={`w-3.5 h-3.5 ${simulatedGps ? 'text-amber-400' : 'text-emerald-400 animate-spin-slow'}`} />
-              <span className="hidden md:inline">{simulatedGps ? 'Simulado' : 'GPS'}</span>
+              <span className="hidden md:inline">{simulatedGps ? t('nav.gpsSimulated') : t('nav.gpsReal')}</span>
             </button>
           )}
 
@@ -87,11 +87,11 @@ export const Navbar: React.FC<NavbarProps> = ({
           {currentView === 'game' && onOpenPauseModal && (
             <button
               onClick={onOpenPauseModal}
-              title="Pausar para continuar otro día o abandonar"
+              title={t('pause.title')}
               className="flex items-center gap-1 px-2 py-1 text-xs rounded-lg border border-amber-600/50 bg-amber-950/40 hover:bg-amber-900/60 text-amber-200 hover:text-white font-semibold transition-all shadow-sm active:scale-95"
             >
               <PauseCircle className="w-3.5 h-3.5 text-amber-400" />
-              <span className="hidden md:inline">Pausar</span>
+              <span className="hidden md:inline">{t('nav.pause')}</span>
             </button>
           )}
 
@@ -104,10 +104,10 @@ export const Navbar: React.FC<NavbarProps> = ({
               {onLogoutAdmin && (
                 <button
                   onClick={onLogoutAdmin}
-                  title="Cerrar sesión de administrador"
+                  title={t('nav.adminExit')}
                   className="px-2.5 py-1 rounded-lg bg-stone-900/80 hover:bg-stone-800 border border-stone-700 text-xs text-stone-300 hover:text-red-300 transition-colors"
                 >
-                  Salir Admin
+                  {t('nav.adminExit')}
                 </button>
               )}
               <button
@@ -115,7 +115,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 className="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-emerald-800 hover:bg-emerald-700 text-xs font-semibold text-white transition-all shadow-sm"
               >
                 <ArrowLeft className="w-3.5 h-3.5" />
-                <span className="hidden sm:inline">Volver</span>
+                <span className="hidden sm:inline">{t('nav.back')}</span>
               </button>
             </div>
           )}

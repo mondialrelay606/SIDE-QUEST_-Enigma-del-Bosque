@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ForestPack, DifficultyType, DurationType, StoryIntro } from '../types';
+import { useI18n } from '../context/I18nContext';
 import { X, Sparkles, Clock, Compass, Users, User, ArrowRight, ShieldAlert, Award, Footprints } from 'lucide-react';
 
 interface NewGameModalProps {
@@ -25,6 +26,7 @@ export const NewGameModal: React.FC<NewGameModalProps> = ({
   onStartSession,
   loading,
 }) => {
+  const { t } = useI18n();
   const [selectedStoryId, setSelectedStoryId] = useState<string>(
     forest.stories[0]?.id || ''
   );
@@ -69,7 +71,7 @@ export const NewGameModal: React.FC<NewGameModalProps> = ({
               {forest.name}
             </span>
             <h3 className="font-adventure text-lg sm:text-2xl font-bold text-amber-100">
-              Preparar Expedición
+              {t('game.setup')}
             </h3>
           </div>
           <button
@@ -92,7 +94,7 @@ export const NewGameModal: React.FC<NewGameModalProps> = ({
           {/* 1. Select Story */}
           <div className="space-y-3">
             <label className="block text-xs font-bold uppercase tracking-wider text-emerald-300">
-              1. Elige la Historia y Ambientación
+              {t('setup.stepStory')}
             </label>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
               {forest.stories.map((story) => {
@@ -110,14 +112,21 @@ export const NewGameModal: React.FC<NewGameModalProps> = ({
                   >
                     <span className="text-2xl p-1 bg-black/30 rounded-lg">{story.icon}</span>
                     <div className="flex-1 min-w-0">
-                      <div className="font-adventure text-sm font-bold text-amber-100 truncate">
-                        {story.title}
+                      <div className="flex items-center gap-2">
+                        <span className="font-adventure text-sm font-bold text-amber-100 truncate">
+                          {story.title}
+                        </span>
+                        {(story.contentRating === 'adult' || forest.contentRating === 'adult') && (
+                          <span className="px-1.5 py-0.5 rounded text-[9px] font-bold bg-red-900/90 text-red-200 border border-red-500 shrink-0">
+                            🔞 +18
+                          </span>
+                        )}
                       </div>
                       <div className="text-[11px] text-stone-400 line-clamp-2 mt-0.5">
                         {story.summary}
                       </div>
                       <div className="text-[10px] text-emerald-400/90 font-medium mt-1">
-                        Guía: {story.narratorName || story.narrator?.name}
+                        {t('nav.guide')}: {story.narratorName || story.narrator?.name}
                       </div>
                     </div>
                   </button>
@@ -125,16 +134,29 @@ export const NewGameModal: React.FC<NewGameModalProps> = ({
               })}
             </div>
 
+            {/* Adult Content Warning Callout */}
+            {currentStory && (currentStory.contentRating === 'adult' || forest.contentRating === 'adult') && (
+              <div className="p-3.5 rounded-xl bg-red-950/60 border border-red-500/70 text-xs text-red-200 space-y-1.5 shadow-md">
+                <div className="font-bold text-red-300 flex items-center gap-1.5">
+                  <ShieldAlert className="w-4 h-4 text-red-400 shrink-0" />
+                  <span>Aviso de Contenido Adulto (+18)</span>
+                </div>
+                <p className="text-stone-200 font-medium leading-snug">
+                  "{currentStory.contentWarning || forest.contentWarning || t('game.contentRatingAdultWarning')}"
+                </p>
+              </div>
+            )}
+
             {/* Story Briefing Callout */}
             {currentStory && (
               <div className="p-3.5 rounded-xl bg-amber-950/30 border border-amber-600/30 text-xs text-amber-200/90 space-y-1">
                 <div className="font-semibold text-amber-300 flex items-center gap-1.5">
                   <Sparkles className="w-3.5 h-3.5 text-amber-400" />
-                  <span>Misión del guía: {currentStory.narratorRole || currentStory.narrator?.role}</span>
+                  <span>{currentStory.narratorRole || currentStory.narrator?.role}</span>
                 </div>
                 <p className="text-stone-300 italic">"{currentStory.narrative || currentStory.summary}"</p>
                 <div className="text-[11px] text-emerald-300 pt-1 font-medium">
-                  Objetivo: {currentStory.mission}
+                  🎯 {currentStory.mission}
                 </div>
               </div>
             )}
@@ -143,26 +165,23 @@ export const NewGameModal: React.FC<NewGameModalProps> = ({
           {/* 2. Select Difficulty */}
           <div className="space-y-3">
             <label className="block text-xs font-bold uppercase tracking-wider text-emerald-300">
-              2. Nivel de Dificultad
+              {t('setup.stepDifficulty')}
             </label>
             <div className="grid grid-cols-3 gap-2.5">
               {[
                 {
                   id: 'novato',
-                  name: 'Novato',
-                  desc: 'Familiar con opciones múltiples',
+                  name: t('difficulty.novato'),
                   color: 'border-emerald-600',
                 },
                 {
                   id: 'explorador',
-                  name: 'Explorador',
-                  desc: 'Deducción y orientación media',
+                  name: t('difficulty.explorador'),
                   color: 'border-amber-600',
                 },
                 {
                   id: 'maestro',
-                  name: 'Maestro',
-                  desc: 'Sin opciones, enigmas puros',
+                  name: t('difficulty.maestro'),
                   color: 'border-purple-600',
                 },
               ].map((lvl) => {
@@ -181,9 +200,6 @@ export const NewGameModal: React.FC<NewGameModalProps> = ({
                     <div className="font-adventure text-xs sm:text-sm font-bold text-amber-100">
                       {lvl.name}
                     </div>
-                    <div className="text-[10px] text-stone-400 mt-0.5 leading-tight">
-                      {lvl.desc}
-                    </div>
                   </button>
                 );
               })}
@@ -193,14 +209,14 @@ export const NewGameModal: React.FC<NewGameModalProps> = ({
           {/* 3. Duration & POI subset */}
           <div className="space-y-3">
             <label className="block text-xs font-bold uppercase tracking-wider text-emerald-300">
-              3. Duración Estimada de la Ruta a Pie
+              {t('setup.stepDuration')}
             </label>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
               {[
-                { id: '30min', label: '30 min', hint: 'Ruta exprés' },
-                { id: '1h', label: '1 hora', hint: 'Ruta estándar' },
-                { id: '1.5h', label: '1.5 horas', hint: 'Ruta completa' },
-                { id: '2h', label: '2 horas', hint: 'Desafío total' },
+                { id: '30min', label: t('duration.30min') },
+                { id: '1h', label: t('duration.1h') },
+                { id: '1.5h', label: t('duration.1.5h') },
+                { id: '2h', label: t('duration.2h') },
               ].map((dur) => {
                 const isSelected = duration === dur.id;
                 return (
@@ -218,7 +234,6 @@ export const NewGameModal: React.FC<NewGameModalProps> = ({
                       <Clock className="w-3.5 h-3.5 text-emerald-400" />
                       <span>{dur.label}</span>
                     </div>
-                    <span className="text-[10px] text-stone-400">{dur.hint}</span>
                   </button>
                 );
               })}
@@ -228,7 +243,7 @@ export const NewGameModal: React.FC<NewGameModalProps> = ({
           {/* 4. Player Name and Mode */}
           <div className="space-y-3">
             <label className="block text-xs font-bold uppercase tracking-wider text-emerald-300">
-              4. Participantes
+              {t('setup.stepParticipants')}
             </label>
             <div className="grid grid-cols-2 gap-2 pb-2">
               <button
@@ -241,7 +256,7 @@ export const NewGameModal: React.FC<NewGameModalProps> = ({
                 }`}
               >
                 <User className="w-3.5 h-3.5" />
-                <span>Individual</span>
+                <span>{t('setup.individual')}</span>
               </button>
               <button
                 type="button"
@@ -253,7 +268,7 @@ export const NewGameModal: React.FC<NewGameModalProps> = ({
                 }`}
               >
                 <Users className="w-3.5 h-3.5" />
-                <span>En Grupo / Familia</span>
+                <span>{t('setup.group')}</span>
               </button>
             </div>
 
@@ -261,7 +276,7 @@ export const NewGameModal: React.FC<NewGameModalProps> = ({
               type="text"
               value={playerName}
               onChange={(e) => setPlayerName(e.target.value)}
-              placeholder={playerType === 'grupo' ? 'Nombre del equipo o familia (ej. Los Linces)' : 'Tu nombre o apodo'}
+              placeholder={playerType === 'grupo' ? t('setup.namePlaceholderGroup') : t('setup.namePlaceholderSingle')}
               maxLength={30}
               className="w-full px-4 py-2.5 rounded-xl bg-black/40 border border-emerald-800/60 text-sm text-stone-100 placeholder-stone-500 focus:outline-none focus:border-emerald-500"
             />
@@ -279,10 +294,10 @@ export const NewGameModal: React.FC<NewGameModalProps> = ({
               <div className="flex-1 text-xs">
                 <div className="font-adventure font-bold text-amber-200 flex items-center gap-1.5">
                   <Footprints className="w-4 h-4 text-emerald-400" />
-                  <span>Modo Familiar / Niños Pequeños (Geocerca ampliada a 60 m)</span>
+                  <span>{t('setup.easyModeTitle')}</span>
                 </div>
                 <p className="text-[11px] text-stone-400 mt-0.5 leading-relaxed">
-                  Amplía el radio de llegada de 25 m a 60 m. Ideal si caminas con carritos, niños pequeños o movilidad reducida para no depender de acertar el punto exacto bajo el follaje.
+                  {t('setup.easyModeDesc')}
                 </p>
               </div>
             </label>
@@ -298,18 +313,18 @@ export const NewGameModal: React.FC<NewGameModalProps> = ({
               {loading ? (
                 <>
                   <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
-                  <span>Generando código de expedición...</span>
+                  <span>{t('setup.submitLoading')}</span>
                 </>
               ) : (
                 <>
                   <Compass className="w-5 h-5 text-amber-300" />
-                  <span>Iniciar Expedición al Bosque</span>
+                  <span>{t('setup.submit')}</span>
                   <ArrowRight className="w-4 h-4" />
                 </>
               )}
             </button>
             <p className="text-[11px] text-center text-stone-400 mt-2">
-              Se generará un código de 6 caracteres para guardar tu progreso en vivo.
+              {t('setup.codeHelp')}
             </p>
           </div>
         </form>

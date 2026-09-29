@@ -69,6 +69,19 @@ export const BriefingModal: React.FC<BriefingModalProps> = ({
 
         {/* Modal Scrollable Body */}
         <div className="p-5 sm:p-6 space-y-5 max-h-[75vh] overflow-y-auto text-xs leading-relaxed">
+          {/* Adult Content Warning Callout */}
+          {(story?.contentRating === 'adult' || forest?.contentRating === 'adult') && (
+            <div className="p-3.5 rounded-xl bg-red-950/60 border border-red-500/70 text-xs text-red-200 space-y-1 shadow-md">
+              <div className="font-bold text-red-300 flex items-center gap-1.5">
+                <ShieldAlert className="w-4 h-4 text-red-400 shrink-0" />
+                <span>Aviso de Contenido Adulto (+18)</span>
+              </div>
+              <p className="text-stone-200 font-medium leading-snug">
+                "{story?.contentWarning || forest?.contentWarning || t('game.contentRatingAdultWarning')}"
+              </p>
+            </div>
+          )}
+
           {/* Welcome narrative in character's voice */}
           <div className="p-4 rounded-2xl bg-black/40 border border-emerald-800/50 space-y-2">
             <div className="flex items-center gap-2 text-amber-300 font-adventure text-xs font-bold">
@@ -156,7 +169,7 @@ export const BriefingModal: React.FC<BriefingModalProps> = ({
         {/* Confirmation Footer */}
         <div className="p-4 sm:p-5 bg-[#121c13] border-t border-emerald-900/60 flex items-center justify-between gap-3">
           <div className="text-[11px] text-stone-400 font-mono hidden sm:block">
-            {forest.pois.length} hitos
+            {forest.pois.length} {t('briefing.poisCount')}
           </div>
 
           <button

@@ -68,5 +68,91 @@
     ],
     "completedPois": [],
     "hintHistory": []
+  },
+  "WLA3KA": {
+    "code": "WLA3KA",
+    "forestPackId": "nalda-fraybotijo",
+    "name": "Peregrino",
+    "type": "individual",
+    "storyId": "fraile-botijo",
+    "difficulty": "novato",
+    "duration": "1h",
+    "easyMode": false,
+    "currentPoiIndex": 0,
+    "routePoiIds": [
+      "castillo-nalda-f",
+      "arco-villa-f",
+      "mirador-cameros-f"
+    ],
+    "points": 0,
+    "status": "active",
+    "dateStarted": "2026-09-29T08:01:49.529Z",
+    "lastActive": "2026-09-29T08:01:49.529Z",
+    "lat": 42.3351,
+    "lng": -2.4883,
+    "messages": [
+      {
+        "id": "msg-welcome",
+        "sender": "narrator",
+        "text": "¡Saludos, Peregrino! Soy Fray Botijo. He preparado la senda para tu expedición. Dirígete al primer punto marcado en tu mapa y prepárate a desentrañar los enigmas del bosque.",
+        "timestamp": "08:01 AM"
+      }
+    ],
+    "completedPois": [],
+    "hintHistory": [],
+    "phase": "in_transit",
+    "hasArrivedAtPoi": false,
+    "collectedRunes": [],
+    "bonusCompleted": [],
+    "metaEnigmaSolved": false
+  },
+  "QU4VZN": {
+    "code": "QU4VZN",
+    "forestPackId": "nalda-fraybotijo",
+    "name": "Peregrino",
+    "type": "individual",
+    "storyId": "fraile-botijo",
+    "difficulty": "novato",
+    "duration": "1h",
+    "easyMode": false,
+    "currentPoiIndex": 0,
+    "routePoiIds": [
+      "castillo-nalda-f",
+      "arco-villa-f",
+      "mirador-cameros-f"
+    ],
+    "points": 0,
+    "status": "active",
+    "dateStarted": "2026-09-29T08:01:56.959Z",
+    "lastActive": "2026-09-29T08:01:56.979Z",
+    "lat": 42.3351,
+    "lng": -2.4883,
+    "messages": [
+      {
+        "id": "msg-welcome",
+        "sender": "narrator",
+        "text": "¡Saludos, Peregrino! Soy Fray Botijo. He preparado la senda para tu expedición. Dirígete al primer punto marcado en tu mapa y prepárate a desentrañar los enigmas del bosque.",
+        "timestamp": "08:01 AM"
+      },
+      {
+        "id": "msg-p-1790668916978",
+        "sender": "player",
+        "text": "Me ha parecido un poco de mal gusto ese chiste, me he sentido ofendido.",
+        "timestamp": "08:01 AM"
+      },
+      {
+        "id": "msg-n-1790668916979",
+        "sender": "narrator",
+        "text": "¡Ostras, chaval! ¡Mil perdones de rodillas ante la Virgen de Villavieja! *eructo* ¡Eso ha sido el Espíritu Santo pidiendo clemencia! No era mi intención molestar, tronco, que a veces a este monje de 1387 se le calienta la boca con el orujo... ¡Venga, borrón y cuenta nueva! Tómate un trago virtual de este buen vino de Rioja a mi salud 🍷, que las penas con pan y vino son menos penas. ¡Salud y seguimos la senda!",
+        "timestamp": "08:01 AM"
+      }
+    ],
+    "completedPois": [],
+    "hintHistory": [],
+    "phase": "in_transit",
+    "hasArrivedAtPoi": false,
+    "collectedRunes": [],
+    "bonusCompleted": [],
+    "metaEnigmaSolved": false
   }
 }

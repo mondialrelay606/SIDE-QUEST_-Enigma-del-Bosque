@@ -398,6 +398,155 @@ export const GeolocatedARModal: React.FC<GeolocatedARModalProps> = ({
       const wings = new THREE.Mesh(wingGeom, bronzeMat);
       wings.position.set(0, 0.2 * scale, 0);
       group.add(wings);
+    } else if (
+      effectivePreset === 'ghost_monk' ||
+      poiId.includes('-f') ||
+      effectivePreset.includes('monk') ||
+      poiId.includes('nalda')
+    ) {
+      // 3D Ethereal Holographic Monk: FRAY BOTIJO (La Rioja)
+      const phantomMat = new THREE.MeshStandardMaterial({
+        color: 0x6ee7b7,
+        emissive: 0x10b981,
+        emissiveIntensity: 0.65,
+        transparent: true,
+        opacity: 0.82,
+        roughness: 0.25,
+      });
+
+      const goldAuraMat = new THREE.MeshBasicMaterial({
+        color: 0xfde047,
+        transparent: true,
+        opacity: 0.75,
+      });
+
+      const fleshMat = new THREE.MeshStandardMaterial({
+        color: 0xfcd34d,
+        roughness: 0.5,
+        transparent: true,
+        opacity: 0.9,
+      });
+
+      const wineRedMat = new THREE.MeshStandardMaterial({
+        color: 0x881337,
+        roughness: 0.3,
+        metalness: 0.2,
+      });
+
+      // Monk Habit / Robe (Tapered cylinder)
+      const habitGeom = new THREE.CylinderGeometry(0.35 * scale, 0.65 * scale, 1.4 * scale, 16);
+      const habit = new THREE.Mesh(habitGeom, phantomMat);
+      habit.position.y = 0.1 * scale;
+      group.add(habit);
+
+      // Franciscan rope cord / belt
+      const ropeGeom = new THREE.TorusGeometry(0.48 * scale, 0.04 * scale, 8, 24);
+      const rope = new THREE.Mesh(ropeGeom, goldAuraMat);
+      rope.rotation.x = Math.PI / 2;
+      rope.position.y = 0.15 * scale;
+      group.add(rope);
+
+      // Monk Head with Tonsure
+      const headGeom = new THREE.SphereGeometry(0.28 * scale, 16, 16);
+      const head = new THREE.Mesh(headGeom, fleshMat);
+      head.position.y = 1.0 * scale;
+      group.add(head);
+
+      // Tonsure hair ring
+      const hairGeom = new THREE.TorusGeometry(0.26 * scale, 0.04 * scale, 8, 20);
+      const hairMat = new THREE.MeshStandardMaterial({ color: 0x451a03, roughness: 0.9 });
+      const hair = new THREE.Mesh(hairGeom, hairMat);
+      hair.rotation.x = Math.PI / 2;
+      hair.position.y = 1.05 * scale;
+      group.add(hair);
+
+      // Floating ethereal halo / wine aura
+      const haloGeom = new THREE.TorusGeometry(0.38 * scale, 0.025 * scale, 8, 32);
+      const halo = new THREE.Mesh(haloGeom, goldAuraMat);
+      halo.rotation.x = Math.PI / 3;
+      halo.position.y = 1.35 * scale;
+      group.add(halo);
+
+      // Pose-specific comical details
+      const pose =
+        assetConfig.pose ||
+        (poiId.includes('cuevas')
+          ? 'eructo'
+          : poiId.includes('arco')
+          ? 'confesion'
+          : poiId.includes('mirador')
+          ? 'meando'
+          : poiId.includes('ermita')
+          ? 'dormido'
+          : 'borracho');
+
+      if (pose === 'borracho') {
+        // Drunk: wine bottle raised, tilted body
+        group.rotation.z = -0.15;
+        const bottleBody = new THREE.Mesh(
+          new THREE.CylinderGeometry(0.08 * scale, 0.08 * scale, 0.45 * scale, 12),
+          wineRedMat
+        );
+        const bottleNeck = new THREE.Mesh(
+          new THREE.CylinderGeometry(0.03 * scale, 0.03 * scale, 0.2 * scale, 8),
+          wineRedMat
+        );
+        bottleNeck.position.y = 0.3 * scale;
+        const bottleGroup = new THREE.Group();
+        bottleGroup.add(bottleBody);
+        bottleGroup.add(bottleNeck);
+        bottleGroup.position.set(0.45 * scale, 0.6 * scale, 0.2 * scale);
+        bottleGroup.rotation.z = -Math.PI / 4;
+        group.add(bottleGroup);
+      } else if (pose === 'eructo') {
+        // Burping: big belly and Holy Spirit burst particles
+        const belly = new THREE.Mesh(new THREE.SphereGeometry(0.42 * scale, 16, 16), phantomMat);
+        belly.position.set(0, 0.1 * scale, 0.25 * scale);
+        group.add(belly);
+        for (let i = 0; i < 5; i++) {
+          const burstParticle = new THREE.Mesh(new THREE.IcosahedronGeometry(0.07 * scale), goldAuraMat);
+          burstParticle.position.set(
+            (Math.random() - 0.5) * 0.3 * scale,
+            (0.95 + i * 0.12) * scale,
+            (0.35 + i * 0.15) * scale
+          );
+          group.add(burstParticle);
+        }
+      } else if (pose === 'confesion') {
+        // Confessing: comical halo and praying hands
+        const handsGeom = new THREE.BoxGeometry(0.18 * scale, 0.22 * scale, 0.15 * scale);
+        const hands = new THREE.Mesh(handsGeom, fleshMat);
+        hands.position.set(0, 0.55 * scale, 0.38 * scale);
+        group.add(hands);
+      } else if (pose === 'meando') {
+        // Urinating into the valley: hands forward, comical water stream
+        const peeStream = new THREE.Mesh(
+          new THREE.CylinderGeometry(0.02 * scale, 0.05 * scale, 0.9 * scale, 6),
+          new THREE.MeshBasicMaterial({ color: 0xfacc15, transparent: true, opacity: 0.85 })
+        );
+        peeStream.position.set(0, -0.2 * scale, 0.45 * scale);
+        peeStream.rotation.x = Math.PI / 5;
+        group.add(peeStream);
+      } else if (pose === 'dormido') {
+        // Sleeping: slouched horizontal with "Z" particles and hugging bottle
+        group.rotation.z = Math.PI / 3;
+        group.position.y = -0.3 * scale;
+        const bottleHug = new THREE.Mesh(
+          new THREE.CylinderGeometry(0.09 * scale, 0.09 * scale, 0.5 * scale, 12),
+          wineRedMat
+        );
+        bottleHug.position.set(0, 0.3 * scale, 0.3 * scale);
+        bottleHug.rotation.z = Math.PI / 4;
+        group.add(bottleHug);
+        for (let i = 0; i < 3; i++) {
+          const zRing = new THREE.Mesh(
+            new THREE.TorusGeometry((0.08 + i * 0.04) * scale, 0.02 * scale, 6, 12),
+            goldAuraMat
+          );
+          zRing.position.set(0.3 * scale + i * 0.12 * scale, (1.2 + i * 0.25) * scale, 0);
+          group.add(zRing);
+        }
+      }
     } else {
       // Brass Ancient Compass (Preset: brujula_flotante or default)
       const dialGeom = new THREE.CylinderGeometry(1.1 * scale, 1.1 * scale, 0.25 * scale, 32);

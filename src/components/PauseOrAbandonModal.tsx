@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ForestPack, PlayerSession } from '../types';
+import { useI18n } from '../context/I18nContext';
 import { sounds } from '../utils/audio';
 import {
   PauseCircle,
@@ -31,6 +32,7 @@ export const PauseOrAbandonModal: React.FC<PauseOrAbandonModalProps> = ({
   onPauseAndSave,
   onAbandonPermanently,
 }) => {
+  const { t } = useI18n();
   const [copied, setCopied] = useState(false);
   const [confirmAbandon, setConfirmAbandon] = useState(false);
   const [loadingAbandon, setLoadingAbandon] = useState(false);
@@ -76,10 +78,10 @@ export const PauseOrAbandonModal: React.FC<PauseOrAbandonModalProps> = ({
             <div>
               <span className="text-[10px] font-bold text-amber-300 uppercase tracking-wider font-mono flex items-center gap-1">
                 <Sparkles className="w-3 h-3 text-amber-400" />
-                <span>Gestión de Partida</span>
+                <span>{t('pause.badge')}</span>
               </span>
               <h2 className="font-adventure text-lg sm:text-xl font-bold text-amber-100 leading-tight">
-                Pausar o Salir de la Expedición
+                {t('pause.title')}
               </h2>
             </div>
           </div>
@@ -100,7 +102,7 @@ export const PauseOrAbandonModal: React.FC<PauseOrAbandonModalProps> = ({
             <div className="flex items-center justify-between gap-2 border-b border-emerald-950 pb-2.5">
               <div>
                 <span className="text-[10px] text-emerald-400 uppercase font-bold tracking-wider block font-mono">
-                  Tu Código de Acceso
+                  {t('resume.codeLabel')}
                 </span>
                 <span className="text-2xl font-mono font-bold tracking-widest text-amber-300">
                   {session.code}
@@ -113,28 +115,25 @@ export const PauseOrAbandonModal: React.FC<PauseOrAbandonModalProps> = ({
                 className="px-3 py-1.5 rounded-xl bg-emerald-900/80 hover:bg-emerald-800 border border-emerald-600/60 text-emerald-200 text-xs font-semibold flex items-center gap-1.5 shadow transition-all active:scale-95"
               >
                 {copied ? <Check className="w-3.5 h-3.5 text-emerald-300" /> : <Copy className="w-3.5 h-3.5" />}
-                <span>{copied ? '¡Copiado!' : 'Copiar código'}</span>
+                <span>{copied ? t('pause.codeCopied') : t('pause.copyCode')}</span>
               </button>
             </div>
 
             <div className="grid grid-cols-2 gap-2 text-[11px]">
               <div>
-                <span className="text-stone-400 block">Bosque:</span>
+                <span className="text-stone-400 block">{t('home.chooseForest')}:</span>
                 <strong className="text-stone-100 truncate block">{forest.name}</strong>
               </div>
               <div>
-                <span className="text-stone-400 block">Ambientación:</span>
+                <span className="text-stone-400 block">{t('setup.story')}:</span>
                 <strong className="text-stone-100 truncate block">{story?.title || 'Personalizada'}</strong>
               </div>
               <div>
-                <span className="text-stone-400 block">Progreso actual:</span>
-                <strong className="text-emerald-300">
-                  Punto {session.currentPoiIndex + 1} de {session.routePoiIds.length}
-                </strong>
+                <span className="text-stone-400 block">{t('reward.poiStep', { current: session.currentPoiIndex + 1, total: session.routePoiIds.length })}</span>
                 <span className="text-stone-400 block text-[10px] truncate">({currentPoi?.name})</span>
               </div>
               <div>
-                <span className="text-stone-400 block">Puntos acumulados:</span>
+                <span className="text-stone-400 block">{t('reward.totalPoints')}</span>
                 <strong className="text-amber-300 font-mono text-sm">{session.points} pts</strong>
               </div>
             </div>
@@ -146,10 +145,10 @@ export const PauseOrAbandonModal: React.FC<PauseOrAbandonModalProps> = ({
               <div className="p-4 rounded-2xl bg-gradient-to-r from-emerald-950/70 to-[#142618]/70 border border-emerald-600/70 space-y-2">
                 <div className="flex items-center gap-2 text-emerald-300 font-adventure text-sm font-bold">
                   <BookmarkCheck className="w-4 h-4 text-emerald-400" />
-                  <span>¿Quieres continuar otro día?</span>
+                  <span>{t('pause.buttonPause')}</span>
                 </div>
                 <p className="text-stone-300 leading-relaxed">
-                  Tu progreso <strong>queda guardado de forma permanente</strong> en el servidor y en este navegador. Puedes apagar el móvil, marcharte a casa y retomarla cuando quieras desde la pantalla principal introduciendo tu código <strong>{session.code}</strong>.
+                  {t('pause.helpNote')}
                 </p>
                 <button
                   type="button"
@@ -157,21 +156,21 @@ export const PauseOrAbandonModal: React.FC<PauseOrAbandonModalProps> = ({
                   className="w-full mt-2 py-3 px-4 rounded-xl bg-gradient-to-r from-emerald-700 to-emerald-600 hover:from-emerald-600 hover:to-emerald-500 text-white font-adventure text-xs font-bold tracking-wider flex items-center justify-center gap-2 shadow-lg shadow-emerald-950/60 active:scale-95 transition-all"
                 >
                   <BookmarkCheck className="w-4 h-4" />
-                  <span>Guardar y volver al menú principal</span>
+                  <span>{t('pause.buttonPause')}</span>
                 </button>
               </div>
 
               {/* Option 2: Abandon permanently trigger */}
               <div className="pt-2 flex items-center justify-between border-t border-emerald-950">
                 <span className="text-stone-400 text-[11px]">
-                  ¿No deseas continuar esta partida?
+                  {t('home.manageOrAbandon')}
                 </span>
                 <button
                   type="button"
                   onClick={() => setConfirmAbandon(true)}
                   className="text-red-400 hover:text-red-300 font-semibold underline text-[11px] transition-colors"
                 >
-                  Abandonar definitivamente
+                  {t('pause.buttonAbandon')}
                 </button>
               </div>
             </div>
@@ -180,18 +179,15 @@ export const PauseOrAbandonModal: React.FC<PauseOrAbandonModalProps> = ({
             <div className="p-4 rounded-2xl bg-red-950/40 border border-red-800/60 space-y-3 animate-in fade-in duration-150">
               <div className="flex items-center gap-2 text-red-300 font-adventure text-sm font-bold">
                 <AlertTriangle className="w-4 h-4 text-red-400" />
-                <span>¿Seguro que deseas abandonar?</span>
+                <span>{t('pause.abandonConfirm')}</span>
               </div>
-              <p className="text-stone-300 leading-relaxed text-[11px]">
-                Esta acción marcará tu partida como <strong>abandonada</strong> y se eliminará de la sesión activa de tu navegador. Si vuelves a jugar este bosque en el futuro, comenzarás una nueva partida desde el primer hito.
-              </p>
               <div className="flex items-center gap-2 pt-1">
                 <button
                   type="button"
                   onClick={() => setConfirmAbandon(false)}
                   className="flex-1 py-2.5 px-3 rounded-xl bg-stone-800 hover:bg-stone-700 text-stone-200 text-xs font-bold transition-all"
                 >
-                  Cancelar
+                  {t('common.cancel')}
                 </button>
                 <button
                   type="button"
@@ -200,7 +196,7 @@ export const PauseOrAbandonModal: React.FC<PauseOrAbandonModalProps> = ({
                   className="flex-1 py-2.5 px-3 rounded-xl bg-red-700 hover:bg-red-600 disabled:opacity-50 text-white font-adventure text-xs font-bold transition-all flex items-center justify-center gap-1.5 shadow"
                 >
                   <LogOut className="w-3.5 h-3.5" />
-                  <span>{loadingAbandon ? 'Abandonando...' : 'Sí, abandonar'}</span>
+                  <span>{loadingAbandon ? '...' : t('pause.buttonAbandon')}</span>
                 </button>
               </div>
             </div>
@@ -214,7 +210,7 @@ export const PauseOrAbandonModal: React.FC<PauseOrAbandonModalProps> = ({
             onClick={onClose}
             className="px-5 py-2.5 rounded-xl bg-stone-800 hover:bg-stone-700 text-stone-200 text-xs font-bold transition-all active:scale-95"
           >
-            Seguir jugando ahora
+            {t('common.continue')}
           </button>
         </div>
       </div>

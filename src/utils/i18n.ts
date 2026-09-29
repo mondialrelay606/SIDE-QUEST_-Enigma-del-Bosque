@@ -18,9 +18,17 @@ export function t(
   params?: Record<string, string | number>,
   defaultLangFallback: string = 'es'
 ): string {
-  const ui = (i18nData as any).ui;
+  const ui = (i18nData as any).ui || {};
+  const keys = (i18nData as any).keys || {};
   const targetDict = ui[lang] || ui[defaultLangFallback] || ui['es'] || {};
-  let text = targetDict[key] || ui['es']?.[key] || key;
+  
+  let text =
+    targetDict[key] ||
+    ui['es']?.[key] ||
+    keys[key]?.[lang] ||
+    keys[key]?.[defaultLangFallback] ||
+    keys[key]?.['es'] ||
+    key;
 
   if (params) {
     Object.entries(params).forEach(([paramKey, val]) => {
@@ -39,43 +47,51 @@ export function getLocalizedForest(forest: ForestPack, lang: string): ForestPack
 
   const targetLang = (lang as SupportedLanguage) || (forest.defaultLanguage as SupportedLanguage) || 'es';
   const forestI18n = (i18nData as any).forests?.[forest.id];
+  const keys = (i18nData as any).keys || {};
 
-  // If language is 'es', return base forest (since base is in Spanish)
-  if (targetLang === 'es' && !forestI18n?.es) {
-    return {
-      ...forest,
-      defaultLanguage: forest.defaultLanguage || 'es',
-      languages: forest.languages || ['es', 'en'],
-    };
-  }
-
-  // Get translations for target language or fallback to defaultLanguage
-  const langData = forestI18n?.[targetLang] || forestI18n?.[forest.defaultLanguage || 'es'];
-  if (!langData) {
-    return forest;
-  }
+  const translateKey = (k?: string, fallbackVal?: string): string => {
+    if (!k) return fallbackVal || '';
+    return t(k, targetLang, undefined, forest.defaultLanguage || 'es');
+  };
 
   // Localize POIs
   const localizedPois: WindmillPOI[] = forest.pois.map((poi) => {
-    const poiTrans = langData.pois?.[poi.id];
-    if (!poiTrans) return poi;
+    const poiTrans = forestI18n?.[targetLang]?.pois?.[poi.id];
+    const name = poiTrans?.name || (poi.nameKey ? translateKey(poi.nameKey, poi.name) : poi.name);
+    const description = poiTrans?.description || (poi.descriptionKey ? translateKey(poi.descriptionKey, poi.description) : poi.description);
+    
+    let arAsset = poi.arAsset;
+    if (arAsset) {
+      const arDesc = arAsset.descriptionKey ? translateKey(arAsset.descriptionKey, arAsset.description) : arAsset.description;
+      arAsset = {
+        ...arAsset,
+        description: arDesc,
+      };
+    }
+
     return {
       ...poi,
-      name: poiTrans.name || poi.name,
-      description: poiTrans.description || poi.description,
+      name,
+      description,
+      arAsset,
     };
   });
 
   // Localize Stories
   const localizedStories: StoryIntro[] = forest.stories.map((story) => {
-    const storyTrans = langData.stories?.[story.id];
-    if (!storyTrans) return story;
+    const storyTrans = forestI18n?.[targetLang]?.stories?.[story.id];
+    const title = storyTrans?.title || (story.titleKey ? translateKey(story.titleKey, story.title) : story.title);
+    const summary = storyTrans?.summary || (story.guide?.personaKey ? translateKey(story.guide.personaKey, story.summary) : story.summary);
+    const mission = storyTrans?.mission || story.mission;
+    const greeting = story.guide?.greetingKey ? translateKey(story.guide.greetingKey, story.characterGreeting) : story.characterGreeting;
+
     return {
       ...story,
-      title: storyTrans.title || story.title,
-      summary: storyTrans.summary || story.summary,
-      mission: storyTrans.mission || story.mission,
-      narrator: storyTrans.narrator
+      title,
+      summary,
+      mission,
+      characterGreeting: greeting,
+      narrator: storyTrans?.narrator
         ? {
             ...story.narrator,
             name: storyTrans.narrator.name || story.narrator?.name || '',
@@ -88,28 +104,69 @@ export function getLocalizedForest(forest: ForestPack, lang: string): ForestPack
 
   // Localize Riddles
   const localizedRiddles: Riddle[] = forest.riddles.map((riddle) => {
-    const rTrans = langData.riddles?.[riddle.id];
-    if (!rTrans) return riddle;
+    const rTrans = forestI18n?.[targetLang]?.riddles?.[riddle.id];
+    let question = rTrans?.question || (riddle.questionKey ? translateKey(riddle.questionKey, riddle.question) : riddle.question);
+    if (riddle.descriptionKey) {
+      question = translateKey(riddle.descriptionKey, question);
+    }
+    const name = rTrans?.name || (riddle.titleKey ? translateKey(riddle.titleKey, riddle.name) : riddle.name);
+
+    let options = riddle.options;
+    if (rTrans?.options) {
+      options = [...rTrans.options];
+    } else if (riddle.optionsKeys && riddle.optionsKeys.length > 0) {
+      options = riddle.optionsKeys.map((ok) => translateKey(ok));
+    }
+
+    let hints = riddle.hints;
+    if (rTrans?.hints) {
+      hints = [...rTrans.hints];
+    } else if (riddle.hintsKeys && riddle.hintsKeys.length > 0) {
+      hints = riddle.hintsKeys.map((hk) => translateKey(hk));
+    }
+
+    let answer = rTrans?.answer || riddle.answer;
+    if (riddle.optionsKeys && riddle.correctIndex !== undefined && options && options[riddle.correctIndex]) {
+      answer = options[riddle.correctIndex];
+    } else if (riddle.answersKeys && riddle.answersKeys.length > 0) {
+      answer = translateKey(riddle.answersKeys[0], riddle.answer);
+    }
+
+    let acceptedAnswers = rTrans?.acceptedAnswers || riddle.acceptedAnswers;
+    if (riddle.answersKeys && riddle.answersKeys.length > 0) {
+      acceptedAnswers = riddle.answersKeys.map((ak) => translateKey(ak));
+    }
 
     return {
       ...riddle,
-      name: rTrans.name || riddle.name,
-      question: rTrans.question || riddle.question,
-      options: rTrans.options ? [...rTrans.options] : riddle.options,
-      answer: rTrans.answer || riddle.answer,
-      acceptedAnswers: rTrans.acceptedAnswers ? [...rTrans.acceptedAnswers] : riddle.acceptedAnswers,
-      hints: rTrans.hints ? [...rTrans.hints] : riddle.hints,
+      name,
+      question,
+      options,
+      answer,
+      acceptedAnswers,
+      hints,
     };
   });
 
+  const forestName = forestI18n?.[targetLang]?.name || (forest.nameKey ? translateKey(forest.nameKey, forest.name) : forest.name);
+  const forestDesc = forestI18n?.[targetLang]?.description || (forest.descriptionKey ? translateKey(forest.descriptionKey, forest.description) : forest.description);
+  const forestCountry = forestI18n?.[targetLang]?.country || forest.country;
+
   return {
     ...forest,
-    name: langData.name || forest.name,
-    country: langData.country || forest.country,
-    credits: langData.credits || forest.credits,
+    name: forestName,
+    country: forestCountry,
+    description: forestDesc,
     pois: localizedPois,
     stories: localizedStories,
     riddles: localizedRiddles,
+    metaEnigma: forest.metaEnigma
+      ? {
+          ...forest.metaEnigma,
+          title: forest.metaEnigma.titleKey ? translateKey(forest.metaEnigma.titleKey, forest.metaEnigma.title) : (forestI18n?.[targetLang]?.metaEnigma?.title || forest.metaEnigma.title),
+          description: forest.metaEnigma.descriptionKey ? translateKey(forest.metaEnigma.descriptionKey, forest.metaEnigma.description) : (forestI18n?.[targetLang]?.metaEnigma?.description || forest.metaEnigma.description),
+        }
+      : undefined,
   };
 }
 

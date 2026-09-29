@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { PlayerSession, ForestPack } from '../types';
+import { useI18n } from '../context/I18nContext';
 import { Trophy, Star, Sparkles, CheckCircle2, MessageSquare, ArrowRight, Share2 } from 'lucide-react';
 import { sounds } from '../utils/audio';
 
@@ -16,6 +17,7 @@ export const CompletionModal: React.FC<CompletionModalProps> = ({
   onFinish,
   loading,
 }) => {
+  const { t } = useI18n();
   const [rating, setRating] = useState(5);
   const [comment, setComment] = useState('');
   const [submitted, setSubmitted] = useState(false);
@@ -43,15 +45,15 @@ export const CompletionModal: React.FC<CompletionModalProps> = ({
         <div className="space-y-1.5">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-950/80 border border-emerald-500/30 text-xs font-semibold text-emerald-300">
             <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
-            <span>¡Expedición Completada con Éxito!</span>
+            <span>{t('finish.completedBadge')}</span>
           </div>
 
           <h2 className="font-adventure text-2xl sm:text-3xl font-extrabold text-amber-100">
-            Honor al Gran Explorador
+            {t('finish.honorTitle')}
           </h2>
 
           <p className="text-xs sm:text-sm text-stone-300 max-w-sm mx-auto">
-            {session.name}, has recorrido todos los hitos de <strong>{forest.name}</strong> y desentrañado la senda de <em>"{story?.title}"</em>.
+            {t('finish.honorDesc', { name: session.name, forestName: forest.name, storyTitle: story?.title || '' })}
           </p>
         </div>
 
@@ -62,7 +64,7 @@ export const CompletionModal: React.FC<CompletionModalProps> = ({
               {session.points}
             </div>
             <div className="text-[11px] text-stone-400 uppercase tracking-wider">
-              Puntos Obtenidos
+              {t('finish.pointsEarned')}
             </div>
           </div>
           <div>
@@ -70,7 +72,7 @@ export const CompletionModal: React.FC<CompletionModalProps> = ({
               {session.routePoiIds.length}/{session.routePoiIds.length}
             </div>
             <div className="text-[11px] text-stone-400 uppercase tracking-wider">
-              Puntos Resueltos
+              {t('finish.pointsResolved')}
             </div>
           </div>
         </div>
@@ -80,7 +82,7 @@ export const CompletionModal: React.FC<CompletionModalProps> = ({
           <form onSubmit={handleSubmit} className="space-y-4 text-left pt-2">
             <div>
               <label className="block text-xs font-bold uppercase tracking-wider text-emerald-300 text-center mb-2">
-                ¿Qué te ha parecido la experiencia por el bosque?
+                {t('finish.rateExperience')}
               </label>
               {/* Star Rating Buttons */}
               <div className="flex justify-center items-center gap-2">
@@ -105,12 +107,12 @@ export const CompletionModal: React.FC<CompletionModalProps> = ({
 
             <div>
               <label className="block text-[11px] font-semibold text-stone-400 mb-1">
-                Comentario para el cuaderno de bitácora (opcional):
+                {t('finish.commentLabel')}
               </label>
               <textarea
                 value={comment}
                 onChange={(e) => setComment(e.target.value)}
-                placeholder="¿Qué acertijo te ha gustado más? ¿Qué tal la senda a pie?"
+                placeholder={t('finish.commentPlaceholder')}
                 rows={2}
                 maxLength={240}
                 className="w-full px-3.5 py-2.5 rounded-xl bg-black/50 border border-emerald-800/60 text-xs sm:text-sm text-stone-100 placeholder-stone-500 focus:outline-none focus:border-amber-400"
@@ -126,7 +128,7 @@ export const CompletionModal: React.FC<CompletionModalProps> = ({
                 <div className="w-4 h-4 border-2 border-stone-900 border-t-transparent rounded-full animate-spin" />
               ) : (
                 <>
-                  <span>Enviar Valoración y Finalizar</span>
+                  <span>{t('finish.submitRating')}</span>
                   <ArrowRight className="w-4 h-4" />
                 </>
               )}
@@ -135,10 +137,10 @@ export const CompletionModal: React.FC<CompletionModalProps> = ({
         ) : (
           <div className="p-4 bg-emerald-950/70 border border-emerald-700/60 rounded-xl text-center space-y-2">
             <p className="text-emerald-300 font-bold text-sm">
-              ¡Muchas gracias por tu opinión!
+              {t('finish.thankYou')}
             </p>
             <p className="text-xs text-stone-400">
-              Tu valoración ha quedado registrada en el cuaderno del bosque.
+              {t('finish.recorded')}
             </p>
           </div>
         )}

@@ -1,5 +1,6 @@
 import React from 'react';
 import { WindmillPOI, StoryIntro, ForestPack, PlayerSession } from '../types';
+import { useI18n } from '../context/I18nContext';
 import { Award, ArrowRight, Sparkles, CheckCircle, KeyRound, BookmarkCheck } from 'lucide-react';
 
 interface RewardScreenCardProps {
@@ -21,6 +22,7 @@ export const RewardScreenCard: React.FC<RewardScreenCardProps> = ({
   onContinue,
   highContrast,
 }) => {
+  const { t } = useI18n();
   const currentRune = session.collectedRunes?.find((r) => r.poiId === currentPoi.id);
   const totalPois = session.routePoiIds.length;
   const isFinalPoi = session.currentPoiIndex + 1 >= totalPois;
@@ -45,13 +47,13 @@ export const RewardScreenCard: React.FC<RewardScreenCardProps> = ({
 
       <div className="space-y-2">
         <span className="text-xs uppercase font-adventure font-bold tracking-widest text-amber-300">
-          ¡Hito Superado con Éxito!
+          {t('reward.passed')}
         </span>
         <h2 className="font-adventure text-2xl sm:text-3xl font-extrabold text-amber-100">
-          Has Descifrado el Enigma de {currentPoi.name}
+          {t('reward.solved', { poiName: currentPoi.name })}
         </h2>
         <p className="text-sm text-stone-300 max-w-lg mx-auto leading-relaxed">
-          Tus observaciones agudas y deducciones han abierto el sendero. Tus puntos se han sumado al registro de la expedición.
+          {t('reward.desc')}
         </p>
       </div>
 
@@ -60,7 +62,7 @@ export const RewardScreenCard: React.FC<RewardScreenCardProps> = ({
         <div className="p-5 rounded-2xl bg-black/50 border border-amber-500/50 max-w-md mx-auto space-y-3">
           <div className="flex items-center justify-center gap-2 text-xs font-bold text-amber-300 uppercase tracking-wider">
             <Sparkles className="w-4 h-4 text-amber-400" />
-            <span>Runa Revelada para el Códice</span>
+            <span>{t('reward.runeRevealed')}</span>
           </div>
 
           <div className="flex items-center justify-center gap-3">
@@ -69,13 +71,13 @@ export const RewardScreenCard: React.FC<RewardScreenCardProps> = ({
             </div>
             <div className="text-left">
               <div className="font-adventure font-bold text-amber-100 text-base">
-                Letra «{currentRune.letter}»
+                {t('reward.runeLetter', { letter: currentRune.letter })}
               </div>
               <div className="text-xs text-stone-300">
-                Guardada en tu mochila para el Meta-Enigma final.
+                {t('reward.runeHelp')}
               </div>
               <div className="text-[11px] text-emerald-400 font-mono mt-0.5">
-                Progreso del códice: {session.collectedRunes?.length || 1} / {totalPois} letras
+                {t('reward.runeProgress', { current: session.collectedRunes?.length || 1, total: totalPois })}
               </div>
             </div>
           </div>
@@ -85,10 +87,10 @@ export const RewardScreenCard: React.FC<RewardScreenCardProps> = ({
       {/* Points & Stats Banner */}
       <div className="flex items-center justify-center gap-4 text-xs font-mono font-bold">
         <div className="px-4 py-2 rounded-xl bg-black/40 border border-emerald-800 text-emerald-300">
-          Puntos totales: <span className="text-amber-300 text-sm">{session.points}</span>
+          {t('reward.totalPoints')} <span className="text-amber-300 text-sm">{session.points}</span>
         </div>
         <div className="px-4 py-2 rounded-xl bg-black/40 border border-emerald-800 text-stone-300">
-          Hito {session.currentPoiIndex + 1} de {totalPois}
+          {t('reward.poiStep', { current: session.currentPoiIndex + 1, total: totalPois })}
         </div>
       </div>
 
@@ -102,11 +104,11 @@ export const RewardScreenCard: React.FC<RewardScreenCardProps> = ({
           {isFinalPoi ? (
             <>
               <KeyRound className="w-5 h-5 text-amber-300" />
-              <span>Abrir el Meta-Enigma Final del Bosque</span>
+              <span>{t('reward.openMetaEnigma')}</span>
             </>
           ) : (
             <>
-              <span>Iniciar marcha hacia: {nextPoi?.name || 'Siguiente Hito'}</span>
+              <span>{t('reward.marchToNext', { poiName: nextPoi?.name || '...' })}</span>
               <ArrowRight className="w-5 h-5 text-amber-300" />
             </>
           )}
@@ -114,7 +116,7 @@ export const RewardScreenCard: React.FC<RewardScreenCardProps> = ({
 
         {!isFinalPoi && nextPoi && (
           <p className="text-[11px] text-stone-400 mt-2">
-            La siguiente prueba permanecerá oculta hasta que alcances físicamente {nextPoi.name}.
+            {t('reward.nextSealed', { poiName: nextPoi.name })}
           </p>
         )}
       </div>
