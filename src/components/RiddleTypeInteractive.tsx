@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Riddle } from '../types';
+import { useI18n } from '../context/I18nContext';
 import {
   Camera,
   CheckCircle,
@@ -55,8 +56,10 @@ export const RiddleTypeInteractive: React.FC<RiddleTypeInteractiveProps> = ({
   loading,
   highContrast,
 }) => {
+  const { t } = useI18n();
   const [textAnswer, setTextAnswer] = useState('');
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
+  const [shuffledOptions, setShuffledOptions] = useState<string[]>([]);
 
   // Photo state
   const [photoPreview, setPhotoPreview] = useState<string | null>(null);
@@ -97,11 +100,18 @@ export const RiddleTypeInteractive: React.FC<RiddleTypeInteractiveProps> = ({
     setListenTimer(0);
     setSelectedToSwap(null);
 
+    // Initial shuffle for multiple-choice options (rule: never show in fixed default order)
+    if (riddle.options && riddle.options.length > 0) {
+      setShuffledOptions(shuffleGuaranteed(riddle.options));
+    } else {
+      setShuffledOptions([]);
+    }
+
     // Initial shuffle for 'order'
     if (riddle.type === 'order' && correctOrderList.length > 0) {
       setOrderedItems(shuffleGuaranteed(correctOrderList));
     }
-  }, [riddle.id]);
+  }, [riddle.id, riddle.options]);
 
   // Compass device orientation
   const handleDeviceHeading = (e: DeviceOrientationEvent) => {
@@ -202,7 +212,7 @@ export const RiddleTypeInteractive: React.FC<RiddleTypeInteractiveProps> = ({
       }
       setFeedback({
         isCorrect: false,
-        message: `${correctCount} de ${correctOrderList.length} piezas están en su sitio. Sigue afinando el orden.`,
+        message: t('order.result', { n: correctCount, total: correctOrderList.length }),
       });
     }
   };
@@ -669,9 +679,9 @@ export const RiddleTypeInteractive: React.FC<RiddleTypeInteractiveProps> = ({
             Elige tu deducción:
           </span>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-            {riddle.options.map((option, idx) => (
+            {(shuffledOptions.length > 0 ? shuffledOptions : riddle.options).map((option, idx) => (
               <button
-                key={idx}
+                key={`${idx}-${option}`}
                 type="button"
                 onClick={() => handleSend(option)}
                 disabled={submitting}

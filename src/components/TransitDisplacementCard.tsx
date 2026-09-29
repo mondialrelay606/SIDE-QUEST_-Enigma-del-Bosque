@@ -1,6 +1,7 @@
 import React from 'react';
 import { WindmillPOI, StoryIntro, ForestPack } from '../types';
 import { formatDistance, calculateHaversineDistance, calculateBearing } from '../utils/geo';
+import { useI18n } from '../context/I18nContext';
 import { Compass, Footprints, Clock, CheckCircle2, MapPin, Eye, Sparkles, AlertCircle } from 'lucide-react';
 
 interface TransitDisplacementCardProps {
@@ -32,6 +33,8 @@ export const TransitDisplacementCard: React.FC<TransitDisplacementCardProps> = (
   onOpenVisualConfirm,
   highContrast,
 }) => {
+  const { t } = useI18n();
+
   // Estimated walking time at ~4.5 km/h (~75 m/min)
   const walkingMinutes = Math.max(1, Math.round(distanceMeters / 75));
 
@@ -61,21 +64,21 @@ export const TransitDisplacementCard: React.FC<TransitDisplacementCardProps> = (
           <div className="flex items-center gap-2">
             <span className="px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 font-adventure text-xs font-bold border border-amber-500/40 flex items-center gap-1.5 animate-pulse">
               <Footprints className="w-3.5 h-3.5" />
-              <span>En Marcha hacia el Siguiente Hito</span>
+              <span>{t('transit.headingTo')} {currentPoi.name}</span>
             </span>
           </div>
 
           <div className="flex items-center gap-3 text-xs">
             <div className="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-black/40 border border-emerald-800/40 text-emerald-300 font-mono font-bold">
               <Clock className="w-3.5 h-3.5 text-amber-400" />
-              <span>~{walkingMinutes} min a pie</span>
+              <span>{t('transit.eta', { minutes: walkingMinutes })}</span>
             </div>
           </div>
         </div>
 
         <h3 className="font-adventure text-xl sm:text-2xl font-extrabold text-amber-100 flex items-center gap-2.5">
           <span>{currentPoi.emoji}</span>
-          <span>Rumbo a: {currentPoi.name}</span>
+          <span>{t('transit.headingTo')}: {currentPoi.name}</span>
         </h3>
       </div>
 

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ForestPack, PlayerSession, StoryIntro } from '../types';
 import { sounds } from '../utils/audio';
+import { useI18n } from '../context/I18nContext';
 import {
   ShieldAlert,
   Footprints,
@@ -29,6 +30,7 @@ export const BriefingModal: React.FC<BriefingModalProps> = ({
   session,
   onConfirm,
 }) => {
+  const { t } = useI18n();
   const [acknowledgedSafety, setAcknowledgedSafety] = useState(false);
 
   if (!isOpen) return null;
@@ -53,10 +55,10 @@ export const BriefingModal: React.FC<BriefingModalProps> = ({
             <div>
               <span className="text-[10px] font-bold text-amber-300 uppercase tracking-wider font-mono flex items-center gap-1">
                 <Sparkles className="w-3 h-3 text-amber-400" />
-                <span>Briefing de Expedición · {forest.name}</span>
+                <span>{t('briefing.title')} · {forest.name}</span>
               </span>
               <h2 className="font-adventure text-lg sm:text-xl font-bold text-amber-100 leading-tight">
-                {story?.title || 'Comienza tu Viaje'}
+                {story?.title || t('briefing.title')}
               </h2>
             </div>
           </div>
@@ -71,14 +73,14 @@ export const BriefingModal: React.FC<BriefingModalProps> = ({
           <div className="p-4 rounded-2xl bg-black/40 border border-emerald-800/50 space-y-2">
             <div className="flex items-center gap-2 text-amber-300 font-adventure text-xs font-bold">
               <span>{story?.narrator?.avatarEmoji || '🧙'}</span>
-              <span>Mensaje del Guía: {story?.narrator?.name || 'El Guardián del Bosque'}</span>
+              <span>{story?.narrator?.name || 'Guía'}</span>
             </div>
             <p className="font-serif italic text-amber-50/90 text-sm leading-relaxed">
-              "{story?.narrative || story?.summary || 'Bienvenido a la senda. Abre bien los ojos y escucha el susurro de las hojas. Tu aventura está a punto de comenzar.'}"
+              "{story?.narrative || story?.summary || 'Bienvenido a la senda.'}"
             </p>
             {story?.mission && (
               <div className="pt-2 border-t border-emerald-950/80 text-[11px] text-emerald-300 font-semibold">
-                🎯 Misión: {story.mission}
+                🎯 {story.mission}
               </div>
             )}
           </div>
@@ -87,55 +89,49 @@ export const BriefingModal: React.FC<BriefingModalProps> = ({
           <div className="space-y-3">
             <div className="flex items-center gap-2 text-amber-400 font-adventure text-xs font-bold uppercase tracking-wider">
               <ShieldAlert className="w-4 h-4 text-amber-400 shrink-0" />
-              <span>Normas de Seguridad y Cuidado del Bosque</span>
+              <span>{t('briefing.safetyTitle')}</span>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-[11px]">
               <div className="flex items-start gap-2.5 p-2.5 rounded-xl bg-black/30 border border-emerald-900/50">
                 <Droplets className="w-4 h-4 text-sky-400 shrink-0 mt-0.5" />
                 <div>
-                  <strong className="text-stone-100 block">Agua y calzado</strong>
-                  <span className="text-stone-400">Lleva hidratación y calzado con agarre para tierra y piedras.</span>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-2.5 p-2.5 rounded-xl bg-black/30 border border-emerald-900/50">
-                <Footprints className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-                <div>
-                  <strong className="text-stone-100 block">Atención al terreno</strong>
-                  <span className="text-stone-400">Cuidado con raíces, ramas caídas, desniveles y fango.</span>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-2.5 p-2.5 rounded-xl bg-black/30 border border-emerald-900/50">
-                <Eye className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
-                <div>
-                  <strong className="text-stone-100 block">No camines mirando la pantalla</strong>
-                  <span className="text-stone-400">Detén tu paso para leer los acertijos o consultar el mapa.</span>
+                  <span className="text-stone-300">{t('briefing.safety.1')}</span>
                 </div>
               </div>
 
               <div className="flex items-start gap-2.5 p-2.5 rounded-xl bg-black/30 border border-emerald-900/50">
                 <HeartHandshake className="w-4 h-4 text-teal-400 shrink-0 mt-0.5" />
                 <div>
-                  <strong className="text-stone-100 block">Avisa de tu ruta</strong>
-                  <span className="text-stone-400">Comunica a familiares tu recorrido y hora aproximada de regreso.</span>
+                  <span className="text-stone-300">{t('briefing.safety.2')}</span>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-2.5 p-2.5 rounded-xl bg-black/30 border border-emerald-900/50">
+                <Footprints className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                <div>
+                  <span className="text-stone-300">{t('briefing.safety.3')}</span>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-2.5 p-2.5 rounded-xl bg-black/30 border border-emerald-900/50">
+                <Eye className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
+                <div>
+                  <span className="text-stone-300">{t('briefing.safety.4')}</span>
                 </div>
               </div>
 
               <div className="flex items-start gap-2.5 p-2.5 rounded-xl bg-black/30 border border-emerald-900/50">
                 <TreePine className="w-4 h-4 text-green-400 shrink-0 mt-0.5" />
                 <div>
-                  <strong className="text-stone-100 block">Respeta fauna y flora</strong>
-                  <span className="text-stone-400">No dejes basura, no arranques plantas ni molestes a los animales.</span>
+                  <span className="text-stone-300">{t('briefing.safety.5')}</span>
                 </div>
               </div>
 
               <div className="flex items-start gap-2.5 p-2.5 rounded-xl bg-black/30 border border-emerald-900/50">
                 <AlertTriangle className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
                 <div>
-                  <strong className="text-stone-100 block">Tu seguridad es lo primero</strong>
-                  <span className="text-stone-400">La app es un juego de apoyo; el sentido común y la precaución mandan.</span>
+                  <span className="text-stone-300">{t('briefing.safety.6')}</span>
                 </div>
               </div>
             </div>
@@ -151,7 +147,7 @@ export const BriefingModal: React.FC<BriefingModalProps> = ({
                 className="mt-0.5 w-4 h-4 accent-amber-500 rounded cursor-pointer shrink-0"
               />
               <span className="text-[11px] text-stone-200">
-                He leído las recomendaciones de seguridad, llevo el equipo necesario y entiendo que la seguridad del recorrido es responsabilidad de los participantes.
+                {t('briefing.safety.6')}
               </span>
             </label>
           </div>
@@ -160,7 +156,7 @@ export const BriefingModal: React.FC<BriefingModalProps> = ({
         {/* Confirmation Footer */}
         <div className="p-4 sm:p-5 bg-[#121c13] border-t border-emerald-900/60 flex items-center justify-between gap-3">
           <div className="text-[11px] text-stone-400 font-mono hidden sm:block">
-            {forest.pois.length} hitos en la senda
+            {forest.pois.length} hitos
           </div>
 
           <button
@@ -169,7 +165,7 @@ export const BriefingModal: React.FC<BriefingModalProps> = ({
             onClick={handleStartAdventure}
             className="w-full sm:w-auto px-6 py-3 rounded-2xl bg-gradient-to-r from-amber-600 via-amber-500 to-yellow-500 hover:from-amber-500 hover:to-yellow-400 text-stone-950 font-adventure text-xs font-bold tracking-wider flex items-center justify-center gap-2 shadow-xl shadow-amber-950/60 active:scale-95 disabled:opacity-40 disabled:pointer-events-none transition-all"
           >
-            <span>Entendido, ¡estoy listo/a!</span>
+            <span>{t('briefing.confirm')}</span>
             <ArrowRight className="w-4 h-4" />
           </button>
         </div>

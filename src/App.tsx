@@ -19,8 +19,10 @@ import { AdminAuthModal } from './components/AdminAuthModal';
 import { BriefingModal } from './components/BriefingModal';
 import { PauseOrAbandonModal } from './components/PauseOrAbandonModal';
 import { ambientAudio } from './utils/audio';
+import { useI18n } from './context/I18nContext';
 
 export default function App() {
+  const { currentLanguage, localizeForest, onForestSelected } = useI18n();
   const [forests, setForests] = useState<ForestPack[]>(SEED_FOREST_PACKS);
   const [currentView, setCurrentView] = useState<'home' | 'game' | 'admin'>('home');
   const [selectedForest, setSelectedForest] = useState<ForestPack | null>(SEED_FOREST_PACKS[0] || null);
@@ -311,6 +313,10 @@ export default function App() {
     setCurrentView(activeSession ? 'game' : 'home');
   };
 
+  // Localized data computed reactively based on currentLanguage
+  const localizedForests = forests.map((f) => localizeForest(f));
+  const localizedSelectedForest = selectedForest ? localizeForest(selectedForest) : null;
+
   return (
     <div className="min-h-screen bg-[#142016] text-stone-100 flex flex-col font-sans selection:bg-emerald-700 selection:text-white">
       {/* Top Navbar */}
@@ -337,29 +343,31 @@ export default function App() {
       <main className="flex-1">
         {currentView === 'home' && (
           <ForestSelector
-            forests={forests}
+            forests={localizedForests}
             onSelectForest={(f) => {
+              onForestSelected(f);
               setSelectedForest(f);
               setIsNewGameOpen(true);
             }}
             onResumeGame={() => setIsResumeOpen(true)}
             onInteractWithCharacter={(story, forest) => {
+              onForestSelected(forest);
               setSelectedForest(forest);
               setActiveCharacterStory(story);
               setIsCharacterModalOpen(true);
             }}
             loading={loading}
             activeSession={activeSession}
-            selectedForest={selectedForest}
+            selectedForest={localizedSelectedForest}
             onContinueSavedGame={() => setCurrentView('game')}
             onOpenPauseOrAbandon={() => setIsPauseModalOpen(true)}
           />
         )}
 
-        {currentView === 'game' && activeSession && selectedForest && (
+        {currentView === 'game' && activeSession && localizedSelectedForest && (
           <GameView
             session={activeSession}
-            forest={selectedForest}
+            forest={localizedSelectedForest}
             onSubmitAnswer={handleSubmitAnswer}
             onRequestHint={handleRequestHint}
             onSendMessage={handleSendMessage}
@@ -394,9 +402,9 @@ export default function App() {
       />
 
       {/* New Game Setup Modal */}
-      {selectedForest && (
+      {localizedSelectedForest && (
         <NewGameModal
-          forest={selectedForest}
+          forest={localizedSelectedForest}
           isOpen={isNewGameOpen}
           onClose={() => setIsNewGameOpen(false)}
           onStartSession={handleStartSession}
@@ -405,10 +413,10 @@ export default function App() {
       )}
 
       {/* Mandatory Safety & Story Briefing Modal */}
-      {selectedForest && activeSession && isBriefingOpen && (
+      {localizedSelectedForest && activeSession && isBriefingOpen && (
         <BriefingModal
           isOpen={isBriefingOpen}
-          forest={selectedForest}
+          forest={localizedSelectedForest}
           session={activeSession}
           onConfirm={() => setIsBriefingOpen(false)}
         />
@@ -423,17 +431,17 @@ export default function App() {
       />
 
       {/* Completion Modal */}
-      {activeSession && selectedForest && isCompletionOpen && (
+      {activeSession && localizedSelectedForest && isCompletionOpen && (
         <CompletionModal
           session={activeSession}
-          forest={selectedForest}
+          forest={localizedSelectedForest}
           onFinish={handleFinishGame}
           loading={loading}
         />
       )}
 
       {/* Global Character Interaction Modal */}
-      {selectedForest && activeCharacterStory && (
+      {localizedSelectedForest && activeCharacterStory && (
         <CharacterInteractionModal
           isOpen={isCharacterModalOpen}
           onClose={() => setIsCharacterModalOpen(false)}
@@ -441,10 +449,10 @@ export default function App() {
           session={activeSession || undefined}
           currentPoi={
             activeSession
-              ? selectedForest.pois.find((p) => p.id === activeSession.routePoiIds[activeSession.currentPoiIndex])
-              : selectedForest.pois[0]
+              ? localizedSelectedForest.pois.find((p) => p.id === activeSession.routePoiIds[activeSession.currentPoiIndex])
+              : localizedSelectedForest.pois[0]
           }
-          forest={selectedForest}
+          forest={localizedSelectedForest}
           onSendTextMessage={activeSession ? handleSendMessage : undefined}
           textMessages={activeSession?.messages}
           onSelectOtherCharacter={(other) => setActiveCharacterStory(other)}
