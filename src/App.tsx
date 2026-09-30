@@ -38,6 +38,7 @@ export default function App() {
   const [isAdminAuthenticated, setIsAdminAuthenticated] = useState(true);
   const [activeCharacterStory, setActiveCharacterStory] = useState<StoryIntro | null>(null);
   const [isCharacterModalOpen, setIsCharacterModalOpen] = useState(false);
+  const [selectedStoryForNewGame, setSelectedStoryForNewGame] = useState<string | undefined>(undefined);
 
   // GPS Simulation toggle (default true for smooth testability, toggleable to real GPS anytime)
   const [simulatedGps, setSimulatedGps] = useState(true);
@@ -347,6 +348,7 @@ export default function App() {
             onSelectForest={(f) => {
               onForestSelected(f);
               setSelectedForest(f);
+              setSelectedStoryForNewGame(undefined);
               setIsNewGameOpen(true);
             }}
             onResumeGame={() => setIsResumeOpen(true)}
@@ -355,6 +357,12 @@ export default function App() {
               setSelectedForest(forest);
               setActiveCharacterStory(story);
               setIsCharacterModalOpen(true);
+            }}
+            onStartRouteWithStory={(forest, storyId) => {
+              onForestSelected(forest);
+              setSelectedForest(forest);
+              setSelectedStoryForNewGame(storyId);
+              setIsNewGameOpen(true);
             }}
             loading={loading}
             activeSession={activeSession}
@@ -406,9 +414,13 @@ export default function App() {
         <NewGameModal
           forest={localizedSelectedForest}
           isOpen={isNewGameOpen}
-          onClose={() => setIsNewGameOpen(false)}
+          onClose={() => {
+            setIsNewGameOpen(false);
+            setSelectedStoryForNewGame(undefined);
+          }}
           onStartSession={handleStartSession}
           loading={loading}
+          initialStoryId={selectedStoryForNewGame}
         />
       )}
 

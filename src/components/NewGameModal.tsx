@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ForestPack, DifficultyType, DurationType, StoryIntro } from '../types';
 import { useI18n } from '../context/I18nContext';
 import { X, Sparkles, Clock, Compass, Users, User, ArrowRight, ShieldAlert, Award, Footprints } from 'lucide-react';
@@ -17,6 +17,7 @@ interface NewGameModalProps {
     easyMode?: boolean;
   }) => Promise<void>;
   loading: boolean;
+  initialStoryId?: string;
 }
 
 export const NewGameModal: React.FC<NewGameModalProps> = ({
@@ -25,10 +26,11 @@ export const NewGameModal: React.FC<NewGameModalProps> = ({
   onClose,
   onStartSession,
   loading,
+  initialStoryId,
 }) => {
   const { t } = useI18n();
   const [selectedStoryId, setSelectedStoryId] = useState<string>(
-    forest.stories[0]?.id || ''
+    initialStoryId || forest.stories[0]?.id || ''
   );
   const [difficulty, setDifficulty] = useState<DifficultyType>('novato');
   const [duration, setDuration] = useState<DurationType>('1h');
@@ -36,6 +38,16 @@ export const NewGameModal: React.FC<NewGameModalProps> = ({
   const [playerType, setPlayerType] = useState<'individual' | 'grupo'>('individual');
   const [easyMode, setEasyMode] = useState<boolean>(false);
   const [errorMsg, setErrorMsg] = useState<string>('');
+
+  useEffect(() => {
+    if (isOpen) {
+      if (initialStoryId && forest.stories.some((s) => s.id === initialStoryId)) {
+        setSelectedStoryId(initialStoryId);
+      } else if (!forest.stories.some((s) => s.id === selectedStoryId)) {
+        setSelectedStoryId(forest.stories[0]?.id || '');
+      }
+    }
+  }, [isOpen, initialStoryId, forest.id]);
 
   if (!isOpen) return null;
 

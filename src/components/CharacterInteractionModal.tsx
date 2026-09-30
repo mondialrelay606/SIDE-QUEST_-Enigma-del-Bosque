@@ -436,25 +436,105 @@ export const CharacterInteractionModal: React.FC<CharacterInteractionModalProps>
               {/* Quick Questions for this Character */}
               <div className="space-y-2">
                 <span className="text-xs font-bold text-amber-300 uppercase tracking-wider block">
-                  Preguntas sugeridas al personaje:
+                  Preguntas sugeridas a {story.narratorName}:
                 </span>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                  {[
-                    `¿Qué secreto esconde ${currentPoi?.name || 'este punto'}?`,
-                    `Dame una pista poética sobre el enigma actual`,
-                    `Cuéntame una leyenda antigua sobre este bosque`,
-                    `¿Hacia dónde me recomiendas caminar ahora?`,
-                  ].map((q, idx) => (
-                    <button
-                      key={idx}
-                      type="button"
-                      onClick={() => handleSendPrompt(q)}
-                      className="p-3 rounded-xl bg-[#141F16] hover:bg-emerald-900/60 border border-emerald-900/70 hover:border-emerald-500 text-left text-xs text-stone-200 transition-all active:scale-[0.98]"
-                    >
-                      <span className="text-amber-400 font-bold mr-1">✦</span>
-                      <span>{q}</span>
-                    </button>
-                  ))}
+                  {(() => {
+                    const isBotijo = story.id === 'fraile-botijo' || story.narratorName?.toLowerCase().includes('botijo');
+                    const isChucho = story.id === 'banda-palomar' || story.narratorName?.toLowerCase().includes('chucho');
+                    const isZorbo = story.id === 'expediente-zorbo' || story.narratorName?.toLowerCase().includes('zorbo');
+                    const isCronicon = story.id === 'guardian-iregua' || story.narratorName?.toLowerCase().includes('cronicón');
+                    const isAnselmo = story.narratorName?.toLowerCase().includes('anselmo');
+                    const isJean = story.narratorName?.toLowerCase().includes('jean') || story.narratorName?.toLowerCase().includes('silence');
+                    const isPierre = story.narratorName?.toLowerCase().includes('pierre');
+                    const isSylvaine = story.narratorName?.toLowerCase().includes('sylvaine');
+                    const isDuendecillo = story.narratorName?.toLowerCase().includes('duende') || story.narratorName?.toLowerCase().includes('roble');
+
+                    let questions: string[] = [];
+                    if (isBotijo) {
+                      questions = [
+                        `¿Qué tal ese barril de vino de 1387, Fray Botijo?`,
+                        `Cuéntame un chiste de frailes y sácate un dato histórico`,
+                        `¿Qué pasó en el Castillo de Nalda en 1299?`,
+                        `¡Brindo contigo con un trago de vino de Rioja! 🍷`,
+                      ];
+                    } else if (isChucho) {
+                      questions = [
+                        `¿Qué ves a vista de pájaro desde aquí arriba, plumas?`,
+                        `¿Cómo se vive en las Cuevas de Los Palomares?`,
+                        `Dame una pista callejera sobre este enigma`,
+                        `¿Qué secretos tramas hoy con tu bandada?`,
+                      ];
+                    } else if (isZorbo) {
+                      questions = [
+                        `¿Qué tecnología alienígena detectas en este punto?`,
+                        `¿Para qué sirve el Castillo de Nalda según tu planeta?`,
+                        `Analiza el río Iregua con tus sensores cuánticos`,
+                        `¿Qué opinas del combustible fermentado terrícola (vino)?`,
+                      ];
+                    } else if (isCronicon) {
+                      questions = [
+                        `¿Qué dice el pergamino sobre ${currentPoi?.name || 'este rincón'}?`,
+                        `Cítame una enseñanza o refrán antiguo del valle`,
+                        `Dame una pista sabia para descifrar el enigma actual`,
+                        `¿Quiénes gobernaban en Nalda en el siglo XIII?`,
+                      ];
+                    } else if (isAnselmo) {
+                      questions = [
+                        `¿Qué huellas o rastros ves en esta senda, Anselmo?`,
+                        `¿Qué plantas o árboles singulares crecen en este pinar?`,
+                        `Dame una pista de tu viejo cuaderno de campo`,
+                        `¿Cómo se orientaban los antiguos por estos montes?`,
+                      ];
+                    } else if (isJean) {
+                      questions = [
+                        `¿Hay patrullas enemigas cerca de esta senda, camarada?`,
+                        `¿Qué mensaje en clave oculta este rincón del bosque?`,
+                        `Dame una pista sigilosa para avanzar sin ser visto`,
+                        `¿Qué ocurrió aquí durante la Resistencia en 1944?`,
+                      ];
+                    } else if (isPierre) {
+                      questions = [
+                        `¿Cómo funcionaba la rueda y muela de este molino?`,
+                        `¿Qué fuerza lleva hoy la corriente del Eau Bourde?`,
+                        `Dame una pista de maestro molinero para este hito`,
+                        `¿Qué grano se molía en este paraje en el siglo XIX?`,
+                      ];
+                    } else if (isSylvaine) {
+                      questions = [
+                        `¿Qué susurran las aguas del río Eau Bourde?`,
+                        `Enséñame a ver los secretos invisibles de este claro`,
+                        `Dame una pista mágica sobre el enigma actual`,
+                        `¿Qué helechos y flores protegen este manantial?`,
+                      ];
+                    } else if (isDuendecillo) {
+                      questions = [
+                        `¿Qué acertijo alegre tienes hoy para mí, duendecillo?`,
+                        `¿Dónde guardas tus bellotas secretas del roble?`,
+                        `¡Cántame una rimilla del bosque de Canéjan!`,
+                        `¿Cuál es el árbol más sabio y viejo de este camino?`,
+                      ];
+                    } else {
+                      questions = [
+                        `¿Qué secreto esconde ${currentPoi?.name || 'este punto'}?`,
+                        `Dame una pista poética sobre el enigma actual`,
+                        `Cuéntame una leyenda antigua sobre este bosque`,
+                        `¿Hacia dónde me recomiendas caminar ahora?`,
+                      ];
+                    }
+
+                    return questions.map((q, idx) => (
+                      <button
+                        key={idx}
+                        type="button"
+                        onClick={() => handleSendPrompt(q)}
+                        className="p-3 rounded-xl bg-[#141F16] hover:bg-emerald-900/60 border border-emerald-900/70 hover:border-emerald-500 text-left text-xs text-stone-200 transition-all active:scale-[0.98]"
+                      >
+                        <span className="text-amber-400 font-bold mr-1">✦</span>
+                        <span>{q}</span>
+                      </button>
+                    ));
+                  })()}
                 </div>
               </div>
 

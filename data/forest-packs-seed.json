@@ -1077,585 +1077,16 @@
     }
   },
   {
-    "id": "pinar-tres-caminos",
-    "name": "El Pinar de los Tres Caminos (Bosque de Casa)",
-    "country": "España — PLACEHOLDER, sustituir por la ubicación real",
-    "description": "Plantilla lista para jugar y personalizar a tu gusto: un bosque mediterráneo de pinos, con pozo centenario, sendero botánico y mirador al atardecer.",
-    "centerLat": 40.4168,
-    "centerLng": -3.7038,
-    "coverImageUrl": "https://images.unsplash.com/photo-1511497584788-87676104235f?auto=format&fit=crop&w=1200&q=80",
-    "attribution": "Plantilla para el bosque local. Coordenadas de ejemplo (Puerta del Sol / Madrid). Puedes sustituirlas desde el Panel de Administración por las de tu bosque real.",
-    "credits": "Plantilla para el bosque local. Coordenadas de ejemplo (Puerta del Sol / Madrid). Puedes sustituirlas desde el Panel de Administración por las de tu bosque real.",
-    "defaultLanguage": "es",
-    "languages": [
-      "es",
-      "en"
-    ],
-    "_todoCoordenadas": "Estas coordenadas son el centro de Madrid (Puerta del Sol), no un bosque real. Sustituir centerLat/centerLng y las lat/lng de cada POI por las de tu bosque real antes de publicar.",
-    "isPublished": true,
-    "pois": [
-      {
-        "id": "fuente_piedra",
-        "name": "La Fuente de Piedra",
-        "description": "Manantial de roca caliza y abrevadero donde antaño abrevaban los pastores y los caminantes llenaban sus cantimploras.",
-        "lat": 40.4172,
-        "lng": -3.7031,
-        "emoji": "⛲",
-        "clueSnippet": "El agua fresca brota de una hendidura en la roca coronada de musgo.",
-        "arAsset": {
-          "preset": "cantaro_piedra",
-          "label": "Cántaro de piedra rebosante 3D (propuesta, a validar)",
-          "title": "Cántaro de Piedra Rebosante",
-          "scale": 1.2,
-          "heightOffsetMeters": 0.8,
-          "revealTrigger": "onArrival",
-          "description": "Un cántaro tradicional de barro y piedra caliza del que emana agua cristalina."
-        }
-      },
-      {
-        "id": "arbol_vigia",
-        "name": "El Gran Árbol Vigía",
-        "description": "Árbol centenario de raíces expuestas que abrazan el terreno y dan sombra a toda la curva del sendero.",
-        "lat": 40.418,
-        "lng": -3.7045,
-        "emoji": "🌳",
-        "clueSnippet": "Fíjate en las cavidades del tronco donde suelen anidar los pájaros carpinteros.",
-        "arAsset": {
-          "preset": "corzo_dorado",
-          "label": "Corzo dorado entre raíces 3D (propuesta, a validar)",
-          "title": "Corzo Dorado Guardián",
-          "scale": 1.4,
-          "heightOffsetMeters": 1.2,
-          "revealTrigger": "onArrival",
-          "description": "Figura mística de un corzo con pelaje áureo descansando entre las raíces milenarias."
-        }
-      },
-      {
-        "id": "cruce_vientos",
-        "name": "Cruce de los Cuatro Vientos",
-        "description": "Hito de piedra en la confluencia de cañadas, sendas de pastoreo y bajada al barranco.",
-        "lat": 40.4162,
-        "lng": -3.705,
-        "emoji": "🧭",
-        "clueSnippet": "Un hito de piedra antiguo marca las direcciones de los términos colindantes.",
-        "arAsset": {
-          "preset": "brujula_flotante",
-          "label": "Brújula flotante de bronce 3D (propuesta, a validar)",
-          "title": "Brújula Flotante de Bronce",
-          "scale": 1.3,
-          "heightOffsetMeters": 1,
-          "revealTrigger": "onRiddleSolved",
-          "description": "Brújula de agrimensor que gira suspendida orientando los cuatro puntos cardinales."
-        }
-      },
-      {
-        "id": "mirador_puestas_sol",
-        "name": "Mirador de las Puestas de Sol",
-        "description": "Balcón natural sobre la ladera rocosa desde el que se divisa todo el valle y las copas de los pinares.",
-        "lat": 40.4155,
-        "lng": -3.7028,
-        "emoji": "🌅",
-        "clueSnippet": "Un banco rústico de madera invita a contemplar el horizonte dorado.",
-        "arAsset": {
-          "preset": "halcon_bronce",
-          "label": "Halcón de bronce planeando 3D (propuesta, a validar)",
-          "title": "Halcón de Bronce Planeando",
-          "scale": 1.3,
-          "heightOffsetMeters": 1.5,
-          "revealTrigger": "onRiddleSolved",
-          "description": "Escultura suspendida de un halcón con alas extendidas aprovechando las corrientes térmicas."
-        }
-      }
-    ],
-    "stories": [
-      {
-        "id": "leyenda_guardabosques",
-        "title": "La Leyenda del Guardabosques Olvidado",
-        "icon": "🌲",
-        "summary": "Durante cuarenta años, Anselmo patrulló estas veredas protegiendo corzos y manantiales. Antes de jubilarse, enterró un cuaderno de campo con notas botánicas y enigmas.",
-        "narrative": "Durante cuarenta años, Anselmo cuidó cada senda, censó los nidos de águila y plantó los brotes jóvenes. Antes de partir, dejó una prueba de agudeza para quien sepa escuchar a la naturaleza.",
-        "mission": "Completar el recorrido de los 4 hitos, resolver las pruebas botánicas y de orientación y obtener el título de Guardián Honorario del Bosque.",
-        "narrator": {
-          "name": "Guardabosques Anselmo",
-          "role": "Espíritu guardián del monte",
-          "avatarEmoji": "🧔",
-          "tone": "Campechano, sabio, amante de las aves y las plantas",
-          "ttsVoice": "Zephyr"
-        },
-        "narratorName": "Guardabosques Anselmo",
-        "narratorRole": "Espíritu guardián del monte",
-        "narratorTone": "Campechano, sabio, amante de las aves y las plantas",
-        "narratorAvatar": "🧔",
-        "voiceName": "Zephyr",
-        "characterBio": "Guarda veterano que patrulló estas sendas durante décadas. Amigo de los corzos, experto en botánica mediterránea y defensor de las fuentes de piedra.",
-        "characterGreeting": "¡Qué pasa, caminante! Huele a resina y jara fresca hoy en el monte. Si necesitas una mano con las sendas o con las pistas de mi viejo cuaderno, dime sin reparo."
-      }
-    ],
-    "riddles": [
-      {
-        "id": "r_guardabosques_fuente_1",
-        "poiId": "fuente_piedra",
-        "storyId": "leyenda_guardabosques",
-        "name": "El Caño Cristalino",
-        "difficulty": "novato",
-        "points": 100,
-        "question": "¿Qué planta aromática de flores moradas o azuladas suele crecer silvestre junto a las rocas secas cerca de la fuente?",
-        "type": "multiple_choice",
-        "options": [
-          "Romero o tomillo",
-          "Lechuga iceberg",
-          "Platanero tropical"
-        ],
-        "answer": "Romero o tomillo",
-        "hints": [
-          "Si frotas sus hojas entre tus dedos desprenden un olor característico del monte.",
-          "Es una planta típica del bosque mediterráneo resistente a la sequía.",
-          "Romero o tomillo."
-        ],
-        "staticHints": [
-          "Si frotas sus hojas entre tus dedos desprenden un olor característico del monte.",
-          "Es una planta típica del bosque mediterráneo resistente a la sequía.",
-          "Romero o tomillo."
-        ]
-      },
-      {
-        "id": "r_guardabosques_fuente_2",
-        "poiId": "fuente_piedra",
-        "storyId": "leyenda_guardabosques",
-        "name": "El Reloj de Arena del Manantial",
-        "difficulty": "explorador",
-        "points": 150,
-        "question": "Anselmo anotó en su cuaderno: «El manantial llena el abrevadero en 4 vueltas de arena, y cada vuelta dura 15 minutos». ¿Cuántos minutos tarda en llenarse el abrevadero completo?",
-        "type": "open_text",
-        "answer": "60",
-        "acceptedAnswers": [
-          "60",
-          "60 minutos",
-          "sesenta",
-          "1 hora",
-          "una hora"
-        ],
-        "hints": [
-          "Multiplica el número de vueltas por la duración de cada una.",
-          "Son 4 vueltas de 15 minutos cada una.",
-          "4 por 15 son 60 minutos."
-        ],
-        "staticHints": [
-          "Multiplica el número de vueltas por la duración de cada una.",
-          "Son 4 vueltas de 15 minutos cada una.",
-          "4 por 15 son 60 minutos."
-        ]
-      },
-      {
-        "id": "r_guardabosques_fuente_3",
-        "poiId": "fuente_piedra",
-        "storyId": "leyenda_guardabosques",
-        "name": "La Piedra Cifrada",
-        "difficulty": "maestro",
-        "points": 250,
-        "question": "En su cuaderno, Anselmo cifró el nombre de la roca que forma esta fuente reordenando sus letras: «ZACILA». ¿Qué palabra esconde?",
-        "type": "open_text",
-        "answer": "CALIZA",
-        "acceptedAnswers": [
-          "CALIZA",
-          "caliza"
-        ],
-        "hints": [
-          "Es el mismo tipo de roca que da nombre al agua «dura».",
-          "Tiene las mismas seis letras que ZACILA, solo reordenadas.",
-          "La palabra es CALIZA."
-        ],
-        "staticHints": [
-          "Es el mismo tipo de roca que da nombre al agua «dura».",
-          "Tiene las mismas seis letras que ZACILA, solo reordenadas.",
-          "La palabra es CALIZA."
-        ]
-      },
-      {
-        "id": "r_guardabosques_arbol_1",
-        "poiId": "arbol_vigia",
-        "storyId": "leyenda_guardabosques",
-        "name": "Los Anillos del Tiempo",
-        "difficulty": "novato",
-        "points": 100,
-        "question": "¿Cómo sabemos la edad exacta de un árbol cortado sin necesidad de máquinas modernas?",
-        "type": "multiple_choice",
-        "options": [
-          "Contando los anillos de crecimiento del tronco",
-          "Pesando las hojas caídas",
-          "Midiendo el grosor de la corteza en invierno"
-        ],
-        "answer": "Contando los anillos de crecimiento del tronco",
-        "hints": [
-          "Cada año el árbol añade una capa circular a su madera.",
-          "Se ven en el corte transversal como círculos concéntricos.",
-          "Contando los anillos de crecimiento del tronco."
-        ],
-        "staticHints": [
-          "Cada año el árbol añade una capa circular a su madera.",
-          "Se ven en el corte transversal como círculos concéntricos.",
-          "Contando los anillos de crecimiento del tronco."
-        ]
-      },
-      {
-        "id": "r_guardabosques_arbol_2",
-        "poiId": "arbol_vigia",
-        "storyId": "leyenda_guardabosques",
-        "name": "La Edad del Vigía",
-        "difficulty": "explorador",
-        "points": 150,
-        "question": "Anselmo midió el tronco: 120 cm de diámetro. Si cada año el árbol añade de media 0,6 cm de radio, ¿cuántos años tiene aproximadamente el Gran Árbol Vigía?",
-        "type": "open_text",
-        "answer": "100",
-        "acceptedAnswers": [
-          "100",
-          "100 años",
-          "cien"
-        ],
-        "hints": [
-          "El radio es la mitad del diámetro: empieza por ahí.",
-          "120 cm de diámetro son 60 cm de radio.",
-          "60 dividido entre 0,6 son 100 años."
-        ],
-        "staticHints": [
-          "El radio es la mitad del diámetro: empieza por ahí.",
-          "120 cm de diámetro son 60 cm de radio.",
-          "60 dividido entre 0,6 son 100 años."
-        ]
-      },
-      {
-        "id": "r_guardabosques_arbol_3",
-        "poiId": "arbol_vigia",
-        "storyId": "leyenda_guardabosques",
-        "name": "El Primo Sediento del Roble",
-        "difficulty": "maestro",
-        "points": 250,
-        "question": "En su cuaderno, Anselmo dibujó una raíz y escribió: «Busco agua profunda bajo la piedra caliza, soy primo del roble pero aguanto mejor la sequía». ¿Qué árbol mediterráneo soy?",
-        "type": "open_text",
-        "answer": "Encina",
-        "acceptedAnswers": [
-          "Encina",
-          "la encina",
-          "carrasca"
-        ],
-        "hints": [
-          "Pertenece a la misma familia que los robles, los Quercus.",
-          "Su fruto también es la bellota, pero su hoja es pequeña y perenne, casi como espinas.",
-          "Es la encina (o carrasca)."
-        ],
-        "staticHints": [
-          "Pertenece a la misma familia que los robles, los Quercus.",
-          "Su fruto también es la bellota, pero su hoja es pequeña y perenne, casi como espinas.",
-          "Es la encina (o carrasca)."
-        ]
-      },
-      {
-        "id": "r_guardabosques_cruce_1",
-        "poiId": "cruce_vientos",
-        "storyId": "leyenda_guardabosques",
-        "name": "La Rosa de los Vientos",
-        "difficulty": "novato",
-        "points": 100,
-        "question": "Si te colocas al amanecer mirando hacia donde sale el Sol (el Este), ¿hacia qué mano quedará el Norte?",
-        "type": "multiple_choice",
-        "options": [
-          "A tu mano izquierda",
-          "A tu mano derecha",
-          "A tu espalda"
-        ],
-        "answer": "A tu mano izquierda",
-        "hints": [
-          "Extiende ambos brazos en cruz mirando hacia la salida del sol.",
-          "Tu brazo derecho apuntará al Sur y tu espalda al Oeste.",
-          "A tu mano izquierda."
-        ],
-        "staticHints": [
-          "Extiende ambos brazos en cruz mirando hacia la salida del sol.",
-          "Tu brazo derecho apuntará al Sur y tu espalda al Oeste.",
-          "A tu mano izquierda."
-        ],
-        "_fix": "Puntos originales: 120. Normalizado a 100 por ser dificultad Novato."
-      },
-      {
-        "id": "r_guardabosques_cruce_2",
-        "poiId": "cruce_vientos",
-        "storyId": "leyenda_guardabosques",
-        "name": "La Sombra del Mediodía",
-        "difficulty": "explorador",
-        "points": 150,
-        "question": "A mediodía solar, en el hemisferio norte, ¿hacia qué punto cardinal apunta siempre la sombra de un poste clavado en el suelo?",
-        "type": "multiple_choice",
-        "options": [
-          "Hacia el Norte",
-          "Hacia el Sur",
-          "Hacia el Este",
-          "Hacia el Oeste"
-        ],
-        "answer": "Hacia el Norte",
-        "hints": [
-          "El sol al mediodía está en su punto más alto, hacia el Sur, en nuestro hemisferio.",
-          "La sombra siempre cae en el lado contrario al sol.",
-          "Apunta hacia el Norte."
-        ],
-        "staticHints": [
-          "El sol al mediodía está en su punto más alto, hacia el Sur, en nuestro hemisferio.",
-          "La sombra siempre cae en el lado contrario al sol.",
-          "Apunta hacia el Norte."
-        ]
-      },
-      {
-        "id": "r_guardabosques_cruce_3",
-        "poiId": "cruce_vientos",
-        "storyId": "leyenda_guardabosques",
-        "name": "El Rumbo de Vuelta",
-        "difficulty": "maestro",
-        "points": 250,
-        "question": "Sales del cruce caminando con rumbo 90° (Este) durante 10 minutos, y luego giras exactamente 180°. ¿Con qué rumbo regresas al cruce?",
-        "type": "open_text",
-        "answer": "270",
-        "acceptedAnswers": [
-          "270",
-          "270°",
-          "270 grados",
-          "oeste"
-        ],
-        "hints": [
-          "Girar 180° significa dar media vuelta completa.",
-          "Suma 180 al rumbo de ida: 90 + 180.",
-          "El rumbo de vuelta es 270° (Oeste)."
-        ],
-        "staticHints": [
-          "Girar 180° significa dar media vuelta completa.",
-          "Suma 180 al rumbo de ida: 90 + 180.",
-          "El rumbo de vuelta es 270° (Oeste)."
-        ]
-      },
-      {
-        "id": "r_guardabosques_mirador_1",
-        "poiId": "mirador_puestas_sol",
-        "storyId": "leyenda_guardabosques",
-        "name": "El Vuelo del Águila",
-        "difficulty": "novato",
-        "points": 100,
-        "question": "¿Qué ave rapaz con cola en cuña y alas anchas suele planear en círculos aprovechando las corrientes térmicas sobre el mirador?",
-        "type": "multiple_choice",
-        "options": [
-          "Águila o busardo",
-          "Pingüino emperador",
-          "Colibrí florero"
-        ],
-        "answer": "Águila o busardo",
-        "hints": [
-          "Tiene garras afiladas y vista prodigiosa.",
-          "Vuela sin apenas aletear en días soleados.",
-          "Águila o busardo."
-        ],
-        "staticHints": [
-          "Tiene garras afiladas y vista prodigiosa.",
-          "Vuela sin apenas aletear en días soleados.",
-          "Águila o busardo."
-        ]
-      },
-      {
-        "id": "r_guardabosques_mirador_2",
-        "poiId": "mirador_puestas_sol",
-        "storyId": "leyenda_guardabosques",
-        "name": "El Sol de Verano",
-        "difficulty": "explorador",
-        "points": 150,
-        "question": "En el hemisferio norte, durante el solsticio de verano, ¿por dónde se pone el sol respecto al Oeste exacto?",
-        "type": "multiple_choice",
-        "options": [
-          "Más hacia el Noroeste",
-          "Más hacia el Suroeste",
-          "Exactamente por el Oeste"
-        ],
-        "answer": "Más hacia el Noroeste",
-        "hints": [
-          "En verano los días son más largos y el sol recorre un arco más amplio.",
-          "Se pone desplazado hacia el mismo lado donde sale más pronto por la mañana.",
-          "Se pone más hacia el Noroeste."
-        ],
-        "staticHints": [
-          "En verano los días son más largos y el sol recorre un arco más amplio.",
-          "Se pone desplazado hacia el mismo lado donde sale más pronto por la mañana.",
-          "Se pone más hacia el Noroeste."
-        ]
-      },
-      {
-        "id": "r_guardabosques_mirador_3",
-        "poiId": "mirador_puestas_sol",
-        "storyId": "leyenda_guardabosques",
-        "name": "El Último Destello",
-        "difficulty": "maestro",
-        "points": 250,
-        "question": "El disco solar tarda unos 2 minutos en ocultarse completamente tras el horizonte desde que lo toca. Si hoy empezó a ocultarse a las 21:07, ¿a qué hora exacta desaparece del todo?",
-        "type": "open_text",
-        "answer": "21:09",
-        "acceptedAnswers": [
-          "21:09",
-          "21h09",
-          "21:09h"
-        ],
-        "hints": [
-          "Suma los 2 minutos que tarda en ocultarse del todo.",
-          "21:07 más 2 minutos.",
-          "Desaparece a las 21:09."
-        ],
-        "staticHints": [
-          "Suma los 2 minutos que tarda en ocultarse del todo.",
-          "21:07 más 2 minutos.",
-          "Desaparece a las 21:09."
-        ]
-      },
-      {
-        "id": "b_fuente_foto",
-        "poiId": "fuente_piedra",
-        "storyId": "*",
-        "name": "La Farmacia del Monte",
-        "difficulty": "*",
-        "points": 50,
-        "optional": true,
-        "isBonus": true,
-        "type": "photo",
-        "question": "Encuentra una planta aromática (romero, tomillo o similar) y fotografíala sin arrancarla. Acércate para oler su aroma.",
-        "config": {
-          "validation": "trust"
-        }
-      },
-      {
-        "id": "b_cruce_brujula",
-        "poiId": "cruce_vientos",
-        "storyId": "*",
-        "name": "Apunta al Norte",
-        "difficulty": "*",
-        "points": 50,
-        "optional": true,
-        "isBonus": true,
-        "type": "compass",
-        "question": "Sujeta el móvil plano y gira sobre ti mismo hasta que la flecha marque el Norte. Mantenlo 3 segundos.",
-        "config": {
-          "targetBearing": 0,
-          "toleranceDeg": 15,
-          "holdSeconds": 3
-        },
-        "hints": [
-          "Mantén el teléfono plano para calibrar los sensores magnéticos.",
-          "Gira lentamente hasta que el indicador marque 0°.",
-          "Mantén la posición durante 3 segundos."
-        ],
-        "staticHints": [
-          "Mantén el teléfono plano para calibrar los sensores magnéticos.",
-          "Gira lentamente hasta que el indicador marque 0°.",
-          "Mantén la posición durante 3 segundos."
-        ]
-      },
-      {
-        "id": "b_arbol_orden",
-        "poiId": "arbol_vigia",
-        "storyId": "*",
-        "name": "El Ciclo del Pino",
-        "difficulty": "*",
-        "points": 50,
-        "optional": true,
-        "isBonus": true,
-        "type": "order",
-        "question": "Anselmo dibujó la vida de un pino en su cuaderno, pero las páginas se han mezclado. Ordena las etapas, de la semilla al árbol adulto.",
-        "options": [
-          "El piñón cae al suelo",
-          "El piñón germina",
-          "Brota una plántula",
-          "Crece un pino joven",
-          "El pino adulto da piñas"
-        ],
-        "hints": [
-          "Todo árbol empieza siendo semilla.",
-          "Primero brota, después crece.",
-          "Piñón, germinación, plántula, pino joven, pino adulto."
-        ],
-        "staticHints": [
-          "Todo árbol empieza siendo semilla.",
-          "Primero brota, después crece.",
-          "Piñón, germinación, plántula, pino joven, pino adulto."
-        ]
-      }
-    ],
-    "routePresets": {
-      "30min": [
-        "fuente_piedra",
-        "arbol_vigia"
-      ],
-      "1h": [
-        "fuente_piedra",
-        "arbol_vigia",
-        "cruce_vientos"
-      ],
-      "1.5h": [
-        "fuente_piedra",
-        "arbol_vigia",
-        "cruce_vientos",
-        "mirador_puestas_sol"
-      ],
-      "2h": [
-        "fuente_piedra",
-        "arbol_vigia",
-        "cruce_vientos",
-        "mirador_puestas_sol"
-      ],
-      "leyenda_guardabosques": {
-        "30min": [
-          "fuente_piedra",
-          "arbol_vigia"
-        ],
-        "1h": [
-          "fuente_piedra",
-          "arbol_vigia",
-          "cruce_vientos"
-        ],
-        "1.5h": [
-          "fuente_piedra",
-          "arbol_vigia",
-          "cruce_vientos",
-          "mirador_puestas_sol"
-        ],
-        "2h": [
-          "fuente_piedra",
-          "arbol_vigia",
-          "cruce_vientos",
-          "mirador_puestas_sol"
-        ]
-      }
-    },
-    "sceneNarratives": {
-      "leyenda_guardabosques_fuente_piedra": "El murmullo de la fuente rompe el silencio del monte. El agua fresca mana limpia entre los helechos que crecen a la sombra de la roca.",
-      "leyenda_guardabosques_arbol_vigia": "El gran árbol extiende su manto protector. Anselmo solía sentarse en su raíz más gruesa para anotar el nacimiento de los primeros corzos.",
-      "leyenda_guardabosques_cruce_vientos": "Cuatro sendas se abren ante ti. El hito de piedra desgastado por la intemperie indica el camino que tomaban los antiguos leñadores.",
-      "leyenda_guardabosques_mirador_puestas_sol": "El aire aquí arriba es puro y huele a jara y pino quemado por el sol. El horizonte te regala una vista inabarcable de todo el valle."
-    },
-    "bridgePhrases": {
-      "fuente_piedra_to_arbol_vigia": "¡Agua fresca para la marcha! Sigue la senda de pinos que asciende suavemente entre jaras hacia el Gran Árbol Vigía.",
-      "arbol_vigia_to_cruce_vientos": "¡El viejo vigía bendice tu camino! Toma la vereda pedregosa hacia el Cruce de los Cuatro Vientos.",
-      "cruce_vientos_to_mirador_puestas_sol": "¡Has escogido el rumbo certero! Avanza hacia la cornisa rocosa donde el sol poniente baña las copas de oro."
-    },
-    "metaEnigma": {
-      "keyword": "PINAR",
-      "title": "El Códice del Guardabosques",
-      "description": "Has culminado todos los hitos y descifrado las runas grabadas por el viejo Anselmo. Combina las letras obtenidas para desvelar la palabra que protege el monte.",
-      "hint": "El bosque mediterráneo de agujas aromáticas y piñas doradas (5 letras).",
-      "successNarrative": "¡Pronuncias «PINAR» y el viento susurra entre las acículas! Anselmo sonríe desde la espesura. Has superado la expedición con honor."
-    }
-  },
-  {
-    "id": "nalda-fraybotijo",
-    "name": "Nalda — El Fraile que Bebió Demasiado",
+    "id": "nalda",
+    "name": "Nalda (La Rioja)",
     "country": "España (La Rioja)",
     "region": "La Rioja, España",
-    "description": "Recorre Nalda junto al irreverente fantasma de Fray Botijo desvelando ruinas medievales, cuevas eremíticas y la historia del valle del Iregua entre chistes verdes y datos reales.",
+    "description": "Un bosque de historia, piedra y río en el Valle del Iregua (La Rioja). Descubre el castillo medieval, las cuevas rupestres de Los Palomares y la Ermita de Villavieja a través de 4 fascinantes historias.",
     "centerLat": 42.3351,
     "centerLng": -2.4883,
     "coverImageUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
-    "attribution": "Basado en la historia real y patrimonio de Nalda (La Rioja) y el humor medieval del fraile copista Fray Botijo (1387).",
-    "credits": "Basado en la historia real y patrimonio de Nalda (La Rioja) y el humor medieval del fraile copista Fray Botijo (1387).",
+    "attribution": "Basado en la historia real y patrimonio de Nalda (La Rioja). Textos históricos y personajes narrativos integrados.",
+    "credits": "Basado en la historia real y patrimonio de Nalda (La Rioja). Textos históricos y personajes narrativos integrados.",
     "defaultLanguage": "es",
     "languages": [
       "es",
@@ -1663,161 +1094,241 @@
       "en"
     ],
     "isPublished": true,
-    "contentRating": "adult",
-    "contentWarning": "Contenido picante con humor irreverente. No apto para niños ni para gente sin sentido del humor.",
     "pois": [
       {
-        "id": "castillo-nalda-f",
-        "name": "Castillo de Nalda (donde me caí borracho, ¿te lo puedes creer?)",
-        "description": "Aparece Fray Botijo con una botella en la mano, tambaleándose sobre las ruinas del castillo. Dice: '¡Ay, perdón, creía que esto era mi celda!'",
+        "id": "castillo-nalda",
+        "name": "Castillo de Nalda",
+        "description": "Reconstrucción 3D de la torre del homenaje superpuesta sobre las ruinas actuales.",
         "lat": 42.3351,
         "lng": -2.4883,
         "emoji": "🏰",
-        "clueSnippet": "Busca la reliquia etérea de Fray Botijo en Castillo de Nalda (donde me caí borracho, ¿te lo puedes creer?).",
+        "clueSnippet": "Observa con atención el entorno de Castillo de Nalda y escucha la voz del guía.",
         "arAsset": {
-          "preset": "ghost_monk",
-          "type": "ghost_monk",
-          "label": "Holograma 3D de Fray Botijo",
-          "title": "Aparición Espectral de Fray Botijo",
-          "modelUrl": "fray_botijo_botella_v1.glb",
-          "model": "fray_botijo_botella_v1.glb",
+          "preset": "torre_homenaje",
+          "type": "3d_reconstruction",
+          "label": "Realidad Aumentada en Castillo de Nalda",
+          "title": "Reliquia de Castillo de Nalda",
+          "modelUrl": "torre_homenaje_v1.glb",
+          "model": "torre_homenaje_v1.glb",
           "scale": 1.3,
           "heightOffsetMeters": 1.1,
           "revealTrigger": "onArrival",
           "trigger": "camera_poi",
-          "description": "Aparece Fray Botijo con una botella en la mano, tambaleándose sobre las ruinas del castillo. Dice: '¡Ay, perdón, creía que esto era mi celda!'",
-          "descriptionKey": "ar_castillo_f_description",
-          "pose": "borracho"
+          "description": "Reconstrucción 3D de la torre del homenaje superpuesta sobre las ruinas actuales.",
+          "descriptionKey": "ar_castillo_description"
         }
       },
       {
-        "id": "cuevas-palomares-f",
-        "name": "Cuevas de Los Palomares (mi antiguo confesionario, jeje)",
-        "description": "Aparece Fray Botijo saliendo de una hornacina, con cara de resaca. Eructa y dice: '¡Perdón! ¡Eso ha sido el Espíritu Santo!'",
-        "lat": 42.3373,
-        "lng": -2.4788,
-        "emoji": "🕳️",
-        "clueSnippet": "Busca la reliquia etérea de Fray Botijo en Cuevas de Los Palomares (mi antiguo confesionario, jeje).",
-        "arAsset": {
-          "preset": "ghost_monk",
-          "type": "ghost_monk",
-          "label": "Holograma 3D de Fray Botijo",
-          "title": "Aparición Espectral de Fray Botijo",
-          "modelUrl": "fray_botijo_eructo_v1.glb",
-          "model": "fray_botijo_eructo_v1.glb",
-          "scale": 1.3,
-          "heightOffsetMeters": 1.1,
-          "revealTrigger": "onArrival",
-          "trigger": "camera_cave_entrance",
-          "description": "Aparece Fray Botijo saliendo de una hornacina, con cara de resaca. Eructa y dice: '¡Perdón! ¡Eso ha sido el Espíritu Santo!'",
-          "descriptionKey": "ar_cuevas_f_description",
-          "pose": "eructo"
-        }
-      },
-      {
-        "id": "arco-villa-f",
-        "name": "Arco de la Villa (la puerta del cielo, pero con más vino)",
-        "description": "Aparece Fray Botijo disfrazado de San Pedro en la puerta del cielo. Dice: '¡Tú! ¿Has bebido? No, espera, esa es la pregunta que me hacen a mí.'",
+        "id": "arco-villa",
+        "name": "Arco de la Villa",
+        "description": "Al cruzar el arco, aparecen figuras de vigías medievales.",
         "lat": 42.3342,
         "lng": -2.4869,
         "emoji": "⛪",
-        "clueSnippet": "Busca la reliquia etérea de Fray Botijo en Arco de la Villa (la puerta del cielo, pero con más vino).",
+        "clueSnippet": "Observa con atención el entorno de Arco de la Villa y escucha la voz del guía.",
         "arAsset": {
-          "preset": "ghost_monk",
-          "type": "ghost_monk",
-          "label": "Holograma 3D de Fray Botijo",
-          "title": "Aparición Espectral de Fray Botijo",
-          "modelUrl": "fray_botijo_confesion_v1.glb",
-          "model": "fray_botijo_confesion_v1.glb",
+          "preset": "portal_temporal",
+          "type": "temporal_portal",
+          "label": "Realidad Aumentada en Arco de la Villa",
+          "title": "Reliquia de Arco de la Villa",
+          "modelUrl": "vigias_medievales_v1.glb",
+          "model": "vigias_medievales_v1.glb",
           "scale": 1.3,
           "heightOffsetMeters": 1.1,
           "revealTrigger": "onArrival",
           "trigger": "cross_arch",
-          "description": "Aparece Fray Botijo disfrazado de San Pedro en la puerta del cielo. Dice: '¡Tú! ¿Has bebido? No, espera, esa es la pregunta que me hacen a mí.'",
-          "descriptionKey": "ar_arco_f_description",
-          "pose": "confesion"
+          "description": "Al cruzar el arco, aparecen figuras de vigías medievales.",
+          "descriptionKey": "ar_arco_description"
         }
       },
       {
-        "id": "mirador-cameros-f",
-        "name": "Mirador Puerta de Cameros (donde meé mirando al valle, con permiso)",
-        "description": "Aparece Fray Botijo mirando al valle con una mano en la espalda y otra... bueno, mejor no digo dónde. Dice: '¡Qué vistas! ¡Y qué ganas de mear!'",
+        "id": "mirador-cameros",
+        "name": "Mirador Puerta de Cameros",
+        "description": "Etiquetas flotantes de los pueblos del valle y la ruta romana.",
         "lat": 42.3215,
         "lng": -2.491,
         "emoji": "🌄",
-        "clueSnippet": "Busca la reliquia etérea de Fray Botijo en Mirador Puerta de Cameros (donde meé mirando al valle, con permiso).",
+        "clueSnippet": "Observa con atención el entorno de Mirador Puerta de Cameros y escucha la voz del guía.",
         "arAsset": {
-          "preset": "ghost_monk",
-          "type": "ghost_monk",
-          "label": "Holograma 3D de Fray Botijo",
-          "title": "Aparición Espectral de Fray Botijo",
-          "modelUrl": "fray_botijo_meando_v1.glb",
-          "model": "fray_botijo_meando_v1.glb",
+          "preset": "etiquetas_valle",
+          "type": "overlay_labels",
+          "label": "Realidad Aumentada en Mirador Puerta de Cameros",
+          "title": "Reliquia de Mirador Puerta de Cameros",
+          "modelUrl": "valle_labels_v1.json",
+          "model": "valle_labels_v1.json",
           "scale": 1.3,
           "heightOffsetMeters": 1.1,
           "revealTrigger": "onArrival",
           "trigger": "camera_horizon",
-          "description": "Aparece Fray Botijo mirando al valle con una mano en la espalda y otra... bueno, mejor no digo dónde. Dice: '¡Qué vistas! ¡Y qué ganas de mear!'",
-          "descriptionKey": "ar_mirador_f_description",
-          "pose": "meando"
+          "description": "Etiquetas flotantes de los pueblos del valle y la ruta romana.",
+          "descriptionKey": "ar_mirador_description"
         }
       },
       {
-        "id": "ermita-villavieja-f",
-        "name": "Ermita de Villavieja (donde echo la siesta eterna)",
-        "description": "Aparece Fray Botijo dormido en un banco de la ermita, roncando y abrazado a una botella vacía. Se despierta y dice: '¿Ya es la hora de misa? ¡Si yo no he ido a misa en 600 años!'",
+        "id": "cuevas-palomares",
+        "name": "Cuevas de Los Palomares",
+        "description": "Paloma 3D animada que vuela hacia las hornacinas. Al tocarla, da una pista.",
+        "lat": 42.3373,
+        "lng": -2.4788,
+        "emoji": "🕳️",
+        "clueSnippet": "Observa con atención el entorno de Cuevas de Los Palomares y escucha la voz del guía.",
+        "arAsset": {
+          "preset": "paloma_3d",
+          "type": "animated_character",
+          "label": "Realidad Aumentada en Cuevas de Los Palomares",
+          "title": "Reliquia de Cuevas de Los Palomares",
+          "modelUrl": "paloma_3d_v1.glb",
+          "model": "paloma_3d_v1.glb",
+          "scale": 1.3,
+          "heightOffsetMeters": 1.1,
+          "revealTrigger": "onArrival",
+          "trigger": "camera_cave_entrance",
+          "description": "Paloma 3D animada que vuela hacia las hornacinas. Al tocarla, da una pista.",
+          "descriptionKey": "ar_cuevas_description"
+        }
+      },
+      {
+        "id": "ermita-villavieja",
+        "name": "Ermita de Nuestra Señora de Villavieja",
+        "description": "Cesta de vendimia 3D con uvas de la Rioja. Al tocarla, reproduce audio de campanas.",
         "lat": 42.327,
         "lng": -2.477,
         "emoji": "🌳",
-        "clueSnippet": "Busca la reliquia etérea de Fray Botijo en Ermita de Villavieja (donde echo la siesta eterna).",
+        "clueSnippet": "Observa con atención el entorno de Ermita de Nuestra Señora de Villavieja y escucha la voz del guía.",
         "arAsset": {
-          "preset": "ghost_monk",
-          "type": "ghost_monk",
-          "label": "Holograma 3D de Fray Botijo",
-          "title": "Aparición Espectral de Fray Botijo",
-          "modelUrl": "fray_botijo_dormido_v1.glb",
-          "model": "fray_botijo_dormido_v1.glb",
+          "preset": "cesta_vendimia",
+          "type": "virtual_still_life",
+          "label": "Realidad Aumentada en Ermita de Nuestra Señora de Villavieja",
+          "title": "Reliquia de Ermita de Nuestra Señora de Villavieja",
+          "modelUrl": "cesta_vendimia_v1.glb",
+          "model": "cesta_vendimia_v1.glb",
           "scale": 1.3,
           "heightOffsetMeters": 1.1,
           "revealTrigger": "onArrival",
           "trigger": "camera_ermita",
-          "description": "Aparece Fray Botijo dormido en un banco de la ermita, roncando y abrazado a una botella vacía. Se despierta y dice: '¿Ya es la hora de misa? ¡Si yo no he ido a misa en 600 años!'",
-          "descriptionKey": "ar_ermita_f_description",
-          "pose": "dormido"
+          "description": "Cesta de vendimia 3D con uvas de la Rioja. Al tocarla, reproduce audio de campanas.",
+          "descriptionKey": "ar_ermita_description"
         }
       }
     ],
     "routePresets": {
       "30min": [
-        "castillo-nalda-f",
-        "arco-villa-f"
+        "castillo-nalda",
+        "arco-villa"
       ],
       "1h": [
-        "castillo-nalda-f",
-        "arco-villa-f",
-        "mirador-cameros-f"
+        "castillo-nalda",
+        "arco-villa",
+        "mirador-cameros"
       ],
       "1.5h": [
-        "castillo-nalda-f",
-        "arco-villa-f",
-        "mirador-cameros-f",
-        "cuevas-palomares-f"
+        "castillo-nalda",
+        "arco-villa",
+        "mirador-cameros",
+        "cuevas-palomares"
       ],
       "1h30": [
-        "castillo-nalda-f",
-        "arco-villa-f",
-        "mirador-cameros-f",
-        "cuevas-palomares-f"
+        "castillo-nalda",
+        "arco-villa",
+        "mirador-cameros",
+        "cuevas-palomares"
       ],
       "2h": [
-        "castillo-nalda-f",
-        "arco-villa-f",
-        "mirador-cameros-f",
-        "cuevas-palomares-f",
-        "ermita-villavieja-f"
+        "castillo-nalda",
+        "arco-villa",
+        "mirador-cameros",
+        "cuevas-palomares",
+        "ermita-villavieja"
       ]
     },
     "stories": [
+      {
+        "id": "guardian-iregua",
+        "title": "El Guardián del Iregua",
+        "icon": "📜",
+        "summary": "Un bosque de historia, piedra y río en el Valle del Iregua.",
+        "narrative": "Bienvenido, aprendiz. Soy el Cronicón, y estas piedras guardan memoria.",
+        "mission": "Recorrer Nalda junto al sabio Cronicón, descifrar los enigmas medievales de cada hito y recomponer el sello sagrado NALDA.",
+        "narratorName": "El Cronicón",
+        "narratorRole": "Monje copista del siglo XIV (San Millán de la Cogolla)",
+        "narratorTone": "Respetuoso, sabio, sereno y amante de refranes antiguos",
+        "narratorAvatar": "📜",
+        "voiceName": "Fenrir",
+        "characterBio": "Monje copista del siglo XIV del Monasterio de San Millán de la Cogolla. Habla con respeto y usa refranes antiguos.",
+        "characterGreeting": "Bienvenido, aprendiz. Soy el Cronicón, y estas piedras guardan memoria.",
+        "guide": {
+          "id": "cronicon",
+          "nameKey": "guide_cronicon_name",
+          "personaKey": "guide_cronicon_persona",
+          "systemPromptKey": "guide_cronicon_system_prompt",
+          "knowledgeBase": [
+            "castillo_nalda_historia.json",
+            "cuevas_palomares.json",
+            "iregua_rio.json",
+            "senorio_cameros.json",
+            "vinedos_rioja.json"
+          ],
+          "voice": "es-ES-Wavenet-M",
+          "greetingKey": "guide_cronicon_greeting"
+        },
+        "durations": {
+          "30min": {
+            "pois": [
+              "castillo-nalda",
+              "arco-villa"
+            ],
+            "distance_km": 0.8,
+            "descriptionKey": "duration_30min_description"
+          },
+          "1h": {
+            "pois": [
+              "castillo-nalda",
+              "arco-villa",
+              "mirador-cameros"
+            ],
+            "distance_km": 2.5,
+            "descriptionKey": "duration_1h_description"
+          },
+          "1h30": {
+            "pois": [
+              "castillo-nalda",
+              "arco-villa",
+              "mirador-cameros",
+              "cuevas-palomares"
+            ],
+            "distance_km": 4.5,
+            "descriptionKey": "duration_1h30_description"
+          },
+          "2h": {
+            "pois": [
+              "castillo-nalda",
+              "arco-villa",
+              "mirador-cameros",
+              "cuevas-palomares",
+              "ermita-villavieja"
+            ],
+            "distance_km": 6.5,
+            "descriptionKey": "duration_2h_description"
+          }
+        },
+        "difficulties": {
+          "novato": {
+            "points_per_test": 100,
+            "free_hints": 2,
+            "easy_mode_geofence_m": 50
+          },
+          "explorador": {
+            "points_per_test": 150,
+            "free_hints": 1,
+            "easy_mode_geofence_m": 25
+          },
+          "maestro": {
+            "points_per_test": 250,
+            "free_hints": 0,
+            "easy_mode_geofence_m": 0
+          }
+        }
+      },
       {
         "id": "fraile-botijo",
         "title": "El Fraile que Bebió Demasiado",
@@ -1907,12 +1418,827 @@
             "easy_mode_geofence_m": 0
           }
         }
+      },
+      {
+        "id": "banda-palomar",
+        "title": "La Banda del Palomar",
+        "icon": "🕊️",
+        "summary": "Una aventura gamberra y canalla por Nalda guiada por Chucho el Palomo, el rey de las palomas de Los Palomares.",
+        "narrative": "¡Epa, plumas! Soy Chucho el Palomo. Aquí en Nalda mando yo y mi bandada de Los Palomares. ¿Vienes a curiosear o a volar con la banda? ¡Al loro con las pistas que las piedras hablan si sabes mirar desde arriba!",
+        "mission": "Explorar Nalda desde la perspectiva de la bandada callejera, sortear los desafíos de las alturas y conseguir el título honorífico de 'Pichón Jefe de Nalda'.",
+        "narratorName": "Chucho el Palomo",
+        "narratorRole": "Líder callejero de la bandada de Los Palomares",
+        "narratorTone": "Gamberro, pícaro, canalla callejero y protector de su bandada",
+        "narratorAvatar": "🕊️",
+        "voiceName": "Puck",
+        "characterBio": "Paloma líder de la bandada que anida en las oquedades medievales de Los Palomares. Conoce cada cornisa, teja y rincón secreto de Nalda a vista de pájaro.",
+        "characterGreeting": "¡Epa, plumas! Soy Chucho el Palomo. ¿Vienes a caminar o a que te eche una pata la mejor paloma de La Rioja? ¡Vuelo rasante y al lío!",
+        "guide": {
+          "id": "chucho-palomo",
+          "nameKey": "guide_chucho_name",
+          "personaKey": "guide_chucho_persona",
+          "systemPromptKey": "guide_chucho_system_prompt",
+          "knowledgeBase": [
+            "cuevas_palomares_palomas.json",
+            "castillo_nalda_azoteas.json",
+            "iregua_bano_aves.json",
+            "calles_nalda_migas.json"
+          ],
+          "voice": "Puck",
+          "greetingKey": "guide_chucho_greeting"
+        },
+        "durations": {
+          "30min": {
+            "pois": [
+              "castillo-nalda",
+              "arco-villa"
+            ],
+            "distance_km": 0.8,
+            "descriptionKey": "duration_30min_description"
+          },
+          "1h": {
+            "pois": [
+              "castillo-nalda",
+              "arco-villa",
+              "mirador-cameros"
+            ],
+            "distance_km": 2.5,
+            "descriptionKey": "duration_1h_description"
+          },
+          "1h30": {
+            "pois": [
+              "castillo-nalda",
+              "arco-villa",
+              "mirador-cameros",
+              "cuevas-palomares"
+            ],
+            "distance_km": 4.5,
+            "descriptionKey": "duration_1h30_description"
+          },
+          "2h": {
+            "pois": [
+              "castillo-nalda",
+              "arco-villa",
+              "mirador-cameros",
+              "cuevas-palomares",
+              "ermita-villavieja"
+            ],
+            "distance_km": 6.5,
+            "descriptionKey": "duration_2h_description"
+          }
+        },
+        "difficulties": {
+          "novato": {
+            "points_per_test": 100,
+            "free_hints": 2,
+            "easy_mode_geofence_m": 50
+          },
+          "explorador": {
+            "points_per_test": 150,
+            "free_hints": 1,
+            "easy_mode_geofence_m": 25
+          },
+          "maestro": {
+            "points_per_test": 250,
+            "free_hints": 0,
+            "easy_mode_geofence_m": 0
+          }
+        }
+      },
+      {
+        "id": "expediente-zorbo",
+        "title": "El Expediente Iregua: Zorbo el Marciano",
+        "icon": "👽",
+        "summary": "Una investigación cósmico-absurda junto a Zorbo, un marciano extraviado que confunde Nalda con una base espacial alienígena.",
+        "narrative": "¡Saludos, espécimen bípedo! Soy Zorbo, del sector estelar ZX-4. Mi nave se averió en el Valle del Iregua. Mis escáneres detectan que Nalda es un nodo de energía cósmica... ¡Ayúdame a recalibrar la nave antes de que se enteren en mi planeta!",
+        "mission": "Ayudar a Zorbo a decodificar las anomalías geológicas e históricas de Nalda para recargar los propulsores de su platillo volante.",
+        "narratorName": "Zorbo el Marciano",
+        "narratorRole": "Científico extraviado del cuadrante galáctico ZX-4",
+        "narratorTone": "Absurdo, cósmico, intrigado y perplejo por las costumbres de La Rioja",
+        "narratorAvatar": "👽",
+        "voiceName": "Zephyr",
+        "characterBio": "Extraterrestre verde con tres ojos y antena oscilante. Cree firmemente que los viñedos son paneles fotosintéticos de recarga y que el Castillo de Nalda fue una rampa de despegue medieval.",
+        "characterGreeting": "¡Bip-bop! Saludos, humano terrícola. Mis sensores marcan lecturas insólitas en este valle fluvial. ¿Eres tú mi contacto local de Nalda?",
+        "guide": {
+          "id": "zorbo-marciano",
+          "nameKey": "guide_zorbo_name",
+          "personaKey": "guide_zorbo_persona",
+          "systemPromptKey": "guide_zorbo_system_prompt",
+          "knowledgeBase": [
+            "anomalias_valle_iregua.json",
+            "tecnologia_rupestre_palomares.json",
+            "reactor_castillo_nalda.json",
+            "combustible_fermentado_rioja.json"
+          ],
+          "voice": "Zephyr",
+          "greetingKey": "guide_zorbo_greeting"
+        },
+        "durations": {
+          "30min": {
+            "pois": [
+              "castillo-nalda",
+              "arco-villa"
+            ],
+            "distance_km": 0.8,
+            "descriptionKey": "duration_30min_description"
+          },
+          "1h": {
+            "pois": [
+              "castillo-nalda",
+              "arco-villa",
+              "mirador-cameros"
+            ],
+            "distance_km": 2.5,
+            "descriptionKey": "duration_1h_description"
+          },
+          "1h30": {
+            "pois": [
+              "castillo-nalda",
+              "arco-villa",
+              "mirador-cameros",
+              "cuevas-palomares"
+            ],
+            "distance_km": 4.5,
+            "descriptionKey": "duration_1h30_description"
+          },
+          "2h": {
+            "pois": [
+              "castillo-nalda",
+              "arco-villa",
+              "mirador-cameros",
+              "cuevas-palomares",
+              "ermita-villavieja"
+            ],
+            "distance_km": 6.5,
+            "descriptionKey": "duration_2h_description"
+          }
+        },
+        "difficulties": {
+          "novato": {
+            "points_per_test": 100,
+            "free_hints": 2,
+            "easy_mode_geofence_m": 50
+          },
+          "explorador": {
+            "points_per_test": 150,
+            "free_hints": 1,
+            "easy_mode_geofence_m": 25
+          },
+          "maestro": {
+            "points_per_test": 250,
+            "free_hints": 0,
+            "easy_mode_geofence_m": 0
+          }
+        }
       }
     ],
     "riddles": [
       {
+        "id": "t1-1",
+        "poiId": "castillo-nalda",
+        "storyId": "guardian-iregua",
+        "name": "Crónica de Nalda #1",
+        "difficulty": "novato",
+        "question": "¿Quién fue el noble que estuvo prisionero aquí en 1299?",
+        "type": "multiple_choice",
+        "options": [
+          "Ramírez de Arellano",
+          "Juan Núñez de Lara",
+          "Pedro I",
+          "Enrique II"
+        ],
+        "answer": "Juan Núñez de Lara",
+        "hints": [
+          "Perdió una batalla entre Araciel y Alfaro.",
+          "Atacó tierras del obispado de Calahorra.",
+          "Su apellido empieza por Núñez."
+        ],
+        "staticHints": [
+          "Perdió una batalla entre Araciel y Alfaro.",
+          "Atacó tierras del obispado de Calahorra.",
+          "Su apellido empieza por Núñez."
+        ],
+        "points": 100,
+        "correctIndex": 1,
+        "questionKey": "t1_1_question",
+        "optionsKeys": [
+          "t1_1_opt_a",
+          "t1_1_opt_b",
+          "t1_1_opt_c",
+          "t1_1_opt_d"
+        ],
+        "hintsKeys": [
+          "t1_1_hint1",
+          "t1_1_hint2",
+          "t1_1_hint3"
+        ],
+        "metaRune": "N",
+        "metaRuneClue": "Letra 'N' del Cronicón"
+      },
+      {
+        "id": "t1-2",
+        "poiId": "castillo-nalda",
+        "storyId": "guardian-iregua",
+        "name": "Crónica de Nalda #2",
+        "difficulty": "explorador",
+        "question": "El castillo tenía un sistema de aljibes. ¿Qué función cumplían en caso de asedio?",
+        "type": "open_text",
+        "answer": "almacenar agua",
+        "acceptedAnswers": [
+          "almacenar agua",
+          "abastecer de agua",
+          "guardar agua"
+        ],
+        "hints": [
+          "Piensa en lo que necesitas para sobrevivir.",
+          "Sin agua, no hay resistencia.",
+          "Se llenaban con agua de lluvia."
+        ],
+        "staticHints": [
+          "Piensa en lo que necesitas para sobrevivir.",
+          "Sin agua, no hay resistencia.",
+          "Se llenaban con agua de lluvia."
+        ],
+        "points": 150,
+        "questionKey": "t1_2_question",
+        "hintsKeys": [
+          "t1_2_hint1",
+          "t1_2_hint2",
+          "t1_2_hint3"
+        ],
+        "answersKeys": [
+          "t1_2_ans1",
+          "t1_2_ans2",
+          "t1_2_ans3"
+        ],
+        "metaRune": "A",
+        "metaRuneClue": "Letra 'A' del Cronicón"
+      },
+      {
+        "id": "t1-3",
+        "poiId": "castillo-nalda",
+        "storyId": "guardian-iregua",
+        "name": "Crónica de Nalda #3",
+        "difficulty": "maestro",
+        "question": "¿Qué rey mató a su hermanastro con un puñal tras la batalla de Montiel?",
+        "type": "open_text",
+        "answer": "Enrique II",
+        "acceptedAnswers": [
+          "Enrique II",
+          "Enrique de Trastámara",
+          "Enrique II de Trastámara"
+        ],
+        "hints": [
+          "Fue en 1369.",
+          "El muerto era Pedro I el Cruel.",
+          "El asesino fundó la dinastía Trastámara."
+        ],
+        "staticHints": [
+          "Fue en 1369.",
+          "El muerto era Pedro I el Cruel.",
+          "El asesino fundó la dinastía Trastámara."
+        ],
+        "points": 250,
+        "questionKey": "t1_3_question",
+        "hintsKeys": [
+          "t1_3_hint1",
+          "t1_3_hint2",
+          "t1_3_hint3"
+        ],
+        "answersKeys": [
+          "t1_3_ans1",
+          "t1_3_ans2",
+          "t1_3_ans3"
+        ],
+        "metaRune": "L",
+        "metaRuneClue": "Letra 'L' del Cronicón"
+      },
+      {
+        "id": "t2-1",
+        "poiId": "arco-villa",
+        "storyId": "guardian-iregua",
+        "name": "Crónica de Nalda #4",
+        "difficulty": "novato",
+        "question": "¿Qué delimitaba el Arco de la Villa?",
+        "type": "multiple_choice",
+        "options": [
+          "El bosque",
+          "La entrada al recinto amurallado",
+          "La frontera con Navarra",
+          "El inicio del Camino de Santiago"
+        ],
+        "answer": "La entrada al recinto amurallado",
+        "hints": [
+          "Era una puerta de acceso.",
+          "Protegía la villa.",
+          "Había murallas alrededor."
+        ],
+        "staticHints": [
+          "Era una puerta de acceso.",
+          "Protegía la villa.",
+          "Había murallas alrededor."
+        ],
+        "points": 100,
+        "correctIndex": 1,
+        "questionKey": "t2_1_question",
+        "optionsKeys": [
+          "t2_1_opt_a",
+          "t2_1_opt_b",
+          "t2_1_opt_c",
+          "t2_1_opt_d"
+        ],
+        "hintsKeys": [
+          "t2_1_hint1",
+          "t2_1_hint2",
+          "t2_1_hint3"
+        ],
+        "metaRune": "D",
+        "metaRuneClue": "Letra 'D' del Cronicón"
+      },
+      {
+        "id": "t2-2",
+        "poiId": "arco-villa",
+        "storyId": "guardian-iregua",
+        "name": "Crónica de Nalda #5",
+        "difficulty": "explorador",
+        "question": "¿Qué familia noble fue señora de Cameros y Nalda desde el siglo XIV?",
+        "type": "open_text",
+        "answer": "Ramírez de Arellano",
+        "acceptedAnswers": [
+          "Ramírez de Arellano",
+          "Arellano",
+          "los Arellano"
+        ],
+        "hints": [
+          "Su nombre aparece en documentos del castillo.",
+          "Empieza por Ramírez.",
+          "Fueron señores de un territorio que llegaba hasta Soria."
+        ],
+        "staticHints": [
+          "Su nombre aparece en documentos del castillo.",
+          "Empieza por Ramírez.",
+          "Fueron señores de un territorio que llegaba hasta Soria."
+        ],
+        "points": 150,
+        "questionKey": "t2_2_question",
+        "hintsKeys": [
+          "t2_2_hint1",
+          "t2_2_hint2",
+          "t2_2_hint3"
+        ],
+        "answersKeys": [
+          "t2_2_ans1",
+          "t2_2_ans2",
+          "t2_2_ans3"
+        ],
+        "metaRune": "A",
+        "metaRuneClue": "Letra 'A' del Cronicón"
+      },
+      {
+        "id": "t2-3",
+        "poiId": "arco-villa",
+        "storyId": "guardian-iregua",
+        "name": "Crónica de Nalda #6",
+        "difficulty": "maestro",
+        "question": "Anagrama: R A L O M P A → ordena para formar el nombre de las cuevas que visitarás después.",
+        "type": "open_text",
+        "answer": "PALOMAR",
+        "acceptedAnswers": [
+          "PALOMAR",
+          "palomar"
+        ],
+        "hints": [
+          "Es el nombre de un lugar con palomas.",
+          "Empieza por P.",
+          "Tiene 7 letras."
+        ],
+        "staticHints": [
+          "Es el nombre de un lugar con palomas.",
+          "Empieza por P.",
+          "Tiene 7 letras."
+        ],
+        "points": 250,
+        "questionKey": "t2_3_question",
+        "hintsKeys": [
+          "t2_3_hint1",
+          "t2_3_hint2",
+          "t2_3_hint3"
+        ],
+        "answersKeys": [
+          "t2_3_ans1",
+          "t2_3_ans2"
+        ],
+        "metaRune": "N",
+        "metaRuneClue": "Letra 'N' del Cronicón"
+      },
+      {
+        "id": "t3-1",
+        "poiId": "mirador-cameros",
+        "storyId": "guardian-iregua",
+        "name": "Crónica de Nalda #7",
+        "difficulty": "novato",
+        "question": "¿Cómo se llama el río que atraviesa este valle?",
+        "type": "multiple_choice",
+        "options": [
+          "Ebro",
+          "Iregua",
+          "Leza",
+          "Cidacos"
+        ],
+        "answer": "Iregua",
+        "hints": [
+          "Nace en la Sierra de Cebollera.",
+          "Es afluente del Ebro.",
+          "Su nombre tiene 6 letras."
+        ],
+        "staticHints": [
+          "Nace en la Sierra de Cebollera.",
+          "Es afluente del Ebro.",
+          "Su nombre tiene 6 letras."
+        ],
+        "points": 100,
+        "correctIndex": 1,
+        "questionKey": "t3_1_question",
+        "optionsKeys": [
+          "t3_1_opt_a",
+          "t3_1_opt_b",
+          "t3_1_opt_c",
+          "t3_1_opt_d"
+        ],
+        "hintsKeys": [
+          "t3_1_hint1",
+          "t3_1_hint2",
+          "t3_1_hint3"
+        ],
+        "metaRune": "A",
+        "metaRuneClue": "Letra 'A' del Cronicón"
+      },
+      {
+        "id": "t3-2",
+        "poiId": "mirador-cameros",
+        "storyId": "guardian-iregua",
+        "name": "Crónica de Nalda #8",
+        "difficulty": "explorador",
+        "question": "Si el caudal medio es de 6,35 m³/s, ¿cuántos m³ pasan en 1 minuto?",
+        "type": "open_text",
+        "answer": "381",
+        "acceptedAnswers": [
+          "381",
+          "381 m3",
+          "381 metros cubicos"
+        ],
+        "hints": [
+          "Un minuto = 60 segundos.",
+          "Multiplica.",
+          "El resultado está entre 380 y 382."
+        ],
+        "staticHints": [
+          "Un minuto = 60 segundos.",
+          "Multiplica.",
+          "El resultado está entre 380 y 382."
+        ],
+        "points": 150,
+        "questionKey": "t3_2_question",
+        "hintsKeys": [
+          "t3_2_hint1",
+          "t3_2_hint2",
+          "t3_2_hint3"
+        ],
+        "answersKeys": [
+          "t3_2_ans1",
+          "t3_2_ans2",
+          "t3_2_ans3"
+        ],
+        "metaRune": "L",
+        "metaRuneClue": "Letra 'L' del Cronicón"
+      },
+      {
+        "id": "t3-3",
+        "poiId": "mirador-cameros",
+        "storyId": "guardian-iregua",
+        "name": "Crónica de Nalda #9",
+        "difficulty": "maestro",
+        "question": "¿A qué región histórica daba acceso esta 'puerta'?",
+        "type": "open_text",
+        "answer": "Cameros",
+        "acceptedAnswers": [
+          "Cameros",
+          "Señorío de Cameros",
+          "Tierra de Cameros"
+        ],
+        "hints": [
+          "El nombre del mirador lo dice.",
+          "Era un señorío.",
+          "Empieza por C."
+        ],
+        "staticHints": [
+          "El nombre del mirador lo dice.",
+          "Era un señorío.",
+          "Empieza por C."
+        ],
+        "points": 250,
+        "questionKey": "t3_3_question",
+        "hintsKeys": [
+          "t3_3_hint1",
+          "t3_3_hint2",
+          "t3_3_hint3"
+        ],
+        "answersKeys": [
+          "t3_3_ans1",
+          "t3_3_ans2",
+          "t3_3_ans3"
+        ],
+        "metaRune": "D",
+        "metaRuneClue": "Letra 'D' del Cronicón"
+      },
+      {
+        "id": "t4-1",
+        "poiId": "cuevas-palomares",
+        "storyId": "guardian-iregua",
+        "name": "Crónica de Nalda #10",
+        "difficulty": "novato",
+        "question": "¿Cuál era el uso principal de estas cuevas en los siglos XIV-XV?",
+        "type": "multiple_choice",
+        "options": [
+          "Vivienda de ermitaños",
+          "Criadero de palomas",
+          "Bodega",
+          "Refugio de bandoleros"
+        ],
+        "answer": "Criadero de palomas",
+        "hints": [
+          "El nombre de las cuevas te lo dice.",
+          "Las hornacinas servían para anidar.",
+          "Las palomas eran fuente de alimento."
+        ],
+        "staticHints": [
+          "El nombre de las cuevas te lo dice.",
+          "Las hornacinas servían para anidar.",
+          "Las palomas eran fuente de alimento."
+        ],
+        "points": 100,
+        "correctIndex": 1,
+        "questionKey": "t4_1_question",
+        "optionsKeys": [
+          "t4_1_opt_a",
+          "t4_1_opt_b",
+          "t4_1_opt_c",
+          "t4_1_opt_d"
+        ],
+        "hintsKeys": [
+          "t4_1_hint1",
+          "t4_1_hint2",
+          "t4_1_hint3"
+        ],
+        "metaRune": "A",
+        "metaRuneClue": "Letra 'A' del Cronicón"
+      },
+      {
+        "id": "t4-2",
+        "poiId": "cuevas-palomares",
+        "storyId": "guardian-iregua",
+        "name": "Crónica de Nalda #11",
+        "difficulty": "explorador",
+        "question": "Las cuevas tienen varios niveles conectados por escaleras talladas en la roca. ¿Qué material usaron los excavadores para tallar estas cuevas?",
+        "type": "open_text",
+        "answer": "piedra",
+        "acceptedAnswers": [
+          "piedra",
+          "roca",
+          "arenisca",
+          "piedra caliza"
+        ],
+        "hints": [
+          "Es el material del que están hechas.",
+          "Se extrae de canteras.",
+          "Las paredes son del mismo material."
+        ],
+        "staticHints": [
+          "Es el material del que están hechas.",
+          "Se extrae de canteras.",
+          "Las paredes son del mismo material."
+        ],
+        "points": 150,
+        "questionKey": "t4_2_question",
+        "hintsKeys": [
+          "t4_2_hint1",
+          "t4_2_hint2",
+          "t4_2_hint3"
+        ],
+        "answersKeys": [
+          "t4_2_ans1",
+          "t4_2_ans2",
+          "t4_2_ans3",
+          "t4_2_ans4"
+        ],
+        "metaRune": "N",
+        "metaRuneClue": "Letra 'N' del Cronicón"
+      },
+      {
+        "id": "t4-3",
+        "poiId": "cuevas-palomares",
+        "storyId": "guardian-iregua",
+        "name": "Crónica de Nalda #12",
+        "difficulty": "maestro",
+        "question": "Las palomas mensajeras llevaban mensajes en un tubo atado a la pata. ¿Cómo se llama ese tubo en español?",
+        "type": "open_text",
+        "answer": "cápsula",
+        "acceptedAnswers": [
+          "cápsula",
+          "tubo portamensajes",
+          "canuto",
+          "capsula"
+        ],
+        "hints": [
+          "Es pequeño y hueco.",
+          "Se ata con un hilo.",
+          "Empieza por c o t."
+        ],
+        "staticHints": [
+          "Es pequeño y hueco.",
+          "Se ata con un hilo.",
+          "Empieza por c o t."
+        ],
+        "points": 250,
+        "questionKey": "t4_3_question",
+        "hintsKeys": [
+          "t4_3_hint1",
+          "t4_3_hint2",
+          "t4_3_hint3"
+        ],
+        "answersKeys": [
+          "t4_3_ans1",
+          "t4_3_ans2",
+          "t4_3_ans3",
+          "t4_3_ans4"
+        ],
+        "metaRune": "A",
+        "metaRuneClue": "Letra 'A' del Cronicón"
+      },
+      {
+        "id": "t5-1",
+        "poiId": "ermita-villavieja",
+        "storyId": "guardian-iregua",
+        "name": "Crónica de Nalda #13",
+        "difficulty": "explorador",
+        "question": "Nalda es tierra de viñedos (Rioja). ¿En qué mes se vendimia tradicionalmente?",
+        "type": "open_text",
+        "answer": "septiembre",
+        "acceptedAnswers": [
+          "septiembre",
+          "setiembre",
+          "finales de septiembre",
+          "septiembre-octubre"
+        ],
+        "hints": [
+          "Después del verano.",
+          "Coincide con la Fiesta de la Ciruela Reina Claudia.",
+          "Es el noveno mes."
+        ],
+        "staticHints": [
+          "Después del verano.",
+          "Coincide con la Fiesta de la Ciruela Reina Claudia.",
+          "Es el noveno mes."
+        ],
+        "points": 150,
+        "questionKey": "t5_1_question",
+        "hintsKeys": [
+          "t5_1_hint1",
+          "t5_1_hint2",
+          "t5_1_hint3"
+        ],
+        "answersKeys": [
+          "t5_1_ans1",
+          "t5_1_ans2",
+          "t5_1_ans3",
+          "t5_1_ans4"
+        ],
+        "metaRune": "L",
+        "metaRuneClue": "Letra 'L' del Cronicón"
+      },
+      {
+        "id": "t5-2",
+        "poiId": "ermita-villavieja",
+        "storyId": "guardian-iregua",
+        "name": "Crónica de Nalda #14",
+        "difficulty": "maestro",
+        "question": "Has recogido fragmentos en cada POI. Ordénalos para formar la frase final del Cronicón: 'El Iregua guarda la memoria de N A L D A'. Escribe la palabra que falta.",
+        "type": "open_text",
+        "answer": "NALDA",
+        "acceptedAnswers": [
+          "NALDA",
+          "Nalda"
+        ],
+        "hints": [
+          "Es el nombre del pueblo.",
+          "Tiene 5 letras.",
+          "Empieza por N."
+        ],
+        "staticHints": [
+          "Es el nombre del pueblo.",
+          "Tiene 5 letras.",
+          "Empieza por N."
+        ],
+        "points": 250,
+        "questionKey": "t5_2_question",
+        "hintsKeys": [
+          "t5_2_hint1",
+          "t5_2_hint2",
+          "t5_2_hint3"
+        ],
+        "answersKeys": [
+          "t5_2_ans1",
+          "t5_2_ans2"
+        ],
+        "metaRune": "D",
+        "metaRuneClue": "Letra 'D' del Cronicón"
+      },
+      {
+        "id": "extra-foto-castillo",
+        "poiId": "castillo-nalda",
+        "storyId": "guardian-iregua",
+        "name": "El Tesoro del Castillo",
+        "difficulty": "*",
+        "question": "Fotografía una piedra con marca de cantero sin tocar nada.",
+        "type": "photo",
+        "points": 50,
+        "optional": true,
+        "isBonus": true,
+        "bonusPoints": 50,
+        "titleKey": "extra_foto_castillo_title",
+        "descriptionKey": "extra_foto_castillo_description"
+      },
+      {
+        "id": "extra-escucha-mirador",
+        "poiId": "mirador-cameros",
+        "storyId": "guardian-iregua",
+        "name": "El Concierto del Iregua",
+        "difficulty": "*",
+        "question": "30 segundos en silencio. Marca los sonidos que oyes.",
+        "type": "listen",
+        "points": 50,
+        "optional": true,
+        "isBonus": true,
+        "bonusPoints": 50,
+        "titleKey": "extra_escucha_mirador_title",
+        "descriptionKey": "extra_escucha_mirador_description"
+      },
+      {
+        "id": "extra-brujula-mirador",
+        "poiId": "mirador-cameros",
+        "storyId": "guardian-iregua",
+        "name": "Apunta al Norte",
+        "difficulty": "*",
+        "question": "Mantén el móvil orientado al Norte 3 s (±15°).",
+        "type": "compass",
+        "points": 50,
+        "optional": true,
+        "isBonus": true,
+        "bonusPoints": 50,
+        "titleKey": "extra_brujula_mirador_title",
+        "descriptionKey": "extra_brujula_mirador_description"
+      },
+      {
+        "id": "extra-ordena-camino",
+        "poiId": "castillo-nalda",
+        "storyId": "guardian-iregua",
+        "name": "El Orden del Camino",
+        "difficulty": "*",
+        "question": "Ordena: Vareia → Nalda → Viguera → Torrecilla → Puerto de Piqueras",
+        "type": "order",
+        "points": 50,
+        "optional": true,
+        "isBonus": true,
+        "bonusPoints": 50,
+        "titleKey": "extra_ordena_camino_title",
+        "descriptionKey": "extra_ordena_camino_description",
+        "options": [
+          "Vareia",
+          "Nalda",
+          "Viguera",
+          "Torrecilla",
+          "Puerto de Piqueras"
+        ],
+        "answer": "Vareia, Nalda, Viguera, Torrecilla, Puerto de Piqueras"
+      },
+      {
+        "id": "extra-escucha-cuevas",
+        "poiId": "cuevas-palomares",
+        "storyId": "guardian-iregua",
+        "name": "El Silencio de las Cuevas",
+        "difficulty": "*",
+        "question": "30 s en silencio dentro de las cuevas. ¿Qué oyes?",
+        "type": "listen",
+        "points": 50,
+        "optional": true,
+        "isBonus": true,
+        "bonusPoints": 50,
+        "titleKey": "extra_escucha_cuevas_title",
+        "descriptionKey": "extra_escucha_cuevas_description"
+      },
+      {
         "id": "f-t1-1",
-        "poiId": "castillo-nalda-f",
+        "poiId": "castillo-nalda",
         "storyId": "fraile-botijo",
         "name": "Misterio de Fray Botijo #1",
         "difficulty": "novato",
@@ -1954,7 +2280,7 @@
       },
       {
         "id": "f-t1-2",
-        "poiId": "castillo-nalda-f",
+        "poiId": "castillo-nalda",
         "storyId": "fraile-botijo",
         "name": "Misterio de Fray Botijo #2",
         "difficulty": "explorador",
@@ -1993,7 +2319,7 @@
       },
       {
         "id": "f-t1-3",
-        "poiId": "castillo-nalda-f",
+        "poiId": "castillo-nalda",
         "storyId": "fraile-botijo",
         "name": "Misterio de Fray Botijo #3",
         "difficulty": "maestro",
@@ -2032,7 +2358,7 @@
       },
       {
         "id": "f-t2-1",
-        "poiId": "arco-villa-f",
+        "poiId": "arco-villa",
         "storyId": "fraile-botijo",
         "name": "Misterio de Fray Botijo #4",
         "difficulty": "novato",
@@ -2074,7 +2400,7 @@
       },
       {
         "id": "f-t2-2",
-        "poiId": "arco-villa-f",
+        "poiId": "arco-villa",
         "storyId": "fraile-botijo",
         "name": "Misterio de Fray Botijo #5",
         "difficulty": "explorador",
@@ -2113,7 +2439,7 @@
       },
       {
         "id": "f-t2-3",
-        "poiId": "arco-villa-f",
+        "poiId": "arco-villa",
         "storyId": "fraile-botijo",
         "name": "Misterio de Fray Botijo #6",
         "difficulty": "maestro",
@@ -2152,7 +2478,7 @@
       },
       {
         "id": "f-t3-1",
-        "poiId": "mirador-cameros-f",
+        "poiId": "mirador-cameros",
         "storyId": "fraile-botijo",
         "name": "Misterio de Fray Botijo #7",
         "difficulty": "novato",
@@ -2194,7 +2520,7 @@
       },
       {
         "id": "f-t3-2",
-        "poiId": "mirador-cameros-f",
+        "poiId": "mirador-cameros",
         "storyId": "fraile-botijo",
         "name": "Misterio de Fray Botijo #8",
         "difficulty": "explorador",
@@ -2233,7 +2559,7 @@
       },
       {
         "id": "f-t3-3",
-        "poiId": "mirador-cameros-f",
+        "poiId": "mirador-cameros",
         "storyId": "fraile-botijo",
         "name": "Misterio de Fray Botijo #9",
         "difficulty": "maestro",
@@ -2272,7 +2598,7 @@
       },
       {
         "id": "f-t4-1",
-        "poiId": "cuevas-palomares-f",
+        "poiId": "cuevas-palomares",
         "storyId": "fraile-botijo",
         "name": "Misterio de Fray Botijo #10",
         "difficulty": "novato",
@@ -2314,7 +2640,7 @@
       },
       {
         "id": "f-t4-2",
-        "poiId": "cuevas-palomares-f",
+        "poiId": "cuevas-palomares",
         "storyId": "fraile-botijo",
         "name": "Misterio de Fray Botijo #11",
         "difficulty": "explorador",
@@ -2353,7 +2679,7 @@
       },
       {
         "id": "f-t4-3",
-        "poiId": "cuevas-palomares-f",
+        "poiId": "cuevas-palomares",
         "storyId": "fraile-botijo",
         "name": "Misterio de Fray Botijo #12",
         "difficulty": "maestro",
@@ -2392,7 +2718,7 @@
       },
       {
         "id": "f-t5-1",
-        "poiId": "ermita-villavieja-f",
+        "poiId": "ermita-villavieja",
         "storyId": "fraile-botijo",
         "name": "Misterio de Fray Botijo #13",
         "difficulty": "explorador",
@@ -2431,7 +2757,7 @@
       },
       {
         "id": "f-t5-2",
-        "poiId": "ermita-villavieja-f",
+        "poiId": "ermita-villavieja",
         "storyId": "fraile-botijo",
         "name": "Misterio de Fray Botijo #14",
         "difficulty": "maestro",
@@ -2468,7 +2794,7 @@
       },
       {
         "id": "f-extra-brindis",
-        "poiId": "castillo-nalda-f",
+        "poiId": "castillo-nalda",
         "storyId": "fraile-botijo",
         "name": "Brindis Tabernero en el Castillo",
         "difficulty": "*",
@@ -2483,7 +2809,7 @@
       },
       {
         "id": "f-extra-eructo",
-        "poiId": "arco-villa-f",
+        "poiId": "arco-villa",
         "storyId": "fraile-botijo",
         "name": "Eructo Divino en el Arco",
         "difficulty": "*",
@@ -2498,7 +2824,7 @@
       },
       {
         "id": "f-extra-confesion",
-        "poiId": "cuevas-palomares-f",
+        "poiId": "cuevas-palomares",
         "storyId": "fraile-botijo",
         "name": "Confesión Secreta en las Cuevas",
         "difficulty": "*",
@@ -2513,7 +2839,7 @@
       },
       {
         "id": "f-extra-pecho",
-        "poiId": "mirador-cameros-f",
+        "poiId": "mirador-cameros",
         "storyId": "fraile-botijo",
         "name": "A Pecho Descubierto en el Mirador",
         "difficulty": "*",
@@ -2528,7 +2854,7 @@
       },
       {
         "id": "f-extra-siesta",
-        "poiId": "ermita-villavieja-f",
+        "poiId": "ermita-villavieja",
         "storyId": "fraile-botijo",
         "name": "La Siesta Eterna en Villavieja",
         "difficulty": "*",
@@ -2543,7 +2869,7 @@
       },
       {
         "id": "f-extra-baile-vino",
-        "poiId": "mirador-cameros-f",
+        "poiId": "mirador-cameros",
         "storyId": "fraile-botijo",
         "name": "El Baile del Monje Achispado",
         "difficulty": "*",
@@ -2555,36 +2881,304 @@
         "bonusPoints": 50,
         "titleKey": "f_extra_baile_vino_title",
         "descriptionKey": "f_extra_baile_vino_description"
+      },
+      {
+        "id": "chucho-t1-castillo",
+        "poiId": "castillo-nalda",
+        "storyId": "banda-palomar",
+        "name": "Ojo de Paloma en el Castillo",
+        "difficulty": "novato",
+        "question": "Oye, plumas: desde lo alto de la torre del castillo veo todo el valle. En 1299 encerraron aquí a un noble de postín. ¿Quién era el pájaro enjaulado?",
+        "type": "test",
+        "options": [
+          "Don Juan de Austria",
+          "Juan Alonso de Haro",
+          "El Obispo de Calahorra",
+          "El Cid Campeador"
+        ],
+        "answer": "Juan Alonso de Haro",
+        "hints": [
+          "No llevaba plumas, pero era señor de Cameros.",
+          "Su apellido tiene nombre de pueblo con mucho vino."
+        ],
+        "staticHints": [
+          "Señor de Cameros en el siglo XIII",
+          "Juan Alonso de Haro"
+        ],
+        "points": 100,
+        "correctIndex": 1
+      },
+      {
+        "id": "chucho-t2-arco",
+        "poiId": "arco-villa",
+        "storyId": "banda-palomar",
+        "name": "Aduana de Plumas en el Arco",
+        "difficulty": "explorador",
+        "question": "Mis palomas montan guardia en lo alto del Arco de la Villa. ¿Qué función histórica tenía este arco de piedra en la muralla medieval?",
+        "type": "text",
+        "answer": "Puerta defensiva de entrada a la villa",
+        "acceptedAnswers": [
+          "puerta defensiva",
+          "puerta de entrada",
+          "defensa",
+          "muralla",
+          "entrada a la villa",
+          "acceso amurallado"
+        ],
+        "hints": [
+          "Nadie pasaba sin ser visto desde arriba.",
+          "Era la puerta principal del recinto amurallado."
+        ],
+        "staticHints": [
+          "Entrada protegida",
+          "Puerta amurallada"
+        ],
+        "points": 150
+      },
+      {
+        "id": "chucho-t3-mirador",
+        "poiId": "mirador-cameros",
+        "storyId": "banda-palomar",
+        "name": "Ruta de Vuelo Cameros",
+        "difficulty": "maestro",
+        "question": "¿Qué río desciende por el cañón hacia el Ebro y es nuestra piscina favorita para remojar las plumas?",
+        "type": "text",
+        "answer": "Iregua",
+        "acceptedAnswers": [
+          "iregua",
+          "río iregua",
+          "rio iregua"
+        ],
+        "hints": [
+          "Empieza por I y tiene 6 letras.",
+          "Pasa rozando Nalda."
+        ],
+        "staticHints": [
+          "Río principal del valle",
+          "Iregua"
+        ],
+        "points": 250
+      },
+      {
+        "id": "chucho-t4-palomares",
+        "poiId": "cuevas-palomares",
+        "storyId": "banda-palomar",
+        "name": "El Cuartel General de la Banda",
+        "difficulty": "explorador",
+        "question": "¡Aquí está mi palacio! Las Cuevas de Los Palomares tienen decenas de huecos tallados en roca. ¿Qué uso religioso tuvieron antes de ser nuestro hogar?",
+        "type": "test",
+        "options": [
+          "Eremitorio medieval de monjes",
+          "Almacén de pólvora carlista",
+          "Caballerizas romanas",
+          "Molino de agua subterráneo"
+        ],
+        "answer": "Eremitorio medieval de monjes",
+        "hints": [
+          "Eran celdas de silencio y oración para ermitaños.",
+          "Siglos después vinieron las palomas."
+        ],
+        "staticHints": [
+          "Monjes ermitaños en la roca",
+          "Eremitorio medieval"
+        ],
+        "points": 150,
+        "correctIndex": 0
+      },
+      {
+        "id": "chucho-t5-ermita",
+        "poiId": "ermita-villavieja",
+        "storyId": "banda-palomar",
+        "name": "La Campana de Villavieja",
+        "difficulty": "novato",
+        "question": "En la espadaña de la Ermita de Villavieja nos posamos a tomar el sol. ¿Qué celebración tradicional reúne a los vecinos con bollos y procesión en este lugar?",
+        "type": "test",
+        "options": [
+          "La Romería de Villavieja",
+          "La Tomatina de Nalda",
+          "La Batalla del Vino de Cameros",
+          "El Desfile de Halcones"
+        ],
+        "answer": "La Romería de Villavieja",
+        "hints": [
+          "Una fiesta popular llena de cánticos y devoción.",
+          "Se sube en romería."
+        ],
+        "staticHints": [
+          "Fiesta tradicional",
+          "Romería de Villavieja"
+        ],
+        "points": 100,
+        "correctIndex": 0
+      },
+      {
+        "id": "zorbo-t1-castillo",
+        "poiId": "castillo-nalda",
+        "storyId": "expediente-zorbo",
+        "name": "La Rampa de Lanzamiento Medieval",
+        "difficulty": "novato",
+        "question": "¡Por las lunas de Júpiter! La elevación de este castillo ofrece un ángulo de reentrada orbital perfecto. ¿En qué siglo terrícola se construyó la fortaleza defensiva de Nalda?",
+        "type": "test",
+        "options": [
+          "Siglo X (Edad Media)",
+          "Siglo XIII (Edad Media)",
+          "Siglo XX (Era Espacial)",
+          "Año 3000"
+        ],
+        "answer": "Siglo XIII (Edad Media)",
+        "hints": [
+          "Fue durante la época de los Señores de Cameros en el medievo.",
+          "Alrededor del año 1200-1300."
+        ],
+        "staticHints": [
+          "Siglo XIII medieval",
+          "Época de los Haro"
+        ],
+        "points": 100,
+        "correctIndex": 1
+      },
+      {
+        "id": "zorbo-t2-arco",
+        "poiId": "arco-villa",
+        "storyId": "expediente-zorbo",
+        "name": "El Portal de Cuarzo y Caliza",
+        "difficulty": "explorador",
+        "question": "Mis escáneres registran una curvatura geométrica perfecta en este arco. En la cultura terrícola, ¿para qué servía esta compuerta de la villa amurallada?",
+        "type": "text",
+        "answer": "Control y defensa de acceso a la población",
+        "acceptedAnswers": [
+          "defensa",
+          "control de acceso",
+          "puerta de muralla",
+          "entrada a la villa",
+          "proteger la villa",
+          "portal amurallado"
+        ],
+        "hints": [
+          "Evitaba que enemigos o forasteros entraran sin permiso.",
+          "Control de paso."
+        ],
+        "staticHints": [
+          "Control de acceso defensivo",
+          "Puerta amurallada"
+        ],
+        "points": 150
+      },
+      {
+        "id": "zorbo-t3-mirador",
+        "poiId": "mirador-cameros",
+        "storyId": "expediente-zorbo",
+        "name": "Sensor Óptico Puerta de Cameros",
+        "difficulty": "maestro",
+        "question": "Desde este puesto de observación se domina el relieve de la comarca. ¿Cómo denominan los nativos a esta comarca montañosa al sur de Nalda?",
+        "type": "text",
+        "answer": "Cameros",
+        "acceptedAnswers": [
+          "cameros",
+          "tierra de cameros",
+          "valle de cameros",
+          "sierra de cameros"
+        ],
+        "hints": [
+          "El mismo mirador lleva su nombre.",
+          "Empieza por C."
+        ],
+        "staticHints": [
+          "Comarca de Cameros",
+          "Cameros"
+        ],
+        "points": 250
+      },
+      {
+        "id": "zorbo-t4-palomares",
+        "poiId": "cuevas-palomares",
+        "storyId": "expediente-zorbo",
+        "name": "Matriz Biológica de Silicio",
+        "difficulty": "explorador",
+        "question": "¡Fascinante! Cientos de hornacinas cúbicas excavadas en la pared de roca. ¿A qué bípedos con alas alberga hoy este complejo?",
+        "type": "test",
+        "options": [
+          "Palomas bravías y torcaces",
+          "Murciélagos de titanio",
+          "Drones de reconocimiento",
+          "Dragones del Iregua"
+        ],
+        "answer": "Palomas bravías y torcaces",
+        "hints": [
+          "Son aves comunes de plumas grises.",
+          "El propio nombre del sitio lo indica: Los Palomares."
+        ],
+        "staticHints": [
+          "Aves de Los Palomares",
+          "Palomas"
+        ],
+        "points": 150,
+        "correctIndex": 0
+      },
+      {
+        "id": "zorbo-t5-ermita",
+        "poiId": "ermita-villavieja",
+        "storyId": "expediente-zorbo",
+        "name": "El Transmisor de Villavieja",
+        "difficulty": "novato",
+        "question": "En las inmediaciones de esta ermita los humanos cultivan unas bayas púrpuras en espaldera para producir un combustible bebible. ¿Qué fruto es?",
+        "type": "test",
+        "options": [
+          "Uva de viñedo de Rioja",
+          "Criptonita silvestre",
+          "Naranjas lunares",
+          "Bayas de antimateria"
+        ],
+        "answer": "Uva de viñedo de Rioja",
+        "hints": [
+          "Se cosecha en la vendimia de otoño.",
+          "Da lugar al prestigioso vino riojano."
+        ],
+        "staticHints": [
+          "Fruto de la vid",
+          "Uva de Rioja"
+        ],
+        "points": 100,
+        "correctIndex": 0
       }
     ],
     "sceneNarratives": {
-      "fraile-botijo_castillo-nalda-f": "Fray Botijo te espera tambaleándose en la torre del castillo con una jarra de barro.",
-      "fraile-botijo_cuevas-palomares-f": "Entre los nichos escarpados de Los Palomares, el fraile busca su escondite de vino favorito.",
-      "fraile-botijo_arco-villa-f": "El eco del arco de la villa retumba con las risotadas de taberna del fraile.",
-      "fraile-botijo_mirador-cameros-f": "Fray Botijo otea el valle del Iregua mientras brinda al viento de Cameros.",
-      "fraile-botijo_ermita-villavieja-f": "A la sombra de Villavieja, Fray Botijo se despereza de una siesta de seis siglos."
+      "guardian-iregua_castillo-nalda": "El Cronicón contempla las piedras del castillo y te invita a recordar la memoria del siglo XIII.",
+      "guardian-iregua_arco-villa": "El arco delimitaba la frontera de protección de la villa medieval frente a incursiones.",
+      "guardian-iregua_mirador-cameros": "El sonido cantarín del Iregua asciende desde el cañón mientras contemplas la entrada a Cameros.",
+      "guardian-iregua_cuevas-palomares": "El rumor de las palomas y el eremitorio excavado guardan siglos de recogimiento en la roca.",
+      "guardian-iregua_ermita-villavieja": "Frente a la ermita, los viñedos de la Rioja susurran la historia de la vendimia y la tradición.",
+      "banda-palomar_castillo-nalda": "Chucho sobrevuela las almenas buscando migas y señalando la vista panorámica.",
+      "banda-palomar_arco-villa": "Las palomas vigilan el arco de entrada como centinelas con plumas.",
+      "banda-palomar_mirador-cameros": "El viento de Cameros levanta el vuelo de la bandada sobre el desfiladero.",
+      "banda-palomar_cuevas-palomares": "¡El hogar supremo! El arrullo de docenas de palomas resuena en los nichos de roca.",
+      "banda-palomar_ermita-villavieja": "Chucho se posa en la espadaña contemplando la tranquilidad de los viñedos.",
+      "expediente-zorbo_castillo-nalda": "Zorbo apunta su escáner con pitidos agudos hacia las murallas del siglo XIII.",
+      "expediente-zorbo_arco-villa": "Zorbo analiza la puerta de piedra sospechando un campo de contención terrícola.",
+      "expediente-zorbo_mirador-cameros": "Zorbo calibra su brújula galáctica con la cordillera de Cameros de fondo.",
+      "expediente-zorbo_cuevas-palomares": "Zorbo cree haber descubierto los camarotes de hibernación de una nave nodriza.",
+      "expediente-zorbo_ermita-villavieja": "Zorbo degusta la atmósfera tranquila y registra el néctar de las vides riojanas."
     },
     "bridgePhrases": {
-      "castillo-nalda-f_to_arco-villa-f": "Baja con cuidado las callejuelas empedradas hasta el Arco de la Villa sin caerte como Fray Botijo.",
-      "arco-villa-f_to_mirador-cameros-f": "Sube hacia el mirador para contemplar la majestuosa Puerta de Cameros.",
-      "mirador-cameros-f_to_cuevas-palomares-f": "Dirígete hacia el farallón arcilloso donde se ocultan las misteriosas cuevas de Los Palomares.",
-      "cuevas-palomares-f_to_ermita-villavieja-f": "Toma el sendero entre campos y huertas hasta la apacible Ermita de Villavieja."
+      "castillo-nalda_to_arco-villa": "Desciende las calles empedradas hacia la puerta amurallada del Arco de la Villa.",
+      "arco-villa_to_mirador-cameros": "Prosigue la senda ascendente hacia el Mirador Puerta de Cameros.",
+      "mirador-cameros_to_cuevas-palomares": "Baja en dirección a la pared vertical donde se abren las Cuevas de Los Palomares.",
+      "cuevas-palomares_to_ermita-villavieja": "Sigue el camino fluvial entre frutales y viñedos hasta la Ermita de Villavieja."
     },
     "metaEnigma": {
-      "keyword": "BOTIJO",
-      "title": "El Códice del Barril de 1387",
-      "description": "[PENDIENTE] Reúne las 6 letras secretas (B-O-T-I-J-O) ocultas en las reliquias de Fray Botijo para destapar el barril de la salvación.",
-      "hint": "El recipiente de barro que refresca el agua y guarda el secreto del vino riojano.",
-      "successNarrative": "¡BINGOOOO, CHAVAL! ¡Has formado la palabra sagrada BOTIJO! Fray Botijo alza su jarra eterna hacia el cielo de Nalda y te nombra Caballero Honorario de la Taberna Medieval. ¡El misterio del barril ha sido resuelto!",
-      "titleKey": "f_meta_enigma_title",
-      "descriptionKey": "f_meta_enigma_description",
+      "keyword": "NALDA",
+      "title": "El Sello del Cronicón",
+      "description": "Al completar todos los POIs, recibes un sello digital con la frase: 'El Iregua guarda la memoria de NALDA'. Se puede compartir en redes.",
+      "hint": "El nombre de esta ilustre villa riojana a orillas del Iregua.",
+      "successNarrative": "¡Enhorabuena, aprendiz! El Cronicón asiente con solemnidad. Has completado la senda y recogido el sello sagrado: 'El Iregua guarda la memoria de NALDA'.",
+      "titleKey": "meta_enigma_title",
+      "descriptionKey": "meta_enigma_description",
       "fragments": [
-        "B",
-        "O",
-        "T",
-        "I",
-        "J",
-        "O"
+        "N",
+        "A",
+        "L",
+        "D",
+        "A"
       ]
     }
   }

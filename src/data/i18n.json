@@ -513,7 +513,153 @@
       "f_meta_enigma_description": "[PENDIENTE] Reúne las 6 letras secretas (B-O-T-I-J-O) ocultas en las reliquias de Fray Botijo para destapar el barril de la salvación.",
       "game.reportJoke": "Reportar chiste (ofensivo)",
       "game.reportJokeSuccess": "Fray Botijo pide perdón de rodillas ante la Virgen de Villavieja y te ofrece un trago virtual 🍷",
-      "game.contentRatingAdultWarning": "Contenido picante con humor irreverente. No apto para niños ni para gente sin sentido del humor."
+      "game.contentRatingAdultWarning": "Contenido picante con humor irreverente. No apto para niños ni para gente sin sentido del humor.",
+      "forest_nalda_name": "Nalda (La Rioja)",
+      "forest_nalda_description": "Un bosque de historia, piedra y río en el Valle del Iregua.",
+      "poi_castillo_name": "Castillo de Nalda",
+      "poi_arco_name": "Arco de la Villa",
+      "poi_mirador_name": "Mirador Puerta de Cameros",
+      "poi_cuevas_name": "Cuevas de Los Palomares",
+      "poi_ermita_name": "Ermita de Nuestra Señora de Villavieja",
+      "ar_castillo_description": "Reconstrucción 3D de la torre del homenaje superpuesta sobre las ruinas actuales.",
+      "ar_arco_description": "Al cruzar el arco, aparecen figuras de vigías medievales.",
+      "ar_mirador_description": "Etiquetas flotantes de los pueblos del valle y la ruta romana.",
+      "ar_cuevas_description": "Paloma 3D animada que vuela hacia las hornacinas. Al tocarla, da una pista.",
+      "ar_ermita_description": "Cesta de vendimia 3D con uvas de la Rioja. Al tocarla, reproduce audio de campanas.",
+      "story_guardian_title": "El Guardián del Iregua",
+      "guide_cronicon_name": "El Cronicón",
+      "guide_cronicon_persona": "Monje copista del siglo XIV del Monasterio de San Millán de la Cogolla. Habla con respeto y usa refranes antiguos.",
+      "guide_cronicon_system_prompt": "Eres El Cronicón, un monje copista del siglo XIV del Monasterio de San Millán de la Cogolla. Hablas con respeto y usas refranes antiguos. Solo respondes sobre Nalda, su historia, naturaleza y el juego. Si te preguntan algo fuera de tema, redirige a la aventura.",
+      "guide_cronicon_greeting": "Bienvenido, aprendiz. Soy el Cronicón, y estas piedras guardan memoria.",
+      "duration_30min_description": "Paseo corto ideal para familias con niños pequeños.",
+      "duration_1h_description": "Parejas o grupos con poco tiempo.",
+      "duration_1h30_description": "Familias y exploradores ocasionales.",
+      "duration_2h_description": "Senderistas, grupos escolares y expertos.",
+      "t1_1_question": "¿Quién fue el noble que estuvo prisionero aquí en 1299?",
+      "t1_1_opt_a": "Ramírez de Arellano",
+      "t1_1_opt_b": "Juan Núñez de Lara",
+      "t1_1_opt_c": "Pedro I",
+      "t1_1_opt_d": "Enrique II",
+      "t1_1_hint1": "Perdió una batalla entre Araciel y Alfaro.",
+      "t1_1_hint2": "Atacó tierras del obispado de Calahorra.",
+      "t1_1_hint3": "Su apellido empieza por Núñez.",
+      "t1_2_question": "El castillo tenía un sistema de aljibes. ¿Qué función cumplían en caso de asedio?",
+      "t1_2_ans1": "almacenar agua",
+      "t1_2_ans2": "abastecer de agua",
+      "t1_2_ans3": "guardar agua",
+      "t1_2_hint1": "Piensa en lo que necesitas para sobrevivir.",
+      "t1_2_hint2": "Sin agua, no hay resistencia.",
+      "t1_2_hint3": "Se llenaban con agua de lluvia.",
+      "t1_3_question": "¿Qué rey mató a su hermanastro con un puñal tras la batalla de Montiel?",
+      "t1_3_ans1": "Enrique II",
+      "t1_3_ans2": "Enrique de Trastámara",
+      "t1_3_ans3": "Enrique II de Trastámara",
+      "t1_3_hint1": "Fue en 1369.",
+      "t1_3_hint2": "El muerto era Pedro I el Cruel.",
+      "t1_3_hint3": "El asesino fundó la dinastía Trastámara.",
+      "t2_1_question": "¿Qué delimitaba el Arco de la Villa?",
+      "t2_1_opt_a": "El bosque",
+      "t2_1_opt_b": "La entrada al recinto amurallado",
+      "t2_1_opt_c": "La frontera con Navarra",
+      "t2_1_opt_d": "El inicio del Camino de Santiago",
+      "t2_1_hint1": "Era una puerta de acceso.",
+      "t2_1_hint2": "Protegía la villa.",
+      "t2_1_hint3": "Había murallas alrededor.",
+      "t2_2_question": "¿Qué familia noble fue señora de Cameros y Nalda desde el siglo XIV?",
+      "t2_2_ans1": "Ramírez de Arellano",
+      "t2_2_ans2": "Arellano",
+      "t2_2_ans3": "los Arellano",
+      "t2_2_hint1": "Su nombre aparece en documentos del castillo.",
+      "t2_2_hint2": "Empieza por Ramírez.",
+      "t2_2_hint3": "Fueron señores de un territorio que llegaba hasta Soria.",
+      "t2_3_question": "Anagrama: R A L O M P A → ordena para formar el nombre de las cuevas que visitarás después.",
+      "t2_3_ans1": "PALOMAR",
+      "t2_3_ans2": "palomar",
+      "t2_3_hint1": "Es el nombre de un lugar con palomas.",
+      "t2_3_hint2": "Empieza por P.",
+      "t2_3_hint3": "Tiene 7 letras.",
+      "t3_1_question": "¿Cómo se llama el río que atraviesa este valle?",
+      "t3_1_opt_a": "Ebro",
+      "t3_1_opt_b": "Iregua",
+      "t3_1_opt_c": "Leza",
+      "t3_1_opt_d": "Cidacos",
+      "t3_1_hint1": "Nace en la Sierra de Cebollera.",
+      "t3_1_hint2": "Es afluente del Ebro.",
+      "t3_1_hint3": "Su nombre tiene 6 letras.",
+      "t3_2_question": "Si el caudal medio es de 6,35 m³/s, ¿cuántos m³ pasan en 1 minuto?",
+      "t3_2_ans1": "381",
+      "t3_2_ans2": "381 m3",
+      "t3_2_ans3": "381 metros cubicos",
+      "t3_2_hint1": "Un minuto = 60 segundos.",
+      "t3_2_hint2": "Multiplica.",
+      "t3_2_hint3": "El resultado está entre 380 y 382.",
+      "t3_3_question": "¿A qué región histórica daba acceso esta 'puerta'?",
+      "t3_3_ans1": "Cameros",
+      "t3_3_ans2": "Señorío de Cameros",
+      "t3_3_ans3": "Tierra de Cameros",
+      "t3_3_hint1": "El nombre del mirador lo dice.",
+      "t3_3_hint2": "Era un señorío.",
+      "t3_3_hint3": "Empieza por C.",
+      "t4_1_question": "¿Cuál era el uso principal de estas cuevas en los siglos XIV-XV?",
+      "t4_1_opt_a": "Vivienda de ermitaños",
+      "t4_1_opt_b": "Criadero de palomas",
+      "t4_1_opt_c": "Bodega",
+      "t4_1_opt_d": "Refugio de bandoleros",
+      "t4_1_hint1": "El nombre de las cuevas te lo dice.",
+      "t4_1_hint2": "Las hornacinas servían para anidar.",
+      "t4_1_hint3": "Las palomas eran fuente de alimento.",
+      "t4_2_question": "Las cuevas tienen varios niveles conectados por escaleras talladas en la roca. ¿Qué material usaron los excavadores para tallar estas cuevas?",
+      "t4_2_ans1": "piedra",
+      "t4_2_ans2": "roca",
+      "t4_2_ans3": "arenisca",
+      "t4_2_ans4": "piedra caliza",
+      "t4_2_hint1": "Es el material del que están hechas.",
+      "t4_2_hint2": "Se extrae de canteras.",
+      "t4_2_hint3": "Las paredes son del mismo material.",
+      "t4_3_question": "Las palomas mensajeras llevaban mensajes en un tubo atado a la pata. ¿Cómo se llama ese tubo en español?",
+      "t4_3_ans1": "cápsula",
+      "t4_3_ans2": "tubo portamensajes",
+      "t4_3_ans3": "canuto",
+      "t4_3_ans4": "capsula",
+      "t4_3_hint1": "Es pequeño y hueco.",
+      "t4_3_hint2": "Se ata con un hilo.",
+      "t4_3_hint3": "Empieza por c o t.",
+      "t5_1_question": "Nalda es tierra de viñedos (Rioja). ¿En qué mes se vendimia tradicionalmente?",
+      "t5_1_ans1": "septiembre",
+      "t5_1_ans2": "setiembre",
+      "t5_1_ans3": "finales de septiembre",
+      "t5_1_ans4": "septiembre-octubre",
+      "t5_1_hint1": "Después del verano.",
+      "t5_1_hint2": "Coincide con la Fiesta de la Ciruela Reina Claudia.",
+      "t5_1_hint3": "Es el noveno mes.",
+      "t5_2_question": "Has recogido fragmentos en cada POI. Ordénalos para formar la frase final del Cronicón: 'El Iregua guarda la memoria de N A L D A'. Escribe la palabra que falta.",
+      "t5_2_ans1": "NALDA",
+      "t5_2_ans2": "Nalda",
+      "t5_2_hint1": "Es el nombre del pueblo.",
+      "t5_2_hint2": "Tiene 5 letras.",
+      "t5_2_hint3": "Empieza por N.",
+      "extra_foto_castillo_title": "El Tesoro del Castillo",
+      "extra_foto_castillo_description": "Fotografía una piedra con marca de cantero sin tocar nada.",
+      "extra_escucha_mirador_title": "El Concierto del Iregua",
+      "extra_escucha_mirador_description": "30 segundos en silencio. Marca los sonidos que oyes.",
+      "extra_brujula_mirador_title": "Apunta al Norte",
+      "extra_brujula_mirador_description": "Mantén el móvil orientado al Norte 3 s (±15°).",
+      "extra_ordena_camino_title": "El Orden del Camino",
+      "extra_ordena_camino_description": "Ordena: Vareia → Nalda → Viguera → Torrecilla → Puerto de Piqueras",
+      "extra_escucha_cuevas_title": "El Silencio de las Cuevas",
+      "extra_escucha_cuevas_description": "30 s en silencio dentro de las cuevas. ¿Qué oyes?",
+      "meta_enigma_title": "El Sello del Cronicón",
+      "meta_enigma_description": "Al completar todos los POIs, recibes un sello digital con la frase: 'El Iregua guarda la memoria de NALDA'. Se puede compartir en redes.",
+      "story_palomar_title": "La Banda del Palomar",
+      "guide_chucho_name": "Chucho el Palomo",
+      "guide_chucho_persona": "Paloma líder de la bandada que anida en las oquedades medievales de Los Palomares. Conoce cada cornisa, teja y rincón secreto de Nalda a vista de pájaro.",
+      "guide_chucho_greeting": "¡Epa, plumas! Soy Chucho el Palomo. ¿Vienes a caminar o a que te eche una pata la mejor paloma de La Rioja? ¡Vuelo rasante y al lío!",
+      "guide_chucho_system_prompt": "Eres Chucho el Palomo, una paloma gamberra, canalla y callejera que anida en las Cuevas de Los Palomares de Nalda. Hablas rápido, con jerga callejera simpática ('plumas', 'al loro', 'a vista de pájaro'). Solo hablas de Nalda y de tu bandada.",
+      "story_zorbo_title": "El Expediente Iregua: Zorbo el Marciano",
+      "guide_zorbo_name": "Zorbo el Marciano",
+      "guide_zorbo_persona": "Extraterrestre verde con tres ojos y antena oscilante. Cree firmemente que los viñedos son paneles fotosintéticos de recarga y que el Castillo de Nalda fue una rampa de despegue medieval.",
+      "guide_zorbo_greeting": "¡Bip-bop! Saludos, humano terrícola. Mis sensores marcan lecturas insólitas en este valle fluvial. ¿Eres tú mi contacto local de Nalda?",
+      "guide_zorbo_system_prompt": "Eres Zorbo el Marciano, un científico alienígena extraviado en el valle del Iregua. Confundes con humor absurdo la historia y paisajes de Nalda con alta tecnología espacial."
     },
     "fr": {
       "app.title": "Énigme de la Forêt",
@@ -1004,7 +1150,153 @@
       "f_meta_enigma_description": "[PENDIENTE] Réunis les 6 lettres secrètes (B-O-T-I-J-O) cachées dans les reliques pour ouvrir le tonneau du salut.",
       "game.reportJoke": "Signaler une blague (offensante)",
       "game.reportJokeSuccess": "Fray Botijo demande pardon à genoux devant la Vierge de Villavieja et t'offre un verre virtuel 🍷",
-      "game.contentRatingAdultWarning": "Contenu épicé avec humour irrévérencieux. Pas pour les enfants ni pour les personnes sans sens de l'humour."
+      "game.contentRatingAdultWarning": "Contenu épicé avec humour irrévérencieux. Pas pour les enfants ni pour les personnes sans sens de l'humour.",
+      "forest_nalda_name": "Nalda (La Rioja)",
+      "forest_nalda_description": "Une forêt d'histoire, de pierre et de rivière dans la vallée de l'Iregua.",
+      "poi_castillo_name": "Château de Nalda",
+      "poi_arco_name": "Arche de la Villa",
+      "poi_mirador_name": "Belvédère Porte de Cameros",
+      "poi_cuevas_name": "Grottes de Los Palomares",
+      "poi_ermita_name": "Ermitage de Notre-Dame de Villavieja",
+      "ar_castillo_description": "Reconstruction 3D de la tour du hommage superposée aux ruines actuelles.",
+      "ar_arco_description": "En traversant l'arche, des figures de guetteurs médiévaux apparaissent.",
+      "ar_mirador_description": "Étiquettes flottantes des villages de la vallée et de la voie romaine.",
+      "ar_cuevas_description": "Colombe 3D animée qui vole vers les niches. En la touchant, elle donne un indice.",
+      "ar_ermita_description": "Panier de vendange 3D avec raisins de La Rioja. En le touchant, audio de cloches.",
+      "story_guardian_title": "Le Gardien de l'Iregua",
+      "guide_cronicon_name": "Le Cronicón",
+      "guide_cronicon_persona": "Moine copiste du XIVe siècle du monastère de San Millán de la Cogolla. Parle avec respect et utilise de vieux proverbes.",
+      "guide_cronicon_system_prompt": "Tu es Le Cronicón, un moine copiste du XIVe siècle du monastère de San Millán de la Cogolla. Tu parles avec respect et utilises de vieux proverbes. Tu ne réponds que sur Nalda, son histoire, sa nature et le jeu. Si on te pose une question hors sujet, redirige vers l'aventure.",
+      "guide_cronicon_greeting": "Bienvenue, apprenti. Je suis le Cronicón, et ces pierres gardent la mémoire.",
+      "duration_30min_description": "Courte promenade idéale pour les familles avec jeunes enfants.",
+      "duration_1h_description": "Couples ou groupes pressés.",
+      "duration_1h30_description": "Familles et explorateurs occasionnels.",
+      "duration_2h_description": "Randonneurs, groupes scolaires et experts.",
+      "t1_1_question": "Qui était le noble emprisonné ici en 1299 ?",
+      "t1_1_opt_a": "Ramírez de Arellano",
+      "t1_1_opt_b": "Juan Núñez de Lara",
+      "t1_1_opt_c": "Pedro I",
+      "t1_1_opt_d": "Enrique II",
+      "t1_1_hint1": "Il a perdu une bataille entre Araciel et Alfaro.",
+      "t1_1_hint2": "Il a attaqué les terres de l'évêché de Calahorra.",
+      "t1_1_hint3": "Son nom commence par Núñez.",
+      "t1_2_question": "Le château avait un système de citernes. Quelle fonction avaient-elles en cas de siège ?",
+      "t1_2_ans1": "stocker de l'eau",
+      "t1_2_ans2": "alimenter en eau",
+      "t1_2_ans3": "garder de l'eau",
+      "t1_2_hint1": "Pensez à ce dont vous avez besoin pour survivre.",
+      "t1_2_hint2": "Sans eau, pas de résistance.",
+      "t1_2_hint3": "Ils se remplissaient d'eau de pluie.",
+      "t1_3_question": "Quel roi a tué son demi-frère avec un poignard après la bataille de Montiel ?",
+      "t1_3_ans1": "Enrique II",
+      "t1_3_ans2": "Enrique de Trastámara",
+      "t1_3_ans3": "Enrique II de Trastámara",
+      "t1_3_hint1": "C'était en 1369.",
+      "t1_3_hint2": "Le mort était Pedro I le Cruel.",
+      "t1_3_hint3": "L'assassin a fondé la dynastie Trastámara.",
+      "t2_1_question": "Que délimitait l'Arche de la Villa ?",
+      "t2_1_opt_a": "La forêt",
+      "t2_1_opt_b": "L'entrée de l'enceinte fortifiée",
+      "t2_1_opt_c": "La frontière avec la Navarre",
+      "t2_1_opt_d": "Le début du chemin de Saint-Jacques",
+      "t2_1_hint1": "C'était une porte d'accès.",
+      "t2_1_hint2": "Elle protégeait le village.",
+      "t2_1_hint3": "Il y avait des remparts autour.",
+      "t2_2_question": "Quelle famille noble était seigneure de Cameros et Nalda depuis le XIVe siècle ?",
+      "t2_2_ans1": "Ramírez de Arellano",
+      "t2_2_ans2": "Arellano",
+      "t2_2_ans3": "les Arellano",
+      "t2_2_hint1": "Leur nom apparaît dans les documents du château.",
+      "t2_2_hint2": "Commence par Ramírez.",
+      "t2_2_hint3": "Ils étaient seigneurs d'un territoire allant jusqu'à Soria.",
+      "t2_3_question": "Anagramme : R A L O M P A → réorganisez pour former le nom des grottes que vous visiterez ensuite.",
+      "t2_3_ans1": "PALOMAR",
+      "t2_3_ans2": "palomar",
+      "t2_3_hint1": "C'est le nom d'un lieu avec des colombes.",
+      "t2_3_hint2": "Commence par P.",
+      "t2_3_hint3": "Il a 7 lettres.",
+      "t3_1_question": "Comment s'appelle la rivière qui traverse cette vallée ?",
+      "t3_1_opt_a": "Ebro",
+      "t3_1_opt_b": "Iregua",
+      "t3_1_opt_c": "Leza",
+      "t3_1_opt_d": "Cidacos",
+      "t3_1_hint1": "Il naît dans la Sierra de Cebollera.",
+      "t3_1_hint2": "C'est un affluent de l'Ebre.",
+      "t3_1_hint3": "Son nom a 6 lettres.",
+      "t3_2_question": "Si le débit moyen est de 6,35 m³/s, combien de m³ passent en 1 minute ?",
+      "t3_2_ans1": "381",
+      "t3_2_ans2": "381 m3",
+      "t3_2_ans3": "381 mètres cubes",
+      "t3_2_hint1": "Une minute = 60 secondes.",
+      "t3_2_hint2": "Multipliez.",
+      "t3_2_hint3": "Le résultat est entre 380 et 382.",
+      "t3_3_question": "À quelle région historique cette 'porte' donnait-elle accès ?",
+      "t3_3_ans1": "Cameros",
+      "t3_3_ans2": "Seigneurie de Cameros",
+      "t3_3_ans3": "Terre de Cameros",
+      "t3_3_hint1": "Le nom du belvédère le dit.",
+      "t3_3_hint2": "C'était une seigneurie.",
+      "t3_3_hint3": "Commence par C.",
+      "t4_1_question": "Quel était l'usage principal de ces grottes aux XIVe-XVe siècles ?",
+      "t4_1_opt_a": "Habitat d'ermites",
+      "t4_1_opt_b": "Élevage de colombes",
+      "t4_1_opt_c": "Cave à vin",
+      "t4_1_opt_d": "Refuge de bandits",
+      "t4_1_hint1": "Le nom des grottes vous le dit.",
+      "t4_1_hint2": "Les niches servaient à nicher.",
+      "t4_1_hint3": "Les colombes étaient une source de nourriture.",
+      "t4_2_question": "Les grottes ont plusieurs niveaux reliés par des escaliers taillés dans la roche. Quel matériau ont utilisé les excavateurs ?",
+      "t4_2_ans1": "pierre",
+      "t4_2_ans2": "roche",
+      "t4_2_ans3": "grès",
+      "t4_2_ans4": "calcaire",
+      "t4_2_hint1": "C'est le matériau dont elles sont faites.",
+      "t4_2_hint2": "Il est extrait de carrières.",
+      "t4_2_hint3": "Les murs sont du même matériau.",
+      "t4_3_question": "Les pigeons voyageurs portaient des messages dans un tube attaché à la patte. Comment s'appelle ce tube en espagnol ?",
+      "t4_3_ans1": "capsule",
+      "t4_3_ans2": "tube porte-messages",
+      "t4_3_ans3": "canule",
+      "t4_3_ans4": "capsula",
+      "t4_3_hint1": "Il est petit et creux.",
+      "t4_3_hint2": "Il s'attache avec un fil.",
+      "t4_3_hint3": "Commence par c ou t.",
+      "t5_1_question": "Nalda est une terre de vignobles (Rioja). En quel mois vendange-t-on traditionnellement ?",
+      "t5_1_ans1": "septembre",
+      "t5_1_ans2": "setiembre",
+      "t5_1_ans3": "fin septembre",
+      "t5_1_ans4": "septembre-octobre",
+      "t5_1_hint1": "Après l'été.",
+      "t5_1_hint2": "Coïncide avec la Fête de la Prune Reine Claude.",
+      "t5_1_hint3": "C'est le neuvième mois.",
+      "t5_2_question": "Vous avez collecté des fragments à chaque POI. Réorganisez-les pour former la phrase finale du Cronicón : 'L'Iregua garde la mémoire de N A L D A'. Écrivez le mot manquant.",
+      "t5_2_ans1": "NALDA",
+      "t5_2_ans2": "Nalda",
+      "t5_2_hint1": "C'est le nom du village.",
+      "t5_2_hint2": "Il a 5 lettres.",
+      "t5_2_hint3": "Commence par N.",
+      "extra_foto_castillo_title": "Le Trésor du Château",
+      "extra_foto_castillo_description": "Photographiez une pierre avec marque de tailleur sans rien toucher.",
+      "extra_escucha_mirador_title": "Le Concert de l'Iregua",
+      "extra_escucha_mirador_description": "30 secondes de silence. Cochez les sons que vous entendez.",
+      "extra_brujula_mirador_title": "Pointez le Nord",
+      "extra_brujula_mirador_description": "Maintenez le téléphone orienté au Nord 3 s (±15°).",
+      "extra_ordena_camino_title": "L'Ordre du Chemin",
+      "extra_ordena_camino_description": "Ordre : Vareia → Nalda → Viguera → Torrecilla → Puerto de Piqueras",
+      "extra_escucha_cuevas_title": "Le Silence des Grottes",
+      "extra_escucha_cuevas_description": "30 s de silence dans les grottes. Qu'entendez-vous ?",
+      "meta_enigma_title": "Le Sceau du Cronicón",
+      "meta_enigma_description": "En complétant tous les POIs, vous recevez un sceau numérique avec la phrase : 'L'Iregua garde la mémoire de NALDA'. Partageable sur les réseaux.",
+      "story_palomar_title": "La Bande du Pigeonnier",
+      "guide_chucho_name": "Chucho le Pigeon",
+      "guide_chucho_persona": "Chef pigeon du troupeau nichant dans les cavités médiévales de Los Palomares. Connaît chaque corniche de Nalda à vol d'oiseau.",
+      "guide_chucho_greeting": "Salut les plumes ! Je suis Chucho le Pigeon. Tu viens marcher ou te faire guider par le meilleur pigeon de La Rioja ? Vol rasant et c'est parti !",
+      "guide_chucho_system_prompt": "Tu es Chucho le Pigeon, un pigeon espiègle et débrouillard nichant dans les Grottes des Palomares à Nalda. Tu parles avec verve et humour de rue.",
+      "story_zorbo_title": "Le Dossier Iregua : Zorbo le Martien",
+      "guide_zorbo_name": "Zorbo le Martien",
+      "guide_zorbo_persona": "Extraterrestre vert à trois yeux et antenne oscillante. Pense que le château de Nalda était une rampe de lancement médiévale.",
+      "guide_zorbo_greeting": "Bip-bop ! Salutations, humain terrien. Mes capteurs détectent des anomalies insolites dans cette vallée fluviale. Es-tu mon contact local à Nalda ?",
+      "guide_zorbo_system_prompt": "Tu es Zorbo le Martien, un scientifique extraterrestre égaré dans la vallée de l'Iregua. Tu confonds avec un humour absurde l'histoire de Nalda avec la technologie spatiale."
     },
     "en": {
       "app.title": "Enigma of the Forest",
@@ -1495,7 +1787,153 @@
       "f_meta_enigma_description": "[PENDIENTE] Gather the 6 secret letters (B-O-T-I-J-O) hidden within Friar Botijo's relics to unlock the barrel of salvation.",
       "game.reportJoke": "Report joke (offensive)",
       "game.reportJokeSuccess": "Friar Botijo apologised on his knees before the Virgin of Villavieja and offers you a virtual drink 🍷",
-      "game.contentRatingAdultWarning": "Spicy content with irreverent humour. Not suitable for children or people without a sense of humour."
+      "game.contentRatingAdultWarning": "Spicy content with irreverent humour. Not suitable for children or people without a sense of humour.",
+      "forest_nalda_name": "Nalda (La Rioja)",
+      "forest_nalda_description": "A forest of history, stone and river in the Iregua Valley.",
+      "poi_castillo_name": "Nalda Castle",
+      "poi_arco_name": "Village Arch",
+      "poi_mirador_name": "Puerta de Cameros Viewpoint",
+      "poi_cuevas_name": "Los Palomares Caves",
+      "poi_ermita_name": "Villavieja Hermitage",
+      "ar_castillo_description": "3D reconstruction of the keep overlaid on the current ruins.",
+      "ar_arco_description": "Medieval watchmen appear when crossing the arch.",
+      "ar_mirador_description": "Floating labels of valley villages and the Roman road.",
+      "ar_cuevas_description": "Animated 3D dove flying to the niches. Touch it for a hint.",
+      "ar_ermita_description": "3D harvest basket with Rioja grapes. Touch it to play bell audio.",
+      "story_guardian_title": "The Guardian of the Iregua",
+      "guide_cronicon_name": "The Cronicón",
+      "guide_cronicon_persona": "14th-century monk copyist from San Millán de la Cogolla Monastery. Speaks respectfully and uses old proverbs.",
+      "guide_cronicon_system_prompt": "You are The Cronicón, a 14th-century monk copyist from San Millán de la Cogolla Monastery. You speak respectfully and use old proverbs. You only answer about Nalda, its history, nature and the game. If asked something off-topic, redirect to the adventure.",
+      "guide_cronicon_greeting": "Welcome, apprentice. I am the Cronicón, and these stones keep memory.",
+      "duration_30min_description": "Short walk ideal for families with young children.",
+      "duration_1h_description": "Couples or groups with little time.",
+      "duration_1h30_description": "Families and casual explorers.",
+      "duration_2h_description": "Hikers, school groups and experts.",
+      "t1_1_question": "Who was the noble imprisoned here in 1299?",
+      "t1_1_opt_a": "Ramírez de Arellano",
+      "t1_1_opt_b": "Juan Núñez de Lara",
+      "t1_1_opt_c": "Pedro I",
+      "t1_1_opt_d": "Enrique II",
+      "t1_1_hint1": "He lost a battle between Araciel and Alfaro.",
+      "t1_1_hint2": "He attacked lands of the Calahorra bishopric.",
+      "t1_1_hint3": "His surname starts with Núñez.",
+      "t1_2_question": "The castle had a cistern system. What was their function during a siege?",
+      "t1_2_ans1": "store water",
+      "t1_2_ans2": "supply water",
+      "t1_2_ans3": "keep water",
+      "t1_2_hint1": "Think about what you need to survive.",
+      "t1_2_hint2": "Without water, no resistance.",
+      "t1_2_hint3": "They were filled with rainwater.",
+      "t1_3_question": "Which king killed his half-brother with a dagger after the Battle of Montiel?",
+      "t1_3_ans1": "Enrique II",
+      "t1_3_ans2": "Enrique de Trastámara",
+      "t1_3_ans3": "Enrique II of Trastámara",
+      "t1_3_hint1": "It was in 1369.",
+      "t1_3_hint2": "The dead man was Pedro I the Cruel.",
+      "t1_3_hint3": "The killer founded the Trastámara dynasty.",
+      "t2_1_question": "What did the Village Arch delimit?",
+      "t2_1_opt_a": "The forest",
+      "t2_1_opt_b": "The entrance to the walled enclosure",
+      "t2_1_opt_c": "The border with Navarre",
+      "t2_1_opt_d": "The start of the Camino de Santiago",
+      "t2_1_hint1": "It was an access gate.",
+      "t2_1_hint2": "It protected the village.",
+      "t2_1_hint3": "There were walls around.",
+      "t2_2_question": "Which noble family was lady of Cameros and Nalda since the 14th century?",
+      "t2_2_ans1": "Ramírez de Arellano",
+      "t2_2_ans2": "Arellano",
+      "t2_2_ans3": "the Arellano",
+      "t2_2_hint1": "Their name appears in castle documents.",
+      "t2_2_hint2": "Starts with Ramírez.",
+      "t2_2_hint3": "They ruled a territory reaching Soria.",
+      "t2_3_question": "Anagram: R A L O M P A → rearrange to form the name of the caves you'll visit next.",
+      "t2_3_ans1": "PALOMAR",
+      "t2_3_ans2": "palomar",
+      "t2_3_hint1": "It's the name of a place with doves.",
+      "t2_3_hint2": "Starts with P.",
+      "t2_3_hint3": "It has 7 letters.",
+      "t3_1_question": "What is the name of the river crossing this valley?",
+      "t3_1_opt_a": "Ebro",
+      "t3_1_opt_b": "Iregua",
+      "t3_1_opt_c": "Leza",
+      "t3_1_opt_d": "Cidacos",
+      "t3_1_hint1": "It is born in the Sierra de Cebollera.",
+      "t3_1_hint2": "It is a tributary of the Ebro.",
+      "t3_1_hint3": "Its name has 6 letters.",
+      "t3_2_question": "If the average flow is 6.35 m³/s, how many m³ pass in 1 minute?",
+      "t3_2_ans1": "381",
+      "t3_2_ans2": "381 m3",
+      "t3_2_ans3": "381 cubic meters",
+      "t3_2_hint1": "One minute = 60 seconds.",
+      "t3_2_hint2": "Multiply.",
+      "t3_2_hint3": "The result is between 380 and 382.",
+      "t3_3_question": "To which historical region did this 'gate' give access?",
+      "t3_3_ans1": "Cameros",
+      "t3_3_ans2": "Lordship of Cameros",
+      "t3_3_ans3": "Land of Cameros",
+      "t3_3_hint1": "The viewpoint name says it.",
+      "t3_3_hint2": "It was a lordship.",
+      "t3_3_hint3": "Starts with C.",
+      "t4_1_question": "What was the main use of these caves in the 14th-15th centuries?",
+      "t4_1_opt_a": "Hermit dwelling",
+      "t4_1_opt_b": "Dove breeding",
+      "t4_1_opt_c": "Wine cellar",
+      "t4_1_opt_d": "Bandit refuge",
+      "t4_1_hint1": "The cave name tells you.",
+      "t4_1_hint2": "The niches were for nesting.",
+      "t4_1_hint3": "Doves were a food source.",
+      "t4_2_question": "The caves have several levels connected by stairs carved into the rock. What material did the diggers use?",
+      "t4_2_ans1": "stone",
+      "t4_2_ans2": "rock",
+      "t4_2_ans3": "sandstone",
+      "t4_2_ans4": "limestone",
+      "t4_2_hint1": "It's the material they're made of.",
+      "t4_2_hint2": "It's extracted from quarries.",
+      "t4_2_hint3": "The walls are the same material.",
+      "t4_3_question": "Carrier pigeons carried messages in a tube tied to the leg. What is that tube called in Spanish?",
+      "t4_3_ans1": "capsule",
+      "t4_3_ans2": "message tube",
+      "t4_3_ans3": "canule",
+      "t4_3_ans4": "capsula",
+      "t4_3_hint1": "It is small and hollow.",
+      "t4_3_hint2": "It is tied with a thread.",
+      "t4_3_hint3": "Starts with c or t.",
+      "t5_1_question": "Nalda is vineyard land (Rioja). In which month is the grape harvest traditionally?",
+      "t5_1_ans1": "September",
+      "t5_1_ans2": "setiembre",
+      "t5_1_ans3": "late September",
+      "t5_1_ans4": "September-October",
+      "t5_1_hint1": "After summer.",
+      "t5_1_hint2": "Coincides with the Reina Claudia Plum Festival.",
+      "t5_1_hint3": "It's the ninth month.",
+      "t5_2_question": "You collected fragments at each POI. Rearrange them to form the Cronicón's final phrase: 'The Iregua keeps the memory of N A L D A'. Write the missing word.",
+      "t5_2_ans1": "NALDA",
+      "t5_2_ans2": "Nalda",
+      "t5_2_hint1": "It's the village name.",
+      "t5_2_hint2": "It has 5 letters.",
+      "t5_2_hint3": "Starts with N.",
+      "extra_foto_castillo_title": "The Castle Treasure",
+      "extra_foto_castillo_description": "Photograph a stone with a mason's mark without touching anything.",
+      "extra_escucha_mirador_title": "The Iregua Concert",
+      "extra_escucha_mirador_description": "30 seconds of silence. Check the sounds you hear.",
+      "extra_brujula_mirador_title": "Point North",
+      "extra_brujula_mirador_description": "Hold the phone facing North for 3 s (±15°).",
+      "extra_ordena_camino_title": "The Order of the Way",
+      "extra_ordena_camino_description": "Order: Vareia → Nalda → Viguera → Torrecilla → Puerto de Piqueras",
+      "extra_escucha_cuevas_title": "The Silence of the Caves",
+      "extra_escucha_cuevas_description": "30 s of silence inside the caves. What do you hear?",
+      "meta_enigma_title": "The Cronicón's Seal",
+      "meta_enigma_description": "Completing all POIs gives you a digital seal with the phrase: 'The Iregua keeps the memory of NALDA'. Shareable on social media.",
+      "story_palomar_title": "The Pigeon Flock Gang",
+      "guide_chucho_name": "Chucho the Pigeon",
+      "guide_chucho_persona": "Leader pigeon of the flock nesting in the medieval cliff niches of Los Palomares. Knows every rooftop of Nalda from a bird's eye view.",
+      "guide_chucho_greeting": "Hey feather-heads! I'm Chucho the Pigeon. Ready to walk or need a wing from the top pigeon in La Rioja? Low flight and let's roll!",
+      "guide_chucho_system_prompt": "You are Chucho the Pigeon, a cheeky street-smart pigeon nesting in the Palomares Caves of Nalda. You speak fast with friendly street slang ('feathers', 'keep eyes peeled').",
+      "story_zorbo_title": "The Iregua Files: Zorbo the Martian",
+      "guide_zorbo_name": "Zorbo the Martian",
+      "guide_zorbo_persona": "Green extraterrestrial with three eyes and a wobbly antenna. Believes the Castle of Nalda was a medieval launchpad.",
+      "guide_zorbo_greeting": "Beep-bop! Greetings, Earth human. My quantum sensors detect strange readings in this river valley. Are you my local Nalda contact?",
+      "guide_zorbo_system_prompt": "You are Zorbo the Martian, an alien scientist lost in the Iregua valley. You humorously mistake Nalda's historical stone heritage for cosmic tech."
     }
   },
   "forests": {
@@ -2451,273 +2889,21 @@
         }
       }
     },
-    "pinar-tres-caminos": {
-      "defaultLanguage": "es",
-      "en": {
-        "name": "The Pine Grove of the Three Paths (Home Forest)",
-        "country": "Spain — PLACEHOLDER, replace with the real location",
-        "pois": {
-          "fuente_piedra": {
-            "name": "The Stone Fountain",
-            "description": "Limestone spring and drinking trough."
-          },
-          "arbol_vigia": {
-            "name": "The Great Lookout Tree",
-            "description": "Centuries-old tree with exposed roots."
-          },
-          "cruce_vientos": {
-            "name": "Crossroads of the Four Winds",
-            "description": "Stone marker where the cattle tracks meet."
-          },
-          "mirador_puestas_sol": {
-            "name": "Sunset Viewpoint",
-            "description": "Natural balcony over the rocky hillside."
-          }
-        },
-        "stories": {
-          "leyenda_guardabosques": {
-            "title": "The Legend of the Forgotten Forest Ranger",
-            "summary": "For forty years, Anselmo patrolled these paths protecting deer and springs. Before retiring, he buried a field notebook with botanical notes and riddles.",
-            "mission": "Complete the four landmarks, solve the botany and orientation challenges and earn the title of Honorary Forest Guardian.",
-            "narrator": {
-              "name": "Ranger Anselmo",
-              "role": "Guardian spirit of the mountain",
-              "tone": "Warm, wise, a lover of birds and plants"
-            }
-          }
-        },
-        "riddles": {
-          "r_guardabosques_fuente_1": {
-            "name": "The Crystal Spout",
-            "question": "Which aromatic plant with purple or bluish flowers often grows wild among the dry rocks near the spring?",
-            "options": [
-              "Rosemary or thyme",
-              "Iceberg lettuce",
-              "Tropical banana plant"
-            ],
-            "answer": "Rosemary or thyme",
-            "hints": [
-              "If you rub its leaves between your fingers they give off the typical scent of the hills.",
-              "It is a typical plant of the Mediterranean forest, resistant to drought.",
-              "Rosemary or thyme."
-            ]
-          },
-          "r_guardabosques_fuente_2": {
-            "name": "The Spring's Hourglass",
-            "question": "Anselmo wrote in his notebook: “The spring fills the trough in 4 turns of the sand, and each turn lasts 15 minutes.” How many minutes does it take to fill the whole trough?",
-            "answer": "60",
-            "acceptedAnswers": [
-              "60",
-              "60 minutes",
-              "sixty",
-              "1 hour",
-              "one hour",
-              "an hour"
-            ],
-            "hints": [
-              "Multiply the number of turns by the length of each one.",
-              "There are 4 turns of 15 minutes each.",
-              "4 times 15 is 60 minutes."
-            ]
-          },
-          "r_guardabosques_fuente_3": {
-            "name": "The Coded Stone",
-            "question": "In his notebook, Anselmo scrambled the name of the material this fountain is made of by rearranging its letters: “NOTES”. What word does it hide?",
-            "answer": "STONE",
-            "acceptedAnswers": [
-              "STONE",
-              "stone",
-              "the stone"
-            ],
-            "hints": [
-              "It is what the fountain, the trough and the boundary marker are made of.",
-              "It has the same five letters as NOTES, just rearranged.",
-              "The word is STONE."
-            ]
-          },
-          "r_guardabosques_arbol_1": {
-            "name": "The Rings of Time",
-            "question": "How can we know the exact age of a felled tree without modern machines?",
-            "options": [
-              "By counting the growth rings of the trunk",
-              "By weighing the fallen leaves",
-              "By measuring the bark thickness in winter"
-            ],
-            "answer": "By counting the growth rings of the trunk",
-            "hints": [
-              "Every year the tree adds a circular layer to its wood.",
-              "They show up in the cross-section as concentric circles.",
-              "By counting the growth rings of the trunk."
-            ]
-          },
-          "r_guardabosques_arbol_2": {
-            "name": "The Lookout's Age",
-            "question": "Anselmo measured the trunk: 120 cm in diameter. If the tree adds on average 0.6 cm of radius each year, roughly how many years old is the Great Lookout Tree?",
-            "answer": "100",
-            "acceptedAnswers": [
-              "100",
-              "100 years",
-              "one hundred",
-              "a hundred"
-            ],
-            "hints": [
-              "The radius is half the diameter: start there.",
-              "120 cm of diameter is 60 cm of radius.",
-              "60 divided by 0.6 is 100 years."
-            ]
-          },
-          "r_guardabosques_arbol_3": {
-            "name": "The Oak's Thirsty Cousin",
-            "question": "In his notebook, Anselmo drew a root and wrote: “I seek deep water beneath the limestone; I am a cousin of the oak but I withstand drought better.” Which Mediterranean tree am I?",
-            "answer": "Holm oak",
-            "acceptedAnswers": [
-              "Holm oak",
-              "holm oak",
-              "the holm oak",
-              "evergreen oak",
-              "holly oak"
-            ],
-            "hints": [
-              "It belongs to the same family as the oaks, the Quercus.",
-              "Its fruit is also the acorn, but its leaf is small and evergreen, almost spiny.",
-              "It is the holm oak (or evergreen oak)."
-            ]
-          },
-          "r_guardabosques_cruce_1": {
-            "name": "The Wind Rose",
-            "question": "If you stand at sunrise facing the direction where the Sun rises (East), which hand will North be on?",
-            "options": [
-              "Your left hand",
-              "Your right hand",
-              "Behind you"
-            ],
-            "answer": "Your left hand",
-            "hints": [
-              "Stretch both arms out to the sides, facing the sunrise.",
-              "Your right arm will point South and your back will face West.",
-              "Your left hand."
-            ]
-          },
-          "r_guardabosques_cruce_2": {
-            "name": "The Midday Shadow",
-            "question": "At solar noon in the northern hemisphere, which cardinal point does the shadow of a pole stuck in the ground always point to?",
-            "options": [
-              "Toward the North",
-              "Toward the South",
-              "Toward the East",
-              "Toward the West"
-            ],
-            "answer": "Toward the North",
-            "hints": [
-              "At noon the sun is at its highest, in the south, in our hemisphere.",
-              "The shadow always falls on the side opposite the sun.",
-              "It points North."
-            ]
-          },
-          "r_guardabosques_cruce_3": {
-            "name": "The Way Back",
-            "question": "You leave the crossroads walking on a bearing of 90° (East) for 10 minutes, then turn exactly 180°. On what bearing do you return to the crossroads?",
-            "answer": "270",
-            "acceptedAnswers": [
-              "270",
-              "270°",
-              "270 degrees",
-              "west"
-            ],
-            "hints": [
-              "Turning 180° means a complete about-turn.",
-              "Add 180 to the outbound bearing: 90 + 180.",
-              "The return bearing is 270° (West)."
-            ]
-          },
-          "r_guardabosques_mirador_1": {
-            "name": "The Eagle's Flight",
-            "question": "Which bird of prey, with a wedge-shaped tail and broad wings, often glides in circles on thermal currents above the viewpoint?",
-            "options": [
-              "Eagle or buzzard",
-              "Emperor penguin",
-              "Hummingbird"
-            ],
-            "answer": "Eagle or buzzard",
-            "hints": [
-              "It has sharp talons and prodigious eyesight.",
-              "It flies with hardly a flap on sunny days.",
-              "Eagle or buzzard."
-            ]
-          },
-          "r_guardabosques_mirador_2": {
-            "name": "The Summer Sun",
-            "question": "In the northern hemisphere, at the summer solstice, where does the sun set relative to due West?",
-            "options": [
-              "Further toward the Northwest",
-              "Further toward the Southwest",
-              "Exactly due West"
-            ],
-            "answer": "Further toward the Northwest",
-            "hints": [
-              "In summer the days are longer and the sun travels a wider arc.",
-              "It sets shifted toward the same side where it rises earliest in the morning.",
-              "It sets further toward the Northwest."
-            ]
-          },
-          "r_guardabosques_mirador_3": {
-            "name": "The Last Glimmer",
-            "question": "The solar disc takes about 2 minutes to disappear completely below the horizon once it touches it. If it started to disappear at 21:07 today, at what exact time does it vanish completely?",
-            "answer": "21:09",
-            "acceptedAnswers": [
-              "21:09",
-              "21h09",
-              "9:09 pm",
-              "9:09pm"
-            ],
-            "hints": [
-              "Add the 2 minutes it takes to disappear.",
-              "21:07 plus 2 minutes.",
-              "It disappears at 21:09."
-            ]
-          },
-          "b_fuente_foto": {
-            "name": "The Mountain Pharmacy",
-            "question": "Find an aromatic plant (rosemary, thyme or similar) and photograph it without pulling it up. Lean in to smell its aroma."
-          },
-          "b_cruce_brujula": {
-            "name": "Point North",
-            "question": "Hold your phone flat and turn around until the arrow points North. Hold it there for 3 seconds."
-          },
-          "b_arbol_orden": {
-            "name": "The Pine's Life Cycle",
-            "question": "Anselmo drew the life of a pine in his notebook, but the pages got mixed up. Put the stages in order, from seed to adult tree.",
-            "options": [
-              "The pine nut falls to the ground",
-              "The pine nut germinates",
-              "A seedling sprouts",
-              "A young pine grows",
-              "The adult pine bears cones"
-            ],
-            "hints": [
-              "Every tree starts as a seed.",
-              "First it sprouts, then it grows.",
-              "Pine nut, germination, seedling, young pine, adult pine."
-            ]
-          }
-        }
-      }
-    },
-    "nalda-fraybotijo": {
+    "nalda": {
       "es": {
-        "name": "Nalda — El Fraile que Bebió Demasiado",
+        "name": "Nalda (La Rioja)",
         "country": "España (La Rioja)",
-        "description": "El fantasma de un monje borracho te guía por Nalda contando chistes verdes y soltando la historia real entre eructo y eructo. No apto para niños ni para gente sin sentido del humor."
+        "description": "Un bosque de historia, piedra y río en el Valle del Iregua."
       },
       "fr": {
-        "name": "Nalda — Le Moine qui a Trop Bu",
+        "name": "Nalda (La Rioja)",
         "country": "Espagne (La Rioja)",
-        "description": "Le fantôme d'un moine ivre te guide à Nalda en racontant des blagues grivoises et en lâchant la vraie histoire entre deux rots. Pas pour les enfants ni les gens sans humour."
+        "description": "Une forêt d'histoire, de pierre et de rivière dans la vallée de l'Iregua."
       },
       "en": {
-        "name": "Nalda — The Monk Who Drank Too Much",
+        "name": "Nalda (La Rioja)",
         "country": "Spain (La Rioja)",
-        "description": "The ghost of a drunk monk guides you through Nalda telling dirty jokes and dropping real history between burps. Not for kids or people without a sense of humour."
+        "description": "A forest of history, stone and river in the Iregua Valley."
       }
     }
   },
@@ -3416,6 +3602,736 @@
       "es": "Contenido picante con humor irreverente. No apto para niños ni para gente sin sentido del humor.",
       "fr": "Contenu épicé avec humour irrévérencieux. Pas pour les enfants ni pour les personnes sans sens de l'humour.",
       "en": "Spicy content with irreverent humour. Not suitable for children or people without a sense of humour."
+    },
+    "forest_nalda_name": {
+      "es": "Nalda (La Rioja)",
+      "fr": "Nalda (La Rioja)",
+      "en": "Nalda (La Rioja)"
+    },
+    "forest_nalda_description": {
+      "es": "Un bosque de historia, piedra y río en el Valle del Iregua.",
+      "fr": "Une forêt d'histoire, de pierre et de rivière dans la vallée de l'Iregua.",
+      "en": "A forest of history, stone and river in the Iregua Valley."
+    },
+    "poi_castillo_name": {
+      "es": "Castillo de Nalda",
+      "fr": "Château de Nalda",
+      "en": "Nalda Castle"
+    },
+    "poi_arco_name": {
+      "es": "Arco de la Villa",
+      "fr": "Arche de la Villa",
+      "en": "Village Arch"
+    },
+    "poi_mirador_name": {
+      "es": "Mirador Puerta de Cameros",
+      "fr": "Belvédère Porte de Cameros",
+      "en": "Puerta de Cameros Viewpoint"
+    },
+    "poi_cuevas_name": {
+      "es": "Cuevas de Los Palomares",
+      "fr": "Grottes de Los Palomares",
+      "en": "Los Palomares Caves"
+    },
+    "poi_ermita_name": {
+      "es": "Ermita de Nuestra Señora de Villavieja",
+      "fr": "Ermitage de Notre-Dame de Villavieja",
+      "en": "Villavieja Hermitage"
+    },
+    "ar_castillo_description": {
+      "es": "Reconstrucción 3D de la torre del homenaje superpuesta sobre las ruinas actuales.",
+      "fr": "Reconstruction 3D de la tour du hommage superposée aux ruines actuelles.",
+      "en": "3D reconstruction of the keep overlaid on the current ruins."
+    },
+    "ar_arco_description": {
+      "es": "Al cruzar el arco, aparecen figuras de vigías medievales.",
+      "fr": "En traversant l'arche, des figures de guetteurs médiévaux apparaissent.",
+      "en": "Medieval watchmen appear when crossing the arch."
+    },
+    "ar_mirador_description": {
+      "es": "Etiquetas flotantes de los pueblos del valle y la ruta romana.",
+      "fr": "Étiquettes flottantes des villages de la vallée et de la voie romaine.",
+      "en": "Floating labels of valley villages and the Roman road."
+    },
+    "ar_cuevas_description": {
+      "es": "Paloma 3D animada que vuela hacia las hornacinas. Al tocarla, da una pista.",
+      "fr": "Colombe 3D animée qui vole vers les niches. En la touchant, elle donne un indice.",
+      "en": "Animated 3D dove flying to the niches. Touch it for a hint."
+    },
+    "ar_ermita_description": {
+      "es": "Cesta de vendimia 3D con uvas de la Rioja. Al tocarla, reproduce audio de campanas.",
+      "fr": "Panier de vendange 3D avec raisins de La Rioja. En le touchant, audio de cloches.",
+      "en": "3D harvest basket with Rioja grapes. Touch it to play bell audio."
+    },
+    "story_guardian_title": {
+      "es": "El Guardián del Iregua",
+      "fr": "Le Gardien de l'Iregua",
+      "en": "The Guardian of the Iregua"
+    },
+    "guide_cronicon_name": {
+      "es": "El Cronicón",
+      "fr": "Le Cronicón",
+      "en": "The Cronicón"
+    },
+    "guide_cronicon_persona": {
+      "es": "Monje copista del siglo XIV del Monasterio de San Millán de la Cogolla. Habla con respeto y usa refranes antiguos.",
+      "fr": "Moine copiste du XIVe siècle du monastère de San Millán de la Cogolla. Parle avec respect et utilise de vieux proverbes.",
+      "en": "14th-century monk copyist from San Millán de la Cogolla Monastery. Speaks respectfully and uses old proverbs."
+    },
+    "guide_cronicon_system_prompt": {
+      "es": "Eres El Cronicón, un monje copista del siglo XIV del Monasterio de San Millán de la Cogolla. Hablas con respeto y usas refranes antiguos. Solo respondes sobre Nalda, su historia, naturaleza y el juego. Si te preguntan algo fuera de tema, redirige a la aventura.",
+      "fr": "Tu es Le Cronicón, un moine copiste du XIVe siècle du monastère de San Millán de la Cogolla. Tu parles avec respect et utilises de vieux proverbes. Tu ne réponds que sur Nalda, son histoire, sa nature et le jeu. Si on te pose une question hors sujet, redirige vers l'aventure.",
+      "en": "You are The Cronicón, a 14th-century monk copyist from San Millán de la Cogolla Monastery. You speak respectfully and use old proverbs. You only answer about Nalda, its history, nature and the game. If asked something off-topic, redirect to the adventure."
+    },
+    "guide_cronicon_greeting": {
+      "es": "Bienvenido, aprendiz. Soy el Cronicón, y estas piedras guardan memoria.",
+      "fr": "Bienvenue, apprenti. Je suis le Cronicón, et ces pierres gardent la mémoire.",
+      "en": "Welcome, apprentice. I am the Cronicón, and these stones keep memory."
+    },
+    "duration_30min_description": {
+      "es": "Paseo corto ideal para familias con niños pequeños.",
+      "fr": "Courte promenade idéale pour les familles avec jeunes enfants.",
+      "en": "Short walk ideal for families with young children."
+    },
+    "duration_1h_description": {
+      "es": "Parejas o grupos con poco tiempo.",
+      "fr": "Couples ou groupes pressés.",
+      "en": "Couples or groups with little time."
+    },
+    "duration_1h30_description": {
+      "es": "Familias y exploradores ocasionales.",
+      "fr": "Familles et explorateurs occasionnels.",
+      "en": "Families and casual explorers."
+    },
+    "duration_2h_description": {
+      "es": "Senderistas, grupos escolares y expertos.",
+      "fr": "Randonneurs, groupes scolaires et experts.",
+      "en": "Hikers, school groups and experts."
+    },
+    "t1_1_question": {
+      "es": "¿Quién fue el noble que estuvo prisionero aquí en 1299?",
+      "fr": "Qui était le noble emprisonné ici en 1299 ?",
+      "en": "Who was the noble imprisoned here in 1299?"
+    },
+    "t1_1_opt_a": {
+      "es": "Ramírez de Arellano",
+      "fr": "Ramírez de Arellano",
+      "en": "Ramírez de Arellano"
+    },
+    "t1_1_opt_b": {
+      "es": "Juan Núñez de Lara",
+      "fr": "Juan Núñez de Lara",
+      "en": "Juan Núñez de Lara"
+    },
+    "t1_1_opt_c": {
+      "es": "Pedro I",
+      "fr": "Pedro I",
+      "en": "Pedro I"
+    },
+    "t1_1_opt_d": {
+      "es": "Enrique II",
+      "fr": "Enrique II",
+      "en": "Enrique II"
+    },
+    "t1_1_hint1": {
+      "es": "Perdió una batalla entre Araciel y Alfaro.",
+      "fr": "Il a perdu une bataille entre Araciel et Alfaro.",
+      "en": "He lost a battle between Araciel and Alfaro."
+    },
+    "t1_1_hint2": {
+      "es": "Atacó tierras del obispado de Calahorra.",
+      "fr": "Il a attaqué les terres de l'évêché de Calahorra.",
+      "en": "He attacked lands of the Calahorra bishopric."
+    },
+    "t1_1_hint3": {
+      "es": "Su apellido empieza por Núñez.",
+      "fr": "Son nom commence par Núñez.",
+      "en": "His surname starts with Núñez."
+    },
+    "t1_2_question": {
+      "es": "El castillo tenía un sistema de aljibes. ¿Qué función cumplían en caso de asedio?",
+      "fr": "Le château avait un système de citernes. Quelle fonction avaient-elles en cas de siège ?",
+      "en": "The castle had a cistern system. What was their function during a siege?"
+    },
+    "t1_2_ans1": {
+      "es": "almacenar agua",
+      "fr": "stocker de l'eau",
+      "en": "store water"
+    },
+    "t1_2_ans2": {
+      "es": "abastecer de agua",
+      "fr": "alimenter en eau",
+      "en": "supply water"
+    },
+    "t1_2_ans3": {
+      "es": "guardar agua",
+      "fr": "garder de l'eau",
+      "en": "keep water"
+    },
+    "t1_2_hint1": {
+      "es": "Piensa en lo que necesitas para sobrevivir.",
+      "fr": "Pensez à ce dont vous avez besoin pour survivre.",
+      "en": "Think about what you need to survive."
+    },
+    "t1_2_hint2": {
+      "es": "Sin agua, no hay resistencia.",
+      "fr": "Sans eau, pas de résistance.",
+      "en": "Without water, no resistance."
+    },
+    "t1_2_hint3": {
+      "es": "Se llenaban con agua de lluvia.",
+      "fr": "Ils se remplissaient d'eau de pluie.",
+      "en": "They were filled with rainwater."
+    },
+    "t1_3_question": {
+      "es": "¿Qué rey mató a su hermanastro con un puñal tras la batalla de Montiel?",
+      "fr": "Quel roi a tué son demi-frère avec un poignard après la bataille de Montiel ?",
+      "en": "Which king killed his half-brother with a dagger after the Battle of Montiel?"
+    },
+    "t1_3_ans1": {
+      "es": "Enrique II",
+      "fr": "Enrique II",
+      "en": "Enrique II"
+    },
+    "t1_3_ans2": {
+      "es": "Enrique de Trastámara",
+      "fr": "Enrique de Trastámara",
+      "en": "Enrique de Trastámara"
+    },
+    "t1_3_ans3": {
+      "es": "Enrique II de Trastámara",
+      "fr": "Enrique II de Trastámara",
+      "en": "Enrique II of Trastámara"
+    },
+    "t1_3_hint1": {
+      "es": "Fue en 1369.",
+      "fr": "C'était en 1369.",
+      "en": "It was in 1369."
+    },
+    "t1_3_hint2": {
+      "es": "El muerto era Pedro I el Cruel.",
+      "fr": "Le mort était Pedro I le Cruel.",
+      "en": "The dead man was Pedro I the Cruel."
+    },
+    "t1_3_hint3": {
+      "es": "El asesino fundó la dinastía Trastámara.",
+      "fr": "L'assassin a fondé la dynastie Trastámara.",
+      "en": "The killer founded the Trastámara dynasty."
+    },
+    "t2_1_question": {
+      "es": "¿Qué delimitaba el Arco de la Villa?",
+      "fr": "Que délimitait l'Arche de la Villa ?",
+      "en": "What did the Village Arch delimit?"
+    },
+    "t2_1_opt_a": {
+      "es": "El bosque",
+      "fr": "La forêt",
+      "en": "The forest"
+    },
+    "t2_1_opt_b": {
+      "es": "La entrada al recinto amurallado",
+      "fr": "L'entrée de l'enceinte fortifiée",
+      "en": "The entrance to the walled enclosure"
+    },
+    "t2_1_opt_c": {
+      "es": "La frontera con Navarra",
+      "fr": "La frontière avec la Navarre",
+      "en": "The border with Navarre"
+    },
+    "t2_1_opt_d": {
+      "es": "El inicio del Camino de Santiago",
+      "fr": "Le début du chemin de Saint-Jacques",
+      "en": "The start of the Camino de Santiago"
+    },
+    "t2_1_hint1": {
+      "es": "Era una puerta de acceso.",
+      "fr": "C'était une porte d'accès.",
+      "en": "It was an access gate."
+    },
+    "t2_1_hint2": {
+      "es": "Protegía la villa.",
+      "fr": "Elle protégeait le village.",
+      "en": "It protected the village."
+    },
+    "t2_1_hint3": {
+      "es": "Había murallas alrededor.",
+      "fr": "Il y avait des remparts autour.",
+      "en": "There were walls around."
+    },
+    "t2_2_question": {
+      "es": "¿Qué familia noble fue señora de Cameros y Nalda desde el siglo XIV?",
+      "fr": "Quelle famille noble était seigneure de Cameros et Nalda depuis le XIVe siècle ?",
+      "en": "Which noble family was lady of Cameros and Nalda since the 14th century?"
+    },
+    "t2_2_ans1": {
+      "es": "Ramírez de Arellano",
+      "fr": "Ramírez de Arellano",
+      "en": "Ramírez de Arellano"
+    },
+    "t2_2_ans2": {
+      "es": "Arellano",
+      "fr": "Arellano",
+      "en": "Arellano"
+    },
+    "t2_2_ans3": {
+      "es": "los Arellano",
+      "fr": "les Arellano",
+      "en": "the Arellano"
+    },
+    "t2_2_hint1": {
+      "es": "Su nombre aparece en documentos del castillo.",
+      "fr": "Leur nom apparaît dans les documents du château.",
+      "en": "Their name appears in castle documents."
+    },
+    "t2_2_hint2": {
+      "es": "Empieza por Ramírez.",
+      "fr": "Commence par Ramírez.",
+      "en": "Starts with Ramírez."
+    },
+    "t2_2_hint3": {
+      "es": "Fueron señores de un territorio que llegaba hasta Soria.",
+      "fr": "Ils étaient seigneurs d'un territoire allant jusqu'à Soria.",
+      "en": "They ruled a territory reaching Soria."
+    },
+    "t2_3_question": {
+      "es": "Anagrama: R A L O M P A → ordena para formar el nombre de las cuevas que visitarás después.",
+      "fr": "Anagramme : R A L O M P A → réorganisez pour former le nom des grottes que vous visiterez ensuite.",
+      "en": "Anagram: R A L O M P A → rearrange to form the name of the caves you'll visit next."
+    },
+    "t2_3_ans1": {
+      "es": "PALOMAR",
+      "fr": "PALOMAR",
+      "en": "PALOMAR"
+    },
+    "t2_3_ans2": {
+      "es": "palomar",
+      "fr": "palomar",
+      "en": "palomar"
+    },
+    "t2_3_hint1": {
+      "es": "Es el nombre de un lugar con palomas.",
+      "fr": "C'est le nom d'un lieu avec des colombes.",
+      "en": "It's the name of a place with doves."
+    },
+    "t2_3_hint2": {
+      "es": "Empieza por P.",
+      "fr": "Commence par P.",
+      "en": "Starts with P."
+    },
+    "t2_3_hint3": {
+      "es": "Tiene 7 letras.",
+      "fr": "Il a 7 lettres.",
+      "en": "It has 7 letters."
+    },
+    "t3_1_question": {
+      "es": "¿Cómo se llama el río que atraviesa este valle?",
+      "fr": "Comment s'appelle la rivière qui traverse cette vallée ?",
+      "en": "What is the name of the river crossing this valley?"
+    },
+    "t3_1_opt_a": {
+      "es": "Ebro",
+      "fr": "Ebro",
+      "en": "Ebro"
+    },
+    "t3_1_opt_b": {
+      "es": "Iregua",
+      "fr": "Iregua",
+      "en": "Iregua"
+    },
+    "t3_1_opt_c": {
+      "es": "Leza",
+      "fr": "Leza",
+      "en": "Leza"
+    },
+    "t3_1_opt_d": {
+      "es": "Cidacos",
+      "fr": "Cidacos",
+      "en": "Cidacos"
+    },
+    "t3_1_hint1": {
+      "es": "Nace en la Sierra de Cebollera.",
+      "fr": "Il naît dans la Sierra de Cebollera.",
+      "en": "It is born in the Sierra de Cebollera."
+    },
+    "t3_1_hint2": {
+      "es": "Es afluente del Ebro.",
+      "fr": "C'est un affluent de l'Ebre.",
+      "en": "It is a tributary of the Ebro."
+    },
+    "t3_1_hint3": {
+      "es": "Su nombre tiene 6 letras.",
+      "fr": "Son nom a 6 lettres.",
+      "en": "Its name has 6 letters."
+    },
+    "t3_2_question": {
+      "es": "Si el caudal medio es de 6,35 m³/s, ¿cuántos m³ pasan en 1 minuto?",
+      "fr": "Si le débit moyen est de 6,35 m³/s, combien de m³ passent en 1 minute ?",
+      "en": "If the average flow is 6.35 m³/s, how many m³ pass in 1 minute?"
+    },
+    "t3_2_ans1": {
+      "es": "381",
+      "fr": "381",
+      "en": "381"
+    },
+    "t3_2_ans2": {
+      "es": "381 m3",
+      "fr": "381 m3",
+      "en": "381 m3"
+    },
+    "t3_2_ans3": {
+      "es": "381 metros cubicos",
+      "fr": "381 mètres cubes",
+      "en": "381 cubic meters"
+    },
+    "t3_2_hint1": {
+      "es": "Un minuto = 60 segundos.",
+      "fr": "Une minute = 60 secondes.",
+      "en": "One minute = 60 seconds."
+    },
+    "t3_2_hint2": {
+      "es": "Multiplica.",
+      "fr": "Multipliez.",
+      "en": "Multiply."
+    },
+    "t3_2_hint3": {
+      "es": "El resultado está entre 380 y 382.",
+      "fr": "Le résultat est entre 380 et 382.",
+      "en": "The result is between 380 and 382."
+    },
+    "t3_3_question": {
+      "es": "¿A qué región histórica daba acceso esta 'puerta'?",
+      "fr": "À quelle région historique cette 'porte' donnait-elle accès ?",
+      "en": "To which historical region did this 'gate' give access?"
+    },
+    "t3_3_ans1": {
+      "es": "Cameros",
+      "fr": "Cameros",
+      "en": "Cameros"
+    },
+    "t3_3_ans2": {
+      "es": "Señorío de Cameros",
+      "fr": "Seigneurie de Cameros",
+      "en": "Lordship of Cameros"
+    },
+    "t3_3_ans3": {
+      "es": "Tierra de Cameros",
+      "fr": "Terre de Cameros",
+      "en": "Land of Cameros"
+    },
+    "t3_3_hint1": {
+      "es": "El nombre del mirador lo dice.",
+      "fr": "Le nom du belvédère le dit.",
+      "en": "The viewpoint name says it."
+    },
+    "t3_3_hint2": {
+      "es": "Era un señorío.",
+      "fr": "C'était une seigneurie.",
+      "en": "It was a lordship."
+    },
+    "t3_3_hint3": {
+      "es": "Empieza por C.",
+      "fr": "Commence par C.",
+      "en": "Starts with C."
+    },
+    "t4_1_question": {
+      "es": "¿Cuál era el uso principal de estas cuevas en los siglos XIV-XV?",
+      "fr": "Quel était l'usage principal de ces grottes aux XIVe-XVe siècles ?",
+      "en": "What was the main use of these caves in the 14th-15th centuries?"
+    },
+    "t4_1_opt_a": {
+      "es": "Vivienda de ermitaños",
+      "fr": "Habitat d'ermites",
+      "en": "Hermit dwelling"
+    },
+    "t4_1_opt_b": {
+      "es": "Criadero de palomas",
+      "fr": "Élevage de colombes",
+      "en": "Dove breeding"
+    },
+    "t4_1_opt_c": {
+      "es": "Bodega",
+      "fr": "Cave à vin",
+      "en": "Wine cellar"
+    },
+    "t4_1_opt_d": {
+      "es": "Refugio de bandoleros",
+      "fr": "Refuge de bandits",
+      "en": "Bandit refuge"
+    },
+    "t4_1_hint1": {
+      "es": "El nombre de las cuevas te lo dice.",
+      "fr": "Le nom des grottes vous le dit.",
+      "en": "The cave name tells you."
+    },
+    "t4_1_hint2": {
+      "es": "Las hornacinas servían para anidar.",
+      "fr": "Les niches servaient à nicher.",
+      "en": "The niches were for nesting."
+    },
+    "t4_1_hint3": {
+      "es": "Las palomas eran fuente de alimento.",
+      "fr": "Les colombes étaient une source de nourriture.",
+      "en": "Doves were a food source."
+    },
+    "t4_2_question": {
+      "es": "Las cuevas tienen varios niveles conectados por escaleras talladas en la roca. ¿Qué material usaron los excavadores para tallar estas cuevas?",
+      "fr": "Les grottes ont plusieurs niveaux reliés par des escaliers taillés dans la roche. Quel matériau ont utilisé les excavateurs ?",
+      "en": "The caves have several levels connected by stairs carved into the rock. What material did the diggers use?"
+    },
+    "t4_2_ans1": {
+      "es": "piedra",
+      "fr": "pierre",
+      "en": "stone"
+    },
+    "t4_2_ans2": {
+      "es": "roca",
+      "fr": "roche",
+      "en": "rock"
+    },
+    "t4_2_ans3": {
+      "es": "arenisca",
+      "fr": "grès",
+      "en": "sandstone"
+    },
+    "t4_2_ans4": {
+      "es": "piedra caliza",
+      "fr": "calcaire",
+      "en": "limestone"
+    },
+    "t4_2_hint1": {
+      "es": "Es el material del que están hechas.",
+      "fr": "C'est le matériau dont elles sont faites.",
+      "en": "It's the material they're made of."
+    },
+    "t4_2_hint2": {
+      "es": "Se extrae de canteras.",
+      "fr": "Il est extrait de carrières.",
+      "en": "It's extracted from quarries."
+    },
+    "t4_2_hint3": {
+      "es": "Las paredes son del mismo material.",
+      "fr": "Les murs sont du même matériau.",
+      "en": "The walls are the same material."
+    },
+    "t4_3_question": {
+      "es": "Las palomas mensajeras llevaban mensajes en un tubo atado a la pata. ¿Cómo se llama ese tubo en español?",
+      "fr": "Les pigeons voyageurs portaient des messages dans un tube attaché à la patte. Comment s'appelle ce tube en espagnol ?",
+      "en": "Carrier pigeons carried messages in a tube tied to the leg. What is that tube called in Spanish?"
+    },
+    "t4_3_ans1": {
+      "es": "cápsula",
+      "fr": "capsule",
+      "en": "capsule"
+    },
+    "t4_3_ans2": {
+      "es": "tubo portamensajes",
+      "fr": "tube porte-messages",
+      "en": "message tube"
+    },
+    "t4_3_ans3": {
+      "es": "canuto",
+      "fr": "canule",
+      "en": "canule"
+    },
+    "t4_3_ans4": {
+      "es": "capsula",
+      "fr": "capsula",
+      "en": "capsula"
+    },
+    "t4_3_hint1": {
+      "es": "Es pequeño y hueco.",
+      "fr": "Il est petit et creux.",
+      "en": "It is small and hollow."
+    },
+    "t4_3_hint2": {
+      "es": "Se ata con un hilo.",
+      "fr": "Il s'attache avec un fil.",
+      "en": "It is tied with a thread."
+    },
+    "t4_3_hint3": {
+      "es": "Empieza por c o t.",
+      "fr": "Commence par c ou t.",
+      "en": "Starts with c or t."
+    },
+    "t5_1_question": {
+      "es": "Nalda es tierra de viñedos (Rioja). ¿En qué mes se vendimia tradicionalmente?",
+      "fr": "Nalda est une terre de vignobles (Rioja). En quel mois vendange-t-on traditionnellement ?",
+      "en": "Nalda is vineyard land (Rioja). In which month is the grape harvest traditionally?"
+    },
+    "t5_1_ans1": {
+      "es": "septiembre",
+      "fr": "septembre",
+      "en": "September"
+    },
+    "t5_1_ans2": {
+      "es": "setiembre",
+      "fr": "setiembre",
+      "en": "setiembre"
+    },
+    "t5_1_ans3": {
+      "es": "finales de septiembre",
+      "fr": "fin septembre",
+      "en": "late September"
+    },
+    "t5_1_ans4": {
+      "es": "septiembre-octubre",
+      "fr": "septembre-octobre",
+      "en": "September-October"
+    },
+    "t5_1_hint1": {
+      "es": "Después del verano.",
+      "fr": "Après l'été.",
+      "en": "After summer."
+    },
+    "t5_1_hint2": {
+      "es": "Coincide con la Fiesta de la Ciruela Reina Claudia.",
+      "fr": "Coïncide avec la Fête de la Prune Reine Claude.",
+      "en": "Coincides with the Reina Claudia Plum Festival."
+    },
+    "t5_1_hint3": {
+      "es": "Es el noveno mes.",
+      "fr": "C'est le neuvième mois.",
+      "en": "It's the ninth month."
+    },
+    "t5_2_question": {
+      "es": "Has recogido fragmentos en cada POI. Ordénalos para formar la frase final del Cronicón: 'El Iregua guarda la memoria de N A L D A'. Escribe la palabra que falta.",
+      "fr": "Vous avez collecté des fragments à chaque POI. Réorganisez-les pour former la phrase finale du Cronicón : 'L'Iregua garde la mémoire de N A L D A'. Écrivez le mot manquant.",
+      "en": "You collected fragments at each POI. Rearrange them to form the Cronicón's final phrase: 'The Iregua keeps the memory of N A L D A'. Write the missing word."
+    },
+    "t5_2_ans1": {
+      "es": "NALDA",
+      "fr": "NALDA",
+      "en": "NALDA"
+    },
+    "t5_2_ans2": {
+      "es": "Nalda",
+      "fr": "Nalda",
+      "en": "Nalda"
+    },
+    "t5_2_hint1": {
+      "es": "Es el nombre del pueblo.",
+      "fr": "C'est le nom du village.",
+      "en": "It's the village name."
+    },
+    "t5_2_hint2": {
+      "es": "Tiene 5 letras.",
+      "fr": "Il a 5 lettres.",
+      "en": "It has 5 letters."
+    },
+    "t5_2_hint3": {
+      "es": "Empieza por N.",
+      "fr": "Commence par N.",
+      "en": "Starts with N."
+    },
+    "extra_foto_castillo_title": {
+      "es": "El Tesoro del Castillo",
+      "fr": "Le Trésor du Château",
+      "en": "The Castle Treasure"
+    },
+    "extra_foto_castillo_description": {
+      "es": "Fotografía una piedra con marca de cantero sin tocar nada.",
+      "fr": "Photographiez une pierre avec marque de tailleur sans rien toucher.",
+      "en": "Photograph a stone with a mason's mark without touching anything."
+    },
+    "extra_escucha_mirador_title": {
+      "es": "El Concierto del Iregua",
+      "fr": "Le Concert de l'Iregua",
+      "en": "The Iregua Concert"
+    },
+    "extra_escucha_mirador_description": {
+      "es": "30 segundos en silencio. Marca los sonidos que oyes.",
+      "fr": "30 secondes de silence. Cochez les sons que vous entendez.",
+      "en": "30 seconds of silence. Check the sounds you hear."
+    },
+    "extra_brujula_mirador_title": {
+      "es": "Apunta al Norte",
+      "fr": "Pointez le Nord",
+      "en": "Point North"
+    },
+    "extra_brujula_mirador_description": {
+      "es": "Mantén el móvil orientado al Norte 3 s (±15°).",
+      "fr": "Maintenez le téléphone orienté au Nord 3 s (±15°).",
+      "en": "Hold the phone facing North for 3 s (±15°)."
+    },
+    "extra_ordena_camino_title": {
+      "es": "El Orden del Camino",
+      "fr": "L'Ordre du Chemin",
+      "en": "The Order of the Way"
+    },
+    "extra_ordena_camino_description": {
+      "es": "Ordena: Vareia → Nalda → Viguera → Torrecilla → Puerto de Piqueras",
+      "fr": "Ordre : Vareia → Nalda → Viguera → Torrecilla → Puerto de Piqueras",
+      "en": "Order: Vareia → Nalda → Viguera → Torrecilla → Puerto de Piqueras"
+    },
+    "extra_escucha_cuevas_title": {
+      "es": "El Silencio de las Cuevas",
+      "fr": "Le Silence des Grottes",
+      "en": "The Silence of the Caves"
+    },
+    "extra_escucha_cuevas_description": {
+      "es": "30 s en silencio dentro de las cuevas. ¿Qué oyes?",
+      "fr": "30 s de silence dans les grottes. Qu'entendez-vous ?",
+      "en": "30 s of silence inside the caves. What do you hear?"
+    },
+    "meta_enigma_title": {
+      "es": "El Sello del Cronicón",
+      "fr": "Le Sceau du Cronicón",
+      "en": "The Cronicón's Seal"
+    },
+    "meta_enigma_description": {
+      "es": "Al completar todos los POIs, recibes un sello digital con la frase: 'El Iregua guarda la memoria de NALDA'. Se puede compartir en redes.",
+      "fr": "En complétant tous les POIs, vous recevez un sceau numérique avec la phrase : 'L'Iregua garde la mémoire de NALDA'. Partageable sur les réseaux.",
+      "en": "Completing all POIs gives you a digital seal with the phrase: 'The Iregua keeps the memory of NALDA'. Shareable on social media."
+    },
+    "story_palomar_title": {
+      "es": "La Banda del Palomar",
+      "fr": "La Bande du Pigeonnier",
+      "en": "The Pigeon Flock Gang"
+    },
+    "guide_chucho_name": {
+      "es": "Chucho el Palomo",
+      "fr": "Chucho le Pigeon",
+      "en": "Chucho the Pigeon"
+    },
+    "guide_chucho_persona": {
+      "es": "Paloma líder de la bandada que anida en las oquedades medievales de Los Palomares. Conoce cada cornisa, teja y rincón secreto de Nalda a vista de pájaro.",
+      "fr": "Chef pigeon du troupeau nichant dans les cavités médiévales de Los Palomares. Connaît chaque corniche de Nalda à vol d'oiseau.",
+      "en": "Leader pigeon of the flock nesting in the medieval cliff niches of Los Palomares. Knows every rooftop of Nalda from a bird's eye view."
+    },
+    "guide_chucho_greeting": {
+      "es": "¡Epa, plumas! Soy Chucho el Palomo. ¿Vienes a caminar o a que te eche una pata la mejor paloma de La Rioja? ¡Vuelo rasante y al lío!",
+      "fr": "Salut les plumes ! Je suis Chucho le Pigeon. Tu viens marcher ou te faire guider par le meilleur pigeon de La Rioja ? Vol rasant et c'est parti !",
+      "en": "Hey feather-heads! I'm Chucho the Pigeon. Ready to walk or need a wing from the top pigeon in La Rioja? Low flight and let's roll!"
+    },
+    "guide_chucho_system_prompt": {
+      "es": "Eres Chucho el Palomo, una paloma gamberra, canalla y callejera que anida en las Cuevas de Los Palomares de Nalda. Hablas rápido, con jerga callejera simpática ('plumas', 'al loro', 'a vista de pájaro'). Solo hablas de Nalda y de tu bandada.",
+      "fr": "Tu es Chucho le Pigeon, un pigeon espiègle et débrouillard nichant dans les Grottes des Palomares à Nalda. Tu parles avec verve et humour de rue.",
+      "en": "You are Chucho the Pigeon, a cheeky street-smart pigeon nesting in the Palomares Caves of Nalda. You speak fast with friendly street slang ('feathers', 'keep eyes peeled')."
+    },
+    "story_zorbo_title": {
+      "es": "El Expediente Iregua: Zorbo el Marciano",
+      "fr": "Le Dossier Iregua : Zorbo le Martien",
+      "en": "The Iregua Files: Zorbo the Martian"
+    },
+    "guide_zorbo_name": {
+      "es": "Zorbo el Marciano",
+      "fr": "Zorbo le Martien",
+      "en": "Zorbo the Martian"
+    },
+    "guide_zorbo_persona": {
+      "es": "Extraterrestre verde con tres ojos y antena oscilante. Cree firmemente que los viñedos son paneles fotosintéticos de recarga y que el Castillo de Nalda fue una rampa de despegue medieval.",
+      "fr": "Extraterrestre vert à trois yeux et antenne oscillante. Pense que le château de Nalda était une rampe de lancement médiévale.",
+      "en": "Green extraterrestrial with three eyes and a wobbly antenna. Believes the Castle of Nalda was a medieval launchpad."
+    },
+    "guide_zorbo_greeting": {
+      "es": "¡Bip-bop! Saludos, humano terrícola. Mis sensores marcan lecturas insólitas en este valle fluvial. ¿Eres tú mi contacto local de Nalda?",
+      "fr": "Bip-bop ! Salutations, humain terrien. Mes capteurs détectent des anomalies insolites dans cette vallée fluviale. Es-tu mon contact local à Nalda ?",
+      "en": "Beep-bop! Greetings, Earth human. My quantum sensors detect strange readings in this river valley. Are you my local Nalda contact?"
+    },
+    "guide_zorbo_system_prompt": {
+      "es": "Eres Zorbo el Marciano, un científico alienígena extraviado en el valle del Iregua. Confundes con humor absurdo la historia y paisajes de Nalda con alta tecnología espacial.",
+      "fr": "Tu es Zorbo le Martien, un scientifique extraterrestre égaré dans la vallée de l'Iregua. Tu confonds avec un humour absurde l'histoire de Nalda avec la technologie spatiale.",
+      "en": "You are Zorbo the Martian, an alien scientist lost in the Iregua valley. You humorously mistake Nalda's historical stone heritage for cosmic tech."
     }
   }
 }

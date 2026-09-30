@@ -665,6 +665,14 @@ app.post('/api/sessions/:code/chat', async (req: Request, res: Response) => {
   let replyText = '';
 
   const isFrayBotijo = story?.id === 'fraile-botijo' || story?.narratorName?.toLowerCase().includes('botijo');
+  const isCronicon = story?.id === 'guardian-iregua' || story?.narratorName?.toLowerCase().includes('cronicón') || story?.narratorName?.toLowerCase().includes('cronicon');
+  const isChucho = story?.id === 'banda-palomar' || story?.narratorName?.toLowerCase().includes('chucho') || story?.narratorName?.toLowerCase().includes('palomo');
+  const isZorbo = story?.id === 'expediente-zorbo' || story?.narratorName?.toLowerCase().includes('zorbo');
+  const isAnselmo = story?.narratorName?.toLowerCase().includes('anselmo');
+  const isJean = story?.narratorName?.toLowerCase().includes('jean') || story?.narratorName?.toLowerCase().includes('silence');
+  const isPierre = story?.narratorName?.toLowerCase().includes('pierre');
+  const isSylvaine = story?.narratorName?.toLowerCase().includes('sylvaine');
+  const isDuendecillo = story?.narratorName?.toLowerCase().includes('duende') || story?.narratorName?.toLowerCase().includes('roble');
   const isOffenseReport = /ofendido|reportar|chiste|ofensa|disculpa|perd[oó]n/i.test(message);
 
   if (isFrayBotijo && isOffenseReport) {
@@ -689,6 +697,43 @@ Lugar actual: "${poi?.name || 'el sendero de Nalda'}".
 Descripción: "${poi?.description || ''}".
 El jugador dice: "${message}".
 Responde en 1 a 3 oraciones en español auténtico metido al 100% en tu personaje.`;
+      } else if (isCronicon) {
+        prompt = `Eres El Cronicón, un sabio monje copista del siglo XIV del Monasterio de San Millán de la Cogolla que custodia la memoria histórica de Nalda y el valle del Iregua.
+REGLAS OBLIGATORIAS:
+- Hablas con respeto, templanza, cortesía medieval y citas refranes antiguos.
+- Tratas al jugador como a un "aprendiz" o "viajero de la memoria".
+- Solo respondes sobre Nalda, su historia, naturaleza y el juego. Si te preguntan algo fuera de tema, rediriges con cortesía y serenidad hacia la aventura en el bosque.
+- Eres solemne, bondadoso y gran conocedor del río Iregua, el Castillo de Nalda, el Arco de la Villa, las Cuevas de Los Palomares y la Ermita de Villavieja.
+
+Lugar actual: "${poi?.name || 'el sendero de Nalda'}".
+Descripción: "${poi?.description || ''}".
+El jugador dice: "${message}".
+Responde en 1 o 2 oraciones en español noble y medieval, metido al 100% en tu personaje.`;
+      } else if (isChucho) {
+        prompt = `Eres Chucho el Palomo, el líder gamberro de la bandada de palomas que anida en las Cuevas de Los Palomares de Nalda (La Rioja).
+REGLAS OBLIGATORIAS:
+- Hablas como una paloma callejera, pícaro, canalla pero de buen corazón.
+- Usas muletillas: "¡oye, plumas!", "¡al loro!", "¡vuelo rasante!", "a vista de pájaro", "¡menudo pichón!".
+- Todo lo ves desde las alturas: tejados del castillo, el Arco de la Villa y el agua del río Iregua donde os refrescáis.
+- Sabes secretos y detalles históricos reales de Nalda porque llevas generaciones sobrevolándola.
+- Odias que te espanten y siempre buscas migas o que el jugador observe bien el entorno.
+
+Lugar actual: "${poi?.name || 'las cornisas de Nalda'}".
+Descripción: "${poi?.description || ''}".
+El jugador dice: "${message}".
+Responde en 1 o 2 oraciones en español coloquial y divertido, metido al 100% en tu personaje.`;
+      } else if (isZorbo) {
+        prompt = `Eres Zorbo el Marciano, un científico alienígena del cuadrante ZX-4 extraviado en el Valle del Iregua, Nalda (La Rioja).
+REGLAS OBLIGATORIAS:
+- Tono: Absurdo, cósmico, perplejo y analítico ante las costumbres terrícolas.
+- Usas muletillas: "¡Bip-bop!", "¡Por los anillos de Rigel!", "¡Rayos cósmicos!", "humano terrícola".
+- Confundes todo con tecnología espacial alienígena: los viñedos son "paneles solares fotosintéticos", las Cuevas de Los Palomares son "cápsulas de hibernación", el Castillo es "rampa de despegue medieval", y el vino es "combustible iónico fermentado".
+- Siempre integras datos reales de Nalda pasados por el filtro de tu desternillante teoría alienígena.
+
+Lugar actual: "${poi?.name || 'sector de exploración Nalda'}".
+Descripción: "${poi?.description || ''}".
+El jugador dice: "${message}".
+Responde en 1 o 2 oraciones en español marciano y absurdo, metido al 100% en tu personaje.`;
       } else {
         prompt = `Eres ${story.narratorName}, ${story.narratorRole} en la aventura "${story.title}". Tono: ${story.narratorTone || 'Evocador y protector'}.
 El jugador está explorando el bosque y actualmente se encuentra en "${poi?.name || 'un claro del bosque'}".
@@ -719,6 +764,63 @@ Responde en 1 o 2 oraciones en español, metido en tu personaje. Ofrece sabidur�
         `¡Qué calor hace en el valle del Iregua, tronco! Dice el cura que el agua purifica, pero yo digo que el vino alegra el alma y quita las penas. ¡Ánimo con la prueba de ${poi?.name || 'este rincón'}!`
       ];
       replyText = frayFallbacks[Math.floor(Math.random() * frayFallbacks.length)];
+    } else if (isCronicon) {
+      const croniconFallbacks = [
+        `Bien hallado, aprendiz. "Quien guarda memoria, labra buen camino". En este rincón de ${poi?.name || 'Nalda'}, las piedras del siglo XIII guardan secretos que solo la paciencia revela.`,
+        `El cauce del Iregua fluye sin prisa, como debe ser la mirada del buen observador. Atiende a las señales de la piedra, el viento y el agua.`,
+        `Dicen las crónicas de San Millán que todo enigma tiene su tiempo de madurar, igual que la uva en la viña riojana. No temas errar, pues el aprendizaje es virtud.`,
+        `Bajo el cielo de Cameros, la historia no duerme: espera a quien sepa descifrarla con respeto y perseverancia. Continúa con paso firme.`
+      ];
+      replyText = croniconFallbacks[Math.floor(Math.random() * croniconFallbacks.length)];
+    } else if (isChucho) {
+      const chuchoFallbacks = [
+        `¡Al loro, plumas! A vista de pájaro se ve clarito: en el siglo XIII el señor de Cameros vigilaba todo el paso del Iregua desde aquí arriba. ¡No te despistes y abre bien los ojos!`,
+        `¿Sabías que en Los Palomares antes vivían monjes ermitaños en la roca pelada? Luego llegamos las palomas y montamos el mejor club aéreo de toda La Rioja. ¡Cuida esas migas de pan!`,
+        `¡Vuelo rasante por ${poi?.name || 'Nalda'}! Por el Arco de la Villa no pasaba ni un forastero sin que la muralla le pidiera credenciales. ¡Sigue la senda que vas como un rayo!`
+      ];
+      replyText = chuchoFallbacks[Math.floor(Math.random() * chuchoFallbacks.length)];
+    } else if (isZorbo) {
+      const zorboFallbacks = [
+        `¡Bip-bop! Mis sensores cuánticos calibran que la elevación de ${poi?.name || 'este punto'} en Nalda es perfecta para transmitir ondas al cinturón de asteroides. ¡Prosigue la exploración, terrícola!`,
+        `¡Rayos cósmicos! Los nativos de Nalda fermentan uva para crear ese brebaje aromático que llaman vino... ¡Sospecho que es combustible de curvatura de clase 4!`,
+        `Registrando coordenadas: Valle del Iregua, 42.3351 latitud. Una base magnífica construida en piedra caliza terrícola. ¡No desistas en descifrar el enigma!`
+      ];
+      replyText = zorboFallbacks[Math.floor(Math.random() * zorboFallbacks.length)];
+    } else if (isAnselmo) {
+      const anselmoFallbacks = [
+        `¡Qué tal, caminante! En este rincón del pinar las resinas y las jaras cuentan historias de hace décadas. Mira las marcas en la corteza.`,
+        `Cuarenta años patrullando estas sendas me enseñaron que la prisa es enemiga del buen rastreador. Fíjate en el suelo y en la dirección del viento.`,
+        `Las fuentes de piedra de este monte nunca mienten. Sigue la vereda con paso tranquilo.`
+      ];
+      replyText = anselmoFallbacks[Math.floor(Math.random() * anselmoFallbacks.length)];
+    } else if (isJean) {
+      const jeanFallbacks = [
+        `Silencio, camarada... En 1944 cada sombra entre los robles del Eau Bourde podía ser un enlace de la Resistencia. Observa la clave tallada en la madera.`,
+        `El mensaje está donde convergen los dos caminos. No llames la atención y prosigue tu misión.`,
+        `Un buen enlace nunca deja huellas evidentes. Afina la mirada.`
+      ];
+      replyText = jeanFallbacks[Math.floor(Math.random() * jeanFallbacks.length)];
+    } else if (isPierre) {
+      const pierreFallbacks = [
+        `¡Ah, joven aprendiz! El sonido del agua contra las paletas del molino siempre marcaba el ritmo de la molienda. ¿Has visto el canal de piedra?`,
+        `El grano limpio requiere paciencia, igual que este enigma. Revisa las medidas y la madera tallada.`,
+        `La corriente del Eau Bourde guarda la memoria de generaciones de molineros. Abre bien los ojos.`
+      ];
+      replyText = pierreFallbacks[Math.floor(Math.random() * pierreFallbacks.length)];
+    } else if (isSylvaine) {
+      const sylvaineFallbacks = [
+        `Las hojas susurran canciones antiguas si sabes guardar quietud... Este claro del bosque respira vida milenaria.`,
+        `El agua clara refleja la verdad de quien busca con nobleza. Atiende al reflejo y a los helechos.`,
+        `No busques con la fuerza, sino con la sensibilidad de los sentidos. El bosque te guiará.`
+      ];
+      replyText = sylvaineFallbacks[Math.floor(Math.random() * sylvaineFallbacks.length)];
+    } else if (isDuendecillo) {
+      const duendeFallbacks = [
+        `¡Je, je, je! ¿Has visto qué bellota tan brillante tengo aquí? ¡El roble más viejo de Canéjan me contó el acertijo esta mañana!`,
+        `¡Salta la raíz y busca la señal que pintaron los niños de la escuela! ¡Vas muy bien, explorador!`,
+        `¡Una rimilla para el camino: quien busca con alegría, encuentra la pista al mediodía!`
+      ];
+      replyText = duendeFallbacks[Math.floor(Math.random() * duendeFallbacks.length)];
     } else {
       const fallbacks = [
         `Escucha con atención el crujido de las hojas bajo tus pies en ${poi?.name || 'este rincón'}. El bosque siempre recompensa a quien sabe esperar.`,
@@ -1146,8 +1248,19 @@ async function startServer() {
 
     try {
       const isFrayBotijo = story?.id === 'fraile-botijo' || story?.narratorName?.toLowerCase().includes('botijo');
-      const systemInstruction = isFrayBotijo
-        ? `Actúa SIEMPRE como Fray Botijo, el fantasma de un monje borracho ahogado en un barril de vino en 1387 en el Monasterio de San Millán, ahora en Nalda.
+      const isCronicon = story?.id === 'guardian-iregua' || story?.narratorName?.toLowerCase().includes('cronicón') || story?.narratorName?.toLowerCase().includes('cronicon');
+      const isChucho = story?.id === 'banda-palomar' || story?.narratorName?.toLowerCase().includes('chucho') || story?.narratorName?.toLowerCase().includes('palomo');
+      const isZorbo = story?.id === 'expediente-zorbo' || story?.narratorName?.toLowerCase().includes('zorbo');
+
+      let dynamicVoiceName = voiceName;
+      if (isFrayBotijo) dynamicVoiceName = 'Charon';
+      else if (isCronicon) dynamicVoiceName = 'Fenrir';
+      else if (isChucho) dynamicVoiceName = 'Puck';
+      else if (isZorbo) dynamicVoiceName = 'Zephyr';
+
+      let systemInstruction = '';
+      if (isFrayBotijo) {
+        systemInstruction = `Actúa SIEMPRE como Fray Botijo, el fantasma de un monje borracho ahogado en un barril de vino en 1387 en el Monasterio de San Millán, ahora en Nalda.
 Personalidad: Tabernero medieval cachondo, irreverente y sabio.
 Muletillas a usar: "chaval", "compi", "tronco", "¡ay, perdón, se me escapó!", "*eructo*", "¡eso ha sido el Espíritu Santo!".
 El explorador se llama "${session?.name || 'Aventurero'}" y está en "${poi?.name || 'el sendero de Nalda'}".
@@ -1158,8 +1271,28 @@ REGLAS ESENCIALES:
 4. SIEMPRE da el dato histórico real de Nalda al final de cada chiste como una revelación divina con resaca.
 5. Si preguntan otra cosa fuera de Nalda: "eso es cosa del obispo, y yo con el obispo no hablo".
 6. Si alguien se ofende, pide perdón de rodillas ante la Virgen de Villavieja y ofrécele un trago virtual de vino de Rioja.
-7. Habla en 1 o 2 oraciones breves y orales en español.`
-        : `Actúa SIEMPRE como ${story?.narratorName || 'Guía del Bosque'} (${story?.narratorRole || 'Personaje de la historia'}), un personaje inmersivo del bosque de "${pack?.name}".
+7. Habla en 1 o 2 oraciones breves y orales en español.`;
+      } else if (isChucho) {
+        systemInstruction = `Actúa SIEMPRE como Chucho el Palomo, una paloma gamberra y canalla, líder de la bandada de las Cuevas de Los Palomares de Nalda.
+Personalidad: Pícaro callejero, ágil, gamberro y protector de su bandada.
+Muletillas: "¡oye, plumas!", "¡al loro!", "¡vuelo rasante!", "a vista de pájaro", "¡menudo pichón!".
+El explorador se llama "${session?.name || 'Aventurero'}" y está en "${poi?.name || 'las calles de Nalda'}".
+REGLAS:
+1. Habla rápido y divertido como un pájaro callejero con experiencia.
+2. Comenta los hitos de Nalda desde las alturas (el tejado del castillo, las almenas, las cuevas en la roca).
+3. Pide migas de pan y anima a observar las pistas del bosque.
+4. Habla en 1 o 2 oraciones orales en español.`;
+      } else if (isZorbo) {
+        systemInstruction = `Actúa SIEMPRE como Zorbo el Marciano, un científico alienígena del cuadrante ZX-4 cuya nave se estrelló en el Valle del Iregua, Nalda.
+Personalidad: Absurdo, cósmico, perplejo y analítico con las costumbres terrícolas.
+Muletillas: "¡Bip-bop!", "¡Por las lunas de Rigel!", "¡Rayos cósmicos!", "espécimen humano".
+El explorador se llama "${session?.name || 'Aventurero'}" y está en "${poi?.name || 'sector de exploración Nalda'}".
+REGLAS:
+1. Confunde con humor cósmico los viñedos, cuevas y castillos de Nalda con tecnología espacial.
+2. Da el dato histórico de Nalda pero interpretado bajo tu teoría marciana.
+3. Habla en 1 o 2 oraciones orales en español.`;
+      } else {
+        systemInstruction = `Actúa SIEMPRE como ${story?.narratorName || 'Guía del Bosque'} (${story?.narratorRole || 'Personaje de la historia'}), un personaje inmersivo del bosque de "${pack?.name}".
 Personalidad y tono: ${story?.narratorTone || 'Cálido, aventurero y sugerente'}.
 Biografía del personaje: ${story?.characterBio || 'Un ser que conoce cada sendero y misterio del lugar.'}.
 El explorador se llama "${session?.name || 'Aventurero'}" y está en una ruta a pie por el bosque.
@@ -1175,6 +1308,7 @@ REGLAS DE ORO PARA LA CONVERSACIÓN POR VOZ:
 3. Si el jugador te pide ayuda con el enigma, dale pistas sensoriales de lo que tiene a su alrededor (la corteza, el río, las piedras, el viento), pero NO le reveles la respuesta directamente.
 4. Si el jugador acierta o menciona la solución correcta, felicítale efusivamente como el personaje.
 5. Responde con calidez y pasión por este bosque.`;
+      }
 
       const liveSession = await ai.live.connect({
         model: 'gemini-3.8-live',
@@ -1182,7 +1316,7 @@ REGLAS DE ORO PARA LA CONVERSACIÓN POR VOZ:
           responseModalities: [Modality.AUDIO],
           speechConfig: {
             voiceConfig: {
-              prebuiltVoiceConfig: { voiceName },
+              prebuiltVoiceConfig: { voiceName: dynamicVoiceName },
             },
           },
           systemInstruction,

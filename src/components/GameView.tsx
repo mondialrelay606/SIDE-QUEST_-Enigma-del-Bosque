@@ -720,13 +720,13 @@ export const GameView: React.FC<GameViewProps> = ({
       </div>
 
       {/* FIXED BOTTOM NAVIGATION BAR (10bis: pestañas inferiores) */}
-      <nav className="fixed bottom-0 inset-x-0 z-40 bg-[#0E1610]/95 backdrop-blur-md border-t border-emerald-900/80 px-2 py-2 shadow-2xl">
+      <nav className="fixed bottom-0 inset-x-0 z-40 bg-[#0E1610]/95 backdrop-blur-md border-t border-emerald-900/80 px-2 py-2 shadow-2xl safe-area-bottom">
         <div className="max-w-md mx-auto flex items-center justify-around">
           {/* Ruta / Prueba */}
           <button
             type="button"
             onClick={() => setActiveTab('route')}
-            className={`flex flex-col items-center gap-1 py-1 px-2.5 rounded-xl text-[10px] font-bold transition-all ${
+            className={`flex flex-col items-center justify-center gap-1 py-1.5 px-3 rounded-xl text-xs font-semibold transition-all min-h-[48px] min-w-[56px] ${
               activeTab === 'route'
                 ? 'text-amber-300 bg-emerald-950/80 border border-emerald-700/60 shadow'
                 : 'text-stone-400 hover:text-stone-200'
@@ -740,7 +740,7 @@ export const GameView: React.FC<GameViewProps> = ({
           <button
             type="button"
             onClick={() => setActiveTab('map')}
-            className={`flex flex-col items-center gap-1 py-1 px-2.5 rounded-xl text-[10px] font-bold transition-all ${
+            className={`flex flex-col items-center justify-center gap-1 py-1.5 px-3 rounded-xl text-xs font-semibold transition-all min-h-[48px] min-w-[56px] ${
               activeTab === 'map'
                 ? 'text-amber-300 bg-emerald-950/80 border border-emerald-700/60 shadow'
                 : 'text-stone-400 hover:text-stone-200'
@@ -754,12 +754,12 @@ export const GameView: React.FC<GameViewProps> = ({
           <button
             type="button"
             onClick={() => setIsCodexModalOpen(true)}
-            className="relative flex flex-col items-center gap-1 py-1 px-2.5 rounded-xl text-[10px] font-bold text-amber-200 hover:text-white transition-all"
+            className="relative flex flex-col items-center justify-center gap-1 py-1.5 px-3 rounded-xl text-xs font-semibold text-amber-200 hover:text-white transition-all min-h-[48px] min-w-[56px]"
           >
             <KeyRound className="w-5 h-5 text-amber-400" />
             <span>{t('nav.codex')}</span>
             {(session.collectedRunes?.length || 0) > 0 && (
-              <span className="absolute top-0 right-1 w-4 h-4 rounded-full bg-amber-500 text-stone-950 text-[9px] font-bold flex items-center justify-center font-mono">
+              <span className="absolute top-0 right-1 w-4 h-4 rounded-full bg-amber-500 text-stone-950 text-[10px] font-bold flex items-center justify-center font-mono">
                 {session.collectedRunes?.length}
               </span>
             )}
@@ -769,7 +769,7 @@ export const GameView: React.FC<GameViewProps> = ({
           <button
             type="button"
             onClick={() => setActiveTab('hints')}
-            className={`flex flex-col items-center gap-1 py-1 px-2.5 rounded-xl text-[10px] font-bold transition-all ${
+            className={`flex flex-col items-center justify-center gap-1 py-1.5 px-3 rounded-xl text-xs font-semibold transition-all min-h-[48px] min-w-[56px] ${
               activeTab === 'hints'
                 ? 'text-amber-300 bg-emerald-950/80 border border-emerald-700/60 shadow'
                 : 'text-stone-400 hover:text-stone-200'
@@ -783,7 +783,7 @@ export const GameView: React.FC<GameViewProps> = ({
           <button
             type="button"
             onClick={() => setCharacterModalOpen(true)}
-            className="flex flex-col items-center gap-1 py-1 px-2.5 rounded-xl text-[10px] font-bold text-stone-300 hover:text-amber-200 transition-all"
+            className="flex flex-col items-center justify-center gap-1 py-1.5 px-3 rounded-xl text-xs font-semibold text-stone-300 hover:text-amber-200 transition-all min-h-[48px] min-w-[56px]"
           >
             <Mic className="w-5 h-5 text-emerald-400" />
             <span>{t('nav.guide')}</span>
