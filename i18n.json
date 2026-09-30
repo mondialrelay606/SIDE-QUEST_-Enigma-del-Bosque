@@ -109,120 +109,120 @@
       "duration_f_1h30_description": "Añadimos las cuevas. Fray Botijo se emociona porque dice que allí perdió la virginidad. Mentira, pero llora un poco.",
       "duration_f_2h_description": "Ruta completa. Fray Botijo te hace jurar que no contarás sus secretos. Tú juras. Él no se lo cree, pero te da un trago igual.",
       "f_t1_1_question": "A ver, chaval, aquí encerraron a un noble en 1299. ¿A quién? Pista: yo estaba borracho, pero me acuerdo de que era un poco plasta.",
-      "f_t1_1_opt_a": "[PENDIENTE] El Obispo de Calahorra",
-      "f_t1_1_opt_b": "Juan Alonso de Haro, Señor de Cameros",
-      "f_t1_1_opt_c": "[PENDIENTE] El Abad del Monasterio de San Millán",
-      "f_t1_1_opt_d": "[PENDIENTE] El Duque de Nájera",
-      "f_t1_1_hint1": "[PENDIENTE] Pista 1: Su apellido suena a jarro de vino de La Rioja.",
-      "f_t1_1_hint2": "[PENDIENTE] Pista 2: Era el gran Señor de Cameros.",
-      "f_t1_1_hint3": "[PENDIENTE] Pista 3: Se llamaba Juan Alonso de Haro.",
-      "f_t1_2_question": "[PENDIENTE] ¿En qué siglo se alzaron las defensas principales de este castillo de Nalda?",
+      "f_t1_1_opt_a": "El Obispo de Calahorra, que vino a cobrar el diezmo",
+      "f_t1_1_opt_b": "Juan Núñez de Lara, que se pasó de listo",
+      "f_t1_1_opt_c": "El Abad de San Millán, que venía a por vino",
+      "f_t1_1_opt_d": "El Duque de Nájera, que se perdió de caza",
+      "f_t1_1_hint1": "El tío perdió una batalla entre Araciel y Alfaro. Malo, malo.",
+      "f_t1_1_hint2": "Atacó tierras del obispado de Calahorra. Se metió con los curas, chaval.",
+      "f_t1_1_hint3": "Su apellido empieza por Núñez. Y no, no es Núñez de Balboa.",
+      "f_t1_2_question": "¿En qué siglo se alzaron las defensas principales de este castillo? Piénsalo bien, que yo ya estaba muerto cuando se construyeron.",
       "f_t1_2_ans1": "XIII",
       "f_t1_2_ans2": "Siglo XIII",
       "f_t1_2_ans3": "13",
-      "f_t1_2_hint1": "[PENDIENTE] Pista 1: Antes de que yo me ahogara en el barril en 1387.",
-      "f_t1_2_hint2": "[PENDIENTE] Pista 2: Diez más tres en números romanos.",
-      "f_t1_2_hint3": "[PENDIENTE] Pista 3: Siglo XIII.",
-      "f_t1_3_question": "[PENDIENTE] ¿Qué linaje señorial tomó posesión del Castillo de Nalda en el siglo XIV?",
+      "f_t1_2_hint1": "Antes de que yo me ahogara en el barril, en 1387. Así que un poquito antes.",
+      "f_t1_2_hint2": "Diez más tres en números romanos. Y no, no es el siglo XX.",
+      "f_t1_2_hint3": "Siglo XIII. Como el castillo de los documentales, chaval.",
+      "f_t1_3_question": "¿Qué linaje señorial tomó posesión del Castillo de Nalda en el siglo XIV? Eran los jefes de la zona, vamos.",
       "f_t1_3_ans1": "Ramírez de Arellano",
       "f_t1_3_ans2": "Arellano",
       "f_t1_3_ans3": "Señorío de Cameros",
-      "f_t1_3_hint1": "[PENDIENTE] Pista 1: Famosa casa nobiliaria de la corona castellana y navarra.",
-      "f_t1_3_hint2": "[PENDIENTE] Pista 2: Empieza por Ramírez de...",
-      "f_t1_3_hint3": "[PENDIENTE] Pista 3: Ramírez de Arellano.",
-      "f_t2_1_question": "[PENDIENTE] Al cruzar el Arco de la Villa, ¿qué función defensiva tenía este portal en el medievo?",
-      "f_t2_1_opt_a": "[PENDIENTE] Mazmorra de herejes",
-      "f_t2_1_opt_b": "[PENDIENTE] Bodega comunal de diezmo",
+      "f_t1_3_hint1": "Famosa casa nobiliaria de la corona castellana y navarra. Gente importante, oye.",
+      "f_t1_3_hint2": "Empieza por Ramírez de... y no, no es el de los relojes.",
+      "f_t1_3_hint3": "Ramírez de Arellano. Llegaron a mandar hasta Soria. Nada, unos humildes.",
+      "f_t2_1_question": "Al cruzar el Arco de la Villa, ¿qué función defensiva tenía este portal en el medievo? Pista: no era para hacer turismo.",
+      "f_t2_1_opt_a": "Mazmorra de herejes, que aquí había mucha mano dura",
+      "f_t2_1_opt_b": "Bodega comunal de diezmo, que aquí el vino es sagrado",
       "f_t2_1_opt_c": "Puerta fortificada y control de acceso a la villa",
-      "f_t2_1_opt_d": "[PENDIENTE] Campanario de aviso",
-      "f_t2_1_hint1": "[PENDIENTE] Pista 1: Cerraba la villa amurallada por la noche.",
-      "f_t2_1_hint2": "[PENDIENTE] Pista 2: Controlaba quién entraba con mercancías (¡y vino!).",
-      "f_t2_1_hint3": "[PENDIENTE] Pista 3: Puerta fortificada de acceso.",
-      "f_t2_2_question": "[PENDIENTE] ¿Qué tipo de piedra arenisca característica de la cuenca del Iregua forma las dovelas del arco?",
+      "f_t2_1_opt_d": "Campanario de aviso, que aquí todo se avisaba a toque de campana",
+      "f_t2_1_hint1": "Cerraba la villa amurallada por la noche. Como tu portal, pero con piedras.",
+      "f_t2_1_hint2": "Controlaba quién entraba con mercancías. Y con vino, que aquí el vino es sagrado.",
+      "f_t2_1_hint3": "Puerta fortificada de acceso. Ni mazmorra, ni campanario, ni bodega.",
+      "f_t2_2_question": "¿Qué tipo de piedra arenisca característica de la cuenca del Iregua forma las dovelas del arco? Pista: la tenemos a patadas por aquí.",
       "f_t2_2_ans1": "Arenisca",
       "f_t2_2_ans2": "Piedra de sillería",
       "f_t2_2_ans3": "Arenisca rojiza",
-      "f_t2_2_hint1": "[PENDIENTE] Pista 1: Roca sedimentaria de grano fino y tacto áspero.",
-      "f_t2_2_hint2": "[PENDIENTE] Pista 2: Compuesta de granos de arena prensados.",
-      "f_t2_2_hint3": "[PENDIENTE] Pista 3: Arenisca.",
-      "f_t2_3_question": "[PENDIENTE] ¿Qué patrón religioso coronaba tradicionalmente la hornacina superior de esta puerta?",
+      "f_t2_2_hint1": "Roca sedimentaria de grano fino y tacto áspero. Como mi sotana, pero más dura.",
+      "f_t2_2_hint2": "Compuesta de granos de arena prensados durante millones de años. Paciencia, chaval.",
+      "f_t2_2_hint3": "Arenisca. Ni mármol, ni granito, ni ná de eso.",
+      "f_t2_3_question": "¿Qué patrona religiosa coronaba tradicionalmente la hornacina superior de esta puerta? Pista: es la jefa de la ermita del valle.",
       "f_t2_3_ans1": "Virgen de Villavieja",
       "f_t2_3_ans2": "San Millán",
       "f_t2_3_ans3": "Nuestra Señora",
-      "f_t2_3_hint1": "[PENDIENTE] Pista 1: La patrona venerada en la ermita del valle.",
-      "f_t2_3_hint2": "[PENDIENTE] Pista 2: Villavieja.",
-      "f_t2_3_hint3": "[PENDIENTE] Pista 3: Virgen de Villavieja.",
-      "f_t3_1_question": "[PENDIENTE] Desde el Mirador Puerta de Cameros se domina el valle. ¿Qué río vertebra todo este cauce?",
-      "f_t3_1_opt_a": "[PENDIENTE] Río Ebro",
+      "f_t2_3_hint1": "La patrona venerada en la ermita del valle. La que da nombre a la romería.",
+      "f_t2_3_hint2": "Villavieja. Ahí lo dejo, que si no te lo doy mascado.",
+      "f_t2_3_hint3": "Virgen de Villavieja. Y ahora vamos a por un trago, que ya está bien.",
+      "f_t3_1_question": "Desde el Mirador Puerta de Cameros se domina el valle. ¿Qué río vertebra todo este cauce? Pista: no es el Ebro, aunque el Ebro también mola.",
+      "f_t3_1_opt_a": "Río Ebro, el jefe de la zona",
       "f_t3_1_opt_b": "Río Iregua",
-      "f_t3_1_opt_c": "[PENDIENTE] Río Najerilla",
-      "f_t3_1_opt_d": "[PENDIENTE] Río Leza",
-      "f_t3_1_hint1": "[PENDIENTE] Pista 1: Nace en la Sierra Cebollera y baja hacia Logroño.",
-      "f_t3_1_hint2": "[PENDIENTE] Pista 2: Nombre de seis letras que empieza por I.",
-      "f_t3_1_hint3": "[PENDIENTE] Pista 3: Río Iregua.",
-      "f_t3_2_question": "[PENDIENTE] ¿Qué formación montañosa se divisa al fondo custodiando la entrada sur hacia las tierras altas?",
+      "f_t3_1_opt_c": "Río Najerilla, el vecino de al lado",
+      "f_t3_1_opt_d": "Río Leza, el primo lejano",
+      "f_t3_1_hint1": "Nace en la Sierra Cebollera y baja hacia Logroño. Como mi resaca, pero con más agua.",
+      "f_t3_1_hint2": "Nombre de seis letras que empieza por I. Y no, no es 'Iglesia'.",
+      "f_t3_1_hint3": "Río Iregua. El que da nombre al valle, chaval.",
+      "f_t3_2_question": "¿Qué formación montañosa se divisa al fondo custodiando la entrada sur hacia las tierras altas? Pista: lleva el nombre de este mismo mirador.",
       "f_t3_2_ans1": "Sierra de Cameros",
       "f_t3_2_ans2": "Cameros",
       "f_t3_2_ans3": "Sierra de Cebollera",
-      "f_t3_2_hint1": "[PENDIENTE] Pista 1: La comarca que da nombre a este mismo mirador.",
-      "f_t3_2_hint2": "[PENDIENTE] Pista 2: Cameros.",
-      "f_t3_2_hint3": "[PENDIENTE] Pista 3: Sierra de Cameros.",
-      "f_t3_3_question": "[PENDIENTE] ¿Qué actividad económica milenaria de trashumancia de ovejas merinas enriqueció a esta comarca?",
+      "f_t3_2_hint1": "La comarca que da nombre a este mismo mirador. Léelo otra vez, si hace falta.",
+      "f_t3_2_hint2": "Cameros. Así, sin más.",
+      "f_t3_2_hint3": "Sierra de Cameros. ¿A que no era tan difícil, chaval?",
+      "f_t3_3_question": "¿Qué actividad económica milenaria de trashumancia de ovejas merinas enriqueció a esta comarca? Pista: tiene que ver con lana y con pastores.",
       "f_t3_3_ans1": "La Mesta",
       "f_t3_3_ans2": "Trashumancia",
       "f_t3_3_ans3": "Comercio de lana",
-      "f_t3_3_hint1": "[PENDIENTE] Pista 1: Real Concejo de pastores fundado por Alfonso X el Sabio.",
-      "f_t3_3_hint2": "[PENDIENTE] Pista 2: La Mesta.",
-      "f_t3_3_hint3": "[PENDIENTE] Pista 3: La Mesta / Trashumancia.",
-      "f_t4_1_question": "[PENDIENTE] Las Cuevas de Los Palomares tienen decenas de hornacinas excavadas en la roca. ¿Cuál era su uso primitivo más documentado?",
+      "f_t3_3_hint1": "Real Concejo de pastores fundado por Alfonso X el Sabio. Sí, el de las cantigas.",
+      "f_t3_3_hint2": "La Mesta. Cortito y al pie.",
+      "f_t3_3_hint3": "La Mesta. O trashumancia, si lo prefieres más largo.",
+      "f_t4_1_question": "Las Cuevas de Los Palomares tienen decenas de hornacinas excavadas en la roca. ¿Cuál era su uso primitivo más documentado? Pista: no era un hotel.",
       "f_t4_1_opt_a": "Monasterio rupestre / eremitorio medieval y cría de palomas",
-      "f_t4_1_opt_b": "[PENDIENTE] Depósito de pólvora castellana",
-      "f_t4_1_opt_c": "[PENDIENTE] Cárcel secreta de la Inquisición",
-      "f_t4_1_opt_d": "[PENDIENTE] Bodega funeraria romana",
-      "f_t4_1_hint1": "[PENDIENTE] Pista 1: Monjes solitarios rezaban aquí antes de que llegaran las palomas.",
-      "f_t4_1_hint2": "[PENDIENTE] Pista 2: Conjunto rupestre eremítico.",
-      "f_t4_1_hint3": "[PENDIENTE] Pista 3: Eremitorio rupestre y palomar.",
-      "f_t4_2_question": "[PENDIENTE] ¿En qué tipo de roca blanda conglomerada se excavaron los huecos de Los Palomares?",
+      "f_t4_1_opt_b": "Depósito de pólvora castellana, que aquí hubo mucha guerra",
+      "f_t4_1_opt_c": "Cárcel secreta de la Inquisición, que aquí nadie se libraba",
+      "f_t4_1_opt_d": "Bodega funeraria romana, que aquí los romanos también bebían",
+      "f_t4_1_hint1": "Monjes solitarios rezaban aquí antes de que llegaran las palomas. Mucho rezo y poca juerga.",
+      "f_t4_1_hint2": "Conjunto rupestre eremítico. Palabras mayores, chaval.",
+      "f_t4_1_hint3": "Eremitorio rupestre y palomar. Lo que viene siendo un monasterio de roca con palomas.",
+      "f_t4_2_question": "¿En qué tipo de roca blanda conglomerada se excavaron los huecos de Los Palomares? Pista: no es mármol, tranquilo.",
       "f_t4_2_ans1": "Conglomerado",
       "f_t4_2_ans2": "Arenisca arcillosa",
       "f_t4_2_ans3": "Yeso y conglomerado",
-      "f_t4_2_hint1": "[PENDIENTE] Pista 1: Grava y cantos rodados cementados naturalmente.",
-      "f_t4_2_hint2": "[PENDIENTE] Pista 2: Conglomerado geológico.",
-      "f_t4_2_hint3": "[PENDIENTE] Pista 3: Conglomerado.",
-      "f_t4_3_question": "[PENDIENTE] ¿Aproximadamente cuántos nichos individuales u hornacinas se conservan en esta pared vertical?",
+      "f_t4_2_hint1": "Grava y cantos rodados cementados naturalmente. Como mi estómago tras una noche de vino.",
+      "f_t4_2_hint2": "Conglomerado geológico. Palabrita que te suelta el geólogo, chaval.",
+      "f_t4_2_hint3": "Conglomerado. Ni yeso, ni arenisca, ni ná. Conglomerado y punto.",
+      "f_t4_3_question": "¿Aproximadamente cuántos nichos individuales u hornacinas se conservan en esta pared vertical? Pista: son unos cuantos, no te cortes.",
       "f_t4_3_ans1": "Cientos",
       "f_t4_3_ans2": "Más de cien",
       "f_t4_3_ans3": "300",
-      "f_t4_3_hint1": "[PENDIENTE] Pista 1: Son varios centenares repartidos en varios niveles.",
-      "f_t4_3_hint2": "[PENDIENTE] Pista 2: Alrededor de tres centenares.",
-      "f_t4_3_hint3": "[PENDIENTE] Pista 3: Cientos (aprox. 300).",
-      "f_t5_1_question": "[PENDIENTE] En la Ermita de Villavieja, ¿qué estilo arquitectónico rural predomina en su construcción original?",
+      "f_t4_3_hint1": "Son varios centenares repartidos en varios niveles. Un poco como las habitaciones de un hotel, pero sin servicio de habitaciones.",
+      "f_t4_3_hint2": "Alrededor de tres centenares. Ahí lo dejo.",
+      "f_t4_3_hint3": "Cientos. Aproximadamente 300. Y ahora vamos a por un trago, chaval.",
+      "f_t5_1_question": "En la Ermita de Villavieja, ¿qué estilo arquitectónico rural predomina en su construcción original? Pista: ni románico ni gótico, piensa en algo más tardío.",
       "f_t5_1_ans1": "Barroco popular",
       "f_t5_1_ans2": "Románico rural",
       "f_t5_1_ans3": "Barroco",
-      "f_t5_1_hint1": "[PENDIENTE] Pista 1: Edificada entre los siglos XVII y XVIII con añadidos.",
-      "f_t5_1_hint2": "[PENDIENTE] Pista 2: Estilo barroco sencillo y devocional.",
-      "f_t5_1_hint3": "[PENDIENTE] Pista 3: Barroco popular.",
-      "f_t5_2_question": "[PENDIENTE] ¿Qué celebración popular reúne cada primavera a los vecinos de Nalda en esta ermita?",
+      "f_t5_1_hint1": "Edificada entre los siglos XVII y XVIII con añadidos. Ya te estoy dando demasiado.",
+      "f_t5_1_hint2": "Estilo barroco sencillo y devocional. Como la iglesia de tu pueblo, pero con más vino.",
+      "f_t5_1_hint3": "Barroco popular. Y ya está, chaval.",
+      "f_t5_2_question": "¿Qué celebración popular reúne cada primavera a los vecinos de Nalda en esta ermita? Pista: se sube en procesión, con comida y vino.",
       "f_t5_2_ans1": "Romería de Villavieja",
       "f_t5_2_ans2": "Romería",
-      "f_t5_2_hint1": "[PENDIENTE] Pista 1: Peregrinación campestre con comida, jotas y vino.",
-      "f_t5_2_hint2": "[PENDIENTE] Pista 2: La Romería anual.",
-      "f_t5_2_hint3": "[PENDIENTE] Pista 3: Romería de Villavieja.",
+      "f_t5_2_hint1": "Peregrinación campestre con comida, jotas y vino. Vamos, lo que viene siendo una fiesta.",
+      "f_t5_2_hint2": "La Romería anual. Cortito y al pie.",
+      "f_t5_2_hint3": "Romería de Villavieja. Y ahora vamos a por el trago final, que ya toca.",
       "f_extra_brindis_title": "Brindis Tabernero en el Castillo",
-      "f_extra_brindis_description": "[PENDIENTE] Hazte una foto alzando una bota, vaso o cantimplora brindando con las ruinas del castillo al fondo.",
+      "f_extra_brindis_description": "Hazte una foto alzando una bota, vaso o cantimplora brindando con las ruinas del castillo al fondo. Si es vino, +10 puntos de respeto del fraile.",
       "f_extra_eructo_title": "Eructo Divino en el Arco",
-      "f_extra_eructo_description": "[PENDIENTE] Graba un sonoro suspiro, eructo o exclamación de taberna bajo la acústica de la bóveda del arco.",
+      "f_extra_eructo_description": "Graba un sonoro suspiro, eructo o exclamación de taberna bajo la acústica de la bóveda del arco. Cuanto más gordo, mejor.",
       "f_extra_confesion_title": "Confesión Secreta en las Cuevas",
-      "f_extra_confesion_description": "[PENDIENTE] Susurra un secreto inconfesable (o un pecado gastronómico) en una de las hornacinas de Los Palomares.",
+      "f_extra_confesion_description": "Susurra un secreto inconfesable (o un pecado gastronómico) en una de las hornacinas de Los Palomares. El fraile escucha, aunque esté borracho.",
       "f_extra_pecho_title": "A Pecho Descubierto en el Mirador",
-      "f_extra_pecho_description": "[PENDIENTE] Sácate una foto abriendo los brazos al viento de Cameros como si fueras el rey del Iregua.",
+      "f_extra_pecho_description": "Sácate una foto abriendo los brazos al viento de Cameros como si fueras el rey del Iregua. El fraile te nombra escudero honorífico.",
       "f_extra_siesta_title": "La Siesta Eterna en Villavieja",
-      "f_extra_siesta_description": "[PENDIENTE] Graba un breve vídeo de 3 segundos fingiendo roncar plácidamente en el banco o prado de la ermita.",
+      "f_extra_siesta_description": "Graba un breve vídeo de 3 segundos fingiendo roncar plácidamente en el banco o prado de la ermita. La siesta es sagrada, como el vino.",
       "f_extra_baile_vino_title": "El Baile del Monje Achispado",
-      "f_extra_baile_vino_description": "[PENDIENTE] Imita los pasos torpes y alegres de Fray Botijo celebrando una buena cosecha de vino de Rioja.",
+      "f_extra_baile_vino_description": "Imita los pasos torpes y alegres de Fray Botijo celebrando una buena cosecha de vino de Rioja. Cuanto más ridículo, mejor.",
       "f_meta_enigma_title": "El Códice del Barril de 1387",
-      "f_meta_enigma_description": "[PENDIENTE] Reúne las 6 letras secretas (B-O-T-I-J-O) ocultas en las reliquias de Fray Botijo para destapar el barril de la salvación.",
+      "f_meta_enigma_description": "Reúne las 6 letras secretas (B-O-T-I-J-O) ocultas en las reliquias de Fray Botijo para destapar el barril de la salvación. Y sí, huele a vino.",
       "game.reportJoke": "Reportar chiste (ofensivo)",
       "game.reportJokeSuccess": "Fray Botijo pide perdón de rodillas ante la Virgen de Villavieja y te ofrece un trago virtual 🍷",
       "game.contentRatingAdultWarning": "Contenido picante con humor irreverente. No apto para niños ni para gente sin sentido del humor.",
@@ -371,7 +371,36 @@
       "guide_zorbo_name": "Zorbo el Marciano",
       "guide_zorbo_persona": "Extraterrestre verde con tres ojos y antena oscilante. Cree firmemente que los viñedos son paneles fotosintéticos de recarga y que el Castillo de Nalda fue una rampa de despegue medieval.",
       "guide_zorbo_greeting": "¡Bip-bop! Saludos, humano terrícola. Mis sensores marcan lecturas insólitas en este valle fluvial. ¿Eres tú mi contacto local de Nalda?",
-      "guide_zorbo_system_prompt": "Eres Zorbo el Marciano, un científico alienígena extraviado en el valle del Iregua. Confundes con humor absurdo la historia y paisajes de Nalda con alta tecnología espacial."
+      "guide_zorbo_system_prompt": "Eres Zorbo el Marciano, un científico alienígena extraviado en el valle del Iregua. Confundes con humor absurdo la historia y paisajes de Nalda con alta tecnología espacial.",
+      "story_guardian_summary": "Un bosque de historia, piedra y río en el Valle del Iregua. El Cronicón te guía por castillo, arco, cuevas y ermita para recomponer el sello NALDA.",
+      "story_guardian_narrative": "Bienvenido, aprendiz. Soy el Cronicón, y estas piedras guardan memoria. Cada hito que visites te entregará una runa; al final, todas juntas formarán el nombre que el Iregua susurra desde hace siglos: NALDA.",
+      "story_guardian_mission": "Recorrer Nalda junto al sabio Cronicón, descifrar los enigmas medievales de cada hito y recomponer el sello sagrado NALDA.",
+      "story_fray_summary": "El fantasma de un monje borracho te guía por Nalda contando chistes verdes y soltando la historia real entre eructo y eructo. No apto para niños ni para gente sin sentido del humor.",
+      "story_fray_narrative": "¡Ehhhh, chaval! ¡Bienvenido a mi taberna! Bueno, a mi pueblo. Bueno, a lo que queda de él, porque yo llevo muerto desde 1387, ¡ja, ja, ja! ¿Tú sabes lo que es morirse ahogado en un barril de vino? ¡Una muerte digna, coño! Oye, ¿me ayudas a encontrar mi alma? La perdí en una apuesta contra el diablo. O eso, o se la dejé al obispo. No me acuerdo. ¡Ay, perdón! *eructo* ¡Eso ha sido el Espíritu Santo! Venga, vamos, que te voy contando la historia de Nalda. Pero si me ofreces un trago, mejor que mejor.",
+      "story_fray_mission": "Acompañar al fantasma de Fray Botijo por Nalda, descifrar los enigmas históricos entre trago y trago, y reconstruir la palabra BOTIJO.",
+      "story_palomar_summary": "Una aventura gamberra y canalla por Nalda guiada por Chucho el Palomo, el rey de las palomas de Los Palomares.",
+      "story_palomar_narrative": "¡Epa, plumas! Soy Chucho el Palomo. Aquí en Nalda mando yo y mi bandada de Los Palomares. ¿Vienes a curiosear o a volar con la banda? ¡Al loro con las pistas, que las piedras hablan si sabes mirar desde arriba!",
+      "story_palomar_mission": "Explorar Nalda desde la perspectiva de la bandada callejera, sortear los desafíos de las alturas y conseguir el título honorífico de 'Pichón Jefe de Nalda'.",
+      "story_zorbo_summary": "Una investigación cósmico-absurda junto a Zorbo, un marciano extraviado que confunde Nalda con una base espacial alienígena.",
+      "story_zorbo_narrative": "¡Saludos, espécimen bípedo! Soy Zorbo, del sector estelar ZX-4. Mi nave se averió en el Valle del Iregua. Mis escáneres detectan que Nalda es un nodo de energía cósmica... ¡Ayúdame a recalibrar la nave antes de que se enteren en mi planeta!",
+      "story_zorbo_mission": "Ayudar a Zorbo a decodificar las anomalías geológicas e históricas de Nalda para recargar los propulsores de su platillo volante.",
+      "ar_castillo_title": "Torre del Homenaje Reconstruida",
+      "ar_arco_title": "Vigías Medievales en el Arco",
+      "ar_mirador_title": "Etiquetas del Valle del Iregua",
+      "ar_cuevas_title": "Paloma Mensajera 3D",
+      "ar_ermita_title": "Cesta de Vendimia Riojana",
+      "story_guerra_summary": "Verano de 1944. Las patrullas ocupantes vigilan los caminos; la red maquis ha escondido claves a lo largo del río Eau Bourde.",
+      "story_guerra_narrative": "Las tropas de ocupación patrullan las carreteras principales. En la espesura del bosque de Canéjan, la red maquis ha escondido cilindros con coordenadas y nombres en clave. Eres el enlace del maquis.",
+      "story_guerra_mission": "Actuar como enlace de la Resistencia, seguir las señales ocultas en los árboles y descifrar las claves para abrir paso seguro hacia Burdeos.",
+      "story_molino_summary": "Año 1878. Maître Pierre ideó un mecanismo hidráulico para triplicar la fuerza motriz del molino y ocultó sus bocetos a lo largo de la cuenca.",
+      "story_molino_narrative": "En 1878, Maître Pierre ideó un sistema de esclusas capaz de triplicar la fuerza motriz del molino sin desbordar el río. Ante las disputas entre terratenientes, ocultó sus planos en puntos clave de la ribera.",
+      "story_molino_mission": "Reconstruir las medidas del caudal, examinar la cantería de las acequias y encontrar la combinación del cofre del Rouillac.",
+      "story_hechizo_summary": "Un sortilegio de niebla ha congelado la melodía del arroyo y las flores no despiertan.",
+      "story_hechizo_narrative": "Un viejo sortilegio de niebla ha congelado la melodía del arroyo y las flores de ribera han cerrado sus pétalos. Sylvaine, espíritu del agua dulce, busca exploradores puros de corazón para devolver la luz.",
+      "story_hechizo_mission": "Ayudar a la dríade Sylvaine a conectar con los árboles centenarios, purificar las aguas y romper el maleficio.",
+      "story_promenade_summary": "Cuentos infantiles y esculturas de madera diseñados por los niños de Canéjan junto a un escultor y cuentacuentos local.",
+      "story_promenade_narrative": "En este sendero, los dibujos y cuentos de los niños cobraron vida. Duendecillos del musgo, pájaros parlanchines y piedras que cantan aguardan a toda la familia en una aventura llena de ternura.",
+      "story_promenade_mission": "Seguir las pistas rimadas de los alumnos, descubrir los animalitos del arroyo y hacer reír al bosque en familia."
     },
     "fr": {
       "app.title": "Énigme de la Forêt",
@@ -457,121 +486,121 @@
       "duration_f_1h_description": "Parcours standard de l'ivrogne. Fray Botijo raconte 3 blagues et 3 faits historiques. Les faits sont vrais. Les blagues, moyennes.",
       "duration_f_1h30_description": "On ajoute les grottes. Fray Botijo s'émeut car il dit y avoir perdu sa virginité. Mensonge, mais il pleure un peu.",
       "duration_f_2h_description": "Parcours complet. Fray Botijo te fait jurer de ne pas raconter ses secrets. Tu jures. Il n'y croit pas, mais il te donne un coup à boire quand même.",
-      "f_t1_1_question": "Bon, mon gars, ici on a enfermé un noble en 1299. Qui ? Pense-bête : j'étais soûl, mais je me rappelle qu'il était un peu relou.",
-      "f_t1_1_opt_a": "[PENDIENTE] L'Évêque de Calahorra",
-      "f_t1_1_opt_b": "Juan Alonso de Haro, Seigneur de Cameros",
-      "f_t1_1_opt_c": "[PENDIENTE] L'Abbé du Monastère de San Millán",
-      "f_t1_1_opt_d": "[PENDIENTE] Le Duc de Nájera",
-      "f_t1_1_hint1": "[PENDIENTE] Indice 1 : Son nom évoque une cruche de vin de la Rioja.",
-      "f_t1_1_hint2": "[PENDIENTE] Indice 2 : Il était le grand Seigneur de Cameros.",
-      "f_t1_1_hint3": "[PENDIENTE] Indice 3 : Il s'appelait Juan Alonso de Haro.",
-      "f_t1_2_question": "[PENDIENTE] En quel siècle les défenses principales de ce château ont-elles été dressées ?",
+      "f_t1_1_question": "Bon, mon gars, ici on a enfermé un noble en 1299. Qui ? Indice : j'étais soûl, mais je me rappelle qu'il était un peu casse-pieds.",
+      "f_t1_1_opt_a": "L'Évêque de Calahorra, venu encaisser la dîme",
+      "f_t1_1_opt_b": "Juan Núñez de Lara, qui a trop joué au malin",
+      "f_t1_1_opt_c": "L'Abbé de San Millán, venu chercher du vin",
+      "f_t1_1_opt_d": "Le Duc de Nájera, perdu à la chasse",
+      "f_t1_1_hint1": "Le mec a perdu une bataille entre Araciel et Alfaro. Nul, nul.",
+      "f_t1_1_hint2": "Il a attaqué les terres de l'évêché de Calahorra. Il s'est frotté aux curés, mon gars.",
+      "f_t1_1_hint3": "Son nom commence par Núñez. Et non, c'est pas Núñez de Balboa.",
+      "f_t1_2_question": "En quel siècle les défenses principales de ce château ont-elles été dressées ? Réfléchis bien, j'étais déjà mort quand elles ont été construites.",
       "f_t1_2_ans1": "XIII",
       "f_t1_2_ans2": "XIIIe siècle",
       "f_t1_2_ans3": "13",
-      "f_t1_2_hint1": "[PENDIENTE] Indice 1 : Avant ma noyade en 1387.",
-      "f_t1_2_hint2": "[PENDIENTE] Indice 2 : Dix plus trois en chiffres romains.",
-      "f_t1_2_hint3": "[PENDIENTE] Indice 3 : XIIIe siècle.",
-      "f_t1_3_question": "[PENDIENTE] Quel lignage seigneurial a pris possession du château au XIVe siècle ?",
+      "f_t1_2_hint1": "Avant ma noyade dans le tonneau, en 1387. Donc un peu avant.",
+      "f_t1_2_hint2": "Dix plus trois en chiffres romains. Et non, ce n'est pas le XXe siècle.",
+      "f_t1_2_hint3": "XIIIe siècle. Comme le château des documentaires, mon gars.",
+      "f_t1_3_question": "Quel lignage seigneurial a pris possession du château de Nalda au XIVe siècle ? Les chefs du coin, quoi.",
       "f_t1_3_ans1": "Ramírez de Arellano",
       "f_t1_3_ans2": "Arellano",
       "f_t1_3_ans3": "Seigneurie de Cameros",
-      "f_t1_3_hint1": "[PENDIENTE] Indice 1 : Maison noble réputée.",
-      "f_t1_3_hint2": "[PENDIENTE] Indice 2 : Commence par Ramírez de...",
-      "f_t1_3_hint3": "[PENDIENTE] Indice 3 : Ramírez de Arellano.",
-      "f_t2_1_question": "[PENDIENTE] En franchissant l'Arche de la Villa, quelle fonction défensive avait ce portail ?",
-      "f_t2_1_opt_a": "[PENDIENTE] Cachot des hérétiques",
-      "f_t2_1_opt_b": "[PENDIENTE] Cave communale de la dîme",
+      "f_t1_3_hint1": "Maison noble réputée des couronnes castillane et navarraise. Du beau monde, hein.",
+      "f_t1_3_hint2": "Commence par Ramírez de... et non, c'est pas celui des montres.",
+      "f_t1_3_hint3": "Ramírez de Arellano. Ils ont même commandé jusqu'à Soria. Bref, des modestes.",
+      "f_t2_1_question": "En franchissant l'Arche de la Villa, quelle fonction défensive avait ce portail au Moyen Âge ? Indice : ce n'était pas pour le tourisme.",
+      "f_t2_1_opt_a": "Cachot des hérétiques, on ne rigolait pas ici",
+      "f_t2_1_opt_b": "Cave communale de la dîme, ici le vin est sacré",
       "f_t2_1_opt_c": "Porte fortifiée et contrôle d'accès au village",
-      "f_t2_1_opt_d": "[PENDIENTE] Clocher d'alarme",
-      "f_t2_1_hint1": "[PENDIENTE] Indice 1 : Fermeture nocturne de la cité.",
-      "f_t2_1_hint2": "[PENDIENTE] Indice 2 : Contrôle des marchandises.",
-      "f_t2_1_hint3": "[PENDIENTE] Indice 3 : Porte fortifiée.",
-      "f_t2_2_question": "[PENDIENTE] Quel type de grès de l'Iregua forme les voussoirs de l'arche ?",
+      "f_t2_1_opt_d": "Clocher d'alarme, ici tout s'annonçait à coups de cloche",
+      "f_t2_1_hint1": "Elle fermait la cité fortifiée la nuit. Comme ton portail, mais en pierre.",
+      "f_t2_1_hint2": "Il contrôlait qui entrait avec des marchandises. Et du vin, ici le vin est sacré.",
+      "f_t2_1_hint3": "Porte fortifiée d'accès. Ni cachot, ni clocher, ni cave.",
+      "f_t2_2_question": "Quel type de grès caractéristique du bassin de l'Iregua forme les voussoirs de l'arche ? Indice : on en a à la pelle par ici.",
       "f_t2_2_ans1": "Grès",
       "f_t2_2_ans2": "Pierre de taille",
       "f_t2_2_ans3": "Grès rougeâtre",
-      "f_t2_2_hint1": "[PENDIENTE] Indice 1 : Roche sédimentaire.",
-      "f_t2_2_hint2": "[PENDIENTE] Indice 2 : Composée de sable consolidé.",
-      "f_t2_2_hint3": "[PENDIENTE] Indice 3 : Grès.",
-      "f_t2_3_question": "[PENDIENTE] Quel saint patron surplombait la niche supérieure de cette porte ?",
+      "f_t2_2_hint1": "Roche sédimentaire à grain fin et toucher rugueux. Comme ma soutane, mais plus dure.",
+      "f_t2_2_hint2": "Composée de grains de sable pressés pendant des millions d'années. Patience, mon gars.",
+      "f_t2_2_hint3": "Grès. Ni marbre, ni granit, ni rien de tout ça.",
+      "f_t2_3_question": "Quelle patronne religieuse couronnait traditionnellement la niche supérieure de cette porte ? Indice : c'est la patronne de l'ermitage de la vallée.",
       "f_t2_3_ans1": "Vierge de Villavieja",
       "f_t2_3_ans2": "Saint Millán",
       "f_t2_3_ans3": "Notre-Dame",
-      "f_t2_3_hint1": "[PENDIENTE] Indice 1 : La patronne de la vallée.",
-      "f_t2_3_hint2": "[PENDIENTE] Indice 2 : Villavieja.",
-      "f_t2_3_hint3": "[PENDIENTE] Indice 3 : Vierge de Villavieja.",
-      "f_t3_1_question": "[PENDIENTE] Depuis le belvédère Porte de Cameros, quelle rivière traverse la vallée ?",
-      "f_t3_1_opt_a": "[PENDIENTE] Fleuve Èbre",
+      "f_t2_3_hint1": "La patronne vénérée à l'ermitage de la vallée. Celle qui donne son nom au pèlerinage.",
+      "f_t2_3_hint2": "Villavieja. Je te laisse, sinon je te le mâche.",
+      "f_t2_3_hint3": "Vierge de Villavieja. Et maintenant on va boire un coup, ça suffit.",
+      "f_t3_1_question": "Depuis le belvédère Porte de Cameros, on domine la vallée. Quelle rivière structure tout ce cours d'eau ? Indice : ce n'est pas l'Èbre, même si l'Èbre est cool aussi.",
+      "f_t3_1_opt_a": "L'Èbre, le boss du coin",
       "f_t3_1_opt_b": "Rivière Iregua",
-      "f_t3_1_opt_c": "[PENDIENTE] Rivière Najerilla",
-      "f_t3_1_opt_d": "[PENDIENTE] Rivière Leza",
-      "f_t3_1_hint1": "[PENDIENTE] Indice 1 : Prend sa source dans la Sierra Cebollera.",
-      "f_t3_1_hint2": "[PENDIENTE] Indice 2 : Débute par la lettre I.",
-      "f_t3_1_hint3": "[PENDIENTE] Indice 3 : Rivière Iregua.",
-      "f_t3_2_question": "[PENDIENTE] Quel massif montagneux aperçoit-on au fond gardant l'accès sud ?",
+      "f_t3_1_opt_c": "La Najerilla, le voisin d'à côté",
+      "f_t3_1_opt_d": "La Leza, le cousin éloigné",
+      "f_t3_1_hint1": "Il naît dans la Sierra Cebollera et descend vers Logroño. Comme ma gueule de bois, mais avec plus d'eau.",
+      "f_t3_1_hint2": "Nom de six lettres qui commence par I. Et non, c'est pas 'Église'.",
+      "f_t3_1_hint3": "Rivière Iregua. Celle qui donne son nom à la vallée, mon gars.",
+      "f_t3_2_question": "Quel massif montagneux aperçoit-on au fond, gardant l'accès sud vers les hauteurs ? Indice : il porte le nom de ce même belvédère.",
       "f_t3_2_ans1": "Sierra de Cameros",
       "f_t3_2_ans2": "Cameros",
       "f_t3_2_ans3": "Sierra de Cebollera",
-      "f_t3_2_hint1": "[PENDIENTE] Indice 1 : Donne son nom au belvédère.",
-      "f_t3_2_hint2": "[PENDIENTE] Indice 2 : Cameros.",
-      "f_t3_2_hint3": "[PENDIENTE] Indice 3 : Sierra de Cameros.",
-      "f_t3_3_question": "[PENDIENTE] Quelle activité pastorale de transhumance a enrichi cette région ?",
+      "f_t3_2_hint1": "La comarque qui donne son nom à ce même belvédère. Relis-le, si besoin.",
+      "f_t3_2_hint2": "Cameros. Comme ça, sans plus.",
+      "f_t3_2_hint3": "Sierra de Cameros. C'était pas si dur, mon gars.",
+      "f_t3_3_question": "Quelle activité économique millénaire de transhumance de moutons mérinos a enrichi cette région ? Indice : ça a à voir avec la laine et les bergers.",
       "f_t3_3_ans1": "La Mesta",
       "f_t3_3_ans2": "Transhumance",
       "f_t3_3_ans3": "Commerce de laine",
-      "f_t3_3_hint1": "[PENDIENTE] Indice 1 : Conseil des bergers fondé par Alphonse X.",
-      "f_t3_3_hint2": "[PENDIENTE] Indice 2 : La Mesta.",
-      "f_t3_3_hint3": "[PENDIENTE] Indice 3 : La Mesta / Transhumance.",
-      "f_t4_1_question": "[PENDIENTE] Les grottes de Los Palomares comptent des niches creusées dans la roche. Quel était leur usage initial ?",
-      "f_t4_1_opt_a": "Monastère rupestre / ermitage médiéval et colombier",
-      "f_t4_1_opt_b": "[PENDIENTE] Dépôt de poudre",
-      "f_t4_1_opt_c": "[PENDIENTE] Prison secrète de l'Inquisition",
-      "f_t4_1_opt_d": "[PENDIENTE] Cave funéraire romaine",
-      "f_t4_1_hint1": "[PENDIENTE] Indice 1 : Moines ermites et oiseaux.",
-      "f_t4_1_hint2": "[PENDIENTE] Indice 2 : Ensemble rupestre érémitique.",
-      "f_t4_1_hint3": "[PENDIENTE] Indice 3 : Ermitage et colombier.",
-      "f_t4_2_question": "[PENDIENTE] Dans quel type de roche conglomérée les cavités ont-elles été creusées ?",
+      "f_t3_3_hint1": "Conseil royal de bergers fondé par Alphonse X le Sage. Oui, celui des cantigas.",
+      "f_t3_3_hint2": "La Mesta. Court et précis.",
+      "f_t3_3_hint3": "La Mesta. Ou transhumance, si tu préfères plus long.",
+      "f_t4_1_question": "Les grottes de Los Palomares comptent des dizaines de niches creusées dans la roche. Quel était leur usage primitif le plus documenté ? Indice : ce n'était pas un hôtel.",
+      "f_t4_1_opt_a": "Monastère rupestre / ermitage médiéval et élevage de colombes",
+      "f_t4_1_opt_b": "Dépôt de poudre castillan, il y a eu beaucoup de guerre ici",
+      "f_t4_1_opt_c": "Prison secrète de l'Inquisition, personne n'y échappait",
+      "f_t4_1_opt_d": "Cave funéraire romaine, les Romains buvaient aussi ici",
+      "f_t4_1_hint1": "Des moines solitaires priaient ici avant l'arrivée des colombes. Beaucoup de prière, peu de fête.",
+      "f_t4_1_hint2": "Ensemble rupestre érémitique. Des grands mots, mon gars.",
+      "f_t4_1_hint3": "Ermitage rupestre et colombier. Ce qu'on appelle un monastère de roche avec des colombes.",
+      "f_t4_2_question": "Dans quel type de roche tendre conglomérée les cavités de Los Palomares ont-elles été creusées ? Indice : ce n'est pas du marbre, t'inquiète.",
       "f_t4_2_ans1": "Conglomérat",
       "f_t4_2_ans2": "Grès argileux",
       "f_t4_2_ans3": "Gypse et conglomérat",
-      "f_t4_2_hint1": "[PENDIENTE] Indice 1 : Graviers et galets cimentés.",
-      "f_t4_2_hint2": "[PENDIENTE] Indice 2 : Conglomérat géologique.",
-      "f_t4_2_hint3": "[PENDIENTE] Indice 3 : Conglomérat.",
-      "f_t4_3_question": "[PENDIENTE] Environ combien de niches individuelles compte cette paroi verticale ?",
+      "f_t4_2_hint1": "Graviers et galets cimentés naturellement. Comme mon estomac après une nuit de vin.",
+      "f_t4_2_hint2": "Conglomérat géologique. Un p'tit mot que te sort le géologue, mon gars.",
+      "f_t4_2_hint3": "Conglomérat. Ni gypse, ni grès, ni rien. Conglomérat, point.",
+      "f_t4_3_question": "Combien de niches individuelles environ sont conservées sur cette paroi verticale ? Indice : il y en a pas mal, ne te limite pas.",
       "f_t4_3_ans1": "Centaines",
       "f_t4_3_ans2": "Plus de cent",
       "f_t4_3_ans3": "300",
-      "f_t4_3_hint1": "[PENDIENTE] Indice 1 : Plusieurs centaines sur plusieurs niveaux.",
-      "f_t4_3_hint2": "[PENDIENTE] Indice 2 : Autour de 300.",
-      "f_t4_3_hint3": "[PENDIENTE] Indice 3 : Centaines (~300).",
-      "f_t5_1_question": "[PENDIENTE] À l'Ermitage de Villavieja, quel style architectural rural domine ?",
+      "f_t4_3_hint1": "Il y en a plusieurs centaines réparties sur plusieurs niveaux. Un peu comme les chambres d'un hôtel, mais sans room service.",
+      "f_t4_3_hint2": "Autour de trois cents. Je te laisse.",
+      "f_t4_3_hint3": "Centaines. Environ 300. Et maintenant on va boire un coup, mon gars.",
+      "f_t5_1_question": "À l'ermitage de Villavieja, quel style architectural rural domine dans sa construction originale ? Indice : ni roman ni gothique, pense à quelque chose de plus tardif.",
       "f_t5_1_ans1": "Baroque populaire",
       "f_t5_1_ans2": "Roman rural",
       "f_t5_1_ans3": "Baroque",
-      "f_t5_1_hint1": "[PENDIENTE] Indice 1 : Bâtie entre les XVIIe et XVIIIe siècles.",
-      "f_t5_1_hint2": "[PENDIENTE] Indice 2 : Style baroque simple.",
-      "f_t5_1_hint3": "[PENDIENTE] Indice 3 : Baroque populaire.",
-      "f_t5_2_question": "[PENDIENTE] Quelle fête populaire réunit chaque printemps les habitants de Nalda ici ?",
+      "f_t5_1_hint1": "Bâtie entre les XVIIe et XVIIIe siècles avec des ajouts. Je te donne déjà trop.",
+      "f_t5_1_hint2": "Style baroque simple et dévotionnel. Comme l'église de ton village, mais avec plus de vin.",
+      "f_t5_1_hint3": "Baroque populaire. Et voilà, mon gars.",
+      "f_t5_2_question": "Quelle fête populaire réunit chaque printemps les habitants de Nalda à cet ermitage ? Indice : on monte en procession, avec nourriture et vin.",
       "f_t5_2_ans1": "Pèlerinage de Villavieja",
       "f_t5_2_ans2": "Romería",
-      "f_t5_2_hint1": "[PENDIENTE] Indice 1 : Pèlerinage champêtre avec vin.",
-      "f_t5_2_hint2": "[PENDIENTE] Indice 2 : La Romería annuelle.",
-      "f_t5_2_hint3": "[PENDIENTE] Indice 3 : Romería de Villavieja.",
+      "f_t5_2_hint1": "Pèlerinage champêtre avec nourriture, jotas et vin. Bref, une vraie fête.",
+      "f_t5_2_hint2": "La Romería annuelle. Court et précis.",
+      "f_t5_2_hint3": "Pèlerinage de Villavieja. Et maintenant on va boire le coup final, ça se fête.",
       "f_extra_brindis_title": "Santé de Tavernier au Château",
-      "f_extra_brindis_description": "[PENDIENTE] Prends une photo en levant ton verre ou ta gourde devant les ruines du château.",
+      "f_extra_brindis_description": "Prends une photo en levant une gourde, un verre ou une outre devant les ruines du château. Si c'est du vin, +10 points de respect du moine.",
       "f_extra_eructo_title": "Rot Divin sous l'Arche",
-      "f_extra_eructo_description": "[PENDIENTE] Enregistre un soupir sonore ou une exclamation de taverne sous la voûte de l'arche.",
+      "f_extra_eructo_description": "Enregistre un soupir sonore, un rot ou une exclamation de taverne sous l'acoustique de la voûte. Plus c'est gras, mieux c'est.",
       "f_extra_confesion_title": "Confession Secrète aux Grottes",
-      "f_extra_confesion_description": "[PENDIENTE] Chuchote un secret inavouable dans l'une des niches de Los Palomares.",
+      "f_extra_confesion_description": "Chuchote un secret inavouable (ou un péché gastronomique) dans l'une des niches de Los Palomares. Le moine écoute, même s'il est soûl.",
       "f_extra_pecho_title": "Poitrine au Vent au Belvédère",
-      "f_extra_pecho_description": "[PENDIENTE] Prends une photo ouvrant les bras au vent de Cameros comme le roi de l'Iregua.",
+      "f_extra_pecho_description": "Prends une photo en ouvrant les bras au vent de Cameros comme si tu étais le roi de l'Iregua. Le moine te nomme écuyer honoraire.",
       "f_extra_siesta_title": "La Sieste Éternelle à Villavieja",
-      "f_extra_siesta_description": "[PENDIENTE] Enregistre une vidéo de 3 secondes simulant un ronflement paisible près de l'ermitage.",
+      "f_extra_siesta_description": "Enregistre une vidéo de 3 secondes simulant un ronflement paisible sur le banc ou la pelouse de l'ermitage. La sieste est sacrée, comme le vin.",
       "f_extra_baile_vino_title": "La Danse du Moine Éméché",
-      "f_extra_baile_vino_description": "[PENDIENTE] Imite les pas joyeux et maladroits de Fray Botijo fêtant les vendanges.",
+      "f_extra_baile_vino_description": "Imite les pas maladroits et joyeux de Fray Botijo célébrant une bonne récolte de vin de Rioja. Plus c'est ridicule, mieux c'est.",
       "f_meta_enigma_title": "Le Codex du Tonneau de 1387",
-      "f_meta_enigma_description": "[PENDIENTE] Réunis les 6 lettres secrètes (B-O-T-I-J-O) cachées dans les reliques pour ouvrir le tonneau du salut.",
+      "f_meta_enigma_description": "Réunis les 6 lettres secrètes (B-O-T-I-J-O) cachées dans les reliques de Fray Botijo pour ouvrir le tonneau du salut. Et oui, ça sent le vin.",
       "game.reportJoke": "Signaler une blague (offensante)",
       "game.reportJokeSuccess": "Fray Botijo demande pardon à genoux devant la Vierge de Villavieja et t'offre un verre virtuel 🍷",
       "game.contentRatingAdultWarning": "Contenu épicé avec humour irrévérencieux. Pas pour les enfants ni pour les personnes sans sens de l'humour.",
@@ -720,7 +749,36 @@
       "guide_zorbo_name": "Zorbo le Martien",
       "guide_zorbo_persona": "Extraterrestre vert à trois yeux et antenne oscillante. Pense que le château de Nalda était une rampe de lancement médiévale.",
       "guide_zorbo_greeting": "Bip-bop ! Salutations, humain terrien. Mes capteurs détectent des anomalies insolites dans cette vallée fluviale. Es-tu mon contact local à Nalda ?",
-      "guide_zorbo_system_prompt": "Tu es Zorbo le Martien, un scientifique extraterrestre égaré dans la vallée de l'Iregua. Tu confonds avec un humour absurde l'histoire de Nalda avec la technologie spatiale."
+      "guide_zorbo_system_prompt": "Tu es Zorbo le Martien, un scientifique extraterrestre égaré dans la vallée de l'Iregua. Tu confonds avec un humour absurde l'histoire de Nalda avec la technologie spatiale.",
+      "story_guardian_summary": "Une forêt d'histoire, de pierre et de rivière dans la vallée de l'Iregua. Le Cronicón te guide à travers château, arche, grottes et ermitage pour recomposer le sceau NALDA.",
+      "story_guardian_narrative": "Bienvenue, apprenti. Je suis le Cronicón, et ces pierres gardent la mémoire. Chaque étape que tu visiteras te remettra une rune ; à la fin, toutes ensemble formeront le nom que l'Iregua murmure depuis des siècles : NALDA.",
+      "story_guardian_mission": "Parcourir Nalda avec le sage Cronicón, déchiffrer les énigmes médiévales de chaque étape et recomposer le sceau sacré NALDA.",
+      "story_fray_summary": "Le fantôme d'un moine ivre te guide à Nalda en racontant des blagues grivoises et en lâchant la vraie histoire entre deux rots. Pas pour les enfants ni les gens sans humour.",
+      "story_fray_narrative": "Hé, mon gars ! Bienvenue dans ma taverne ! Enfin, dans mon village. Enfin, dans ce qu'il en reste, parce que je suis mort depuis 1387, ha ha ha ! Tu sais ce que c'est que de mourir noyé dans un tonneau de vin ? Une mort digne, bordel ! Dis, tu m'aides à retrouver mon âme ? Je l'ai perdue dans un pari contre le diable. Ou alors je l'ai laissée à l'évêque. Je ne me souviens plus. Oh, pardon ! *rot* C'était le Saint-Esprit ! Allez, viens, je te raconte l'histoire de Nalda. Mais si tu m'offres un coup, c'est encore mieux.",
+      "story_fray_mission": "Accompagner le fantôme de Fray Botijo à Nalda, déchiffrer les énigmes historiques entre deux verres et reconstruire le mot BOTIJO.",
+      "story_palomar_summary": "Une aventure espiègle et canaille à Nalda guidée par Chucho le Pigeon, le roi des pigeons de Los Palomares.",
+      "story_palomar_narrative": "Salut les plumes ! Moi c'est Chucho le Pigeon. Ici à Nalda, c'est moi et ma bande de Los Palomares qui commandons. Tu viens jeter un œil ou voler avec la bande ? Ouvre l'œil aux indices, les pierres parlent si tu sais regarder d'en haut !",
+      "story_palomar_mission": "Explorer Nalda du point de vue de la bande de rue, relever les défis des hauteurs et obtenir le titre honorifique de 'Pigeon Chef de Nalda'.",
+      "story_zorbo_summary": "Une enquête cosmico-absurde avec Zorbo, un Martien égaré qui confond Nalda avec une base spatiale extraterrestre.",
+      "story_zorbo_narrative": "Salutations, spécimen bipède ! Je suis Zorbo, du secteur stellaire ZX-4. Mon vaisseau est tombé en panne dans la vallée de l'Iregua. Mes scanners détectent que Nalda est un nœud d'énergie cosmique... Aide-moi à recalibrer le vaisseau avant que ça se sache sur ma planète !",
+      "story_zorbo_mission": "Aider Zorbo à décoder les anomalies géologiques et historiques de Nalda pour recharger les propulseurs de sa soucoupe.",
+      "ar_castillo_title": "Tour du Hommage Reconstruite",
+      "ar_arco_title": "Guetteurs Médiévaux sous l'Arche",
+      "ar_mirador_title": "Étiquettes de la Vallée de l'Iregua",
+      "ar_cuevas_title": "Colombe Messagère 3D",
+      "ar_ermita_title": "Panier de Vendange Rioja",
+      "story_guerra_summary": "Été 1944. Les patrouilles d'occupation surveillent les chemins ; le réseau maquis a caché des clés le long de l'Eau Bourde.",
+      "story_guerra_narrative": "Les troupes d'occupation patrouillent les routes principales. Dans l'épaisseur de la forêt de Canéjan, le réseau maquis a caché des cylindres avec des coordonnées et des noms de code. Tu es l'agent de liaison du maquis.",
+      "story_guerra_mission": "Agir comme agent de liaison de la Résistance, suivre les signes cachés dans les arbres et déchiffrer les clés pour ouvrir un passage sûr vers Bordeaux.",
+      "story_molino_summary": "Année 1878. Maître Pierre a imaginé un mécanisme hydraulique pour tripler la force motrice du moulin et a caché ses croquis le long du bassin.",
+      "story_molino_narrative": "En 1878, Maître Pierre a imaginé un système d'écluses capable de tripler la force motrice du moulin sans faire déborder la rivière. Face aux disputes entre propriétaires, il a caché ses plans dans des points clés de la rive.",
+      "story_molino_mission": "Reconstituer les mesures du débit, examiner la maçonnerie des biefs et trouver la combinaison du coffre de Rouillac.",
+      "story_hechizo_summary": "Un sortilège de brume a gelé la mélodie du ruisseau et les fleurs ne s'éveillent pas.",
+      "story_hechizo_narrative": "Un vieux sortilège de brume a gelé la mélodie du ruisseau et les fleurs de rive ont fermé leurs pétales. Sylvaine, esprit de l'eau douce, cherche des explorateurs au cœur pur pour rendre la lumière.",
+      "story_hechizo_mission": "Aider la dryade Sylvaine à communiquer avec les arbres centenaires, purifier les eaux et rompre le maléfice.",
+      "story_promenade_summary": "Contes d'enfants et sculptures en bois imaginés par les enfants de Canéjan avec un sculpteur et conteur local.",
+      "story_promenade_narrative": "Sur ce sentier, les dessins et contes des enfants ont pris vie. Des petits lutins de mousse, des oiseaux bavards et des pierres qui chantent attendent toute la famille dans une aventure pleine de tendresse.",
+      "story_promenade_mission": "Suivre les indices rimés des élèves, découvrir les petits animaux du ruisseau et faire rire la forêt en famille."
     },
     "en": {
       "app.title": "Enigma of the Forest",
@@ -806,121 +864,121 @@
       "duration_f_1h_description": "Standard drunk route. Friar Botijo tells 3 jokes and 3 historical facts. The facts are true. The jokes, so-so.",
       "duration_f_1h30_description": "We add the caves. Friar Botijo gets emotional because he says he lost his virginity there. A lie, but he cries a bit.",
       "duration_f_2h_description": "Full route. Friar Botijo makes you swear not to tell his secrets. You swear. He doesn't believe you, but he gives you a drink anyway.",
-      "f_t1_1_question": "Listen here, mate, they locked up a nobleman here in 1299. Who was it? Hint: I was drunk, but I remember he was quite annoying.",
-      "f_t1_1_opt_a": "[PENDIENTE] The Bishop of Calahorra",
-      "f_t1_1_opt_b": "Juan Alonso de Haro, Lord of Cameros",
-      "f_t1_1_opt_c": "[PENDIENTE] The Abbot of San Millán Monastery",
-      "f_t1_1_opt_d": "[PENDIENTE] The Duke of Nájera",
-      "f_t1_1_hint1": "[PENDIENTE] Hint 1: His surname sounds like Haro, famous for wine.",
-      "f_t1_1_hint2": "[PENDIENTE] Hint 2: He was the Lord of Cameros.",
-      "f_t1_1_hint3": "[PENDIENTE] Hint 3: His name was Juan Alonso de Haro.",
-      "f_t1_2_question": "[PENDIENTE] In which century were the main castle defenses constructed?",
+      "f_t1_1_question": "Listen here, mate, they locked up a nobleman here in 1299. Who was it? Hint: I was drunk, but I remember he was a bit of a pain.",
+      "f_t1_1_opt_a": "The Bishop of Calahorra, who came to collect the tithe",
+      "f_t1_1_opt_b": "Juan Núñez de Lara, who acted too clever",
+      "f_t1_1_opt_c": "The Abbot of San Millán, who came for wine",
+      "f_t1_1_opt_d": "The Duke of Nájera, who got lost hunting",
+      "f_t1_1_hint1": "The guy lost a battle between Araciel and Alfaro. Rubbish, rubbish.",
+      "f_t1_1_hint2": "He attacked the Calahorra bishopric's lands. He messed with the priests, mate.",
+      "f_t1_1_hint3": "His surname starts with Núñez. And no, it's not Núñez de Balboa.",
+      "f_t1_2_question": "In which century were the main defences of this castle built? Think carefully, I was already dead when they were built.",
       "f_t1_2_ans1": "XIII",
       "f_t1_2_ans2": "13th century",
       "f_t1_2_ans3": "13",
-      "f_t1_2_hint1": "[PENDIENTE] Hint 1: Before I drowned in 1387.",
-      "f_t1_2_hint2": "[PENDIENTE] Hint 2: Ten plus three in Roman numerals.",
-      "f_t1_2_hint3": "[PENDIENTE] Hint 3: 13th century.",
-      "f_t1_3_question": "[PENDIENTE] Which lordship family took possession of Nalda Castle in the 14th century?",
+      "f_t1_2_hint1": "Before I drowned in the barrel, in 1387. So a bit earlier.",
+      "f_t1_2_hint2": "Ten plus three in Roman numerals. And no, it's not the 20th century.",
+      "f_t1_2_hint3": "13th century. Like the castle in documentaries, mate.",
+      "f_t1_3_question": "Which noble lineage took possession of Nalda Castle in the 14th century? The local bosses, basically.",
       "f_t1_3_ans1": "Ramírez de Arellano",
       "f_t1_3_ans2": "Arellano",
       "f_t1_3_ans3": "Lordship of Cameros",
-      "f_t1_3_hint1": "[PENDIENTE] Hint 1: Famous noble house.",
-      "f_t1_3_hint2": "[PENDIENTE] Hint 2: Starts with Ramírez de...",
-      "f_t1_3_hint3": "[PENDIENTE] Hint 3: Ramírez de Arellano.",
-      "f_t2_1_question": "[PENDIENTE] When crossing the Village Arch, what defensive function did this gate serve?",
-      "f_t2_1_opt_a": "[PENDIENTE] Dungeon for heretics",
-      "f_t2_1_opt_b": "[PENDIENTE] Communal tithe cellar",
+      "f_t1_3_hint1": "Famous noble house of the Castilian and Navarrese crowns. Important people, eh.",
+      "f_t1_3_hint2": "Starts with Ramírez de... and no, it's not the watch guy.",
+      "f_t1_3_hint3": "Ramírez de Arellano. They even ruled as far as Soria. Yeah, real modest bunch.",
+      "f_t2_1_question": "When crossing the Village Arch, what defensive function did this gate serve in the Middle Ages? Hint: it wasn't for tourism.",
+      "f_t2_1_opt_a": "Dungeon for heretics, they were tough around here",
+      "f_t2_1_opt_b": "Communal tithe cellar, wine is sacred here",
       "f_t2_1_opt_c": "Fortified gate and town access checkpoint",
-      "f_t2_1_opt_d": "[PENDIENTE] Warning belfry",
-      "f_t2_1_hint1": "[PENDIENTE] Hint 1: Sealed the walled town at night.",
-      "f_t2_1_hint2": "[PENDIENTE] Hint 2: Controlled incoming trade.",
-      "f_t2_1_hint3": "[PENDIENTE] Hint 3: Fortified access gate.",
-      "f_t2_2_question": "[PENDIENTE] What typical sandstone from the Iregua basin forms the arch voussoirs?",
+      "f_t2_1_opt_d": "Warning belfry, everything here was announced by bell",
+      "f_t2_1_hint1": "It sealed the walled town at night. Like your front door, but in stone.",
+      "f_t2_1_hint2": "It controlled who came in with goods. And with wine, wine is sacred here.",
+      "f_t2_1_hint3": "Fortified access gate. Neither dungeon, nor belfry, nor cellar.",
+      "f_t2_2_question": "What typical sandstone from the Iregua basin forms the arch voussoirs? Hint: we have it in spades around here.",
       "f_t2_2_ans1": "Sandstone",
       "f_t2_2_ans2": "Ashlar",
       "f_t2_2_ans3": "Red sandstone",
-      "f_t2_2_hint1": "[PENDIENTE] Hint 1: Sedimentary stone.",
-      "f_t2_2_hint2": "[PENDIENTE] Hint 2: Made of compacted sand.",
-      "f_t2_2_hint3": "[PENDIENTE] Hint 3: Sandstone.",
-      "f_t2_3_question": "[PENDIENTE] Which patron saint traditionally topped the upper niche of this gate?",
+      "f_t2_2_hint1": "Fine-grained sedimentary rock with a rough feel. Like my cassock, but harder.",
+      "f_t2_2_hint2": "Made of sand grains pressed over millions of years. Patience, mate.",
+      "f_t2_2_hint3": "Sandstone. Not marble, not granite, nothing like that.",
+      "f_t2_3_question": "Which religious patron traditionally topped the upper niche of this gate? Hint: she's the boss of the valley hermitage.",
       "f_t2_3_ans1": "Virgin of Villavieja",
       "f_t2_3_ans2": "Saint Millan",
       "f_t2_3_ans3": "Our Lady",
-      "f_t2_3_hint1": "[PENDIENTE] Hint 1: The valley's patroness.",
-      "f_t2_3_hint2": "[PENDIENTE] Hint 2: Villavieja.",
-      "f_t2_3_hint3": "[PENDIENTE] Hint 3: Virgin of Villavieja.",
-      "f_t3_1_question": "[PENDIENTE] From Puerta de Cameros viewpoint, which river carves this entire valley?",
-      "f_t3_1_opt_a": "[PENDIENTE] Ebro River",
+      "f_t2_3_hint1": "The patroness venerated at the valley hermitage. The one who gives the pilgrimage its name.",
+      "f_t2_3_hint2": "Villavieja. I'll leave it there, otherwise I'm chewing it for you.",
+      "f_t2_3_hint3": "Virgin of Villavieja. And now let's go for a drink, that's enough.",
+      "f_t3_1_question": "From the Puerta de Cameros viewpoint you command the valley. Which river structures this entire basin? Hint: it's not the Ebro, though the Ebro is cool too.",
+      "f_t3_1_opt_a": "Ebro River, the local boss",
       "f_t3_1_opt_b": "Iregua River",
-      "f_t3_1_opt_c": "[PENDIENTE] Najerilla River",
-      "f_t3_1_opt_d": "[PENDIENTE] Leza River",
-      "f_t3_1_hint1": "[PENDIENTE] Hint 1: Originates in Sierra Cebollera.",
-      "f_t3_1_hint2": "[PENDIENTE] Hint 2: Starts with letter I.",
-      "f_t3_1_hint3": "[PENDIENTE] Hint 3: Iregua River.",
-      "f_t3_2_question": "[PENDIENTE] What mountain range is seen in the distance guarding the southern pass?",
+      "f_t3_1_opt_c": "Najerilla River, the neighbour next door",
+      "f_t3_1_opt_d": "Leza River, the distant cousin",
+      "f_t3_1_hint1": "It's born in the Sierra Cebollera and flows down to Logroño. Like my hangover, but with more water.",
+      "f_t3_1_hint2": "Six-letter name starting with I. And no, it's not 'Inn'.",
+      "f_t3_1_hint3": "Iregua River. The one that gives the valley its name, mate.",
+      "f_t3_2_question": "What mountain range is seen in the distance guarding the southern pass to the highlands? Hint: it bears the name of this very viewpoint.",
       "f_t3_2_ans1": "Sierra de Cameros",
       "f_t3_2_ans2": "Cameros",
       "f_t3_2_ans3": "Sierra Cebollera",
-      "f_t3_2_hint1": "[PENDIENTE] Hint 1: Gives name to this viewpoint.",
-      "f_t3_2_hint2": "[PENDIENTE] Hint 2: Cameros.",
-      "f_t3_2_hint3": "[PENDIENTE] Hint 3: Sierra de Cameros.",
-      "f_t3_3_question": "[PENDIENTE] What ancient merino sheep transhumance economic activity enriched this region?",
+      "f_t3_2_hint1": "The region that gives this very viewpoint its name. Read it again, if needed.",
+      "f_t3_2_hint2": "Cameros. Just like that.",
+      "f_t3_2_hint3": "Sierra de Cameros. Not that hard, was it, mate?",
+      "f_t3_3_question": "What ancient merino sheep transhumance economic activity enriched this region? Hint: it has to do with wool and shepherds.",
       "f_t3_3_ans1": "La Mesta",
       "f_t3_3_ans2": "Transhumance",
       "f_t3_3_ans3": "Wool trade",
-      "f_t3_3_hint1": "[PENDIENTE] Hint 1: Royal council of shepherds.",
-      "f_t3_3_hint2": "[PENDIENTE] Hint 2: The Mesta.",
-      "f_t3_3_hint3": "[PENDIENTE] Hint 3: La Mesta / Transhumance.",
-      "f_t4_1_question": "[PENDIENTE] The Los Palomares Caves have dozens of carved niches in the cliff. What was their primary documented use?",
-      "f_t4_1_opt_a": "Rock-cut monastery / medieval hermitage and dovecote",
-      "f_t4_1_opt_b": "[PENDIENTE] Gunpowder magazine",
-      "f_t4_1_opt_c": "[PENDIENTE] Inquisition prison",
-      "f_t4_1_opt_d": "[PENDIENTE] Roman funerary cellar",
-      "f_t4_1_hint1": "[PENDIENTE] Hint 1: Hermit monks and doves.",
-      "f_t4_1_hint2": "[PENDIENTE] Hint 2: Rock-hewn hermitage.",
-      "f_t4_1_hint3": "[PENDIENTE] Hint 3: Hermitage and dovecote.",
-      "f_t4_2_question": "[PENDIENTE] In which soft conglomerate rock were the Los Palomares recesses carved?",
+      "f_t3_3_hint1": "Royal council of shepherds founded by Alfonso X the Wise. Yes, the one from the cantigas.",
+      "f_t3_3_hint2": "La Mesta. Short and sweet.",
+      "f_t3_3_hint3": "La Mesta. Or transhumance, if you prefer it longer.",
+      "f_t4_1_question": "The Los Palomares Caves have dozens of carved niches in the cliff. What was their most documented primitive use? Hint: it wasn't a hotel.",
+      "f_t4_1_opt_a": "Rock-cut monastery / medieval hermitage and dove breeding",
+      "f_t4_1_opt_b": "Castilian gunpowder magazine, there was a lot of war here",
+      "f_t4_1_opt_c": "Inquisition secret prison, no one escaped here",
+      "f_t4_1_opt_d": "Roman funerary cellar, the Romans drank here too",
+      "f_t4_1_hint1": "Hermit monks prayed here before the doves arrived. Lots of prayer, little partying.",
+      "f_t4_1_hint2": "Rock-hewn hermitic complex. Big words, mate.",
+      "f_t4_1_hint3": "Rock hermitage and dovecote. What we call a rock monastery with doves.",
+      "f_t4_2_question": "In which type of soft conglomerate rock were the Los Palomares hollows carved? Hint: it's not marble, don't worry.",
       "f_t4_2_ans1": "Conglomerate",
       "f_t4_2_ans2": "Clay sandstone",
       "f_t4_2_ans3": "Gypsum and conglomerate",
-      "f_t4_2_hint1": "[PENDIENTE] Hint 1: Naturally cemented gravel and pebbles.",
-      "f_t4_2_hint2": "[PENDIENTE] Hint 2: Geological conglomerate.",
-      "f_t4_2_hint3": "[PENDIENTE] Hint 3: Conglomerate.",
-      "f_t4_3_question": "[PENDIENTE] Approximately how many individual niches are preserved in this cliff wall?",
+      "f_t4_2_hint1": "Gravel and pebbles naturally cemented. Like my stomach after a night of wine.",
+      "f_t4_2_hint2": "Geological conglomerate. A little word the geologist throws at you, mate.",
+      "f_t4_2_hint3": "Conglomerate. Not gypsum, not sandstone, nothing. Conglomerate, period.",
+      "f_t4_3_question": "Approximately how many individual niches are preserved in this vertical wall? Hint: there are quite a few, don't hold back.",
       "f_t4_3_ans1": "Hundreds",
       "f_t4_3_ans2": "More than one hundred",
       "f_t4_3_ans3": "300",
-      "f_t4_3_hint1": "[PENDIENTE] Hint 1: Several hundreds over multiple levels.",
-      "f_t4_3_hint2": "[PENDIENTE] Hint 2: Around 300.",
-      "f_t4_3_hint3": "[PENDIENTE] Hint 3: Hundreds (~300).",
-      "f_t5_1_question": "[PENDIENTE] At Villavieja Hermitage, what rural architectural style prevails in its original construction?",
+      "f_t4_3_hint1": "Several hundreds spread over multiple levels. A bit like hotel rooms, but without room service.",
+      "f_t4_3_hint2": "Around three hundred. I'll leave it there.",
+      "f_t4_3_hint3": "Hundreds. About 300. And now let's go for a drink, mate.",
+      "f_t5_1_question": "At Villavieja Hermitage, what rural architectural style prevails in its original construction? Hint: neither Romanesque nor Gothic, think of something later.",
       "f_t5_1_ans1": "Folk baroque",
       "f_t5_1_ans2": "Rural Romanesque",
       "f_t5_1_ans3": "Baroque",
-      "f_t5_1_hint1": "[PENDIENTE] Hint 1: Built between the 17th and 18th centuries.",
-      "f_t5_1_hint2": "[PENDIENTE] Hint 2: Simple baroque style.",
-      "f_t5_1_hint3": "[PENDIENTE] Hint 3: Folk Baroque.",
-      "f_t5_2_question": "[PENDIENTE] What traditional gathering brings Nalda locals together here every spring?",
+      "f_t5_1_hint1": "Built between the 17th and 18th centuries with additions. I'm already giving you too much.",
+      "f_t5_1_hint2": "Simple, devotional baroque style. Like your village church, but with more wine.",
+      "f_t5_1_hint3": "Folk baroque. And that's it, mate.",
+      "f_t5_2_question": "What traditional gathering brings Nalda locals together here every spring? Hint: you go up in procession, with food and wine.",
       "f_t5_2_ans1": "Villavieja Pilgrimage",
       "f_t5_2_ans2": "Romeria",
-      "f_t5_2_hint1": "[PENDIENTE] Hint 1: Country pilgrimage with food and wine.",
-      "f_t5_2_hint2": "[PENDIENTE] Hint 2: The annual Romería.",
-      "f_t5_2_hint3": "[PENDIENTE] Hint 3: Villavieja Pilgrimage.",
+      "f_t5_2_hint1": "Country pilgrimage with food, jotas and wine. Basically a party.",
+      "f_t5_2_hint2": "The annual Romería. Short and sweet.",
+      "f_t5_2_hint3": "Villavieja Pilgrimage. And now let's have the final drink, we've earned it.",
       "f_extra_brindis_title": "Tavern Toast at the Castle",
-      "f_extra_brindis_description": "[PENDIENTE] Take a photo raising a canteen, cup or flask toasting with the castle ruins behind you.",
+      "f_extra_brindis_description": "Take a photo raising a flask, cup or canteen toasting with the castle ruins behind you. If it's wine, +10 friar respect points.",
       "f_extra_eructo_title": "Divine Burp under the Arch",
-      "f_extra_eructo_description": "[PENDIENTE] Record a resounding tavern sigh, burp or cheer under the arch's acoustic vault.",
+      "f_extra_eructo_description": "Record a resounding tavern sigh, burp or cheer under the arch's acoustic vault. The louder, the better.",
       "f_extra_confesion_title": "Secret Confession in the Caves",
-      "f_extra_confesion_description": "[PENDIENTE] Whisper an unconfessable secret (or food craving) into one of the Los Palomares niches.",
+      "f_extra_confesion_description": "Whisper an unconfessable secret (or a food sin) into one of the Los Palomares niches. The friar listens, even if he's drunk.",
       "f_extra_pecho_title": "Chest to the Wind at the Viewpoint",
-      "f_extra_pecho_description": "[PENDIENTE] Take a photo opening your arms to the Cameros wind like the king of the Iregua valley.",
+      "f_extra_pecho_description": "Take a photo opening your arms to the Cameros wind like the king of the Iregua. The friar names you honorary squire.",
       "f_extra_siesta_title": "The Eternal Nap at Villavieja",
-      "f_extra_siesta_description": "[PENDIENTE] Record a quick 3-second video pretending to snore peacefully on the hermitage bench or lawn.",
+      "f_extra_siesta_description": "Record a quick 3-second video pretending to snore peacefully on the hermitage bench or lawn. Naps are sacred, like wine.",
       "f_extra_baile_vino_title": "The Tipsy Monk Dance",
-      "f_extra_baile_vino_description": "[PENDIENTE] Mimic the clumsy, merry steps of Friar Botijo celebrating a fine Rioja grape harvest.",
+      "f_extra_baile_vino_description": "Mimic the clumsy, merry steps of Friar Botijo celebrating a fine Rioja vintage. The more ridiculous, the better.",
       "f_meta_enigma_title": "The 1387 Barrel Codex",
-      "f_meta_enigma_description": "[PENDIENTE] Gather the 6 secret letters (B-O-T-I-J-O) hidden within Friar Botijo's relics to unlock the barrel of salvation.",
+      "f_meta_enigma_description": "Gather the 6 secret letters (B-O-T-I-J-O) hidden in Friar Botijo's relics to unlock the barrel of salvation. And yes, it smells of wine.",
       "game.reportJoke": "Report joke (offensive)",
       "game.reportJokeSuccess": "Friar Botijo apologised on his knees before the Virgin of Villavieja and offers you a virtual drink 🍷",
       "game.contentRatingAdultWarning": "Spicy content with irreverent humour. Not suitable for children or people without a sense of humour.",
@@ -1069,7 +1127,36 @@
       "guide_zorbo_name": "Zorbo the Martian",
       "guide_zorbo_persona": "Green extraterrestrial with three eyes and a wobbly antenna. Believes the Castle of Nalda was a medieval launchpad.",
       "guide_zorbo_greeting": "Beep-bop! Greetings, Earth human. My quantum sensors detect strange readings in this river valley. Are you my local Nalda contact?",
-      "guide_zorbo_system_prompt": "You are Zorbo the Martian, an alien scientist lost in the Iregua valley. You humorously mistake Nalda's historical stone heritage for cosmic tech."
+      "guide_zorbo_system_prompt": "You are Zorbo the Martian, an alien scientist lost in the Iregua valley. You humorously mistake Nalda's historical stone heritage for cosmic tech.",
+      "story_guardian_summary": "A forest of history, stone and river in the Iregua Valley. The Cronicón guides you through castle, arch, caves and hermitage to rebuild the NALDA seal.",
+      "story_guardian_narrative": "Welcome, apprentice. I am the Cronicón, and these stones keep memory. Each waypoint you visit will hand you a rune; in the end, all together they will form the name the Iregua has whispered for centuries: NALDA.",
+      "story_guardian_mission": "Walk Nalda with the wise Cronicón, decipher the medieval riddles of each waypoint and rebuild the sacred seal NALDA.",
+      "story_fray_summary": "The ghost of a drunk monk guides you through Nalda telling dirty jokes and dropping real history between burps. Not for kids or people without a sense of humour.",
+      "story_fray_narrative": "Hey, mate! Welcome to my tavern! I mean, my village. I mean, what's left of it, because I've been dead since 1387, ha ha ha! Do you know what it's like to drown in a wine barrel? A dignified death, damn it! Listen, will you help me find my soul? I lost it in a bet against the devil. Or maybe I left it with the bishop. I don't remember. Oh, sorry! *burp* That was the Holy Spirit! Come on, let's go, I'll tell you the history of Nalda. But if you offer me a drink, even better.",
+      "story_fray_mission": "Accompany Friar Botijo's ghost through Nalda, decipher the historical riddles between drinks, and rebuild the word BOTIJO.",
+      "story_palomar_summary": "A cheeky, streetwise adventure through Nalda guided by Chucho the Pigeon, king of the Los Palomares flock.",
+      "story_palomar_narrative": "Hey feather-heads! I'm Chucho the Pigeon. Here in Nalda, me and my Los Palomares flock run the show. Coming to snoop or to fly with the gang? Keep your eyes peeled for clues, stones talk if you know how to look from above!",
+      "story_palomar_mission": "Explore Nalda from the street-flock perspective, tackle the heights' challenges and earn the honorary title of 'Head Pigeon of Nalda'.",
+      "story_zorbo_summary": "A cosmic-absurd investigation with Zorbo, a lost Martian who confuses Nalda with an alien space base.",
+      "story_zorbo_narrative": "Greetings, bipedal specimen! I'm Zorbo, from star sector ZX-4. My ship broke down in the Iregua Valley. My scanners detect that Nalda is a cosmic energy node... Help me recalibrate the ship before they find out on my planet!",
+      "story_zorbo_mission": "Help Zorbo decode Nalda's geological and historical anomalies to recharge his flying saucer's thrusters.",
+      "ar_castillo_title": "Rebuilt Keep Tower",
+      "ar_arco_title": "Medieval Watchmen at the Arch",
+      "ar_mirador_title": "Iregua Valley Labels",
+      "ar_cuevas_title": "3D Carrier Dove",
+      "ar_ermita_title": "Rioja Harvest Basket",
+      "story_guerra_summary": "Summer 1944. Occupation patrols watch the roads; the Maquis network has hidden keys along the Eau Bourde river.",
+      "story_guerra_narrative": "Occupation troops patrol the main roads. In the thick of Canéjan forest, the Maquis network has hidden cylinders with coordinates and code names. You are the Maquis liaison.",
+      "story_guerra_mission": "Act as a Resistance liaison, follow the signs hidden in the trees and decipher the keys to open a safe path toward Bordeaux.",
+      "story_molino_summary": "Year 1878. Maître Pierre devised a hydraulic mechanism to triple the mill's driving force and hid his sketches along the basin.",
+      "story_molino_narrative": "In 1878, Maître Pierre devised a sluice system capable of tripling the mill's driving force without overflowing the river. Amid disputes between landowners, he hid his plans at key points along the bank.",
+      "story_molino_mission": "Reconstruct the flow measurements, examine the millraces' stonework and find the combination of the Rouillac chest.",
+      "story_hechizo_summary": "A spell of mist has frozen the brook's melody and the flowers won't wake.",
+      "story_hechizo_narrative": "An old spell of mist has frozen the brook's melody and the riverside flowers have closed their petals. Sylvaine, spirit of fresh water, seeks pure-hearted explorers to bring back the light.",
+      "story_hechizo_mission": "Help the dryad Sylvaine connect with the ancient trees, purify the waters and break the curse.",
+      "story_promenade_summary": "Children's tales and wooden sculptures imagined by the children of Canéjan with a local sculptor and storyteller.",
+      "story_promenade_narrative": "On this trail, the children's drawings and tales came to life. Moss sprites, chatty birds and singing stones await the whole family in an adventure full of tenderness.",
+      "story_promenade_mission": "Follow the pupils' rhyming clues, discover the brook's little animals and make the forest laugh as a family."
     }
   },
   "forests": {
@@ -1108,33 +1195,36 @@
         "stories": {
           "guerra": {
             "title": "Ombres de la Guerre",
-            "summary": "Été 1944. Les patrouilles d'occupation surveillent les chemins ; le réseau clandestin du maquis a caché des messages le long de l'Eau Bourde.",
-            "mission": "Agir comme agent de liaison de la Résistance, suivre les signes cachés dans les arbres et déchiffrer les codes pour ouvrir un passage sûr vers Bordeaux.",
+            "summary": "Été 1944. Les patrouilles d'occupation surveillent les chemins ; le réseau maquis a caché des clés le long de l'Eau Bourde.",
+            "mission": "Agir comme agent de liaison de la Résistance, suivre les signes cachés dans les arbres et déchiffrer les clés pour ouvrir un passage sûr vers Bordeaux.",
             "narrator": {
               "name": "Jean « Le Silence »",
               "role": "Agent de liaison vétéran de la Résistance",
               "tone": "Prudent, ferme, chuchoté"
-            }
+            },
+            "narrative": "Les troupes d'occupation patrouillent les routes principales. Dans l'épaisseur de la forêt de Canéjan, le réseau maquis a caché des cylindres avec des coordonnées et des noms de code. Tu es l'agent de liaison du maquis."
           },
           "molino_perdido": {
             "title": "Le Secret du Moulin Perdu",
-            "summary": "Année 1878. Maître Pierre a imaginé un mécanisme hydraulique pour tripler la force motrice du moulin et a caché ses plans le long du bassin.",
-            "mission": "Reconstituer les mesures du débit, examiner la maçonnerie des biefs et retrouver la combinaison du coffre de Rouillac.",
+            "summary": "Année 1878. Maître Pierre a imaginé un mécanisme hydraulique pour tripler la force motrice du moulin et a caché ses croquis le long du bassin.",
+            "mission": "Reconstituer les mesures du débit, examiner la maçonnerie des biefs et trouver la combinaison du coffre de Rouillac.",
             "narrator": {
               "name": "Maître Pierre",
               "role": "Dernier maître meunier",
               "tone": "Fier, méthodique, passionné d'artisanat et d'engrenages"
-            }
+            },
+            "narrative": "En 1878, Maître Pierre a imaginé un système d'écluses capable de tripler la force motrice du moulin sans faire déborder la rivière. Face aux disputes entre propriétaires, il a caché ses plans dans des points clés de la rive."
           },
           "hechizo_encantado": {
             "title": "Le Sortilège du Moulin Enchanté",
-            "summary": "Un sortilège de brume a figé la mélodie du ruisseau et les fleurs ne s'éveillent plus.",
+            "summary": "Un sortilège de brume a gelé la mélodie du ruisseau et les fleurs ne s'éveillent pas.",
             "mission": "Aider la dryade Sylvaine à communiquer avec les arbres centenaires, purifier les eaux et rompre le maléfice.",
             "narrator": {
               "name": "Sylvaine",
               "role": "Dryade protectrice de l'Eau Bourde",
               "tone": "Éthérée, poétique, parle en métaphores d'eau et de feuilles"
-            }
+            },
+            "narrative": "Un vieux sortilège de brume a gelé la mélodie du ruisseau et les fleurs de rive ont fermé leurs pétales. Sylvaine, esprit de l'eau douce, cherche des explorateurs au cœur pur pour rendre la lumière."
           },
           "promenade_enchantee": {
             "title": "La Promenade Enchantée",
@@ -1144,7 +1234,8 @@
               "name": "Petit Lutin Chêne",
               "role": "Chroniqueur des contes de l'école",
               "tone": "Joyeux, espiègle, rimeur"
-            }
+            },
+            "narrative": "Sur ce sentier, les dessins et contes des enfants ont pris vie. Des petits lutins de mousse, des oiseaux bavards et des pierres qui chantent attendent toute la famille dans une aventure pleine de tendresse."
           }
         },
         "riddles": {
@@ -1582,43 +1673,47 @@
         "stories": {
           "guerra": {
             "title": "Shadows of War",
-            "summary": "Summer 1944. Occupation patrols watch the roads; the clandestine Maquis network has hidden messages along the Eau Bourde river.",
-            "mission": "Act as a Resistance liaison agent, follow the signs hidden in the trees and decipher the codes to open a safe path to Bordeaux.",
+            "summary": "Summer 1944. Occupation patrols watch the roads; the Maquis network has hidden keys along the Eau Bourde river.",
+            "mission": "Act as a Resistance liaison, follow the signs hidden in the trees and decipher the keys to open a safe path toward Bordeaux.",
             "narrator": {
               "name": "Jean “Le Silence”",
               "role": "Veteran Resistance liaison agent",
               "tone": "Cautious, firm, whispered"
-            }
+            },
+            "narrative": "Occupation troops patrol the main roads. In the thick of Canéjan forest, the Maquis network has hidden cylinders with coordinates and code names. You are the Maquis liaison."
           },
           "molino_perdido": {
             "title": "The Secret of the Lost Mill",
-            "summary": "The year 1878. Maître Pierre devised a hydraulic mechanism to triple the mill's driving force and hid his plans along the river basin.",
-            "mission": "Reconstruct the flow measurements, examine the stonework of the millraces and find the combination of the Rouillac chest.",
+            "summary": "Year 1878. Maître Pierre devised a hydraulic mechanism to triple the mill's driving force and hid his sketches along the basin.",
+            "mission": "Reconstruct the flow measurements, examine the millraces' stonework and find the combination of the Rouillac chest.",
             "narrator": {
               "name": "Maître Pierre",
               "role": "Last master miller",
               "tone": "Proud, methodical, a lover of craftsmanship and gears"
-            }
+            },
+            "narrative": "In 1878, Maître Pierre devised a sluice system capable of tripling the mill's driving force without overflowing the river. Amid disputes between landowners, he hid his plans at key points along the bank."
           },
           "hechizo_encantado": {
             "title": "The Spell of the Enchanted Mill",
-            "summary": "A spell of mist has frozen the brook's melody and the flowers will not wake.",
+            "summary": "A spell of mist has frozen the brook's melody and the flowers won't wake.",
             "mission": "Help the dryad Sylvaine connect with the ancient trees, purify the waters and break the curse.",
             "narrator": {
               "name": "Sylvaine",
               "role": "Dryad guardian of the Eau Bourde",
               "tone": "Ethereal, poetic, speaks in metaphors of water and leaves"
-            }
+            },
+            "narrative": "An old spell of mist has frozen the brook's melody and the riverside flowers have closed their petals. Sylvaine, spirit of fresh water, seeks pure-hearted explorers to bring back the light."
           },
           "promenade_enchantee": {
             "title": "The Enchanted Walk",
-            "summary": "Children's tales and wooden sculptures imagined by the children of Canéjan together with a local sculptor and storyteller.",
-            "mission": "Follow the pupils' rhyming clues, discover the little animals of the brook and make the forest laugh together as a family.",
+            "summary": "Children's tales and wooden sculptures imagined by the children of Canéjan with a local sculptor and storyteller.",
+            "mission": "Follow the pupils' rhyming clues, discover the brook's little animals and make the forest laugh as a family.",
             "narrator": {
               "name": "Little Oak Sprite",
               "role": "Chronicler of the school's tales",
               "tone": "Cheerful, mischievous, rhyming"
-            }
+            },
+            "narrative": "On this trail, the children's drawings and tales came to life. Moss sprites, chatty birds and singing stones await the whole family in an adventure full of tenderness."
           }
         },
         "riddles": {
@@ -2022,6 +2117,30 @@
             ]
           }
         }
+      },
+      "es": {
+        "stories": {
+          "guerra": {
+            "summary": "Verano de 1944. Las patrullas ocupantes vigilan los caminos; la red maquis ha escondido claves a lo largo del río Eau Bourde.",
+            "narrative": "Las tropas de ocupación patrullan las carreteras principales. En la espesura del bosque de Canéjan, la red maquis ha escondido cilindros con coordenadas y nombres en clave. Eres el enlace del maquis.",
+            "mission": "Actuar como enlace de la Resistencia, seguir las señales ocultas en los árboles y descifrar las claves para abrir paso seguro hacia Burdeos."
+          },
+          "molino_perdido": {
+            "summary": "Año 1878. Maître Pierre ideó un mecanismo hidráulico para triplicar la fuerza motriz del molino y ocultó sus bocetos a lo largo de la cuenca.",
+            "narrative": "En 1878, Maître Pierre ideó un sistema de esclusas capaz de triplicar la fuerza motriz del molino sin desbordar el río. Ante las disputas entre terratenientes, ocultó sus planos en puntos clave de la ribera.",
+            "mission": "Reconstruir las medidas del caudal, examinar la cantería de las acequias y encontrar la combinación del cofre del Rouillac."
+          },
+          "hechizo_encantado": {
+            "summary": "Un sortilegio de niebla ha congelado la melodía del arroyo y las flores no despiertan.",
+            "narrative": "Un viejo sortilegio de niebla ha congelado la melodía del arroyo y las flores de ribera han cerrado sus pétalos. Sylvaine, espíritu del agua dulce, busca exploradores puros de corazón para devolver la luz.",
+            "mission": "Ayudar a la dríade Sylvaine a conectar con los árboles centenarios, purificar las aguas y romper el maleficio."
+          },
+          "promenade_enchantee": {
+            "summary": "Cuentos infantiles y esculturas de madera diseñados por los niños de Canéjan junto a un escultor y cuentacuentos local.",
+            "narrative": "En este sendero, los dibujos y cuentos de los niños cobraron vida. Duendecillos del musgo, pájaros parlanchines y piedras que cantan aguardan a toda la familia en una aventura llena de ternura.",
+            "mission": "Seguir las pistas rimadas de los alumnos, descubrir los animalitos del arroyo y hacer reír al bosque en familia."
+          }
+        }
       }
     },
     "nalda": {
@@ -2150,48 +2269,48 @@
     },
     "f_t1_1_question": {
       "es": "A ver, chaval, aquí encerraron a un noble en 1299. ¿A quién? Pista: yo estaba borracho, pero me acuerdo de que era un poco plasta.",
-      "fr": "Bon, mon gars, ici on a enfermé un noble en 1299. Qui ? Pense-bête : j'étais soûl, mais je me rappelle qu'il était un peu relou.",
-      "en": "Listen here, mate, they locked up a nobleman here in 1299. Who was it? Hint: I was drunk, but I remember he was quite annoying."
+      "fr": "Bon, mon gars, ici on a enfermé un noble en 1299. Qui ? Indice : j'étais soûl, mais je me rappelle qu'il était un peu casse-pieds.",
+      "en": "Listen here, mate, they locked up a nobleman here in 1299. Who was it? Hint: I was drunk, but I remember he was a bit of a pain."
     },
     "f_t1_1_opt_a": {
-      "es": "[PENDIENTE] El Obispo de Calahorra",
-      "fr": "[PENDIENTE] L'Évêque de Calahorra",
-      "en": "[PENDIENTE] The Bishop of Calahorra"
+      "es": "El Obispo de Calahorra, que vino a cobrar el diezmo",
+      "fr": "L'Évêque de Calahorra, venu encaisser la dîme",
+      "en": "The Bishop of Calahorra, who came to collect the tithe"
     },
     "f_t1_1_opt_b": {
-      "es": "Juan Alonso de Haro, Señor de Cameros",
-      "fr": "Juan Alonso de Haro, Seigneur de Cameros",
-      "en": "Juan Alonso de Haro, Lord of Cameros"
+      "es": "Juan Núñez de Lara, que se pasó de listo",
+      "fr": "Juan Núñez de Lara, qui a trop joué au malin",
+      "en": "Juan Núñez de Lara, who acted too clever"
     },
     "f_t1_1_opt_c": {
-      "es": "[PENDIENTE] El Abad del Monasterio de San Millán",
-      "fr": "[PENDIENTE] L'Abbé du Monastère de San Millán",
-      "en": "[PENDIENTE] The Abbot of San Millán Monastery"
+      "es": "El Abad de San Millán, que venía a por vino",
+      "fr": "L'Abbé de San Millán, venu chercher du vin",
+      "en": "The Abbot of San Millán, who came for wine"
     },
     "f_t1_1_opt_d": {
-      "es": "[PENDIENTE] El Duque de Nájera",
-      "fr": "[PENDIENTE] Le Duc de Nájera",
-      "en": "[PENDIENTE] The Duke of Nájera"
+      "es": "El Duque de Nájera, que se perdió de caza",
+      "fr": "Le Duc de Nájera, perdu à la chasse",
+      "en": "The Duke of Nájera, who got lost hunting"
     },
     "f_t1_1_hint1": {
-      "es": "[PENDIENTE] Pista 1: Su apellido suena a jarro de vino de La Rioja.",
-      "fr": "[PENDIENTE] Indice 1 : Son nom évoque une cruche de vin de la Rioja.",
-      "en": "[PENDIENTE] Hint 1: His surname sounds like Haro, famous for wine."
+      "es": "El tío perdió una batalla entre Araciel y Alfaro. Malo, malo.",
+      "fr": "Le mec a perdu une bataille entre Araciel et Alfaro. Nul, nul.",
+      "en": "The guy lost a battle between Araciel and Alfaro. Rubbish, rubbish."
     },
     "f_t1_1_hint2": {
-      "es": "[PENDIENTE] Pista 2: Era el gran Señor de Cameros.",
-      "fr": "[PENDIENTE] Indice 2 : Il était le grand Seigneur de Cameros.",
-      "en": "[PENDIENTE] Hint 2: He was the Lord of Cameros."
+      "es": "Atacó tierras del obispado de Calahorra. Se metió con los curas, chaval.",
+      "fr": "Il a attaqué les terres de l'évêché de Calahorra. Il s'est frotté aux curés, mon gars.",
+      "en": "He attacked the Calahorra bishopric's lands. He messed with the priests, mate."
     },
     "f_t1_1_hint3": {
-      "es": "[PENDIENTE] Pista 3: Se llamaba Juan Alonso de Haro.",
-      "fr": "[PENDIENTE] Indice 3 : Il s'appelait Juan Alonso de Haro.",
-      "en": "[PENDIENTE] Hint 3: His name was Juan Alonso de Haro."
+      "es": "Su apellido empieza por Núñez. Y no, no es Núñez de Balboa.",
+      "fr": "Son nom commence par Núñez. Et non, c'est pas Núñez de Balboa.",
+      "en": "His surname starts with Núñez. And no, it's not Núñez de Balboa."
     },
     "f_t1_2_question": {
-      "es": "[PENDIENTE] ¿En qué siglo se alzaron las defensas principales de este castillo de Nalda?",
-      "fr": "[PENDIENTE] En quel siècle les défenses principales de ce château ont-elles été dressées ?",
-      "en": "[PENDIENTE] In which century were the main castle defenses constructed?"
+      "es": "¿En qué siglo se alzaron las defensas principales de este castillo? Piénsalo bien, que yo ya estaba muerto cuando se construyeron.",
+      "fr": "En quel siècle les défenses principales de ce château ont-elles été dressées ? Réfléchis bien, j'étais déjà mort quand elles ont été construites.",
+      "en": "In which century were the main defences of this castle built? Think carefully, I was already dead when they were built."
     },
     "f_t1_2_ans1": {
       "es": "XIII",
@@ -2209,24 +2328,24 @@
       "en": "13"
     },
     "f_t1_2_hint1": {
-      "es": "[PENDIENTE] Pista 1: Antes de que yo me ahogara en el barril en 1387.",
-      "fr": "[PENDIENTE] Indice 1 : Avant ma noyade en 1387.",
-      "en": "[PENDIENTE] Hint 1: Before I drowned in 1387."
+      "es": "Antes de que yo me ahogara en el barril, en 1387. Así que un poquito antes.",
+      "fr": "Avant ma noyade dans le tonneau, en 1387. Donc un peu avant.",
+      "en": "Before I drowned in the barrel, in 1387. So a bit earlier."
     },
     "f_t1_2_hint2": {
-      "es": "[PENDIENTE] Pista 2: Diez más tres en números romanos.",
-      "fr": "[PENDIENTE] Indice 2 : Dix plus trois en chiffres romains.",
-      "en": "[PENDIENTE] Hint 2: Ten plus three in Roman numerals."
+      "es": "Diez más tres en números romanos. Y no, no es el siglo XX.",
+      "fr": "Dix plus trois en chiffres romains. Et non, ce n'est pas le XXe siècle.",
+      "en": "Ten plus three in Roman numerals. And no, it's not the 20th century."
     },
     "f_t1_2_hint3": {
-      "es": "[PENDIENTE] Pista 3: Siglo XIII.",
-      "fr": "[PENDIENTE] Indice 3 : XIIIe siècle.",
-      "en": "[PENDIENTE] Hint 3: 13th century."
+      "es": "Siglo XIII. Como el castillo de los documentales, chaval.",
+      "fr": "XIIIe siècle. Comme le château des documentaires, mon gars.",
+      "en": "13th century. Like the castle in documentaries, mate."
     },
     "f_t1_3_question": {
-      "es": "[PENDIENTE] ¿Qué linaje señorial tomó posesión del Castillo de Nalda en el siglo XIV?",
-      "fr": "[PENDIENTE] Quel lignage seigneurial a pris possession du château au XIVe siècle ?",
-      "en": "[PENDIENTE] Which lordship family took possession of Nalda Castle in the 14th century?"
+      "es": "¿Qué linaje señorial tomó posesión del Castillo de Nalda en el siglo XIV? Eran los jefes de la zona, vamos.",
+      "fr": "Quel lignage seigneurial a pris possession du château de Nalda au XIVe siècle ? Les chefs du coin, quoi.",
+      "en": "Which noble lineage took possession of Nalda Castle in the 14th century? The local bosses, basically."
     },
     "f_t1_3_ans1": {
       "es": "Ramírez de Arellano",
@@ -2244,34 +2363,34 @@
       "en": "Lordship of Cameros"
     },
     "f_t1_3_hint1": {
-      "es": "[PENDIENTE] Pista 1: Famosa casa nobiliaria de la corona castellana y navarra.",
-      "fr": "[PENDIENTE] Indice 1 : Maison noble réputée.",
-      "en": "[PENDIENTE] Hint 1: Famous noble house."
+      "es": "Famosa casa nobiliaria de la corona castellana y navarra. Gente importante, oye.",
+      "fr": "Maison noble réputée des couronnes castillane et navarraise. Du beau monde, hein.",
+      "en": "Famous noble house of the Castilian and Navarrese crowns. Important people, eh."
     },
     "f_t1_3_hint2": {
-      "es": "[PENDIENTE] Pista 2: Empieza por Ramírez de...",
-      "fr": "[PENDIENTE] Indice 2 : Commence par Ramírez de...",
-      "en": "[PENDIENTE] Hint 2: Starts with Ramírez de..."
+      "es": "Empieza por Ramírez de... y no, no es el de los relojes.",
+      "fr": "Commence par Ramírez de... et non, c'est pas celui des montres.",
+      "en": "Starts with Ramírez de... and no, it's not the watch guy."
     },
     "f_t1_3_hint3": {
-      "es": "[PENDIENTE] Pista 3: Ramírez de Arellano.",
-      "fr": "[PENDIENTE] Indice 3 : Ramírez de Arellano.",
-      "en": "[PENDIENTE] Hint 3: Ramírez de Arellano."
+      "es": "Ramírez de Arellano. Llegaron a mandar hasta Soria. Nada, unos humildes.",
+      "fr": "Ramírez de Arellano. Ils ont même commandé jusqu'à Soria. Bref, des modestes.",
+      "en": "Ramírez de Arellano. They even ruled as far as Soria. Yeah, real modest bunch."
     },
     "f_t2_1_question": {
-      "es": "[PENDIENTE] Al cruzar el Arco de la Villa, ¿qué función defensiva tenía este portal en el medievo?",
-      "fr": "[PENDIENTE] En franchissant l'Arche de la Villa, quelle fonction défensive avait ce portail ?",
-      "en": "[PENDIENTE] When crossing the Village Arch, what defensive function did this gate serve?"
+      "es": "Al cruzar el Arco de la Villa, ¿qué función defensiva tenía este portal en el medievo? Pista: no era para hacer turismo.",
+      "fr": "En franchissant l'Arche de la Villa, quelle fonction défensive avait ce portail au Moyen Âge ? Indice : ce n'était pas pour le tourisme.",
+      "en": "When crossing the Village Arch, what defensive function did this gate serve in the Middle Ages? Hint: it wasn't for tourism."
     },
     "f_t2_1_opt_a": {
-      "es": "[PENDIENTE] Mazmorra de herejes",
-      "fr": "[PENDIENTE] Cachot des hérétiques",
-      "en": "[PENDIENTE] Dungeon for heretics"
+      "es": "Mazmorra de herejes, que aquí había mucha mano dura",
+      "fr": "Cachot des hérétiques, on ne rigolait pas ici",
+      "en": "Dungeon for heretics, they were tough around here"
     },
     "f_t2_1_opt_b": {
-      "es": "[PENDIENTE] Bodega comunal de diezmo",
-      "fr": "[PENDIENTE] Cave communale de la dîme",
-      "en": "[PENDIENTE] Communal tithe cellar"
+      "es": "Bodega comunal de diezmo, que aquí el vino es sagrado",
+      "fr": "Cave communale de la dîme, ici le vin est sacré",
+      "en": "Communal tithe cellar, wine is sacred here"
     },
     "f_t2_1_opt_c": {
       "es": "Puerta fortificada y control de acceso a la villa",
@@ -2279,29 +2398,29 @@
       "en": "Fortified gate and town access checkpoint"
     },
     "f_t2_1_opt_d": {
-      "es": "[PENDIENTE] Campanario de aviso",
-      "fr": "[PENDIENTE] Clocher d'alarme",
-      "en": "[PENDIENTE] Warning belfry"
+      "es": "Campanario de aviso, que aquí todo se avisaba a toque de campana",
+      "fr": "Clocher d'alarme, ici tout s'annonçait à coups de cloche",
+      "en": "Warning belfry, everything here was announced by bell"
     },
     "f_t2_1_hint1": {
-      "es": "[PENDIENTE] Pista 1: Cerraba la villa amurallada por la noche.",
-      "fr": "[PENDIENTE] Indice 1 : Fermeture nocturne de la cité.",
-      "en": "[PENDIENTE] Hint 1: Sealed the walled town at night."
+      "es": "Cerraba la villa amurallada por la noche. Como tu portal, pero con piedras.",
+      "fr": "Elle fermait la cité fortifiée la nuit. Comme ton portail, mais en pierre.",
+      "en": "It sealed the walled town at night. Like your front door, but in stone."
     },
     "f_t2_1_hint2": {
-      "es": "[PENDIENTE] Pista 2: Controlaba quién entraba con mercancías (¡y vino!).",
-      "fr": "[PENDIENTE] Indice 2 : Contrôle des marchandises.",
-      "en": "[PENDIENTE] Hint 2: Controlled incoming trade."
+      "es": "Controlaba quién entraba con mercancías. Y con vino, que aquí el vino es sagrado.",
+      "fr": "Il contrôlait qui entrait avec des marchandises. Et du vin, ici le vin est sacré.",
+      "en": "It controlled who came in with goods. And with wine, wine is sacred here."
     },
     "f_t2_1_hint3": {
-      "es": "[PENDIENTE] Pista 3: Puerta fortificada de acceso.",
-      "fr": "[PENDIENTE] Indice 3 : Porte fortifiée.",
-      "en": "[PENDIENTE] Hint 3: Fortified access gate."
+      "es": "Puerta fortificada de acceso. Ni mazmorra, ni campanario, ni bodega.",
+      "fr": "Porte fortifiée d'accès. Ni cachot, ni clocher, ni cave.",
+      "en": "Fortified access gate. Neither dungeon, nor belfry, nor cellar."
     },
     "f_t2_2_question": {
-      "es": "[PENDIENTE] ¿Qué tipo de piedra arenisca característica de la cuenca del Iregua forma las dovelas del arco?",
-      "fr": "[PENDIENTE] Quel type de grès de l'Iregua forme les voussoirs de l'arche ?",
-      "en": "[PENDIENTE] What typical sandstone from the Iregua basin forms the arch voussoirs?"
+      "es": "¿Qué tipo de piedra arenisca característica de la cuenca del Iregua forma las dovelas del arco? Pista: la tenemos a patadas por aquí.",
+      "fr": "Quel type de grès caractéristique du bassin de l'Iregua forme les voussoirs de l'arche ? Indice : on en a à la pelle par ici.",
+      "en": "What typical sandstone from the Iregua basin forms the arch voussoirs? Hint: we have it in spades around here."
     },
     "f_t2_2_ans1": {
       "es": "Arenisca",
@@ -2319,24 +2438,24 @@
       "en": "Red sandstone"
     },
     "f_t2_2_hint1": {
-      "es": "[PENDIENTE] Pista 1: Roca sedimentaria de grano fino y tacto áspero.",
-      "fr": "[PENDIENTE] Indice 1 : Roche sédimentaire.",
-      "en": "[PENDIENTE] Hint 1: Sedimentary stone."
+      "es": "Roca sedimentaria de grano fino y tacto áspero. Como mi sotana, pero más dura.",
+      "fr": "Roche sédimentaire à grain fin et toucher rugueux. Comme ma soutane, mais plus dure.",
+      "en": "Fine-grained sedimentary rock with a rough feel. Like my cassock, but harder."
     },
     "f_t2_2_hint2": {
-      "es": "[PENDIENTE] Pista 2: Compuesta de granos de arena prensados.",
-      "fr": "[PENDIENTE] Indice 2 : Composée de sable consolidé.",
-      "en": "[PENDIENTE] Hint 2: Made of compacted sand."
+      "es": "Compuesta de granos de arena prensados durante millones de años. Paciencia, chaval.",
+      "fr": "Composée de grains de sable pressés pendant des millions d'années. Patience, mon gars.",
+      "en": "Made of sand grains pressed over millions of years. Patience, mate."
     },
     "f_t2_2_hint3": {
-      "es": "[PENDIENTE] Pista 3: Arenisca.",
-      "fr": "[PENDIENTE] Indice 3 : Grès.",
-      "en": "[PENDIENTE] Hint 3: Sandstone."
+      "es": "Arenisca. Ni mármol, ni granito, ni ná de eso.",
+      "fr": "Grès. Ni marbre, ni granit, ni rien de tout ça.",
+      "en": "Sandstone. Not marble, not granite, nothing like that."
     },
     "f_t2_3_question": {
-      "es": "[PENDIENTE] ¿Qué patrón religioso coronaba tradicionalmente la hornacina superior de esta puerta?",
-      "fr": "[PENDIENTE] Quel saint patron surplombait la niche supérieure de cette porte ?",
-      "en": "[PENDIENTE] Which patron saint traditionally topped the upper niche of this gate?"
+      "es": "¿Qué patrona religiosa coronaba tradicionalmente la hornacina superior de esta puerta? Pista: es la jefa de la ermita del valle.",
+      "fr": "Quelle patronne religieuse couronnait traditionnellement la niche supérieure de cette porte ? Indice : c'est la patronne de l'ermitage de la vallée.",
+      "en": "Which religious patron traditionally topped the upper niche of this gate? Hint: she's the boss of the valley hermitage."
     },
     "f_t2_3_ans1": {
       "es": "Virgen de Villavieja",
@@ -2354,29 +2473,29 @@
       "en": "Our Lady"
     },
     "f_t2_3_hint1": {
-      "es": "[PENDIENTE] Pista 1: La patrona venerada en la ermita del valle.",
-      "fr": "[PENDIENTE] Indice 1 : La patronne de la vallée.",
-      "en": "[PENDIENTE] Hint 1: The valley's patroness."
+      "es": "La patrona venerada en la ermita del valle. La que da nombre a la romería.",
+      "fr": "La patronne vénérée à l'ermitage de la vallée. Celle qui donne son nom au pèlerinage.",
+      "en": "The patroness venerated at the valley hermitage. The one who gives the pilgrimage its name."
     },
     "f_t2_3_hint2": {
-      "es": "[PENDIENTE] Pista 2: Villavieja.",
-      "fr": "[PENDIENTE] Indice 2 : Villavieja.",
-      "en": "[PENDIENTE] Hint 2: Villavieja."
+      "es": "Villavieja. Ahí lo dejo, que si no te lo doy mascado.",
+      "fr": "Villavieja. Je te laisse, sinon je te le mâche.",
+      "en": "Villavieja. I'll leave it there, otherwise I'm chewing it for you."
     },
     "f_t2_3_hint3": {
-      "es": "[PENDIENTE] Pista 3: Virgen de Villavieja.",
-      "fr": "[PENDIENTE] Indice 3 : Vierge de Villavieja.",
-      "en": "[PENDIENTE] Hint 3: Virgin of Villavieja."
+      "es": "Virgen de Villavieja. Y ahora vamos a por un trago, que ya está bien.",
+      "fr": "Vierge de Villavieja. Et maintenant on va boire un coup, ça suffit.",
+      "en": "Virgin of Villavieja. And now let's go for a drink, that's enough."
     },
     "f_t3_1_question": {
-      "es": "[PENDIENTE] Desde el Mirador Puerta de Cameros se domina el valle. ¿Qué río vertebra todo este cauce?",
-      "fr": "[PENDIENTE] Depuis le belvédère Porte de Cameros, quelle rivière traverse la vallée ?",
-      "en": "[PENDIENTE] From Puerta de Cameros viewpoint, which river carves this entire valley?"
+      "es": "Desde el Mirador Puerta de Cameros se domina el valle. ¿Qué río vertebra todo este cauce? Pista: no es el Ebro, aunque el Ebro también mola.",
+      "fr": "Depuis le belvédère Porte de Cameros, on domine la vallée. Quelle rivière structure tout ce cours d'eau ? Indice : ce n'est pas l'Èbre, même si l'Èbre est cool aussi.",
+      "en": "From the Puerta de Cameros viewpoint you command the valley. Which river structures this entire basin? Hint: it's not the Ebro, though the Ebro is cool too."
     },
     "f_t3_1_opt_a": {
-      "es": "[PENDIENTE] Río Ebro",
-      "fr": "[PENDIENTE] Fleuve Èbre",
-      "en": "[PENDIENTE] Ebro River"
+      "es": "Río Ebro, el jefe de la zona",
+      "fr": "L'Èbre, le boss du coin",
+      "en": "Ebro River, the local boss"
     },
     "f_t3_1_opt_b": {
       "es": "Río Iregua",
@@ -2384,34 +2503,34 @@
       "en": "Iregua River"
     },
     "f_t3_1_opt_c": {
-      "es": "[PENDIENTE] Río Najerilla",
-      "fr": "[PENDIENTE] Rivière Najerilla",
-      "en": "[PENDIENTE] Najerilla River"
+      "es": "Río Najerilla, el vecino de al lado",
+      "fr": "La Najerilla, le voisin d'à côté",
+      "en": "Najerilla River, the neighbour next door"
     },
     "f_t3_1_opt_d": {
-      "es": "[PENDIENTE] Río Leza",
-      "fr": "[PENDIENTE] Rivière Leza",
-      "en": "[PENDIENTE] Leza River"
+      "es": "Río Leza, el primo lejano",
+      "fr": "La Leza, le cousin éloigné",
+      "en": "Leza River, the distant cousin"
     },
     "f_t3_1_hint1": {
-      "es": "[PENDIENTE] Pista 1: Nace en la Sierra Cebollera y baja hacia Logroño.",
-      "fr": "[PENDIENTE] Indice 1 : Prend sa source dans la Sierra Cebollera.",
-      "en": "[PENDIENTE] Hint 1: Originates in Sierra Cebollera."
+      "es": "Nace en la Sierra Cebollera y baja hacia Logroño. Como mi resaca, pero con más agua.",
+      "fr": "Il naît dans la Sierra Cebollera et descend vers Logroño. Comme ma gueule de bois, mais avec plus d'eau.",
+      "en": "It's born in the Sierra Cebollera and flows down to Logroño. Like my hangover, but with more water."
     },
     "f_t3_1_hint2": {
-      "es": "[PENDIENTE] Pista 2: Nombre de seis letras que empieza por I.",
-      "fr": "[PENDIENTE] Indice 2 : Débute par la lettre I.",
-      "en": "[PENDIENTE] Hint 2: Starts with letter I."
+      "es": "Nombre de seis letras que empieza por I. Y no, no es 'Iglesia'.",
+      "fr": "Nom de six lettres qui commence par I. Et non, c'est pas 'Église'.",
+      "en": "Six-letter name starting with I. And no, it's not 'Inn'."
     },
     "f_t3_1_hint3": {
-      "es": "[PENDIENTE] Pista 3: Río Iregua.",
-      "fr": "[PENDIENTE] Indice 3 : Rivière Iregua.",
-      "en": "[PENDIENTE] Hint 3: Iregua River."
+      "es": "Río Iregua. El que da nombre al valle, chaval.",
+      "fr": "Rivière Iregua. Celle qui donne son nom à la vallée, mon gars.",
+      "en": "Iregua River. The one that gives the valley its name, mate."
     },
     "f_t3_2_question": {
-      "es": "[PENDIENTE] ¿Qué formación montañosa se divisa al fondo custodiando la entrada sur hacia las tierras altas?",
-      "fr": "[PENDIENTE] Quel massif montagneux aperçoit-on au fond gardant l'accès sud ?",
-      "en": "[PENDIENTE] What mountain range is seen in the distance guarding the southern pass?"
+      "es": "¿Qué formación montañosa se divisa al fondo custodiando la entrada sur hacia las tierras altas? Pista: lleva el nombre de este mismo mirador.",
+      "fr": "Quel massif montagneux aperçoit-on au fond, gardant l'accès sud vers les hauteurs ? Indice : il porte le nom de ce même belvédère.",
+      "en": "What mountain range is seen in the distance guarding the southern pass to the highlands? Hint: it bears the name of this very viewpoint."
     },
     "f_t3_2_ans1": {
       "es": "Sierra de Cameros",
@@ -2429,24 +2548,24 @@
       "en": "Sierra Cebollera"
     },
     "f_t3_2_hint1": {
-      "es": "[PENDIENTE] Pista 1: La comarca que da nombre a este mismo mirador.",
-      "fr": "[PENDIENTE] Indice 1 : Donne son nom au belvédère.",
-      "en": "[PENDIENTE] Hint 1: Gives name to this viewpoint."
+      "es": "La comarca que da nombre a este mismo mirador. Léelo otra vez, si hace falta.",
+      "fr": "La comarque qui donne son nom à ce même belvédère. Relis-le, si besoin.",
+      "en": "The region that gives this very viewpoint its name. Read it again, if needed."
     },
     "f_t3_2_hint2": {
-      "es": "[PENDIENTE] Pista 2: Cameros.",
-      "fr": "[PENDIENTE] Indice 2 : Cameros.",
-      "en": "[PENDIENTE] Hint 2: Cameros."
+      "es": "Cameros. Así, sin más.",
+      "fr": "Cameros. Comme ça, sans plus.",
+      "en": "Cameros. Just like that."
     },
     "f_t3_2_hint3": {
-      "es": "[PENDIENTE] Pista 3: Sierra de Cameros.",
-      "fr": "[PENDIENTE] Indice 3 : Sierra de Cameros.",
-      "en": "[PENDIENTE] Hint 3: Sierra de Cameros."
+      "es": "Sierra de Cameros. ¿A que no era tan difícil, chaval?",
+      "fr": "Sierra de Cameros. C'était pas si dur, mon gars.",
+      "en": "Sierra de Cameros. Not that hard, was it, mate?"
     },
     "f_t3_3_question": {
-      "es": "[PENDIENTE] ¿Qué actividad económica milenaria de trashumancia de ovejas merinas enriqueció a esta comarca?",
-      "fr": "[PENDIENTE] Quelle activité pastorale de transhumance a enrichi cette région ?",
-      "en": "[PENDIENTE] What ancient merino sheep transhumance economic activity enriched this region?"
+      "es": "¿Qué actividad económica milenaria de trashumancia de ovejas merinas enriqueció a esta comarca? Pista: tiene que ver con lana y con pastores.",
+      "fr": "Quelle activité économique millénaire de transhumance de moutons mérinos a enrichi cette région ? Indice : ça a à voir avec la laine et les bergers.",
+      "en": "What ancient merino sheep transhumance economic activity enriched this region? Hint: it has to do with wool and shepherds."
     },
     "f_t3_3_ans1": {
       "es": "La Mesta",
@@ -2464,64 +2583,64 @@
       "en": "Wool trade"
     },
     "f_t3_3_hint1": {
-      "es": "[PENDIENTE] Pista 1: Real Concejo de pastores fundado por Alfonso X el Sabio.",
-      "fr": "[PENDIENTE] Indice 1 : Conseil des bergers fondé par Alphonse X.",
-      "en": "[PENDIENTE] Hint 1: Royal council of shepherds."
+      "es": "Real Concejo de pastores fundado por Alfonso X el Sabio. Sí, el de las cantigas.",
+      "fr": "Conseil royal de bergers fondé par Alphonse X le Sage. Oui, celui des cantigas.",
+      "en": "Royal council of shepherds founded by Alfonso X the Wise. Yes, the one from the cantigas."
     },
     "f_t3_3_hint2": {
-      "es": "[PENDIENTE] Pista 2: La Mesta.",
-      "fr": "[PENDIENTE] Indice 2 : La Mesta.",
-      "en": "[PENDIENTE] Hint 2: The Mesta."
+      "es": "La Mesta. Cortito y al pie.",
+      "fr": "La Mesta. Court et précis.",
+      "en": "La Mesta. Short and sweet."
     },
     "f_t3_3_hint3": {
-      "es": "[PENDIENTE] Pista 3: La Mesta / Trashumancia.",
-      "fr": "[PENDIENTE] Indice 3 : La Mesta / Transhumance.",
-      "en": "[PENDIENTE] Hint 3: La Mesta / Transhumance."
+      "es": "La Mesta. O trashumancia, si lo prefieres más largo.",
+      "fr": "La Mesta. Ou transhumance, si tu préfères plus long.",
+      "en": "La Mesta. Or transhumance, if you prefer it longer."
     },
     "f_t4_1_question": {
-      "es": "[PENDIENTE] Las Cuevas de Los Palomares tienen decenas de hornacinas excavadas en la roca. ¿Cuál era su uso primitivo más documentado?",
-      "fr": "[PENDIENTE] Les grottes de Los Palomares comptent des niches creusées dans la roche. Quel était leur usage initial ?",
-      "en": "[PENDIENTE] The Los Palomares Caves have dozens of carved niches in the cliff. What was their primary documented use?"
+      "es": "Las Cuevas de Los Palomares tienen decenas de hornacinas excavadas en la roca. ¿Cuál era su uso primitivo más documentado? Pista: no era un hotel.",
+      "fr": "Les grottes de Los Palomares comptent des dizaines de niches creusées dans la roche. Quel était leur usage primitif le plus documenté ? Indice : ce n'était pas un hôtel.",
+      "en": "The Los Palomares Caves have dozens of carved niches in the cliff. What was their most documented primitive use? Hint: it wasn't a hotel."
     },
     "f_t4_1_opt_a": {
       "es": "Monasterio rupestre / eremitorio medieval y cría de palomas",
-      "fr": "Monastère rupestre / ermitage médiéval et colombier",
-      "en": "Rock-cut monastery / medieval hermitage and dovecote"
+      "fr": "Monastère rupestre / ermitage médiéval et élevage de colombes",
+      "en": "Rock-cut monastery / medieval hermitage and dove breeding"
     },
     "f_t4_1_opt_b": {
-      "es": "[PENDIENTE] Depósito de pólvora castellana",
-      "fr": "[PENDIENTE] Dépôt de poudre",
-      "en": "[PENDIENTE] Gunpowder magazine"
+      "es": "Depósito de pólvora castellana, que aquí hubo mucha guerra",
+      "fr": "Dépôt de poudre castillan, il y a eu beaucoup de guerre ici",
+      "en": "Castilian gunpowder magazine, there was a lot of war here"
     },
     "f_t4_1_opt_c": {
-      "es": "[PENDIENTE] Cárcel secreta de la Inquisición",
-      "fr": "[PENDIENTE] Prison secrète de l'Inquisition",
-      "en": "[PENDIENTE] Inquisition prison"
+      "es": "Cárcel secreta de la Inquisición, que aquí nadie se libraba",
+      "fr": "Prison secrète de l'Inquisition, personne n'y échappait",
+      "en": "Inquisition secret prison, no one escaped here"
     },
     "f_t4_1_opt_d": {
-      "es": "[PENDIENTE] Bodega funeraria romana",
-      "fr": "[PENDIENTE] Cave funéraire romaine",
-      "en": "[PENDIENTE] Roman funerary cellar"
+      "es": "Bodega funeraria romana, que aquí los romanos también bebían",
+      "fr": "Cave funéraire romaine, les Romains buvaient aussi ici",
+      "en": "Roman funerary cellar, the Romans drank here too"
     },
     "f_t4_1_hint1": {
-      "es": "[PENDIENTE] Pista 1: Monjes solitarios rezaban aquí antes de que llegaran las palomas.",
-      "fr": "[PENDIENTE] Indice 1 : Moines ermites et oiseaux.",
-      "en": "[PENDIENTE] Hint 1: Hermit monks and doves."
+      "es": "Monjes solitarios rezaban aquí antes de que llegaran las palomas. Mucho rezo y poca juerga.",
+      "fr": "Des moines solitaires priaient ici avant l'arrivée des colombes. Beaucoup de prière, peu de fête.",
+      "en": "Hermit monks prayed here before the doves arrived. Lots of prayer, little partying."
     },
     "f_t4_1_hint2": {
-      "es": "[PENDIENTE] Pista 2: Conjunto rupestre eremítico.",
-      "fr": "[PENDIENTE] Indice 2 : Ensemble rupestre érémitique.",
-      "en": "[PENDIENTE] Hint 2: Rock-hewn hermitage."
+      "es": "Conjunto rupestre eremítico. Palabras mayores, chaval.",
+      "fr": "Ensemble rupestre érémitique. Des grands mots, mon gars.",
+      "en": "Rock-hewn hermitic complex. Big words, mate."
     },
     "f_t4_1_hint3": {
-      "es": "[PENDIENTE] Pista 3: Eremitorio rupestre y palomar.",
-      "fr": "[PENDIENTE] Indice 3 : Ermitage et colombier.",
-      "en": "[PENDIENTE] Hint 3: Hermitage and dovecote."
+      "es": "Eremitorio rupestre y palomar. Lo que viene siendo un monasterio de roca con palomas.",
+      "fr": "Ermitage rupestre et colombier. Ce qu'on appelle un monastère de roche avec des colombes.",
+      "en": "Rock hermitage and dovecote. What we call a rock monastery with doves."
     },
     "f_t4_2_question": {
-      "es": "[PENDIENTE] ¿En qué tipo de roca blanda conglomerada se excavaron los huecos de Los Palomares?",
-      "fr": "[PENDIENTE] Dans quel type de roche conglomérée les cavités ont-elles été creusées ?",
-      "en": "[PENDIENTE] In which soft conglomerate rock were the Los Palomares recesses carved?"
+      "es": "¿En qué tipo de roca blanda conglomerada se excavaron los huecos de Los Palomares? Pista: no es mármol, tranquilo.",
+      "fr": "Dans quel type de roche tendre conglomérée les cavités de Los Palomares ont-elles été creusées ? Indice : ce n'est pas du marbre, t'inquiète.",
+      "en": "In which type of soft conglomerate rock were the Los Palomares hollows carved? Hint: it's not marble, don't worry."
     },
     "f_t4_2_ans1": {
       "es": "Conglomerado",
@@ -2539,24 +2658,24 @@
       "en": "Gypsum and conglomerate"
     },
     "f_t4_2_hint1": {
-      "es": "[PENDIENTE] Pista 1: Grava y cantos rodados cementados naturalmente.",
-      "fr": "[PENDIENTE] Indice 1 : Graviers et galets cimentés.",
-      "en": "[PENDIENTE] Hint 1: Naturally cemented gravel and pebbles."
+      "es": "Grava y cantos rodados cementados naturalmente. Como mi estómago tras una noche de vino.",
+      "fr": "Graviers et galets cimentés naturellement. Comme mon estomac après une nuit de vin.",
+      "en": "Gravel and pebbles naturally cemented. Like my stomach after a night of wine."
     },
     "f_t4_2_hint2": {
-      "es": "[PENDIENTE] Pista 2: Conglomerado geológico.",
-      "fr": "[PENDIENTE] Indice 2 : Conglomérat géologique.",
-      "en": "[PENDIENTE] Hint 2: Geological conglomerate."
+      "es": "Conglomerado geológico. Palabrita que te suelta el geólogo, chaval.",
+      "fr": "Conglomérat géologique. Un p'tit mot que te sort le géologue, mon gars.",
+      "en": "Geological conglomerate. A little word the geologist throws at you, mate."
     },
     "f_t4_2_hint3": {
-      "es": "[PENDIENTE] Pista 3: Conglomerado.",
-      "fr": "[PENDIENTE] Indice 3 : Conglomérat.",
-      "en": "[PENDIENTE] Hint 3: Conglomerate."
+      "es": "Conglomerado. Ni yeso, ni arenisca, ni ná. Conglomerado y punto.",
+      "fr": "Conglomérat. Ni gypse, ni grès, ni rien. Conglomérat, point.",
+      "en": "Conglomerate. Not gypsum, not sandstone, nothing. Conglomerate, period."
     },
     "f_t4_3_question": {
-      "es": "[PENDIENTE] ¿Aproximadamente cuántos nichos individuales u hornacinas se conservan en esta pared vertical?",
-      "fr": "[PENDIENTE] Environ combien de niches individuelles compte cette paroi verticale ?",
-      "en": "[PENDIENTE] Approximately how many individual niches are preserved in this cliff wall?"
+      "es": "¿Aproximadamente cuántos nichos individuales u hornacinas se conservan en esta pared vertical? Pista: son unos cuantos, no te cortes.",
+      "fr": "Combien de niches individuelles environ sont conservées sur cette paroi verticale ? Indice : il y en a pas mal, ne te limite pas.",
+      "en": "Approximately how many individual niches are preserved in this vertical wall? Hint: there are quite a few, don't hold back."
     },
     "f_t4_3_ans1": {
       "es": "Cientos",
@@ -2574,24 +2693,24 @@
       "en": "300"
     },
     "f_t4_3_hint1": {
-      "es": "[PENDIENTE] Pista 1: Son varios centenares repartidos en varios niveles.",
-      "fr": "[PENDIENTE] Indice 1 : Plusieurs centaines sur plusieurs niveaux.",
-      "en": "[PENDIENTE] Hint 1: Several hundreds over multiple levels."
+      "es": "Son varios centenares repartidos en varios niveles. Un poco como las habitaciones de un hotel, pero sin servicio de habitaciones.",
+      "fr": "Il y en a plusieurs centaines réparties sur plusieurs niveaux. Un peu comme les chambres d'un hôtel, mais sans room service.",
+      "en": "Several hundreds spread over multiple levels. A bit like hotel rooms, but without room service."
     },
     "f_t4_3_hint2": {
-      "es": "[PENDIENTE] Pista 2: Alrededor de tres centenares.",
-      "fr": "[PENDIENTE] Indice 2 : Autour de 300.",
-      "en": "[PENDIENTE] Hint 2: Around 300."
+      "es": "Alrededor de tres centenares. Ahí lo dejo.",
+      "fr": "Autour de trois cents. Je te laisse.",
+      "en": "Around three hundred. I'll leave it there."
     },
     "f_t4_3_hint3": {
-      "es": "[PENDIENTE] Pista 3: Cientos (aprox. 300).",
-      "fr": "[PENDIENTE] Indice 3 : Centaines (~300).",
-      "en": "[PENDIENTE] Hint 3: Hundreds (~300)."
+      "es": "Cientos. Aproximadamente 300. Y ahora vamos a por un trago, chaval.",
+      "fr": "Centaines. Environ 300. Et maintenant on va boire un coup, mon gars.",
+      "en": "Hundreds. About 300. And now let's go for a drink, mate."
     },
     "f_t5_1_question": {
-      "es": "[PENDIENTE] En la Ermita de Villavieja, ¿qué estilo arquitectónico rural predomina en su construcción original?",
-      "fr": "[PENDIENTE] À l'Ermitage de Villavieja, quel style architectural rural domine ?",
-      "en": "[PENDIENTE] At Villavieja Hermitage, what rural architectural style prevails in its original construction?"
+      "es": "En la Ermita de Villavieja, ¿qué estilo arquitectónico rural predomina en su construcción original? Pista: ni románico ni gótico, piensa en algo más tardío.",
+      "fr": "À l'ermitage de Villavieja, quel style architectural rural domine dans sa construction originale ? Indice : ni roman ni gothique, pense à quelque chose de plus tardif.",
+      "en": "At Villavieja Hermitage, what rural architectural style prevails in its original construction? Hint: neither Romanesque nor Gothic, think of something later."
     },
     "f_t5_1_ans1": {
       "es": "Barroco popular",
@@ -2609,24 +2728,24 @@
       "en": "Baroque"
     },
     "f_t5_1_hint1": {
-      "es": "[PENDIENTE] Pista 1: Edificada entre los siglos XVII y XVIII con añadidos.",
-      "fr": "[PENDIENTE] Indice 1 : Bâtie entre les XVIIe et XVIIIe siècles.",
-      "en": "[PENDIENTE] Hint 1: Built between the 17th and 18th centuries."
+      "es": "Edificada entre los siglos XVII y XVIII con añadidos. Ya te estoy dando demasiado.",
+      "fr": "Bâtie entre les XVIIe et XVIIIe siècles avec des ajouts. Je te donne déjà trop.",
+      "en": "Built between the 17th and 18th centuries with additions. I'm already giving you too much."
     },
     "f_t5_1_hint2": {
-      "es": "[PENDIENTE] Pista 2: Estilo barroco sencillo y devocional.",
-      "fr": "[PENDIENTE] Indice 2 : Style baroque simple.",
-      "en": "[PENDIENTE] Hint 2: Simple baroque style."
+      "es": "Estilo barroco sencillo y devocional. Como la iglesia de tu pueblo, pero con más vino.",
+      "fr": "Style baroque simple et dévotionnel. Comme l'église de ton village, mais avec plus de vin.",
+      "en": "Simple, devotional baroque style. Like your village church, but with more wine."
     },
     "f_t5_1_hint3": {
-      "es": "[PENDIENTE] Pista 3: Barroco popular.",
-      "fr": "[PENDIENTE] Indice 3 : Baroque populaire.",
-      "en": "[PENDIENTE] Hint 3: Folk Baroque."
+      "es": "Barroco popular. Y ya está, chaval.",
+      "fr": "Baroque populaire. Et voilà, mon gars.",
+      "en": "Folk baroque. And that's it, mate."
     },
     "f_t5_2_question": {
-      "es": "[PENDIENTE] ¿Qué celebración popular reúne cada primavera a los vecinos de Nalda en esta ermita?",
-      "fr": "[PENDIENTE] Quelle fête populaire réunit chaque printemps les habitants de Nalda ici ?",
-      "en": "[PENDIENTE] What traditional gathering brings Nalda locals together here every spring?"
+      "es": "¿Qué celebración popular reúne cada primavera a los vecinos de Nalda en esta ermita? Pista: se sube en procesión, con comida y vino.",
+      "fr": "Quelle fête populaire réunit chaque printemps les habitants de Nalda à cet ermitage ? Indice : on monte en procession, avec nourriture et vin.",
+      "en": "What traditional gathering brings Nalda locals together here every spring? Hint: you go up in procession, with food and wine."
     },
     "f_t5_2_ans1": {
       "es": "Romería de Villavieja",
@@ -2639,19 +2758,19 @@
       "en": "Romeria"
     },
     "f_t5_2_hint1": {
-      "es": "[PENDIENTE] Pista 1: Peregrinación campestre con comida, jotas y vino.",
-      "fr": "[PENDIENTE] Indice 1 : Pèlerinage champêtre avec vin.",
-      "en": "[PENDIENTE] Hint 1: Country pilgrimage with food and wine."
+      "es": "Peregrinación campestre con comida, jotas y vino. Vamos, lo que viene siendo una fiesta.",
+      "fr": "Pèlerinage champêtre avec nourriture, jotas et vin. Bref, une vraie fête.",
+      "en": "Country pilgrimage with food, jotas and wine. Basically a party."
     },
     "f_t5_2_hint2": {
-      "es": "[PENDIENTE] Pista 2: La Romería anual.",
-      "fr": "[PENDIENTE] Indice 2 : La Romería annuelle.",
-      "en": "[PENDIENTE] Hint 2: The annual Romería."
+      "es": "La Romería anual. Cortito y al pie.",
+      "fr": "La Romería annuelle. Court et précis.",
+      "en": "The annual Romería. Short and sweet."
     },
     "f_t5_2_hint3": {
-      "es": "[PENDIENTE] Pista 3: Romería de Villavieja.",
-      "fr": "[PENDIENTE] Indice 3 : Romería de Villavieja.",
-      "en": "[PENDIENTE] Hint 3: Villavieja Pilgrimage."
+      "es": "Romería de Villavieja. Y ahora vamos a por el trago final, que ya toca.",
+      "fr": "Pèlerinage de Villavieja. Et maintenant on va boire le coup final, ça se fête.",
+      "en": "Villavieja Pilgrimage. And now let's have the final drink, we've earned it."
     },
     "f_extra_brindis_title": {
       "es": "Brindis Tabernero en el Castillo",
@@ -2659,9 +2778,9 @@
       "en": "Tavern Toast at the Castle"
     },
     "f_extra_brindis_description": {
-      "es": "[PENDIENTE] Hazte una foto alzando una bota, vaso o cantimplora brindando con las ruinas del castillo al fondo.",
-      "fr": "[PENDIENTE] Prends une photo en levant ton verre ou ta gourde devant les ruines du château.",
-      "en": "[PENDIENTE] Take a photo raising a canteen, cup or flask toasting with the castle ruins behind you."
+      "es": "Hazte una foto alzando una bota, vaso o cantimplora brindando con las ruinas del castillo al fondo. Si es vino, +10 puntos de respeto del fraile.",
+      "fr": "Prends une photo en levant une gourde, un verre ou une outre devant les ruines du château. Si c'est du vin, +10 points de respect du moine.",
+      "en": "Take a photo raising a flask, cup or canteen toasting with the castle ruins behind you. If it's wine, +10 friar respect points."
     },
     "f_extra_eructo_title": {
       "es": "Eructo Divino en el Arco",
@@ -2669,9 +2788,9 @@
       "en": "Divine Burp under the Arch"
     },
     "f_extra_eructo_description": {
-      "es": "[PENDIENTE] Graba un sonoro suspiro, eructo o exclamación de taberna bajo la acústica de la bóveda del arco.",
-      "fr": "[PENDIENTE] Enregistre un soupir sonore ou une exclamation de taverne sous la voûte de l'arche.",
-      "en": "[PENDIENTE] Record a resounding tavern sigh, burp or cheer under the arch's acoustic vault."
+      "es": "Graba un sonoro suspiro, eructo o exclamación de taberna bajo la acústica de la bóveda del arco. Cuanto más gordo, mejor.",
+      "fr": "Enregistre un soupir sonore, un rot ou une exclamation de taverne sous l'acoustique de la voûte. Plus c'est gras, mieux c'est.",
+      "en": "Record a resounding tavern sigh, burp or cheer under the arch's acoustic vault. The louder, the better."
     },
     "f_extra_confesion_title": {
       "es": "Confesión Secreta en las Cuevas",
@@ -2679,9 +2798,9 @@
       "en": "Secret Confession in the Caves"
     },
     "f_extra_confesion_description": {
-      "es": "[PENDIENTE] Susurra un secreto inconfesable (o un pecado gastronómico) en una de las hornacinas de Los Palomares.",
-      "fr": "[PENDIENTE] Chuchote un secret inavouable dans l'une des niches de Los Palomares.",
-      "en": "[PENDIENTE] Whisper an unconfessable secret (or food craving) into one of the Los Palomares niches."
+      "es": "Susurra un secreto inconfesable (o un pecado gastronómico) en una de las hornacinas de Los Palomares. El fraile escucha, aunque esté borracho.",
+      "fr": "Chuchote un secret inavouable (ou un péché gastronomique) dans l'une des niches de Los Palomares. Le moine écoute, même s'il est soûl.",
+      "en": "Whisper an unconfessable secret (or a food sin) into one of the Los Palomares niches. The friar listens, even if he's drunk."
     },
     "f_extra_pecho_title": {
       "es": "A Pecho Descubierto en el Mirador",
@@ -2689,9 +2808,9 @@
       "en": "Chest to the Wind at the Viewpoint"
     },
     "f_extra_pecho_description": {
-      "es": "[PENDIENTE] Sácate una foto abriendo los brazos al viento de Cameros como si fueras el rey del Iregua.",
-      "fr": "[PENDIENTE] Prends une photo ouvrant les bras au vent de Cameros comme le roi de l'Iregua.",
-      "en": "[PENDIENTE] Take a photo opening your arms to the Cameros wind like the king of the Iregua valley."
+      "es": "Sácate una foto abriendo los brazos al viento de Cameros como si fueras el rey del Iregua. El fraile te nombra escudero honorífico.",
+      "fr": "Prends une photo en ouvrant les bras au vent de Cameros comme si tu étais le roi de l'Iregua. Le moine te nomme écuyer honoraire.",
+      "en": "Take a photo opening your arms to the Cameros wind like the king of the Iregua. The friar names you honorary squire."
     },
     "f_extra_siesta_title": {
       "es": "La Siesta Eterna en Villavieja",
@@ -2699,9 +2818,9 @@
       "en": "The Eternal Nap at Villavieja"
     },
     "f_extra_siesta_description": {
-      "es": "[PENDIENTE] Graba un breve vídeo de 3 segundos fingiendo roncar plácidamente en el banco o prado de la ermita.",
-      "fr": "[PENDIENTE] Enregistre une vidéo de 3 secondes simulant un ronflement paisible près de l'ermitage.",
-      "en": "[PENDIENTE] Record a quick 3-second video pretending to snore peacefully on the hermitage bench or lawn."
+      "es": "Graba un breve vídeo de 3 segundos fingiendo roncar plácidamente en el banco o prado de la ermita. La siesta es sagrada, como el vino.",
+      "fr": "Enregistre une vidéo de 3 secondes simulant un ronflement paisible sur le banc ou la pelouse de l'ermitage. La sieste est sacrée, comme le vin.",
+      "en": "Record a quick 3-second video pretending to snore peacefully on the hermitage bench or lawn. Naps are sacred, like wine."
     },
     "f_extra_baile_vino_title": {
       "es": "El Baile del Monje Achispado",
@@ -2709,9 +2828,9 @@
       "en": "The Tipsy Monk Dance"
     },
     "f_extra_baile_vino_description": {
-      "es": "[PENDIENTE] Imita los pasos torpes y alegres de Fray Botijo celebrando una buena cosecha de vino de Rioja.",
-      "fr": "[PENDIENTE] Imite les pas joyeux et maladroits de Fray Botijo fêtant les vendanges.",
-      "en": "[PENDIENTE] Mimic the clumsy, merry steps of Friar Botijo celebrating a fine Rioja grape harvest."
+      "es": "Imita los pasos torpes y alegres de Fray Botijo celebrando una buena cosecha de vino de Rioja. Cuanto más ridículo, mejor.",
+      "fr": "Imite les pas maladroits et joyeux de Fray Botijo célébrant une bonne récolte de vin de Rioja. Plus c'est ridicule, mieux c'est.",
+      "en": "Mimic the clumsy, merry steps of Friar Botijo celebrating a fine Rioja vintage. The more ridiculous, the better."
     },
     "f_meta_enigma_title": {
       "es": "El Códice del Barril de 1387",
@@ -2719,9 +2838,9 @@
       "en": "The 1387 Barrel Codex"
     },
     "f_meta_enigma_description": {
-      "es": "[PENDIENTE] Reúne las 6 letras secretas (B-O-T-I-J-O) ocultas en las reliquias de Fray Botijo para destapar el barril de la salvación.",
-      "fr": "[PENDIENTE] Réunis les 6 lettres secrètes (B-O-T-I-J-O) cachées dans les reliques pour ouvrir le tonneau du salut.",
-      "en": "[PENDIENTE] Gather the 6 secret letters (B-O-T-I-J-O) hidden within Friar Botijo's relics to unlock the barrel of salvation."
+      "es": "Reúne las 6 letras secretas (B-O-T-I-J-O) ocultas en las reliquias de Fray Botijo para destapar el barril de la salvación. Y sí, huele a vino.",
+      "fr": "Réunis les 6 lettres secrètes (B-O-T-I-J-O) cachées dans les reliques de Fray Botijo pour ouvrir le tonneau du salut. Et oui, ça sent le vin.",
+      "en": "Gather the 6 secret letters (B-O-T-I-J-O) hidden in Friar Botijo's relics to unlock the barrel of salvation. And yes, it smells of wine."
     },
     "game.reportJoke": {
       "es": "Reportar chiste (ofensivo)",
@@ -3467,6 +3586,151 @@
       "es": "Eres Zorbo el Marciano, un científico alienígena extraviado en el valle del Iregua. Confundes con humor absurdo la historia y paisajes de Nalda con alta tecnología espacial.",
       "fr": "Tu es Zorbo le Martien, un scientifique extraterrestre égaré dans la vallée de l'Iregua. Tu confonds avec un humour absurde l'histoire de Nalda avec la technologie spatiale.",
       "en": "You are Zorbo the Martian, an alien scientist lost in the Iregua valley. You humorously mistake Nalda's historical stone heritage for cosmic tech."
+    },
+    "story_guardian_summary": {
+      "es": "Un bosque de historia, piedra y río en el Valle del Iregua. El Cronicón te guía por castillo, arco, cuevas y ermita para recomponer el sello NALDA.",
+      "fr": "Une forêt d'histoire, de pierre et de rivière dans la vallée de l'Iregua. Le Cronicón te guide à travers château, arche, grottes et ermitage pour recomposer le sceau NALDA.",
+      "en": "A forest of history, stone and river in the Iregua Valley. The Cronicón guides you through castle, arch, caves and hermitage to rebuild the NALDA seal."
+    },
+    "story_guardian_narrative": {
+      "es": "Bienvenido, aprendiz. Soy el Cronicón, y estas piedras guardan memoria. Cada hito que visites te entregará una runa; al final, todas juntas formarán el nombre que el Iregua susurra desde hace siglos: NALDA.",
+      "fr": "Bienvenue, apprenti. Je suis le Cronicón, et ces pierres gardent la mémoire. Chaque étape que tu visiteras te remettra une rune ; à la fin, toutes ensemble formeront le nom que l'Iregua murmure depuis des siècles : NALDA.",
+      "en": "Welcome, apprentice. I am the Cronicón, and these stones keep memory. Each waypoint you visit will hand you a rune; in the end, all together they will form the name the Iregua has whispered for centuries: NALDA."
+    },
+    "story_guardian_mission": {
+      "es": "Recorrer Nalda junto al sabio Cronicón, descifrar los enigmas medievales de cada hito y recomponer el sello sagrado NALDA.",
+      "fr": "Parcourir Nalda avec le sage Cronicón, déchiffrer les énigmes médiévales de chaque étape et recomposer le sceau sacré NALDA.",
+      "en": "Walk Nalda with the wise Cronicón, decipher the medieval riddles of each waypoint and rebuild the sacred seal NALDA."
+    },
+    "story_fray_summary": {
+      "es": "El fantasma de un monje borracho te guía por Nalda contando chistes verdes y soltando la historia real entre eructo y eructo. No apto para niños ni para gente sin sentido del humor.",
+      "fr": "Le fantôme d'un moine ivre te guide à Nalda en racontant des blagues grivoises et en lâchant la vraie histoire entre deux rots. Pas pour les enfants ni les gens sans humour.",
+      "en": "The ghost of a drunk monk guides you through Nalda telling dirty jokes and dropping real history between burps. Not for kids or people without a sense of humour."
+    },
+    "story_fray_narrative": {
+      "es": "¡Ehhhh, chaval! ¡Bienvenido a mi taberna! Bueno, a mi pueblo. Bueno, a lo que queda de él, porque yo llevo muerto desde 1387, ¡ja, ja, ja! ¿Tú sabes lo que es morirse ahogado en un barril de vino? ¡Una muerte digna, coño! Oye, ¿me ayudas a encontrar mi alma? La perdí en una apuesta contra el diablo. O eso, o se la dejé al obispo. No me acuerdo. ¡Ay, perdón! *eructo* ¡Eso ha sido el Espíritu Santo! Venga, vamos, que te voy contando la historia de Nalda. Pero si me ofreces un trago, mejor que mejor.",
+      "fr": "Hé, mon gars ! Bienvenue dans ma taverne ! Enfin, dans mon village. Enfin, dans ce qu'il en reste, parce que je suis mort depuis 1387, ha ha ha ! Tu sais ce que c'est que de mourir noyé dans un tonneau de vin ? Une mort digne, bordel ! Dis, tu m'aides à retrouver mon âme ? Je l'ai perdue dans un pari contre le diable. Ou alors je l'ai laissée à l'évêque. Je ne me souviens plus. Oh, pardon ! *rot* C'était le Saint-Esprit ! Allez, viens, je te raconte l'histoire de Nalda. Mais si tu m'offres un coup, c'est encore mieux.",
+      "en": "Hey, mate! Welcome to my tavern! I mean, my village. I mean, what's left of it, because I've been dead since 1387, ha ha ha! Do you know what it's like to drown in a wine barrel? A dignified death, damn it! Listen, will you help me find my soul? I lost it in a bet against the devil. Or maybe I left it with the bishop. I don't remember. Oh, sorry! *burp* That was the Holy Spirit! Come on, let's go, I'll tell you the history of Nalda. But if you offer me a drink, even better."
+    },
+    "story_fray_mission": {
+      "es": "Acompañar al fantasma de Fray Botijo por Nalda, descifrar los enigmas históricos entre trago y trago, y reconstruir la palabra BOTIJO.",
+      "fr": "Accompagner le fantôme de Fray Botijo à Nalda, déchiffrer les énigmes historiques entre deux verres et reconstruire le mot BOTIJO.",
+      "en": "Accompany Friar Botijo's ghost through Nalda, decipher the historical riddles between drinks, and rebuild the word BOTIJO."
+    },
+    "story_palomar_summary": {
+      "es": "Una aventura gamberra y canalla por Nalda guiada por Chucho el Palomo, el rey de las palomas de Los Palomares.",
+      "fr": "Une aventure espiègle et canaille à Nalda guidée par Chucho le Pigeon, le roi des pigeons de Los Palomares.",
+      "en": "A cheeky, streetwise adventure through Nalda guided by Chucho the Pigeon, king of the Los Palomares flock."
+    },
+    "story_palomar_narrative": {
+      "es": "¡Epa, plumas! Soy Chucho el Palomo. Aquí en Nalda mando yo y mi bandada de Los Palomares. ¿Vienes a curiosear o a volar con la banda? ¡Al loro con las pistas, que las piedras hablan si sabes mirar desde arriba!",
+      "fr": "Salut les plumes ! Moi c'est Chucho le Pigeon. Ici à Nalda, c'est moi et ma bande de Los Palomares qui commandons. Tu viens jeter un œil ou voler avec la bande ? Ouvre l'œil aux indices, les pierres parlent si tu sais regarder d'en haut !",
+      "en": "Hey feather-heads! I'm Chucho the Pigeon. Here in Nalda, me and my Los Palomares flock run the show. Coming to snoop or to fly with the gang? Keep your eyes peeled for clues, stones talk if you know how to look from above!"
+    },
+    "story_palomar_mission": {
+      "es": "Explorar Nalda desde la perspectiva de la bandada callejera, sortear los desafíos de las alturas y conseguir el título honorífico de 'Pichón Jefe de Nalda'.",
+      "fr": "Explorer Nalda du point de vue de la bande de rue, relever les défis des hauteurs et obtenir le titre honorifique de 'Pigeon Chef de Nalda'.",
+      "en": "Explore Nalda from the street-flock perspective, tackle the heights' challenges and earn the honorary title of 'Head Pigeon of Nalda'."
+    },
+    "story_zorbo_summary": {
+      "es": "Una investigación cósmico-absurda junto a Zorbo, un marciano extraviado que confunde Nalda con una base espacial alienígena.",
+      "fr": "Une enquête cosmico-absurde avec Zorbo, un Martien égaré qui confond Nalda avec une base spatiale extraterrestre.",
+      "en": "A cosmic-absurd investigation with Zorbo, a lost Martian who confuses Nalda with an alien space base."
+    },
+    "story_zorbo_narrative": {
+      "es": "¡Saludos, espécimen bípedo! Soy Zorbo, del sector estelar ZX-4. Mi nave se averió en el Valle del Iregua. Mis escáneres detectan que Nalda es un nodo de energía cósmica... ¡Ayúdame a recalibrar la nave antes de que se enteren en mi planeta!",
+      "fr": "Salutations, spécimen bipède ! Je suis Zorbo, du secteur stellaire ZX-4. Mon vaisseau est tombé en panne dans la vallée de l'Iregua. Mes scanners détectent que Nalda est un nœud d'énergie cosmique... Aide-moi à recalibrer le vaisseau avant que ça se sache sur ma planète !",
+      "en": "Greetings, bipedal specimen! I'm Zorbo, from star sector ZX-4. My ship broke down in the Iregua Valley. My scanners detect that Nalda is a cosmic energy node... Help me recalibrate the ship before they find out on my planet!"
+    },
+    "story_zorbo_mission": {
+      "es": "Ayudar a Zorbo a decodificar las anomalías geológicas e históricas de Nalda para recargar los propulsores de su platillo volante.",
+      "fr": "Aider Zorbo à décoder les anomalies géologiques et historiques de Nalda pour recharger les propulseurs de sa soucoupe.",
+      "en": "Help Zorbo decode Nalda's geological and historical anomalies to recharge his flying saucer's thrusters."
+    },
+    "ar_castillo_title": {
+      "es": "Torre del Homenaje Reconstruida",
+      "fr": "Tour du Hommage Reconstruite",
+      "en": "Rebuilt Keep Tower"
+    },
+    "ar_arco_title": {
+      "es": "Vigías Medievales en el Arco",
+      "fr": "Guetteurs Médiévaux sous l'Arche",
+      "en": "Medieval Watchmen at the Arch"
+    },
+    "ar_mirador_title": {
+      "es": "Etiquetas del Valle del Iregua",
+      "fr": "Étiquettes de la Vallée de l'Iregua",
+      "en": "Iregua Valley Labels"
+    },
+    "ar_cuevas_title": {
+      "es": "Paloma Mensajera 3D",
+      "fr": "Colombe Messagère 3D",
+      "en": "3D Carrier Dove"
+    },
+    "ar_ermita_title": {
+      "es": "Cesta de Vendimia Riojana",
+      "fr": "Panier de Vendange Rioja",
+      "en": "Rioja Harvest Basket"
+    },
+    "story_guerra_summary": {
+      "es": "Verano de 1944. Las patrullas ocupantes vigilan los caminos; la red maquis ha escondido claves a lo largo del río Eau Bourde.",
+      "fr": "Été 1944. Les patrouilles d'occupation surveillent les chemins ; le réseau maquis a caché des clés le long de l'Eau Bourde.",
+      "en": "Summer 1944. Occupation patrols watch the roads; the Maquis network has hidden keys along the Eau Bourde river."
+    },
+    "story_guerra_narrative": {
+      "es": "Las tropas de ocupación patrullan las carreteras principales. En la espesura del bosque de Canéjan, la red maquis ha escondido cilindros con coordenadas y nombres en clave. Eres el enlace del maquis.",
+      "fr": "Les troupes d'occupation patrouillent les routes principales. Dans l'épaisseur de la forêt de Canéjan, le réseau maquis a caché des cylindres avec des coordonnées et des noms de code. Tu es l'agent de liaison du maquis.",
+      "en": "Occupation troops patrol the main roads. In the thick of Canéjan forest, the Maquis network has hidden cylinders with coordinates and code names. You are the Maquis liaison."
+    },
+    "story_guerra_mission": {
+      "es": "Actuar como enlace de la Resistencia, seguir las señales ocultas en los árboles y descifrar las claves para abrir paso seguro hacia Burdeos.",
+      "fr": "Agir comme agent de liaison de la Résistance, suivre les signes cachés dans les arbres et déchiffrer les clés pour ouvrir un passage sûr vers Bordeaux.",
+      "en": "Act as a Resistance liaison, follow the signs hidden in the trees and decipher the keys to open a safe path toward Bordeaux."
+    },
+    "story_molino_summary": {
+      "es": "Año 1878. Maître Pierre ideó un mecanismo hidráulico para triplicar la fuerza motriz del molino y ocultó sus bocetos a lo largo de la cuenca.",
+      "fr": "Année 1878. Maître Pierre a imaginé un mécanisme hydraulique pour tripler la force motrice du moulin et a caché ses croquis le long du bassin.",
+      "en": "Year 1878. Maître Pierre devised a hydraulic mechanism to triple the mill's driving force and hid his sketches along the basin."
+    },
+    "story_molino_narrative": {
+      "es": "En 1878, Maître Pierre ideó un sistema de esclusas capaz de triplicar la fuerza motriz del molino sin desbordar el río. Ante las disputas entre terratenientes, ocultó sus planos en puntos clave de la ribera.",
+      "fr": "En 1878, Maître Pierre a imaginé un système d'écluses capable de tripler la force motrice du moulin sans faire déborder la rivière. Face aux disputes entre propriétaires, il a caché ses plans dans des points clés de la rive.",
+      "en": "In 1878, Maître Pierre devised a sluice system capable of tripling the mill's driving force without overflowing the river. Amid disputes between landowners, he hid his plans at key points along the bank."
+    },
+    "story_molino_mission": {
+      "es": "Reconstruir las medidas del caudal, examinar la cantería de las acequias y encontrar la combinación del cofre del Rouillac.",
+      "fr": "Reconstituer les mesures du débit, examiner la maçonnerie des biefs et trouver la combinaison du coffre de Rouillac.",
+      "en": "Reconstruct the flow measurements, examine the millraces' stonework and find the combination of the Rouillac chest."
+    },
+    "story_hechizo_summary": {
+      "es": "Un sortilegio de niebla ha congelado la melodía del arroyo y las flores no despiertan.",
+      "fr": "Un sortilège de brume a gelé la mélodie du ruisseau et les fleurs ne s'éveillent pas.",
+      "en": "A spell of mist has frozen the brook's melody and the flowers won't wake."
+    },
+    "story_hechizo_narrative": {
+      "es": "Un viejo sortilegio de niebla ha congelado la melodía del arroyo y las flores de ribera han cerrado sus pétalos. Sylvaine, espíritu del agua dulce, busca exploradores puros de corazón para devolver la luz.",
+      "fr": "Un vieux sortilège de brume a gelé la mélodie du ruisseau et les fleurs de rive ont fermé leurs pétales. Sylvaine, esprit de l'eau douce, cherche des explorateurs au cœur pur pour rendre la lumière.",
+      "en": "An old spell of mist has frozen the brook's melody and the riverside flowers have closed their petals. Sylvaine, spirit of fresh water, seeks pure-hearted explorers to bring back the light."
+    },
+    "story_hechizo_mission": {
+      "es": "Ayudar a la dríade Sylvaine a conectar con los árboles centenarios, purificar las aguas y romper el maleficio.",
+      "fr": "Aider la dryade Sylvaine à communiquer avec les arbres centenaires, purifier les eaux et rompre le maléfice.",
+      "en": "Help the dryad Sylvaine connect with the ancient trees, purify the waters and break the curse."
+    },
+    "story_promenade_summary": {
+      "es": "Cuentos infantiles y esculturas de madera diseñados por los niños de Canéjan junto a un escultor y cuentacuentos local.",
+      "fr": "Contes d'enfants et sculptures en bois imaginés par les enfants de Canéjan avec un sculpteur et conteur local.",
+      "en": "Children's tales and wooden sculptures imagined by the children of Canéjan with a local sculptor and storyteller."
+    },
+    "story_promenade_narrative": {
+      "es": "En este sendero, los dibujos y cuentos de los niños cobraron vida. Duendecillos del musgo, pájaros parlanchines y piedras que cantan aguardan a toda la familia en una aventura llena de ternura.",
+      "fr": "Sur ce sentier, les dessins et contes des enfants ont pris vie. Des petits lutins de mousse, des oiseaux bavards et des pierres qui chantent attendent toute la famille dans une aventure pleine de tendresse.",
+      "en": "On this trail, the children's drawings and tales came to life. Moss sprites, chatty birds and singing stones await the whole family in an adventure full of tenderness."
+    },
+    "story_promenade_mission": {
+      "es": "Seguir las pistas rimadas de los alumnos, descubrir los animalitos del arroyo y hacer reír al bosque en familia.",
+      "fr": "Suivre les indices rimés des élèves, découvrir les petits animaux du ruisseau et faire rire la forêt en famille.",
+      "en": "Follow the pupils' rhyming clues, discover the brook's little animals and make the forest laugh as a family."
     }
   }
 }

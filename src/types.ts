@@ -77,6 +77,7 @@ export interface ArAssetConfig {
   revealTrigger?: 'onArrival' | 'onRiddleSolved' | string; // cuándo se activa
   trigger?: string;
   title?: string;
+  titleKey?: string;
   description?: string;
   descriptionKey?: string;
   pose?: 'borracho' | 'eructo' | 'confesion' | 'meando' | 'dormido' | string;
@@ -124,6 +125,9 @@ export interface StoryIntro {
   characterGreeting?: string;
   narrator?: StoryNarrator;
   titleKey?: string;
+  summaryKey?: string;
+  narrativeKey?: string;
+  missionKey?: string;
   guide?: any;
   durations?: Record<string, any>;
   difficulties?: Record<string, any>;

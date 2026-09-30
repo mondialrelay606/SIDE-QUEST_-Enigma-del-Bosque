@@ -148,7 +148,10 @@
         "narratorAvatar": "🕵️‍♂️",
         "voiceName": "Fenrir",
         "characterBio": "Miembro veterano de la red clandestina bordelesa en 1944. Conoce cada raíz, cueva y recodo del Eau Bourde. Te hablará con cautela para no llamar la atención de las patrullas.",
-        "characterGreeting": "Camarada... acércate despacio. No llames la atención. ¿Has localizado la siguiente señal entre los árboles?"
+        "characterGreeting": "Camarada... acércate despacio. No llames la atención. ¿Has localizado la siguiente señal entre los árboles?",
+        "summaryKey": "story_guerra_summary",
+        "narrativeKey": "story_guerra_narrative",
+        "missionKey": "story_guerra_mission"
       },
       {
         "id": "molino_perdido",
@@ -170,7 +173,10 @@
         "narratorAvatar": "👨‍🔧",
         "voiceName": "Charon",
         "characterBio": "Artesano apasionado del siglo XIX que dedicó su vida a domesticar la fuerza del río. Te enseñará a leer la corriente, los engranajes de madera y las muelas de piedra.",
-        "characterGreeting": "¡Ah, bien hallado, joven aprendiz! Escucha el rumor del caz... las muelas tienen secretos que sólo los oídos pacientes entienden. ¿Qué duda te asalta?"
+        "characterGreeting": "¡Ah, bien hallado, joven aprendiz! Escucha el rumor del caz... las muelas tienen secretos que sólo los oídos pacientes entienden. ¿Qué duda te asalta?",
+        "summaryKey": "story_molino_summary",
+        "narrativeKey": "story_molino_narrative",
+        "missionKey": "story_molino_mission"
       },
       {
         "id": "hechizo_encantado",
@@ -192,7 +198,10 @@
         "narratorAvatar": "🧚‍♀️",
         "voiceName": "Kore",
         "characterBio": "Espíritu milenario de las aguas claras y los helechos. Habla con delicadeza, como el murmullo de un manantial, y te revelará los secretos invisibles a ojos comunes.",
-        "characterGreeting": "Siento tu presencia entre las hojas... La niebla aún pesa sobre mis aguas. Cuéntame, caminante de corazón noble, ¿qué buscas en este claro?"
+        "characterGreeting": "Siento tu presencia entre las hojas... La niebla aún pesa sobre mis aguas. Cuéntame, caminante de corazón noble, ¿qué buscas en este claro?",
+        "summaryKey": "story_hechizo_summary",
+        "narrativeKey": "story_hechizo_narrative",
+        "missionKey": "story_hechizo_mission"
       },
       {
         "id": "promenade_enchantee",
@@ -214,7 +223,10 @@
         "narratorAvatar": "🧝‍♂️",
         "voiceName": "Puck",
         "characterBio": "Pequeño duende nacido de los dibujos y la imaginación de los escolares de Canéjan. Le encantan los acertijos alegres, saltar por las raíces y coleccionar bellotas.",
-        "characterGreeting": "¡Hoooola explorador! ¡Qué alegría verte por aquí! ¿Tienes preparado tu gorrito de duende o necesitas que te cante una rimilla?"
+        "characterGreeting": "¡Hoooola explorador! ¡Qué alegría verte por aquí! ¿Tienes preparado tu gorrito de duende o necesitas que te cante una rimilla?",
+        "summaryKey": "story_promenade_summary",
+        "narrativeKey": "story_promenade_narrative",
+        "missionKey": "story_promenade_mission"
       }
     ],
     "riddles": [
@@ -1106,8 +1118,8 @@
         "arAsset": {
           "preset": "torre_homenaje",
           "type": "3d_reconstruction",
-          "label": "Realidad Aumentada en Castillo de Nalda",
-          "title": "Reliquia de Castillo de Nalda",
+          "label": "Torre del Homenaje Reconstruida",
+          "title": "Torre del Homenaje Reconstruida",
           "modelUrl": "torre_homenaje_v1.glb",
           "model": "torre_homenaje_v1.glb",
           "scale": 1.3,
@@ -1115,7 +1127,8 @@
           "revealTrigger": "onArrival",
           "trigger": "camera_poi",
           "description": "Reconstrucción 3D de la torre del homenaje superpuesta sobre las ruinas actuales.",
-          "descriptionKey": "ar_castillo_description"
+          "descriptionKey": "ar_castillo_description",
+          "titleKey": "ar_castillo_title"
         }
       },
       {
@@ -1129,8 +1142,8 @@
         "arAsset": {
           "preset": "portal_temporal",
           "type": "temporal_portal",
-          "label": "Realidad Aumentada en Arco de la Villa",
-          "title": "Reliquia de Arco de la Villa",
+          "label": "Vigías Medievales en el Arco",
+          "title": "Vigías Medievales en el Arco",
           "modelUrl": "vigias_medievales_v1.glb",
           "model": "vigias_medievales_v1.glb",
           "scale": 1.3,
@@ -1138,7 +1151,8 @@
           "revealTrigger": "onArrival",
           "trigger": "cross_arch",
           "description": "Al cruzar el arco, aparecen figuras de vigías medievales.",
-          "descriptionKey": "ar_arco_description"
+          "descriptionKey": "ar_arco_description",
+          "titleKey": "ar_arco_title"
         }
       },
       {
@@ -1152,8 +1166,8 @@
         "arAsset": {
           "preset": "etiquetas_valle",
           "type": "overlay_labels",
-          "label": "Realidad Aumentada en Mirador Puerta de Cameros",
-          "title": "Reliquia de Mirador Puerta de Cameros",
+          "label": "Etiquetas del Valle del Iregua",
+          "title": "Etiquetas del Valle del Iregua",
           "modelUrl": "valle_labels_v1.json",
           "model": "valle_labels_v1.json",
           "scale": 1.3,
@@ -1161,7 +1175,8 @@
           "revealTrigger": "onArrival",
           "trigger": "camera_horizon",
           "description": "Etiquetas flotantes de los pueblos del valle y la ruta romana.",
-          "descriptionKey": "ar_mirador_description"
+          "descriptionKey": "ar_mirador_description",
+          "titleKey": "ar_mirador_title"
         }
       },
       {
@@ -1175,8 +1190,8 @@
         "arAsset": {
           "preset": "paloma_3d",
           "type": "animated_character",
-          "label": "Realidad Aumentada en Cuevas de Los Palomares",
-          "title": "Reliquia de Cuevas de Los Palomares",
+          "label": "Paloma Mensajera 3D",
+          "title": "Paloma Mensajera 3D",
           "modelUrl": "paloma_3d_v1.glb",
           "model": "paloma_3d_v1.glb",
           "scale": 1.3,
@@ -1184,7 +1199,8 @@
           "revealTrigger": "onArrival",
           "trigger": "camera_cave_entrance",
           "description": "Paloma 3D animada que vuela hacia las hornacinas. Al tocarla, da una pista.",
-          "descriptionKey": "ar_cuevas_description"
+          "descriptionKey": "ar_cuevas_description",
+          "titleKey": "ar_cuevas_title"
         }
       },
       {
@@ -1198,8 +1214,8 @@
         "arAsset": {
           "preset": "cesta_vendimia",
           "type": "virtual_still_life",
-          "label": "Realidad Aumentada en Ermita de Nuestra Señora de Villavieja",
-          "title": "Reliquia de Ermita de Nuestra Señora de Villavieja",
+          "label": "Cesta de Vendimia Riojana",
+          "title": "Cesta de Vendimia Riojana",
           "modelUrl": "cesta_vendimia_v1.glb",
           "model": "cesta_vendimia_v1.glb",
           "scale": 1.3,
@@ -1207,7 +1223,8 @@
           "revealTrigger": "onArrival",
           "trigger": "camera_ermita",
           "description": "Cesta de vendimia 3D con uvas de la Rioja. Al tocarla, reproduce audio de campanas.",
-          "descriptionKey": "ar_ermita_description"
+          "descriptionKey": "ar_ermita_description",
+          "titleKey": "ar_ermita_title"
         }
       }
     ],
@@ -1246,8 +1263,8 @@
         "id": "guardian-iregua",
         "title": "El Guardián del Iregua",
         "icon": "📜",
-        "summary": "Un bosque de historia, piedra y río en el Valle del Iregua.",
-        "narrative": "Bienvenido, aprendiz. Soy el Cronicón, y estas piedras guardan memoria.",
+        "summary": "Un bosque de historia, piedra y río en el Valle del Iregua. El Cronicón te guía por castillo, arco, cuevas y ermita para recomponer el sello NALDA.",
+        "narrative": "Bienvenido, aprendiz. Soy el Cronicón, y estas piedras guardan memoria. Cada hito que visites te entregará una runa; al final, todas juntas formarán el nombre que el Iregua susurra desde hace siglos: NALDA.",
         "mission": "Recorrer Nalda junto al sabio Cronicón, descifrar los enigmas medievales de cada hito y recomponer el sello sagrado NALDA.",
         "narratorName": "El Cronicón",
         "narratorRole": "Monje copista del siglo XIV (San Millán de la Cogolla)",
@@ -1327,7 +1344,10 @@
             "free_hints": 0,
             "easy_mode_geofence_m": 0
           }
-        }
+        },
+        "summaryKey": "story_guardian_summary",
+        "narrativeKey": "story_guardian_narrative",
+        "missionKey": "story_guardian_mission"
       },
       {
         "id": "fraile-botijo",
@@ -1417,14 +1437,17 @@
             "free_hints": 0,
             "easy_mode_geofence_m": 0
           }
-        }
+        },
+        "summaryKey": "story_fray_summary",
+        "narrativeKey": "story_fray_narrative",
+        "missionKey": "story_fray_mission"
       },
       {
         "id": "banda-palomar",
         "title": "La Banda del Palomar",
         "icon": "🕊️",
         "summary": "Una aventura gamberra y canalla por Nalda guiada por Chucho el Palomo, el rey de las palomas de Los Palomares.",
-        "narrative": "¡Epa, plumas! Soy Chucho el Palomo. Aquí en Nalda mando yo y mi bandada de Los Palomares. ¿Vienes a curiosear o a volar con la banda? ¡Al loro con las pistas que las piedras hablan si sabes mirar desde arriba!",
+        "narrative": "¡Epa, plumas! Soy Chucho el Palomo. Aquí en Nalda mando yo y mi bandada de Los Palomares. ¿Vienes a curiosear o a volar con la banda? ¡Al loro con las pistas, que las piedras hablan si sabes mirar desde arriba!",
         "mission": "Explorar Nalda desde la perspectiva de la bandada callejera, sortear los desafíos de las alturas y conseguir el título honorífico de 'Pichón Jefe de Nalda'.",
         "narratorName": "Chucho el Palomo",
         "narratorRole": "Líder callejero de la bandada de Los Palomares",
@@ -1503,7 +1526,10 @@
             "free_hints": 0,
             "easy_mode_geofence_m": 0
           }
-        }
+        },
+        "summaryKey": "story_palomar_summary",
+        "narrativeKey": "story_palomar_narrative",
+        "missionKey": "story_palomar_mission"
       },
       {
         "id": "expediente-zorbo",
@@ -1589,7 +1615,10 @@
             "free_hints": 0,
             "easy_mode_geofence_m": 0
           }
-        }
+        },
+        "summaryKey": "story_zorbo_summary",
+        "narrativeKey": "story_zorbo_narrative",
+        "missionKey": "story_zorbo_mission"
       }
     ],
     "riddles": [
@@ -2245,21 +2274,21 @@
         "question": "A ver, chaval, aquí encerraron a un noble en 1299. ¿A quién? Pista: yo estaba borracho, pero me acuerdo de que era un poco plasta.",
         "type": "multiple_choice",
         "options": [
-          "[PENDIENTE] El Obispo de Calahorra",
-          "Juan Alonso de Haro, Señor de Cameros",
-          "[PENDIENTE] El Abad del Monasterio de San Millán",
-          "[PENDIENTE] El Duque de Nájera"
+          "El Obispo de Calahorra, que vino a cobrar el diezmo",
+          "Juan Núñez de Lara, que se pasó de listo",
+          "El Abad de San Millán, que venía a por vino",
+          "El Duque de Nájera, que se perdió de caza"
         ],
-        "answer": "Juan Alonso de Haro, Señor de Cameros",
+        "answer": "Juan Núñez de Lara, que se pasó de listo",
         "hints": [
-          "[PENDIENTE] Pista 1: Su apellido suena a jarro de vino de La Rioja.",
-          "[PENDIENTE] Pista 2: Era el gran Señor de Cameros.",
-          "[PENDIENTE] Pista 3: Se llamaba Juan Alonso de Haro."
+          "El tío perdió una batalla entre Araciel y Alfaro. Malo, malo.",
+          "Atacó tierras del obispado de Calahorra. Se metió con los curas, chaval.",
+          "Su apellido empieza por Núñez. Y no, no es Núñez de Balboa."
         ],
         "staticHints": [
-          "[PENDIENTE] Pista 1: Su apellido suena a jarro de vino de La Rioja.",
-          "[PENDIENTE] Pista 2: Era el gran Señor de Cameros.",
-          "[PENDIENTE] Pista 3: Se llamaba Juan Alonso de Haro."
+          "El tío perdió una batalla entre Araciel y Alfaro. Malo, malo.",
+          "Atacó tierras del obispado de Calahorra. Se metió con los curas, chaval.",
+          "Su apellido empieza por Núñez. Y no, no es Núñez de Balboa."
         ],
         "points": 100,
         "correctIndex": 1,
@@ -2284,7 +2313,7 @@
         "storyId": "fraile-botijo",
         "name": "Misterio de Fray Botijo #2",
         "difficulty": "explorador",
-        "question": "[PENDIENTE] ¿En qué siglo se alzaron las defensas principales de este castillo de Nalda?",
+        "question": "¿En qué siglo se alzaron las defensas principales de este castillo? Piénsalo bien, que yo ya estaba muerto cuando se construyeron.",
         "type": "open_text",
         "answer": "XIII",
         "acceptedAnswers": [
@@ -2293,14 +2322,14 @@
           "13"
         ],
         "hints": [
-          "[PENDIENTE] Pista 1: Antes de que yo me ahogara en el barril en 1387.",
-          "[PENDIENTE] Pista 2: Diez más tres en números romanos.",
-          "[PENDIENTE] Pista 3: Siglo XIII."
+          "Antes de que yo me ahogara en el barril, en 1387. Así que un poquito antes.",
+          "Diez más tres en números romanos. Y no, no es el siglo XX.",
+          "Siglo XIII. Como el castillo de los documentales, chaval."
         ],
         "staticHints": [
-          "[PENDIENTE] Pista 1: Antes de que yo me ahogara en el barril en 1387.",
-          "[PENDIENTE] Pista 2: Diez más tres en números romanos.",
-          "[PENDIENTE] Pista 3: Siglo XIII."
+          "Antes de que yo me ahogara en el barril, en 1387. Así que un poquito antes.",
+          "Diez más tres en números romanos. Y no, no es el siglo XX.",
+          "Siglo XIII. Como el castillo de los documentales, chaval."
         ],
         "points": 150,
         "questionKey": "f_t1_2_question",
@@ -2323,7 +2352,7 @@
         "storyId": "fraile-botijo",
         "name": "Misterio de Fray Botijo #3",
         "difficulty": "maestro",
-        "question": "[PENDIENTE] ¿Qué linaje señorial tomó posesión del Castillo de Nalda en el siglo XIV?",
+        "question": "¿Qué linaje señorial tomó posesión del Castillo de Nalda en el siglo XIV? Eran los jefes de la zona, vamos.",
         "type": "open_text",
         "answer": "Ramírez de Arellano",
         "acceptedAnswers": [
@@ -2332,14 +2361,14 @@
           "Señorío de Cameros"
         ],
         "hints": [
-          "[PENDIENTE] Pista 1: Famosa casa nobiliaria de la corona castellana y navarra.",
-          "[PENDIENTE] Pista 2: Empieza por Ramírez de...",
-          "[PENDIENTE] Pista 3: Ramírez de Arellano."
+          "Famosa casa nobiliaria de la corona castellana y navarra. Gente importante, oye.",
+          "Empieza por Ramírez de... y no, no es el de los relojes.",
+          "Ramírez de Arellano. Llegaron a mandar hasta Soria. Nada, unos humildes."
         ],
         "staticHints": [
-          "[PENDIENTE] Pista 1: Famosa casa nobiliaria de la corona castellana y navarra.",
-          "[PENDIENTE] Pista 2: Empieza por Ramírez de...",
-          "[PENDIENTE] Pista 3: Ramírez de Arellano."
+          "Famosa casa nobiliaria de la corona castellana y navarra. Gente importante, oye.",
+          "Empieza por Ramírez de... y no, no es el de los relojes.",
+          "Ramírez de Arellano. Llegaron a mandar hasta Soria. Nada, unos humildes."
         ],
         "points": 250,
         "questionKey": "f_t1_3_question",
@@ -2362,24 +2391,24 @@
         "storyId": "fraile-botijo",
         "name": "Misterio de Fray Botijo #4",
         "difficulty": "novato",
-        "question": "[PENDIENTE] Al cruzar el Arco de la Villa, ¿qué función defensiva tenía este portal en el medievo?",
+        "question": "Al cruzar el Arco de la Villa, ¿qué función defensiva tenía este portal en el medievo? Pista: no era para hacer turismo.",
         "type": "multiple_choice",
         "options": [
-          "[PENDIENTE] Mazmorra de herejes",
-          "[PENDIENTE] Bodega comunal de diezmo",
+          "Mazmorra de herejes, que aquí había mucha mano dura",
+          "Bodega comunal de diezmo, que aquí el vino es sagrado",
           "Puerta fortificada y control de acceso a la villa",
-          "[PENDIENTE] Campanario de aviso"
+          "Campanario de aviso, que aquí todo se avisaba a toque de campana"
         ],
         "answer": "Puerta fortificada y control de acceso a la villa",
         "hints": [
-          "[PENDIENTE] Pista 1: Cerraba la villa amurallada por la noche.",
-          "[PENDIENTE] Pista 2: Controlaba quién entraba con mercancías (¡y vino!).",
-          "[PENDIENTE] Pista 3: Puerta fortificada de acceso."
+          "Cerraba la villa amurallada por la noche. Como tu portal, pero con piedras.",
+          "Controlaba quién entraba con mercancías. Y con vino, que aquí el vino es sagrado.",
+          "Puerta fortificada de acceso. Ni mazmorra, ni campanario, ni bodega."
         ],
         "staticHints": [
-          "[PENDIENTE] Pista 1: Cerraba la villa amurallada por la noche.",
-          "[PENDIENTE] Pista 2: Controlaba quién entraba con mercancías (¡y vino!).",
-          "[PENDIENTE] Pista 3: Puerta fortificada de acceso."
+          "Cerraba la villa amurallada por la noche. Como tu portal, pero con piedras.",
+          "Controlaba quién entraba con mercancías. Y con vino, que aquí el vino es sagrado.",
+          "Puerta fortificada de acceso. Ni mazmorra, ni campanario, ni bodega."
         ],
         "points": 100,
         "correctIndex": 2,
@@ -2404,7 +2433,7 @@
         "storyId": "fraile-botijo",
         "name": "Misterio de Fray Botijo #5",
         "difficulty": "explorador",
-        "question": "[PENDIENTE] ¿Qué tipo de piedra arenisca característica de la cuenca del Iregua forma las dovelas del arco?",
+        "question": "¿Qué tipo de piedra arenisca característica de la cuenca del Iregua forma las dovelas del arco? Pista: la tenemos a patadas por aquí.",
         "type": "open_text",
         "answer": "Arenisca",
         "acceptedAnswers": [
@@ -2413,14 +2442,14 @@
           "Arenisca rojiza"
         ],
         "hints": [
-          "[PENDIENTE] Pista 1: Roca sedimentaria de grano fino y tacto áspero.",
-          "[PENDIENTE] Pista 2: Compuesta de granos de arena prensados.",
-          "[PENDIENTE] Pista 3: Arenisca."
+          "Roca sedimentaria de grano fino y tacto áspero. Como mi sotana, pero más dura.",
+          "Compuesta de granos de arena prensados durante millones de años. Paciencia, chaval.",
+          "Arenisca. Ni mármol, ni granito, ni ná de eso."
         ],
         "staticHints": [
-          "[PENDIENTE] Pista 1: Roca sedimentaria de grano fino y tacto áspero.",
-          "[PENDIENTE] Pista 2: Compuesta de granos de arena prensados.",
-          "[PENDIENTE] Pista 3: Arenisca."
+          "Roca sedimentaria de grano fino y tacto áspero. Como mi sotana, pero más dura.",
+          "Compuesta de granos de arena prensados durante millones de años. Paciencia, chaval.",
+          "Arenisca. Ni mármol, ni granito, ni ná de eso."
         ],
         "points": 150,
         "questionKey": "f_t2_2_question",
@@ -2443,7 +2472,7 @@
         "storyId": "fraile-botijo",
         "name": "Misterio de Fray Botijo #6",
         "difficulty": "maestro",
-        "question": "[PENDIENTE] ¿Qué patrón religioso coronaba tradicionalmente la hornacina superior de esta puerta?",
+        "question": "¿Qué patrona religiosa coronaba tradicionalmente la hornacina superior de esta puerta? Pista: es la jefa de la ermita del valle.",
         "type": "open_text",
         "answer": "Virgen de Villavieja",
         "acceptedAnswers": [
@@ -2452,14 +2481,14 @@
           "Nuestra Señora"
         ],
         "hints": [
-          "[PENDIENTE] Pista 1: La patrona venerada en la ermita del valle.",
-          "[PENDIENTE] Pista 2: Villavieja.",
-          "[PENDIENTE] Pista 3: Virgen de Villavieja."
+          "La patrona venerada en la ermita del valle. La que da nombre a la romería.",
+          "Villavieja. Ahí lo dejo, que si no te lo doy mascado.",
+          "Virgen de Villavieja. Y ahora vamos a por un trago, que ya está bien."
         ],
         "staticHints": [
-          "[PENDIENTE] Pista 1: La patrona venerada en la ermita del valle.",
-          "[PENDIENTE] Pista 2: Villavieja.",
-          "[PENDIENTE] Pista 3: Virgen de Villavieja."
+          "La patrona venerada en la ermita del valle. La que da nombre a la romería.",
+          "Villavieja. Ahí lo dejo, que si no te lo doy mascado.",
+          "Virgen de Villavieja. Y ahora vamos a por un trago, que ya está bien."
         ],
         "points": 250,
         "questionKey": "f_t2_3_question",
@@ -2482,24 +2511,24 @@
         "storyId": "fraile-botijo",
         "name": "Misterio de Fray Botijo #7",
         "difficulty": "novato",
-        "question": "[PENDIENTE] Desde el Mirador Puerta de Cameros se domina el valle. ¿Qué río vertebra todo este cauce?",
+        "question": "Desde el Mirador Puerta de Cameros se domina el valle. ¿Qué río vertebra todo este cauce? Pista: no es el Ebro, aunque el Ebro también mola.",
         "type": "multiple_choice",
         "options": [
-          "[PENDIENTE] Río Ebro",
+          "Río Ebro, el jefe de la zona",
           "Río Iregua",
-          "[PENDIENTE] Río Najerilla",
-          "[PENDIENTE] Río Leza"
+          "Río Najerilla, el vecino de al lado",
+          "Río Leza, el primo lejano"
         ],
         "answer": "Río Iregua",
         "hints": [
-          "[PENDIENTE] Pista 1: Nace en la Sierra Cebollera y baja hacia Logroño.",
-          "[PENDIENTE] Pista 2: Nombre de seis letras que empieza por I.",
-          "[PENDIENTE] Pista 3: Río Iregua."
+          "Nace en la Sierra Cebollera y baja hacia Logroño. Como mi resaca, pero con más agua.",
+          "Nombre de seis letras que empieza por I. Y no, no es 'Iglesia'.",
+          "Río Iregua. El que da nombre al valle, chaval."
         ],
         "staticHints": [
-          "[PENDIENTE] Pista 1: Nace en la Sierra Cebollera y baja hacia Logroño.",
-          "[PENDIENTE] Pista 2: Nombre de seis letras que empieza por I.",
-          "[PENDIENTE] Pista 3: Río Iregua."
+          "Nace en la Sierra Cebollera y baja hacia Logroño. Como mi resaca, pero con más agua.",
+          "Nombre de seis letras que empieza por I. Y no, no es 'Iglesia'.",
+          "Río Iregua. El que da nombre al valle, chaval."
         ],
         "points": 100,
         "correctIndex": 1,
@@ -2524,7 +2553,7 @@
         "storyId": "fraile-botijo",
         "name": "Misterio de Fray Botijo #8",
         "difficulty": "explorador",
-        "question": "[PENDIENTE] ¿Qué formación montañosa se divisa al fondo custodiando la entrada sur hacia las tierras altas?",
+        "question": "¿Qué formación montañosa se divisa al fondo custodiando la entrada sur hacia las tierras altas? Pista: lleva el nombre de este mismo mirador.",
         "type": "open_text",
         "answer": "Sierra de Cameros",
         "acceptedAnswers": [
@@ -2533,14 +2562,14 @@
           "Sierra de Cebollera"
         ],
         "hints": [
-          "[PENDIENTE] Pista 1: La comarca que da nombre a este mismo mirador.",
-          "[PENDIENTE] Pista 2: Cameros.",
-          "[PENDIENTE] Pista 3: Sierra de Cameros."
+          "La comarca que da nombre a este mismo mirador. Léelo otra vez, si hace falta.",
+          "Cameros. Así, sin más.",
+          "Sierra de Cameros. ¿A que no era tan difícil, chaval?"
         ],
         "staticHints": [
-          "[PENDIENTE] Pista 1: La comarca que da nombre a este mismo mirador.",
-          "[PENDIENTE] Pista 2: Cameros.",
-          "[PENDIENTE] Pista 3: Sierra de Cameros."
+          "La comarca que da nombre a este mismo mirador. Léelo otra vez, si hace falta.",
+          "Cameros. Así, sin más.",
+          "Sierra de Cameros. ¿A que no era tan difícil, chaval?"
         ],
         "points": 150,
         "questionKey": "f_t3_2_question",
@@ -2563,7 +2592,7 @@
         "storyId": "fraile-botijo",
         "name": "Misterio de Fray Botijo #9",
         "difficulty": "maestro",
-        "question": "[PENDIENTE] ¿Qué actividad económica milenaria de trashumancia de ovejas merinas enriqueció a esta comarca?",
+        "question": "¿Qué actividad económica milenaria de trashumancia de ovejas merinas enriqueció a esta comarca? Pista: tiene que ver con lana y con pastores.",
         "type": "open_text",
         "answer": "La Mesta",
         "acceptedAnswers": [
@@ -2572,14 +2601,14 @@
           "Comercio de lana"
         ],
         "hints": [
-          "[PENDIENTE] Pista 1: Real Concejo de pastores fundado por Alfonso X el Sabio.",
-          "[PENDIENTE] Pista 2: La Mesta.",
-          "[PENDIENTE] Pista 3: La Mesta / Trashumancia."
+          "Real Concejo de pastores fundado por Alfonso X el Sabio. Sí, el de las cantigas.",
+          "La Mesta. Cortito y al pie.",
+          "La Mesta. O trashumancia, si lo prefieres más largo."
         ],
         "staticHints": [
-          "[PENDIENTE] Pista 1: Real Concejo de pastores fundado por Alfonso X el Sabio.",
-          "[PENDIENTE] Pista 2: La Mesta.",
-          "[PENDIENTE] Pista 3: La Mesta / Trashumancia."
+          "Real Concejo de pastores fundado por Alfonso X el Sabio. Sí, el de las cantigas.",
+          "La Mesta. Cortito y al pie.",
+          "La Mesta. O trashumancia, si lo prefieres más largo."
         ],
         "points": 250,
         "questionKey": "f_t3_3_question",
@@ -2602,24 +2631,24 @@
         "storyId": "fraile-botijo",
         "name": "Misterio de Fray Botijo #10",
         "difficulty": "novato",
-        "question": "[PENDIENTE] Las Cuevas de Los Palomares tienen decenas de hornacinas excavadas en la roca. ¿Cuál era su uso primitivo más documentado?",
+        "question": "Las Cuevas de Los Palomares tienen decenas de hornacinas excavadas en la roca. ¿Cuál era su uso primitivo más documentado? Pista: no era un hotel.",
         "type": "multiple_choice",
         "options": [
           "Monasterio rupestre / eremitorio medieval y cría de palomas",
-          "[PENDIENTE] Depósito de pólvora castellana",
-          "[PENDIENTE] Cárcel secreta de la Inquisición",
-          "[PENDIENTE] Bodega funeraria romana"
+          "Depósito de pólvora castellana, que aquí hubo mucha guerra",
+          "Cárcel secreta de la Inquisición, que aquí nadie se libraba",
+          "Bodega funeraria romana, que aquí los romanos también bebían"
         ],
         "answer": "Monasterio rupestre / eremitorio medieval y cría de palomas",
         "hints": [
-          "[PENDIENTE] Pista 1: Monjes solitarios rezaban aquí antes de que llegaran las palomas.",
-          "[PENDIENTE] Pista 2: Conjunto rupestre eremítico.",
-          "[PENDIENTE] Pista 3: Eremitorio rupestre y palomar."
+          "Monjes solitarios rezaban aquí antes de que llegaran las palomas. Mucho rezo y poca juerga.",
+          "Conjunto rupestre eremítico. Palabras mayores, chaval.",
+          "Eremitorio rupestre y palomar. Lo que viene siendo un monasterio de roca con palomas."
         ],
         "staticHints": [
-          "[PENDIENTE] Pista 1: Monjes solitarios rezaban aquí antes de que llegaran las palomas.",
-          "[PENDIENTE] Pista 2: Conjunto rupestre eremítico.",
-          "[PENDIENTE] Pista 3: Eremitorio rupestre y palomar."
+          "Monjes solitarios rezaban aquí antes de que llegaran las palomas. Mucho rezo y poca juerga.",
+          "Conjunto rupestre eremítico. Palabras mayores, chaval.",
+          "Eremitorio rupestre y palomar. Lo que viene siendo un monasterio de roca con palomas."
         ],
         "points": 100,
         "correctIndex": 0,
@@ -2644,7 +2673,7 @@
         "storyId": "fraile-botijo",
         "name": "Misterio de Fray Botijo #11",
         "difficulty": "explorador",
-        "question": "[PENDIENTE] ¿En qué tipo de roca blanda conglomerada se excavaron los huecos de Los Palomares?",
+        "question": "¿En qué tipo de roca blanda conglomerada se excavaron los huecos de Los Palomares? Pista: no es mármol, tranquilo.",
         "type": "open_text",
         "answer": "Conglomerado",
         "acceptedAnswers": [
@@ -2653,14 +2682,14 @@
           "Yeso y conglomerado"
         ],
         "hints": [
-          "[PENDIENTE] Pista 1: Grava y cantos rodados cementados naturalmente.",
-          "[PENDIENTE] Pista 2: Conglomerado geológico.",
-          "[PENDIENTE] Pista 3: Conglomerado."
+          "Grava y cantos rodados cementados naturalmente. Como mi estómago tras una noche de vino.",
+          "Conglomerado geológico. Palabrita que te suelta el geólogo, chaval.",
+          "Conglomerado. Ni yeso, ni arenisca, ni ná. Conglomerado y punto."
         ],
         "staticHints": [
-          "[PENDIENTE] Pista 1: Grava y cantos rodados cementados naturalmente.",
-          "[PENDIENTE] Pista 2: Conglomerado geológico.",
-          "[PENDIENTE] Pista 3: Conglomerado."
+          "Grava y cantos rodados cementados naturalmente. Como mi estómago tras una noche de vino.",
+          "Conglomerado geológico. Palabrita que te suelta el geólogo, chaval.",
+          "Conglomerado. Ni yeso, ni arenisca, ni ná. Conglomerado y punto."
         ],
         "points": 150,
         "questionKey": "f_t4_2_question",
@@ -2683,7 +2712,7 @@
         "storyId": "fraile-botijo",
         "name": "Misterio de Fray Botijo #12",
         "difficulty": "maestro",
-        "question": "[PENDIENTE] ¿Aproximadamente cuántos nichos individuales u hornacinas se conservan en esta pared vertical?",
+        "question": "¿Aproximadamente cuántos nichos individuales u hornacinas se conservan en esta pared vertical? Pista: son unos cuantos, no te cortes.",
         "type": "open_text",
         "answer": "Cientos",
         "acceptedAnswers": [
@@ -2692,14 +2721,14 @@
           "300"
         ],
         "hints": [
-          "[PENDIENTE] Pista 1: Son varios centenares repartidos en varios niveles.",
-          "[PENDIENTE] Pista 2: Alrededor de tres centenares.",
-          "[PENDIENTE] Pista 3: Cientos (aprox. 300)."
+          "Son varios centenares repartidos en varios niveles. Un poco como las habitaciones de un hotel, pero sin servicio de habitaciones.",
+          "Alrededor de tres centenares. Ahí lo dejo.",
+          "Cientos. Aproximadamente 300. Y ahora vamos a por un trago, chaval."
         ],
         "staticHints": [
-          "[PENDIENTE] Pista 1: Son varios centenares repartidos en varios niveles.",
-          "[PENDIENTE] Pista 2: Alrededor de tres centenares.",
-          "[PENDIENTE] Pista 3: Cientos (aprox. 300)."
+          "Son varios centenares repartidos en varios niveles. Un poco como las habitaciones de un hotel, pero sin servicio de habitaciones.",
+          "Alrededor de tres centenares. Ahí lo dejo.",
+          "Cientos. Aproximadamente 300. Y ahora vamos a por un trago, chaval."
         ],
         "points": 250,
         "questionKey": "f_t4_3_question",
@@ -2722,7 +2751,7 @@
         "storyId": "fraile-botijo",
         "name": "Misterio de Fray Botijo #13",
         "difficulty": "explorador",
-        "question": "[PENDIENTE] En la Ermita de Villavieja, ¿qué estilo arquitectónico rural predomina en su construcción original?",
+        "question": "En la Ermita de Villavieja, ¿qué estilo arquitectónico rural predomina en su construcción original? Pista: ni románico ni gótico, piensa en algo más tardío.",
         "type": "open_text",
         "answer": "Barroco popular",
         "acceptedAnswers": [
@@ -2731,14 +2760,14 @@
           "Barroco"
         ],
         "hints": [
-          "[PENDIENTE] Pista 1: Edificada entre los siglos XVII y XVIII con añadidos.",
-          "[PENDIENTE] Pista 2: Estilo barroco sencillo y devocional.",
-          "[PENDIENTE] Pista 3: Barroco popular."
+          "Edificada entre los siglos XVII y XVIII con añadidos. Ya te estoy dando demasiado.",
+          "Estilo barroco sencillo y devocional. Como la iglesia de tu pueblo, pero con más vino.",
+          "Barroco popular. Y ya está, chaval."
         ],
         "staticHints": [
-          "[PENDIENTE] Pista 1: Edificada entre los siglos XVII y XVIII con añadidos.",
-          "[PENDIENTE] Pista 2: Estilo barroco sencillo y devocional.",
-          "[PENDIENTE] Pista 3: Barroco popular."
+          "Edificada entre los siglos XVII y XVIII con añadidos. Ya te estoy dando demasiado.",
+          "Estilo barroco sencillo y devocional. Como la iglesia de tu pueblo, pero con más vino.",
+          "Barroco popular. Y ya está, chaval."
         ],
         "points": 150,
         "questionKey": "f_t5_1_question",
@@ -2761,7 +2790,7 @@
         "storyId": "fraile-botijo",
         "name": "Misterio de Fray Botijo #14",
         "difficulty": "maestro",
-        "question": "[PENDIENTE] ¿Qué celebración popular reúne cada primavera a los vecinos de Nalda en esta ermita?",
+        "question": "¿Qué celebración popular reúne cada primavera a los vecinos de Nalda en esta ermita? Pista: se sube en procesión, con comida y vino.",
         "type": "open_text",
         "answer": "Romería de Villavieja",
         "acceptedAnswers": [
@@ -2769,14 +2798,14 @@
           "Romería"
         ],
         "hints": [
-          "[PENDIENTE] Pista 1: Peregrinación campestre con comida, jotas y vino.",
-          "[PENDIENTE] Pista 2: La Romería anual.",
-          "[PENDIENTE] Pista 3: Romería de Villavieja."
+          "Peregrinación campestre con comida, jotas y vino. Vamos, lo que viene siendo una fiesta.",
+          "La Romería anual. Cortito y al pie.",
+          "Romería de Villavieja. Y ahora vamos a por el trago final, que ya toca."
         ],
         "staticHints": [
-          "[PENDIENTE] Pista 1: Peregrinación campestre con comida, jotas y vino.",
-          "[PENDIENTE] Pista 2: La Romería anual.",
-          "[PENDIENTE] Pista 3: Romería de Villavieja."
+          "Peregrinación campestre con comida, jotas y vino. Vamos, lo que viene siendo una fiesta.",
+          "La Romería anual. Cortito y al pie.",
+          "Romería de Villavieja. Y ahora vamos a por el trago final, que ya toca."
         ],
         "points": 250,
         "questionKey": "f_t5_2_question",
@@ -2798,7 +2827,7 @@
         "storyId": "fraile-botijo",
         "name": "Brindis Tabernero en el Castillo",
         "difficulty": "*",
-        "question": "[PENDIENTE] Hazte una foto alzando una bota, vaso o cantimplora brindando con las ruinas del castillo al fondo.",
+        "question": "Hazte una foto alzando una bota, vaso o cantimplora brindando con las ruinas del castillo al fondo. Si es vino, +10 puntos de respeto del fraile.",
         "type": "photo",
         "points": 50,
         "optional": true,
@@ -2813,7 +2842,7 @@
         "storyId": "fraile-botijo",
         "name": "Eructo Divino en el Arco",
         "difficulty": "*",
-        "question": "[PENDIENTE] Graba un sonoro suspiro, eructo o exclamación de taberna bajo la acústica de la bóveda del arco.",
+        "question": "Graba un sonoro suspiro, eructo o exclamación de taberna bajo la acústica de la bóveda del arco. Cuanto más gordo, mejor.",
         "type": "audio_record",
         "points": 50,
         "optional": true,
@@ -2828,7 +2857,7 @@
         "storyId": "fraile-botijo",
         "name": "Confesión Secreta en las Cuevas",
         "difficulty": "*",
-        "question": "[PENDIENTE] Susurra un secreto inconfesable (o un pecado gastronómico) en una de las hornacinas de Los Palomares.",
+        "question": "Susurra un secreto inconfesable (o un pecado gastronómico) en una de las hornacinas de Los Palomares. El fraile escucha, aunque esté borracho.",
         "type": "audio_record",
         "points": 50,
         "optional": true,
@@ -2843,7 +2872,7 @@
         "storyId": "fraile-botijo",
         "name": "A Pecho Descubierto en el Mirador",
         "difficulty": "*",
-        "question": "[PENDIENTE] Sácate una foto abriendo los brazos al viento de Cameros como si fueras el rey del Iregua.",
+        "question": "Sácate una foto abriendo los brazos al viento de Cameros como si fueras el rey del Iregua. El fraile te nombra escudero honorífico.",
         "type": "photo",
         "points": 50,
         "optional": true,
@@ -2858,7 +2887,7 @@
         "storyId": "fraile-botijo",
         "name": "La Siesta Eterna en Villavieja",
         "difficulty": "*",
-        "question": "[PENDIENTE] Graba un breve vídeo de 3 segundos fingiendo roncar plácidamente en el banco o prado de la ermita.",
+        "question": "Graba un breve vídeo de 3 segundos fingiendo roncar plácidamente en el banco o prado de la ermita. La siesta es sagrada, como el vino.",
         "type": "video",
         "points": 50,
         "optional": true,
@@ -2873,7 +2902,7 @@
         "storyId": "fraile-botijo",
         "name": "El Baile del Monje Achispado",
         "difficulty": "*",
-        "question": "[PENDIENTE] Imita los pasos torpes y alegres de Fray Botijo celebrando una buena cosecha de vino de Rioja.",
+        "question": "Imita los pasos torpes y alegres de Fray Botijo celebrando una buena cosecha de vino de Rioja. Cuanto más ridículo, mejor.",
         "type": "mimic",
         "points": 50,
         "optional": true,

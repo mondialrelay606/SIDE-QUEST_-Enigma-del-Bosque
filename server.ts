@@ -758,7 +758,7 @@ Responde en 1 o 2 oraciones en español, metido en tu personaje. Ofrece sabidur�
   if (!replyText) {
     if (isFrayBotijo) {
       const frayFallbacks = [
-        `¡Ehhhh, compi! ¿Sabías que en el Castillo de Nalda en 1299 encerraron a Juan Alonso de Haro? Un noble un poco plasta, ¡pero seguro que no tenía tanto aguante con el vino como yo! *eructo* ¡Ay, perdón, se me escapó! ¡Eso ha sido el Espíritu Santo!`,
+        `¡Ehhhh, compi! ¿Sabías que en el Castillo de Nalda en 1299 encerraron a Juan Núñez de Lara? Un noble un poco plasta, ¡pero seguro que no tenía tanto aguante con el vino como yo! *eructo* ¡Ay, perdón, se me escapó! ¡Eso ha sido el Espíritu Santo!`,
         `¡Tronco, en estas Cuevas de Los Palomares los monjes vivían como ermitaños en sus hornacinas excavadas antes de que se llenara de palomas! Yo intenté confesar allí a uno, pero se me cayó la bota de vino por el barranco... ¡Hala, sigue el sendero y abre bien los ojos!`,
         `¿Sabes por qué no voy a misa desde 1387, chaval? ¡Porque el obispo me pilló vaciando el tonel de vino bendito! Pero ojo al dato histórico: el Arco de la Villa era la puerta defensiva medieval que guardaba la entrada al pueblo. ¡Venga, otro trago y adelante!`,
         `¡Qué calor hace en el valle del Iregua, tronco! Dice el cura que el agua purifica, pero yo digo que el vino alegra el alma y quita las penas. ¡Ánimo con la prueba de ${poi?.name || 'este rincón'}!`

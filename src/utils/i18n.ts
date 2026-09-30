@@ -62,9 +62,12 @@ export function getLocalizedForest(forest: ForestPack, lang: string): ForestPack
     
     let arAsset = poi.arAsset;
     if (arAsset) {
+      const arTitle = arAsset.titleKey ? translateKey(arAsset.titleKey, arAsset.title) : arAsset.title;
       const arDesc = arAsset.descriptionKey ? translateKey(arAsset.descriptionKey, arAsset.description) : arAsset.description;
       arAsset = {
         ...arAsset,
+        title: arTitle,
+        label: arTitle || arAsset.label,
         description: arDesc,
       };
     }
@@ -81,14 +84,16 @@ export function getLocalizedForest(forest: ForestPack, lang: string): ForestPack
   const localizedStories: StoryIntro[] = forest.stories.map((story) => {
     const storyTrans = forestI18n?.[targetLang]?.stories?.[story.id];
     const title = storyTrans?.title || (story.titleKey ? translateKey(story.titleKey, story.title) : story.title);
-    const summary = storyTrans?.summary || (story.guide?.personaKey ? translateKey(story.guide.personaKey, story.summary) : story.summary);
-    const mission = storyTrans?.mission || story.mission;
+    const summary = storyTrans?.summary || (story.summaryKey ? translateKey(story.summaryKey, story.summary) : (story.guide?.personaKey ? translateKey(story.guide.personaKey, story.summary) : story.summary));
+    const narrative = story.narrativeKey ? translateKey(story.narrativeKey, story.narrative) : story.narrative;
+    const mission = storyTrans?.mission || (story.missionKey ? translateKey(story.missionKey, story.mission) : story.mission);
     const greeting = story.guide?.greetingKey ? translateKey(story.guide.greetingKey, story.characterGreeting) : story.characterGreeting;
 
     return {
       ...story,
       title,
       summary,
+      narrative,
       mission,
       characterGreeting: greeting,
       narrator: storyTrans?.narrator
